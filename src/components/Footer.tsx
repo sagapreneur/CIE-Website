@@ -16,7 +16,7 @@ export const Footer: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) => {
           {/* Column 1: Company Profile with Logo Only */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3">
-              <img src="/CIE logo.png" alt="Central India Export" className="h-14 w-auto bg-white p-2 rounded-lg border border-slate-200 shadow-sm" />
+              <img src="/cie-logo.png" alt="Central India Export" className="h-14 w-auto bg-white p-2 rounded-lg border border-slate-200 shadow-sm" />
             </div>
 
             <p className="text-sm text-slate-600 leading-relaxed pr-4 font-normal">

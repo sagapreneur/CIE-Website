@@ -114,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
           {/* Logo ONLY */}
           <Link to="/" className="flex items-center group shrink-0">
             <img 
-              src="/CIE logo.png" 
+              src="/cie-logo.png" 
               alt="Central India Export" 
               className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105" 
             />
