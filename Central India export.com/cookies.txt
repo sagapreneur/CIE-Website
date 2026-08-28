@@ -1,0 +1,12 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+centralindiaexport.com	TRUE	/	FALSE	1999999999	PHPSESSID	1f2mf3n7uc8tfgokfe9t7d082d
+centralindiaexport.com	TRUE	/	FALSE	1999999999	wp_woocommerce_session_c0a477c8c0094889927760a7212923b1	t_012b2163ca21f2b309ba985147a884%7C1788010793%7C1787924393%7C%24generic%24vRSF8FXqtQJUTnY3uL7VM7ZwCnh47-z1Y-i66eIn
+centralindiaexport.com	TRUE	/	FALSE	1999999999	woodmart_wishlist_count	0
+centralindiaexport.com	TRUE	/	FALSE	1999999999	wishlist_cleared_time	1787838116
+centralindiaexport.com	TRUE	/	FALSE	1999999999	shop_view	grid
+centralindiaexport.com	TRUE	/	FALSE	1999999999	shop_per_row	4
+centralindiaexport.com	TRUE	/	FALSE	1999999999	shop_per_page	18
+centralindiaexport.com	TRUE	/	FALSE	1999999999	woodmart_recently_viewed_products	18026%7C17915%7C17619%7C17854
+centralindiaexport.com	TRUE	/	FALSE	1999999999	yith_ywraq_session_c0a477c8c0094889927760a7212923b1	f1afc1d20f39da30eb55a733c4cf9438%7C%7C1788013946%7C%7C1788010346%7C%7C460aea3ffec83649571b06967e256614
+

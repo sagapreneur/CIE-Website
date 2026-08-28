@@ -1,0 +1,127 @@
+[
+  {
+    "id": 3,
+    "name": "Intraocular Lenses",
+    "slug": "intraocular-lenses",
+    "subcategories": [],
+    "product_count": 13,
+    "icon_url": "/category-icons/3.svg"
+  },
+  {
+    "id": 2,
+    "name": "Instruments",
+    "slug": "instruments",
+    "subcategories": [
+      {
+        "name": "Cannulas",
+        "slug": "cannulas"
+      },
+      {
+        "name": "Forceps",
+        "slug": "forceps"
+      },
+      {
+        "name": "Lacrimal Instruments",
+        "slug": "lacrimal-instruments"
+      },
+      {
+        "name": "Lens Manipulators & Rotators",
+        "slug": "lens-manipulators-and-rotators"
+      },
+      {
+        "name": "Markers & Calipers",
+        "slug": "markers-and-calipers"
+      },
+      {
+        "name": "Needle Holder",
+        "slug": "needle-holder"
+      },
+      {
+        "name": "Punches & Curettes & Spoons",
+        "slug": "punches-and-curettes-and-spoons"
+      },
+      {
+        "name": "Scissors",
+        "slug": "scissors"
+      },
+      {
+        "name": "Spatulas & Spuds",
+        "slug": "spatulas-and-spuds"
+      },
+      {
+        "name": "Speculums & Retractors",
+        "slug": "speculums-and-retractors"
+      },
+      {
+        "name": "Lens Loops",
+        "count": 8
+      }
+    ],
+    "product_count": 344,
+    "icon_url": "/category-icons/2.svg"
+  },
+  {
+    "id": 4,
+    "name": "Micro Surgical Blades",
+    "slug": "micro-surgical-blades-and-knives",
+    "subcategories": [],
+    "product_count": 26,
+    "icon_url": "/category-icons/4.svg"
+  },
+  {
+    "id": 6,
+    "name": "Eye Drape & Eye Shield",
+    "slug": "eye-drape-and-eye-shield",
+    "subcategories": [],
+    "product_count": 2,
+    "icon_url": "/category-icons/6.svg"
+  },
+  {
+    "id": 8,
+    "name": "Fluorescein & Schirmer Strips | Iris Retractor",
+    "slug": "ophthalmic-strips",
+    "subcategories": [],
+    "product_count": 4,
+    "icon_url": "/category-icons/8.svg"
+  },
+  {
+    "id": 7,
+    "name": "Ophthalmic Solutions",
+    "slug": "ophthalmic-solutions",
+    "subcategories": [],
+    "product_count": 5,
+    "icon_url": "/category-icons/7.svg"
+  },
+  {
+    "id": 9,
+    "name": "Retina Equipments",
+    "slug": "retina-equipments",
+    "subcategories": [],
+    "product_count": 37,
+    "icon_url": "/category-icons/9.svg"
+  },
+  {
+    "id": 1,
+    "name": "Artificial Eyes",
+    "slug": "artificial-eyes-and-implants",
+    "subcategories": [],
+    "product_count": 6,
+    "icon_url": "/category-icons/1.svg"
+  },
+  {
+    "id": 11,
+    "name": "Vision Drum/Acuity Chart",
+    "slug": "vision-drum-acuity-chart",
+    "subcategories": [],
+    "product_count": 3,
+    "icon_url": "/category-icons/11.svg"
+  },
+  {
+    "id": 5,
+    "name": "Miscellaneous",
+    "slug": "miscellaneous",
+    "subcategories": [],
+    "product_count": 20,
+    "icon_url": "/category-icons/5.svg"
+  }
+]

@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary-teal: #28B2A8;
+    --color-primary-blue: #0D3666;
+    --color-teal-blue: #1FA6C9;
+    --color-light-gray: #EBF1F5;
+    --color-soft-gray: #E2F5F7;
+    --color-dark-navy: #1A2638;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #1A2638;
+    overflow-x: hidden;
+  }
+
+  /* Focus visible accessibility outline */
+  *:focus-visible {
+    outline: 2px solid var(--color-primary-teal);
+    outline-offset: 3px;
+  }
+}
+
+/* Light Blueprint Grid Backdrop Motif */
+.bg-blueprint-grid {
+  background-image: 
+    linear-gradient(to right, rgba(40, 178, 168, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(40, 178, 168, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-dot-pattern {
+  background-image: radial-gradient(rgba(40, 178, 168, 0.15) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Custom Light Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EBF1F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #28B2A8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1FA6C9;
+}
+
+/* Button Shine animation */
+@keyframes shine-sweep {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(200%) rotate(45deg); }
+}
+
+.animate-shine {
+  animation: shine-sweep 2.5s infinite;
+}
+
+/* Reduced Motion Guard */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

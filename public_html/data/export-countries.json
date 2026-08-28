@@ -1,0 +1,26 @@
+[
+  {
+    "region": "North America & Canada",
+    "countries": ["Canada", "United States", "Mexico"]
+  },
+  {
+    "region": "Central America",
+    "countries": ["Costa Rica", "Panama", "Guatemala", "Dominican Republic"]
+  },
+  {
+    "region": "Latin America",
+    "countries": ["Brazil", "Colombia", "Peru", "Chile", "Argentina"]
+  },
+  {
+    "region": "Europe",
+    "countries": ["Germany", "United Kingdom", "France", "Italy", "Spain", "Netherlands", "Poland", "Turkey"]
+  },
+  {
+    "region": "African Continent",
+    "countries": ["Kenya", "Nigeria", "South Africa", "Egypt", "Tanzania", "Ethiopia", "Ghana", "Uganda"]
+  },
+  {
+    "region": "Middle East & Asia",
+    "countries": ["UAE", "Saudi Arabia", "Oman", "Vietnam", "Indonesia", "Thailand", "Malaysia", "Nepal"]
+  }
+]
