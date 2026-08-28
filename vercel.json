@@ -1,0 +1,9 @@
+{
+  "outputDirectory": "public_html",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
