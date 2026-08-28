@@ -10,7 +10,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: 'public_html',
+    outDir: 'dist',
     emptyOutDir: false, // Don't wipe api/ or data/ in public_html
     assetsDir: 'assets',
     rollupOptions: {

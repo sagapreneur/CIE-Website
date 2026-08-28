@@ -1,5 +1,4 @@
 {
-  "outputDirectory": "public_html",
   "rewrites": [
     {
       "source": "/(.*)",

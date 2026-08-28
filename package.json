@@ -5,15 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && node copy_build.js",
     "preview": "vite preview"
   },
   "dependencies": {
     "@types/d3-geo": "^3.1.1",
+    "@types/fs-extra": "^11.0.4",
     "@types/topojson-client": "^3.1.5",
     "clsx": "^2.1.1",
     "d3-geo": "^3.1.1",
     "framer-motion": "^11.18.2",
+    "fs-extra": "^11.4.0",
     "lucide-react": "^0.475.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
