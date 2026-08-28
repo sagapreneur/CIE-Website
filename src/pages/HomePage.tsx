@@ -37,14 +37,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
             </div>
 
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1] text-slate-900">
-              High-Precision <span className="text-brand-teal">Ophthalmic Surgical</span> Instruments & IOLs
+              Ophthalmic Products <span className="text-brand-teal">& IOLs</span>
             </h1>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
-              Direct export manufacturing of micro-surgical instruments, ioVue intraocular lenses, surgical blades, and diagnostic equipment. Dispatched globally from Nagpur's Zero-Mile MIHAN cargo hub.
+              Direct export manufacturing of ioVue intraocular lenses, micro-blades, ophthalmic solutions, diagnostic strips, and ocular prostheses. Dispatched globally from Nagpur's Zero-Mile MIHAN cargo hub.
             </p>
-
-
 
             {/* Action CTAs */}
             <div className="pt-1 flex flex-wrap gap-4 items-center">
@@ -64,7 +62,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                   className="border-2 border-brand-teal text-brand-teal bg-white hover:bg-brand-teal hover:text-white hover:border-brand-teal shadow-sm font-bold"
                   icon={<ArrowRight className="w-5 h-5" />}
                 >
-                  Browse All 457 Products
+                  Browse All 460 Products
                 </Button>
               </Link>
             </div>

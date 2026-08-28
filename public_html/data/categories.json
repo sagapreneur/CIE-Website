@@ -57,7 +57,7 @@
         "count": 8
       }
     ],
-    "product_count": 344,
+    "product_count": 363,
     "icon_url": "/category-icons/2.svg"
   },
   {
@@ -65,7 +65,7 @@
     "name": "Micro Surgical Blades",
     "slug": "micro-surgical-blades-and-knives",
     "subcategories": [],
-    "product_count": 26,
+    "product_count": 20,
     "icon_url": "/category-icons/4.svg"
   },
   {
@@ -73,7 +73,7 @@
     "name": "Eye Drape & Eye Shield",
     "slug": "eye-drape-and-eye-shield",
     "subcategories": [],
-    "product_count": 2,
+    "product_count": 3,
     "icon_url": "/category-icons/6.svg"
   },
   {
@@ -81,7 +81,7 @@
     "name": "Fluorescein & Schirmer Strips | Iris Retractor",
     "slug": "ophthalmic-strips",
     "subcategories": [],
-    "product_count": 4,
+    "product_count": 3,
     "icon_url": "/category-icons/8.svg"
   },
   {
@@ -89,7 +89,7 @@
     "name": "Ophthalmic Solutions",
     "slug": "ophthalmic-solutions",
     "subcategories": [],
-    "product_count": 5,
+    "product_count": 6,
     "icon_url": "/category-icons/7.svg"
   },
   {
@@ -113,7 +113,7 @@
     "name": "Vision Drum/Acuity Chart",
     "slug": "vision-drum-acuity-chart",
     "subcategories": [],
-    "product_count": 3,
+    "product_count": 2,
     "icon_url": "/category-icons/11.svg"
   },
   {
@@ -121,7 +121,7 @@
     "name": "Miscellaneous",
     "slug": "miscellaneous",
     "subcategories": [],
-    "product_count": 20,
+    "product_count": 7,
     "icon_url": "/category-icons/5.svg"
   }
 ]
