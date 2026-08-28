@@ -118,9 +118,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
               alt="Central India Export" 
               className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105" 
             />
-            <span className="hidden sm:inline-flex items-center space-x-1 px-2.5 py-1 rounded-md bg-slate-900 text-white text-[10px] font-black tracking-widest uppercase shadow-2xs group-hover:bg-brand-teal transition-colors font-display">
-              <span className="text-teal-400 font-extrabold">ioVue™</span>
-              <span className="text-slate-300 font-normal">Brand</span>
+            <span className="hidden sm:inline-flex items-center space-x-1 px-2.5 py-1 rounded-md bg-brand-soft border border-brand-teal/40 text-brand-teal text-[10px] font-bold tracking-wider uppercase shadow-2xs font-display">
+              <span className="font-black text-brand-teal">ioVue™</span>
+              <span className="text-slate-600 font-medium">Brand</span>
             </span>
           </Link>
 
