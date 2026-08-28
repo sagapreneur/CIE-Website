@@ -111,8 +111,12 @@ export const Footer: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
-          <p>© 1985–2026 Central India Export. All Rights Reserved.</p>
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4 border-t border-slate-200/80">
+          <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-3 text-center sm:text-left">
+            <p>© 1985–2026 Central India Export. All Rights Reserved.</p>
+            <span className="hidden sm:inline text-slate-300">•</span>
+            <p className="font-semibold text-slate-700">ioVue™ is an official registered trademark of Central India Export.</p>
+          </div>
           <div className="flex space-x-6">
             <Link to="/privacy-policy" className="hover:text-slate-700">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-slate-700">Terms & Conditions</Link>

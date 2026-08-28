@@ -111,13 +111,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
       }`}>
         <Container className="flex items-center justify-between gap-6">
           
-          {/* Logo ONLY */}
-          <Link to="/" className="flex items-center group shrink-0">
+          {/* Logo with ioVue™ Trademark Badge */}
+          <Link to="/" className="flex items-center space-x-2.5 group shrink-0">
             <img 
               src="/cie-logo.png" 
               alt="Central India Export" 
               className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105" 
             />
+            <span className="hidden sm:inline-flex items-center space-x-1 px-2.5 py-1 rounded-md bg-slate-900 text-white text-[10px] font-black tracking-widest uppercase shadow-2xs group-hover:bg-brand-teal transition-colors font-display">
+              <span className="text-teal-400 font-extrabold">ioVue™</span>
+              <span className="text-slate-300 font-normal">Brand</span>
+            </span>
           </Link>
 
           {/* Desktop Nav Links & Search Bar (Fixed Flex Layout - Zero Shift) */}
