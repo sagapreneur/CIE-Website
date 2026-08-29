@@ -5,7 +5,7 @@
     "slug": "intraocular-lenses",
     "subcategories": [],
     "product_count": 13,
-    "icon_url": "/category-icons/3.svg"
+    "icon_url": "/category-icons/Intraocular Lenses-01.svg"
   },
   {
     "id": 2,
@@ -58,7 +58,7 @@
       }
     ],
     "product_count": 363,
-    "icon_url": "/category-icons/2.svg"
+    "icon_url": "/category-icons/Instruments-01.svg"
   },
   {
     "id": 4,
@@ -66,7 +66,7 @@
     "slug": "micro-surgical-blades-and-knives",
     "subcategories": [],
     "product_count": 20,
-    "icon_url": "/category-icons/4.svg"
+    "icon_url": "/category-icons/Micro Surgical Blades-01.svg"
   },
   {
     "id": 6,
@@ -74,7 +74,7 @@
     "slug": "eye-drape-and-eye-shield",
     "subcategories": [],
     "product_count": 3,
-    "icon_url": "/category-icons/6.svg"
+    "icon_url": "/category-icons/Eye Drape & Eye Shield-01.svg"
   },
   {
     "id": 8,
@@ -82,7 +82,7 @@
     "slug": "ophthalmic-strips",
     "subcategories": [],
     "product_count": 3,
-    "icon_url": "/category-icons/8.svg"
+    "icon_url": "/category-icons/Strips-01.svg"
   },
   {
     "id": 7,
@@ -90,7 +90,7 @@
     "slug": "ophthalmic-solutions",
     "subcategories": [],
     "product_count": 6,
-    "icon_url": "/category-icons/7.svg"
+    "icon_url": "/category-icons/Ophthalmic Solutions-01.svg"
   },
   {
     "id": 9,
@@ -98,7 +98,7 @@
     "slug": "retina-equipments",
     "subcategories": [],
     "product_count": 37,
-    "icon_url": "/category-icons/9.svg"
+    "icon_url": "/category-icons/Retina Equipments-01.svg"
   },
   {
     "id": 1,
@@ -106,7 +106,7 @@
     "slug": "artificial-eyes-and-implants",
     "subcategories": [],
     "product_count": 6,
-    "icon_url": "/category-icons/1.svg"
+    "icon_url": "/category-icons/Artificial Eyes-01.svg"
   },
   {
     "id": 11,
@@ -114,7 +114,7 @@
     "slug": "vision-drum-acuity-chart",
     "subcategories": [],
     "product_count": 2,
-    "icon_url": "/category-icons/11.svg"
+    "icon_url": "/category-icons/Vision Drum Acuity Chart-01.svg"
   },
   {
     "id": 5,
@@ -122,6 +122,6 @@
     "slug": "miscellaneous",
     "subcategories": [],
     "product_count": 7,
-    "icon_url": "/category-icons/5.svg"
+    "icon_url": "/category-icons/Miscellaneous-01.svg"
   }
 ]
