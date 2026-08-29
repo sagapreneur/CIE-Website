@@ -69,7 +69,7 @@
     },
     "image": "/products/Hydrophilic-Acrylic-Foldable-Intraocular-Lenses-1-700x700.jpg",
     "is_featured": true,
-    "image_url": "/iovue/iovue-aspheric-acrylic.png"
+    "image_url": "/products/hydrophilic-acrylic-foldable-intraocular-lenses.jpg"
   },
   {
     "id": 193,
@@ -95,7 +95,7 @@
     },
     "image": "/products/Hydrophobic-Acrylic-3-Piece-Intraocular-Lens.png",
     "is_featured": false,
-    "image_url": "/iovue/iovue-phobic.png"
+    "image_url": "/products/hydrophobic-acrylic-3-piece-intraocular-lens.jpg"
   },
   {
     "id": 194,
@@ -121,7 +121,7 @@
     },
     "image": "/products/Hydrophobic_Foldable_xIjRzXP-700x424.png",
     "is_featured": true,
-    "image_url": "/iovue/iovue-phobic.png"
+    "image_url": "/products/hydrophobic-foldable-acrylic-intraocular-lenses.jpg"
   },
   {
     "id": 225,
@@ -929,7 +929,7 @@
     },
     "image": "/products/Anterior-Chamber-Cannulas-Anterior-Chamber.html",
     "is_featured": false,
-    "image_url": "/products/anterior-chamber-anterior-chamber-cannulas.jpg"
+    "image_url": "/products/anterior-chamber-anterior-chamber-cannulas.png"
   },
   {
     "id": 18,
@@ -1091,7 +1091,7 @@
     },
     "image": "/products/BackFlush_Flute_Needle_With_Silicon_Tip_Cannula-700x243.html",
     "is_featured": false,
-    "image_url": "/products/back-flush-flute-needle-with-silicon-tipped-cannula-retina-equipments.jpg"
+    "image_url": "/products/back-flush-flute-needle-with-silicon-tipped-cannula-retina-equipments.jpeg"
   },
   {
     "id": 25,
@@ -1395,7 +1395,7 @@
     },
     "image": "/products/Speculums-Barraquer.html",
     "is_featured": false,
-    "image_url": "/products/barraquer-speculums.jpg"
+    "image_url": "/products/barraquer-speculums.png"
   },
   {
     "id": 38,
@@ -1621,7 +1621,7 @@
     },
     "image": "/products/Hydrodissection-Cannulas-Binkhorst.jpg",
     "is_featured": false,
-    "image_url": "/products/binkhorst-hydrodissection-cannulas.jpg"
+    "image_url": "/products/binkhorst-hydrodissection-cannulas.png"
   },
   {
     "id": 48,
@@ -2137,7 +2137,7 @@
     },
     "image": "/products/Anterior-Chamber-Cannulas-Bracken.jpg",
     "is_featured": false,
-    "image_url": "/products/bracken-anterior-chamber-cannulas.jpg"
+    "image_url": "/products/bracken-anterior-chamber-cannulas.png"
   },
   {
     "id": 70,
@@ -3678,7 +3678,7 @@
     },
     "image": "/products/Fasanella-Lacrimal-Cannulas-215x90.jpg",
     "is_featured": false,
-    "image_url": "/products/fasanella-lacrimal-cannulas.png"
+    "image_url": "/products/fasanella-lacrimal-cannulas.jpg"
   },
   {
     "id": 139,
@@ -4167,7 +4167,7 @@
     },
     "image": "/products/20D_Aspheric_Lens.jpg",
     "is_featured": false,
-    "image_url": "/products/gess-irrigating-aspirating-cannulas.jpg"
+    "image_url": "/products/gess-irrigating-aspirating-cannulas.png"
   },
   {
     "id": 161,
@@ -5137,7 +5137,7 @@
     },
     "image": "/products/20D_Aspheric_Lens.jpg",
     "is_featured": false,
-    "image_url": "/products/irrigating-aspirat-irrigating-aspirating-cannulas.jpg"
+    "image_url": "/products/irrigating-aspirat-irrigating-aspirating-cannulas.png"
   },
   {
     "id": 206,
@@ -5504,7 +5504,7 @@
     },
     "image": "/products/20D_Aspheric_Lens.jpg",
     "is_featured": false,
-    "image_url": "/products/jewelers-jewelers-forceps.jpg"
+    "image_url": "/products/jewelers-jewelers-forceps.png"
   },
   {
     "id": 222,
@@ -6296,7 +6296,7 @@
     },
     "image": "/products/SS027_Lacrimal_Cannula_Reinforced_STRAIGHT.html",
     "is_featured": false,
-    "image_url": "/products/lacrimal-lacrimal-cannulas.jpg"
+    "image_url": "/products/lacrimal-lacrimal-cannulas.png"
   },
   {
     "id": 257,
@@ -6412,7 +6412,7 @@
     },
     "image": "/products/SS371_Lasik_Flap_Irrigator_Vidaurri.png",
     "is_featured": false,
-    "image_url": "/products/lasik-flap-irrigat-lasik-cannulas.jpg"
+    "image_url": "/products/lasik-flap-irrigat-lasik-cannulas.png"
   },
   {
     "id": 262,
@@ -7406,7 +7406,7 @@
     },
     "image": "/products/20D_Aspheric_Lens.jpg",
     "is_featured": false,
-    "image_url": "/products/nicati-spuds.png"
+    "image_url": "/products/nicati-spuds.jpg"
   },
   {
     "id": 306,
@@ -7929,7 +7929,7 @@
     },
     "image": "/products/20D_Aspheric_Lens.jpg",
     "is_featured": false,
-    "image_url": "/products/phaco-tip-phaco-tips.png"
+    "image_url": "/products/phaco-tip-phaco-tips.jpg"
   },
   {
     "id": 330,
@@ -7950,7 +7950,7 @@
     },
     "image": "/products/Phaco-Wrench.html",
     "is_featured": false,
-    "image_url": "/products/phaco-wrench-phaco-tips.png"
+    "image_url": "/products/phaco-wrench-phaco-tips.jpg"
   },
   {
     "id": 331,
@@ -8095,7 +8095,7 @@
     },
     "image": "/products/ring.jpg",
     "is_featured": false,
-    "image_url": "/products/pre-filled-syringes-pfs-2ml-visco-elastic.png"
+    "image_url": "/products/pre-filled-syringes-pfs-2ml-visco-elastic.jpg"
   },
   {
     "id": 341,
@@ -8233,7 +8233,7 @@
     },
     "image": "/products/20D_Aspheric_Lens.jpg",
     "is_featured": false,
-    "image_url": "/products/rollet-rugins-dissectors.jpg"
+    "image_url": "/products/rollet-rugins-dissectors.jpeg"
   },
   {
     "id": 348,
@@ -9110,7 +9110,7 @@
     },
     "image": "/products/Spatulas-Stallard.jpg",
     "is_featured": false,
-    "image_url": "/products/stallard-spatulas.jpg"
+    "image_url": "/products/stallard-spatulas.png"
   },
   {
     "id": 387,
@@ -9762,7 +9762,7 @@
     },
     "image": "/products/20D_Aspheric_Lens.jpg",
     "is_featured": false,
-    "image_url": "/products/trephine-retina-equipments.png"
+    "image_url": "/products/trephine-retina-equipments.jpg"
   },
   {
     "id": 417,
@@ -9945,7 +9945,7 @@
     },
     "image": "/products/tryblue_final1-scaled-700x580.jpg",
     "is_featured": false,
-    "image_url": "/products/trypan-blue-0-06-ophthalmic-solution-trypan-blue.jpg"
+    "image_url": "/products/trypan-blue-0-06-ophthalmic-solution-trypan-blue.png"
   },
   {
     "id": 425,
@@ -9993,7 +9993,7 @@
     },
     "image": "/products/Logo-01.html",
     "is_featured": false,
-    "image_url": "/products/tunnel-blade-blade.jpg"
+    "image_url": "/products/tunnel-blade-blade.jpeg"
   },
   {
     "id": 427,
