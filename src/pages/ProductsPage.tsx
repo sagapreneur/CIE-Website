@@ -19,6 +19,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
   const [searchQuery, setSearchQuery] = useState<string>(initialSearch);
   const [onlyIovue, setOnlyIovue] = useState<boolean>(false);
   const [visibleCount, setVisibleCount] = useState<number>(15);
+  const [showMobileFilters, setShowMobileFilters] = useState<boolean>(false);
 
   useEffect(() => {
     const cat = searchParams.get('category');
@@ -77,8 +78,24 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
       <Container className="pt-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
+          {/* Mobile Filter Toggle Button */}
+          <div className="lg:hidden col-span-1">
+            <button
+              onClick={() => setShowMobileFilters(!showMobileFilters)}
+              className="w-full py-3 px-4 bg-white border border-slate-200 rounded-xl shadow-sm font-bold text-slate-800 text-xs flex items-center justify-between hover:bg-slate-50 transition-colors"
+            >
+              <div className="flex items-center space-x-2">
+                <Filter className="w-4 h-4 text-brand-teal" />
+                <span>Filter By Category & Keywords</span>
+              </div>
+              <span className="text-[11px] font-mono text-brand-teal bg-brand-soft px-2 py-0.5 rounded">
+                {showMobileFilters ? 'Hide Filters' : 'Show Filters'}
+              </span>
+            </button>
+          </div>
+
           {/* Left Sidebar Filter Column */}
-          <div className="lg:col-span-3 space-y-6">
+          <div className={`lg:col-span-3 space-y-6 ${showMobileFilters ? 'block' : 'hidden lg:block'}`}>
             
             {/* Search Box */}
             <div className="bg-white rounded-xl p-4 border border-slate-200 shadow-sm space-y-3">
