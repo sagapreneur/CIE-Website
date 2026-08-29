@@ -30,10 +30,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
         onMouseLeave={() => setIsHovered(false)}
         className="bg-slate-50 p-4 border-b border-slate-100 relative overflow-hidden flex items-center justify-center min-h-[220px] h-[220px] group/img cursor-crosshair"
       >
-        {product.image ? (
+        {(product.image_url || product.image) ? (
           <div className="relative overflow-hidden w-full h-full flex items-center justify-center">
             <img 
-              src={product.image} 
+              src={product.image_url || product.image} 
               alt={product.name} 
               className="h-44 sm:h-48 w-auto max-w-full object-contain mx-auto transition-transform duration-200 ease-out"
               style={{

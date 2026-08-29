@@ -9,6 +9,7 @@ export interface Product {
   long_description: string;
   specifications: Record<string, any>;
   image: string;
+  image_url?: string;
   is_featured: boolean;
 }
 

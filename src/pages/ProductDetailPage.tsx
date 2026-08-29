@@ -56,10 +56,10 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
               onMouseLeave={() => setIsHovered(false)}
               className="bg-slate-50 rounded-xl p-6 border border-slate-200 shadow-sm flex flex-col items-center justify-center min-h-[320px] relative overflow-hidden group/zoom cursor-crosshair"
             >
-              {product.image ? (
+              {(product.image_url || product.image) ? (
                 <div className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden">
                   <img 
-                    src={product.image} 
+                    src={product.image_url || product.image} 
                     alt={product.name} 
                     className="max-h-64 w-auto object-contain mx-auto transition-transform duration-150 ease-out" 
                     style={{
