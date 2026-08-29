@@ -126,29 +126,29 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
         </Container>
       </section>
 
-      {/* CATEGORY GRID */}
+      {/* CATEGORY GRID (5-Column Balanced Grid - 2 Full Rows of 5 Categories) */}
       <Section className="bg-slate-50">
         <Container>
           <SectionHeading
             eyebrow="Ophthalmic Catalog Categories"
             title="Browse Complete Wholesale Product Inventory"
-            subtitle="Explore our comprehensive export catalog organized across 8 primary medical product categories."
+            subtitle="Explore our comprehensive export catalog organized across 10 primary medical product categories."
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-5">
             {categoriesData.map((cat) => (
               <Link 
                 key={cat.id} 
                 to={`/products?category=${encodeURIComponent(cat.name)}`}
-                className="group relative bg-gradient-to-b from-white via-slate-50/50 to-brand-soft/20 rounded-2xl p-5 border border-slate-200/90 hover:border-brand-teal shadow-sm hover:shadow-brand-glow transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer hover:-translate-y-1"
+                className="group relative bg-white hover:bg-gradient-to-b hover:from-white hover:to-brand-soft/40 rounded-2xl p-5 border border-slate-200/80 hover:border-brand-teal/50 shadow-sm hover:shadow-brand-glow transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer hover:-translate-y-1.5"
               >
                 {/* Decorative Ambient Radial Glow */}
                 <div className="absolute top-0 right-0 w-28 h-28 bg-brand-teal/5 rounded-full blur-2xl group-hover:bg-brand-teal/15 transition-all duration-500 pointer-events-none" />
 
-                <div className="space-y-3.5 relative z-10">
+                <div className="space-y-3 relative z-10">
                   {/* Header Row: Custom SVG Icon Badge + Product Count Pill */}
-                  <div className="flex justify-between items-start">
-                    <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-2xl bg-white border border-brand-teal/30 text-brand-teal flex items-center justify-center p-3 shadow-md group-hover:bg-brand-teal group-hover:text-white group-hover:scale-105 group-hover:shadow-brand-glow transition-all duration-300 shrink-0">
+                  <div className="flex justify-between items-center">
+                    <div className="w-12 h-12 rounded-2xl bg-brand-soft/80 border border-brand-teal/20 text-brand-teal flex items-center justify-center p-2.5 shadow-2xs group-hover:bg-brand-teal group-hover:text-white group-hover:scale-105 group-hover:shadow-brand-glow transition-all duration-300 shrink-0">
                       {cat.icon_url ? (
                         <img 
                           src={cat.icon_url} 
@@ -156,40 +156,45 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                           className="w-full h-full object-contain group-hover:brightness-0 group-hover:invert transition-all" 
                         />
                       ) : (
-                        <Layers className="w-7 h-7" />
+                        <Layers className="w-6 h-6" />
                       )}
                     </div>
 
-                    <span className="text-xs font-extrabold bg-brand-teal text-white px-3 py-1 rounded-full shadow-sm font-mono tracking-tight flex items-center space-x-1">
+                    <span className="text-[11px] font-extrabold bg-brand-soft border border-brand-teal/30 text-brand-teal px-2.5 py-1 rounded-full font-mono tracking-tight flex items-center space-x-1 group-hover:bg-brand-teal group-hover:text-white group-hover:border-transparent transition-all shadow-2xs">
                       <span>{cat.product_count}</span>
-                      <span className="font-normal opacity-90 text-[10px]">Products</span>
+                      <span className="font-normal opacity-90 text-[9px]">Items</span>
                     </span>
                   </div>
 
                   {/* Category Title */}
                   <div>
-                    <h3 className="font-display font-extrabold text-slate-900 text-base sm:text-lg group-hover:text-brand-teal transition-colors leading-snug">
+                    <h3 className="font-display font-extrabold text-slate-900 text-base group-hover:text-brand-teal transition-colors leading-snug line-clamp-2 min-h-[2.5rem] mt-1">
                       {cat.name}
                     </h3>
                   </div>
 
                   {/* Subcategory List Bullets */}
-                  {cat.subcategories && cat.subcategories.length > 0 && (
-                    <ul className="space-y-1 text-xs text-slate-500 pt-1">
-                      {cat.subcategories.slice(0, 3).map((sub, sIdx) => (
-                        <li key={sIdx} className="truncate flex items-center space-x-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-brand-teal/60 shrink-0" />
-                          <span className="truncate group-hover:text-slate-700 font-medium">{sub.name}</span>
+                  {cat.subcategories && cat.subcategories.length > 0 ? (
+                    <ul className="space-y-1 text-xs text-slate-500 pt-0.5 min-h-[3.25rem]">
+                      {cat.subcategories.slice(0, 2).map((sub, sIdx) => (
+                        <li key={sIdx} className="truncate flex items-center space-x-1.5">
+                          <span className="w-1.5 h-1.5 rounded-full bg-brand-teal/60 shrink-0 group-hover:bg-brand-teal transition-colors" />
+                          <span className="truncate group-hover:text-slate-700 font-medium text-[11px]">{sub.name}</span>
                         </li>
                       ))}
                     </ul>
+                  ) : (
+                    <div className="min-h-[3.25rem] text-[11px] text-slate-400 italic pt-0.5">
+                      Explore full range
+                    </div>
                   )}
                 </div>
 
-                {/* Clean Bottom Arrow Link (No Text) */}
-                <div className="pt-3 border-t border-slate-200/60 mt-4 flex items-center justify-end text-brand-teal group-hover:text-[#20968E] transition-colors relative z-10">
-                  <div className="w-7 h-7 rounded-full bg-brand-soft group-hover:bg-brand-teal group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-2xs">
-                    <ArrowRight className="w-4 h-4 transform group-hover:translate-x-0.5 transition-transform" />
+                {/* Sleek Bottom Action Link */}
+                <div className="pt-3 border-t border-slate-100 mt-3 flex items-center justify-between text-brand-teal group-hover:text-[#20968E] transition-colors relative z-10">
+                  <span className="text-[11px] font-bold tracking-tight text-slate-500 group-hover:text-brand-teal transition-colors">Browse Range</span>
+                  <div className="w-6 h-6 rounded-full bg-brand-soft group-hover:bg-brand-teal group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-2xs">
+                    <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" />
                   </div>
                 </div>
               </Link>
