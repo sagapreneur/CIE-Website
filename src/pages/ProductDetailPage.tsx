@@ -92,7 +92,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
               )}
 
               <span className="text-xs font-mono text-slate-500 mt-4 block">
-                PRODUCT CODE: CIE-PRD-{product.id.toString().padStart(4, '0')}
+                PRODUCT CODE: CIE-{product.id.toString().padStart(4, '0')}
               </span>
             </div>
 
