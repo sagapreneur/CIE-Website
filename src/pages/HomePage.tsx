@@ -148,12 +148,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                 <div className="space-y-4 relative z-10">
                   {/* Header Row: Custom SVG Icon Badge + Product Count Pill */}
                   <div className="flex justify-between items-center">
-                    <div className="w-13 h-13 rounded-2xl bg-brand-soft/80 border border-brand-teal/20 text-brand-teal flex items-center justify-center p-3 shadow-2xs group-hover:bg-brand-teal group-hover:text-white group-hover:scale-105 group-hover:shadow-brand-glow transition-all duration-300 shrink-0">
+                    <div className="w-12 h-12 rounded-xl bg-brand-soft/80 border border-brand-teal/20 text-brand-teal flex items-center justify-center p-2.5 shadow-2xs group-hover:bg-brand-teal group-hover:text-white group-hover:scale-105 group-hover:shadow-brand-glow transition-all duration-300 shrink-0">
                       {cat.icon_url ? (
                         <img 
                           src={cat.icon_url} 
                           alt={cat.name} 
-                          className="w-full h-full object-contain group-hover:brightness-0 group-hover:invert transition-all" 
+                          className="w-7 h-7 max-w-full max-h-full object-contain group-hover:brightness-0 group-hover:invert transition-all" 
                         />
                       ) : (
                         <Layers className="w-6 h-6" />
