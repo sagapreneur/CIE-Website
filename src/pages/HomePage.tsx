@@ -140,15 +140,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
               <Link 
                 key={cat.id} 
                 to={`/products?category=${encodeURIComponent(cat.name)}`}
-                className="group relative bg-white hover:bg-gradient-to-b hover:from-white hover:to-brand-soft/40 rounded-2xl p-5 border border-slate-200/80 hover:border-brand-teal/50 shadow-sm hover:shadow-brand-glow transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer hover:-translate-y-1.5"
+                className="group relative bg-white hover:bg-gradient-to-b hover:from-white hover:to-brand-soft/50 rounded-2xl p-5 border border-slate-200/80 hover:border-brand-teal/50 shadow-sm hover:shadow-brand-glow transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer hover:-translate-y-1.5"
               >
                 {/* Decorative Ambient Radial Glow */}
                 <div className="absolute top-0 right-0 w-28 h-28 bg-brand-teal/5 rounded-full blur-2xl group-hover:bg-brand-teal/15 transition-all duration-500 pointer-events-none" />
 
-                <div className="space-y-3 relative z-10">
+                <div className="space-y-4 relative z-10">
                   {/* Header Row: Custom SVG Icon Badge + Product Count Pill */}
                   <div className="flex justify-between items-center">
-                    <div className="w-12 h-12 rounded-2xl bg-brand-soft/80 border border-brand-teal/20 text-brand-teal flex items-center justify-center p-2.5 shadow-2xs group-hover:bg-brand-teal group-hover:text-white group-hover:scale-105 group-hover:shadow-brand-glow transition-all duration-300 shrink-0">
+                    <div className="w-13 h-13 rounded-2xl bg-brand-soft/80 border border-brand-teal/20 text-brand-teal flex items-center justify-center p-3 shadow-2xs group-hover:bg-brand-teal group-hover:text-white group-hover:scale-105 group-hover:shadow-brand-glow transition-all duration-300 shrink-0">
                       {cat.icon_url ? (
                         <img 
                           src={cat.icon_url} 
@@ -160,39 +160,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                       )}
                     </div>
 
-                    <span className="text-[11px] font-extrabold bg-brand-soft border border-brand-teal/30 text-brand-teal px-2.5 py-1 rounded-full font-mono tracking-tight flex items-center space-x-1 group-hover:bg-brand-teal group-hover:text-white group-hover:border-transparent transition-all shadow-2xs">
+                    <span className="text-xs font-extrabold bg-brand-soft border border-brand-teal/30 text-brand-teal px-3 py-1 rounded-full font-mono tracking-tight flex items-center space-x-1 group-hover:bg-brand-teal group-hover:text-white group-hover:border-transparent transition-all shadow-2xs">
                       <span>{cat.product_count}</span>
-                      <span className="font-normal opacity-90 text-[9px]">Items</span>
+                      <span className="font-normal opacity-90 text-[10px]">Products</span>
                     </span>
                   </div>
 
                   {/* Category Title */}
                   <div>
-                    <h3 className="font-display font-extrabold text-slate-900 text-base group-hover:text-brand-teal transition-colors leading-snug line-clamp-2 min-h-[2.5rem] mt-1">
+                    <h3 className="font-display font-extrabold text-slate-900 text-base group-hover:text-brand-teal transition-colors leading-snug line-clamp-2 min-h-[2.5rem]">
                       {cat.name}
                     </h3>
                   </div>
-
-                  {/* Subcategory List Bullets */}
-                  {cat.subcategories && cat.subcategories.length > 0 ? (
-                    <ul className="space-y-1 text-xs text-slate-500 pt-0.5 min-h-[3.25rem]">
-                      {cat.subcategories.slice(0, 2).map((sub, sIdx) => (
-                        <li key={sIdx} className="truncate flex items-center space-x-1.5">
-                          <span className="w-1.5 h-1.5 rounded-full bg-brand-teal/60 shrink-0 group-hover:bg-brand-teal transition-colors" />
-                          <span className="truncate group-hover:text-slate-700 font-medium text-[11px]">{sub.name}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <div className="min-h-[3.25rem] text-[11px] text-slate-400 italic pt-0.5">
-                      Explore full range
-                    </div>
-                  )}
                 </div>
 
                 {/* Sleek Bottom Action Link */}
-                <div className="pt-3 border-t border-slate-100 mt-3 flex items-center justify-between text-brand-teal group-hover:text-[#20968E] transition-colors relative z-10">
-                  <span className="text-[11px] font-bold tracking-tight text-slate-500 group-hover:text-brand-teal transition-colors">Browse Range</span>
+                <div className="pt-3 border-t border-slate-100 mt-4 flex items-center justify-between text-brand-teal group-hover:text-[#20968E] transition-colors relative z-10">
+                  <span className="text-xs font-bold tracking-tight text-slate-500 group-hover:text-brand-teal transition-colors">View Products</span>
                   <div className="w-6 h-6 rounded-full bg-brand-soft group-hover:bg-brand-teal group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-2xs">
                     <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" />
                   </div>
