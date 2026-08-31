@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Section, SectionHeading, Button, Badge } from '../components/Primitives';
 import { CompanyProfileShowcase } from '../components/CompanyProfileShowcase';
+import { WorldMap } from '../components/WorldMap';
 import { 
   Building2, ShieldCheck, Award, Globe2, Truck, FileText, ArrowRight,
-  CheckCircle2, Sparkles, Factory, Microscope, PhoneCall, ChevronRight, Layers
+  CheckCircle2, Sparkles, Factory, Microscope, PhoneCall, ChevronRight, Layers,
+  Target, Compass, Star, RefreshCw, PackageCheck, HelpCircle, Check, Shield
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -70,25 +72,180 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
         </Container>
       </section>
 
-      {/* DEDICATED PRESENTATION SHOWCASE (Company Profile, Main Products, Production Lines) */}
+      {/* 1. DEDICATED PRESENTATION SHOWCASE (Company Profile, Main Products, Production Lines) */}
       <CompanyProfileShowcase onOpenRfq={onOpenRfq} />
 
-      {/* DETAILED CORPORATE CAPABILITIES & EXPORT COMPLIANCE */}
+      {/* 2. CORPORATE MISSION, VISION & CORE VALUES */}
+      <Section className="bg-white">
+        <Container className="space-y-12">
+          
+          <SectionHeading
+            eyebrow="Corporate Philosophy"
+            title="Mission, Vision & Strategic Pillars"
+            subtitle="Guiding our growth as a leading manufacturer and exporter of ophthalmic medical consumables."
+            centered
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            {/* Card 1: Mission */}
+            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-sm space-y-4 hover:border-brand-teal/50 transition-colors">
+              <div className="w-12 h-12 rounded-2xl bg-brand-soft border border-brand-teal/30 text-brand-teal flex items-center justify-center">
+                <Target className="w-6 h-6" />
+              </div>
+
+              <h3 className="font-display font-extrabold text-xl text-slate-900">
+                Corporate Mission
+              </h3>
+
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                To empower ophthalmologists, surgical clinics, and healthcare distributors worldwide with certified, micron-precision ophthalmic instruments and ioVue™ intraocular lenses at direct manufacturer wholesale rates.
+              </p>
+            </div>
+
+            {/* Card 2: Vision */}
+            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-sm space-y-4 hover:border-brand-teal/50 transition-colors">
+              <div className="w-12 h-12 rounded-2xl bg-brand-soft border border-brand-teal/30 text-brand-teal flex items-center justify-center">
+                <Compass className="w-6 h-6" />
+              </div>
+
+              <h3 className="font-display font-extrabold text-xl text-slate-900">
+                Global Vision
+              </h3>
+
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                To establish Central India Export as Asia's premier zero-defect exporter of ophthalmic surgical products, continuously innovating cleanroom assembly lines and optical technologies from Nagpur's zero-mile cargo hub.
+              </p>
+            </div>
+
+            {/* Card 3: Quality Values */}
+            <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-sm space-y-4 hover:border-brand-teal/50 transition-colors">
+              <div className="w-12 h-12 rounded-2xl bg-brand-soft border border-brand-teal/30 text-brand-teal flex items-center justify-center">
+                <Star className="w-6 h-6" />
+              </div>
+
+              <h3 className="font-display font-extrabold text-xl text-slate-900">
+                Pillars of Excellence
+              </h3>
+
+              <ul className="space-y-2 text-xs text-slate-700 font-medium">
+                <li className="flex items-center space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
+                  <span>100% Optical Power Interferometry</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
+                  <span>Laser-Guided Blade Edge Honing</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
+                  <span>WHO-GMP Cleanroom Standards</span>
+                </li>
+                <li className="flex items-center space-x-2">
+                  <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
+                  <span>ISO 13485 & CE Compliance</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </Container>
+      </Section>
+
+      {/* 3. MANUFACTURING & QUALITY ASSURANCE 4-STEP PROCESS */}
       <Section className="bg-slate-50">
         <Container className="space-y-12">
           
           <SectionHeading
-            eyebrow="Export Quality & Infrastructure Standards"
-            title="Global Manufacturing Excellence & Compliance"
-            subtitle="Built on 39 years of rigorous quality management systems and central logistics advantages."
+            eyebrow="Precision Manufacturing Workflow"
+            title="4-Stage Quality Assurance & Production Process"
+            subtitle="From raw material spectrometry to cleanroom assembly and ETO gas sterilization."
+            centered
+          />
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            {/* Step 1 */}
+            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm relative space-y-3">
+              <span className="w-8 h-8 rounded-xl bg-brand-teal text-white font-mono font-bold text-xs flex items-center justify-center">
+                01
+              </span>
+              <h4 className="font-display font-bold text-slate-900 text-lg">
+                Material Spectrometry
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Verification of pure PMMA, hydrophilic/hydrophobic optical polymers, and Swiss Grade 5 Titanium for zero cytotoxicity.
+              </p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm relative space-y-3">
+              <span className="w-8 h-8 rounded-xl bg-brand-teal text-white font-mono font-bold text-xs flex items-center justify-center">
+                02
+              </span>
+              <h4 className="font-display font-bold text-slate-900 text-lg">
+                Cleanroom Machining
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                CNC optical lathe milling for 360° Square Edge IOL optics and micro-laser edge honing under ISO Class 5 air laminar flow.
+              </p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm relative space-y-3">
+              <span className="w-8 h-8 rounded-xl bg-brand-teal text-white font-mono font-bold text-xs flex items-center justify-center">
+                03
+              </span>
+              <h4 className="font-display font-bold text-slate-900 text-lg">
+                Optical Inspection
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                100% interferometric diopter power verification and 100x magnification digital microscope blade inspection.
+              </p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm relative space-y-3">
+              <span className="w-8 h-8 rounded-xl bg-brand-teal text-white font-mono font-bold text-xs flex items-center justify-center">
+                04
+              </span>
+              <h4 className="font-display font-bold text-slate-900 text-lg">
+                Sterile BFS & ETO Packaging
+              </h4>
+              <p className="text-xs text-slate-600 leading-relaxed">
+                Automated Blow-Fill-Seal liquid filling, blister pouch sealing, and ETO gas sterilization with Certificate of Analysis.
+              </p>
+            </div>
+
+          </div>
+
+        </Container>
+      </Section>
+
+      {/* 4. GLOBAL REACH WORLD MAP */}
+      <Section className="bg-white py-12">
+        <Container>
+          <WorldMap />
+        </Container>
+      </Section>
+
+      {/* 5. OEM & PRIVATE LABEL SERVICES FOR DISTRIBUTORS */}
+      <Section className="bg-slate-50">
+        <Container className="space-y-12">
+          
+          <SectionHeading
+            eyebrow="Distributor Partnership Services"
+            title="OEM Private Label & Custom Packaging Solutions"
+            subtitle="Tailored manufacturing, custom laser marking, and bespoke packaging for international medical networks."
             centered
           />
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
             {/* Capability Card 1 */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-brand-soft border border-brand-teal/20 text-brand-teal flex items-center justify-center">
+            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4 hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 rounded-2xl bg-brand-soft border border-brand-teal/20 text-brand-teal flex items-center justify-center">
                 <ShieldCheck className="w-6 h-6" />
               </div>
 
@@ -117,8 +274,8 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
             </div>
 
             {/* Capability Card 2 */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-brand-soft border border-brand-teal/20 text-brand-teal flex items-center justify-center">
+            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4 hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 rounded-2xl bg-brand-soft border border-brand-teal/20 text-brand-teal flex items-center justify-center">
                 <Truck className="w-6 h-6" />
               </div>
 
@@ -147,8 +304,8 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
             </div>
 
             {/* Capability Card 3 */}
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-4 hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-xl bg-brand-soft border border-brand-teal/20 text-brand-teal flex items-center justify-center">
+            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-4 hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 rounded-2xl bg-brand-soft border border-brand-teal/20 text-brand-teal flex items-center justify-center">
                 <Factory className="w-6 h-6" />
               </div>
 
@@ -181,7 +338,66 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
         </Container>
       </Section>
 
-      {/* BOTTOM CTA BANNER */}
+      {/* 6. WHOLESALE EXPORT FAQ ACCORDION SECTION */}
+      <section className="bg-white py-14 border-t border-slate-200">
+        <Container className="max-w-4xl space-y-8">
+          <div className="text-center space-y-2">
+            <Badge variant="teal" className="bg-brand-soft text-brand-teal border-brand-teal/30">
+              B2B Importers FAQ
+            </Badge>
+            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
+              Frequently Asked Questions for Medical Importers & Distributors
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600">
+              Key information on MOQ policies, sample dispatches, payment terms, and ISO 13485 certification downloads.
+            </p>
+          </div>
+
+          <div className="bg-slate-50 rounded-3xl border border-slate-200 shadow-sm p-6 space-y-4">
+            <details className="group border-b border-slate-200 pb-3">
+              <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
+                What are Central India Export's Minimum Order Quantities (MOQs)?
+                <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
+              </summary>
+              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                We offer flexible MOQ terms for initial clinic/distributor evaluation orders. Tiered volume pricing is available for container and air cargo shipments.
+              </p>
+            </details>
+
+            <details className="group border-b border-slate-200 pb-3">
+              <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
+                How can international buyers request product samples for evaluation?
+                <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
+              </summary>
+              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Evaluation samples for micro blades, cannulas, and ioVue™ IOLs can be dispatched within 48 business hours via FedEx or DHL air express upon request.
+              </p>
+            </details>
+
+            <details className="group border-b border-slate-200 pb-3">
+              <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
+                What international payment & shipping Incoterms do you support?
+                <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
+              </summary>
+              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                We support Wire Transfer (T/T), Irrevocable Letter of Credit (L/C at sight), and CAD terms. Incoterms include FOB (Nagpur/Mumbai), CIF, and CFR Incoterms 2020.
+              </p>
+            </details>
+
+            <details className="group">
+              <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
+                How do I receive formal proforma quotes and quality certificates?
+                <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
+              </summary>
+              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                Click any "Request Quote" button or email cie@cieindia.com. Our export desk issues formal proforma invoices along with ISO 13485 & CE technical dossiers within 24 business hours.
+              </p>
+            </details>
+          </div>
+        </Container>
+      </section>
+
+      {/* 7. BOTTOM CTA BANNER */}
       <section className="bg-gradient-to-r from-brand-soft via-white to-brand-soft py-16 border-t border-slate-200">
         <Container className="text-center space-y-6 max-w-4xl">
           <Badge variant="teal" className="bg-white text-brand-teal border-brand-teal/30 shadow-sm">
