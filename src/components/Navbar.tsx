@@ -95,14 +95,14 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
             </span>
           </div>
 
-          <div className="flex items-center space-x-6 text-xs">
+          <div className="hidden sm:flex items-center space-x-6 text-xs">
             <a href="tel:+917122522500" className="hover:text-brand-teal transition-colors font-medium flex items-center space-x-1.5">
               <Phone className="w-3.5 h-3.5 text-brand-teal shrink-0" />
-              <span>Phone No. +91-712-2522500</span>
+              <span>+91-712-2522500</span>
             </a>
             <a href="mailto:vaidsandeep100@yahoo.co.in" className="hover:text-brand-teal transition-colors font-medium flex items-center space-x-1.5">
               <Mail className="w-3.5 h-3.5 text-brand-teal shrink-0" />
-              <span>Email. vaidsandeep100@yahoo.co.in</span>
+              <span>vaidsandeep100@yahoo.co.in</span>
             </a>
           </div>
         </Container>
@@ -111,17 +111,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
       {/* Main Sticky Navbar */}
       <header className={`sticky top-0 z-40 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-sm py-3 border-b border-slate-200' 
-          : 'bg-white py-4 border-b border-slate-100'
+          ? 'bg-white/95 backdrop-blur-md shadow-sm py-2.5 border-b border-slate-200' 
+          : 'bg-white py-3 sm:py-4 border-b border-slate-100'
       }`}>
-        <Container className="flex items-center justify-between gap-6">
+        <Container className="flex items-center justify-between gap-4">
           
           {/* Logo with ioVue™ Trademark Badge */}
-          <Link to="/" className="flex items-center space-x-2.5 group shrink-0">
+          <Link to="/" className="flex items-center space-x-2 group shrink-0">
             <img 
               src="/cie-logo.png" 
               alt="Central India Export" 
-              className="h-12 sm:h-14 w-auto object-contain transition-transform group-hover:scale-105" 
+              className="h-9 sm:h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105" 
             />
             <span className="hidden sm:inline-flex items-center space-x-1 px-2.5 py-1 rounded-md bg-brand-soft border border-brand-teal/40 text-brand-teal text-[10px] font-bold tracking-wider uppercase shadow-2xs font-display">
               <span className="font-black text-brand-teal">ioVue™</span>
