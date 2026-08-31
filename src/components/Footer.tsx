@@ -45,7 +45,8 @@ export const Footer: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) => {
               <li><Link to="/" className="hover:text-brand-teal transition-colors">Home</Link></li>
               <li><Link to="/products" className="hover:text-brand-teal transition-colors">Product Catalog (457 Items)</Link></li>
               <li><Link to="/iovue" className="text-brand-teal font-semibold hover:underline">ioVue IOL Flagship</Link></li>
-              <li><Link to="/about-us" className="hover:text-brand-teal transition-colors">About Central India Export</Link></li>
+              <li><Link to="/about-us" className="hover:text-brand-teal transition-colors">About Us</Link></li>
+              <li><Link to="/company-profile" className="hover:text-brand-teal transition-colors font-semibold text-brand-teal">Company Profile & Facilities</Link></li>
               <li><Link to="/contact-us" className="hover:text-brand-teal transition-colors">Contact Us</Link></li>
               <li><Link to="/faq" className="hover:text-brand-teal transition-colors font-semibold">FAQ & Help Center</Link></li>
               <li>

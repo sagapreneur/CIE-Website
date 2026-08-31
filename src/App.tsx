@@ -7,6 +7,7 @@ import { ProductsPage } from './pages/ProductsPage';
 import { ProductDetailPage } from './pages/ProductDetailPage';
 import { IoVuePage } from './pages/IoVuePage';
 import { AboutPage } from './pages/AboutPage';
+import { CompanyProfilePage } from './pages/CompanyProfilePage';
 import { ContactPage } from './pages/ContactPage';
 import { PrivacyPolicyPage, TermsPage, NotFoundPage } from './pages/StaticPages';
 import { RfqModal } from './components/RfqModal';
@@ -38,6 +39,7 @@ export const App: React.FC = () => {
           <Route path="/products/:categorySlug/:productSlug" element={<ProductDetailPage onOpenRfq={handleOpenRfq} />} />
           <Route path="/iovue" element={<IoVuePage onOpenRfq={handleOpenRfq} />} />
           <Route path="/about-us" element={<AboutPage onOpenRfq={handleOpenRfq} />} />
+          <Route path="/company-profile" element={<CompanyProfilePage onOpenRfq={handleOpenRfq} />} />
           <Route path="/contact-us" element={<ContactPage onOpenRfq={handleOpenRfq} />} />
           <Route path="/faq" element={<FaqPage onOpenRfq={handleOpenRfq} />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Container, Button } from './Primitives';
-import { Search, ChevronDown, ChevronRight, Menu, X, FileText, Globe, Phone, Mail, TrendingUp, ArrowRight, Layers } from 'lucide-react';
+import { Search, ChevronDown, ChevronRight, Menu, X, FileText, Globe, Phone, Mail, TrendingUp, ArrowRight, Layers, Building2 } from 'lucide-react';
 import categoriesData from '../../public_html/data/categories.json';
 import productsData from '../../public_html/data/products.json';
 
@@ -13,6 +13,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
+  const [aboutMenuOpen, setAboutMenuOpen] = useState(false);
   const [navSearch, setNavSearch] = useState('');
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   
@@ -52,6 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
   useEffect(() => {
     setMobileMenuOpen(false);
     setMegaMenuOpen(false);
+    setAboutMenuOpen(false);
     setIsSearchFocused(false);
   }, [location]);
 
@@ -339,9 +341,47 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
               )}
             </div>
 
-            <Link to="/about-us" className={`whitespace-nowrap shrink-0 hover:text-brand-teal transition-colors ${location.pathname === '/about-us' ? 'text-brand-teal font-bold' : ''}`}>
-              About Us
-            </Link>
+            {/* About Dropdown Menu */}
+            <div 
+              className="relative shrink-0"
+              onMouseEnter={() => setAboutMenuOpen(true)}
+              onMouseLeave={() => setAboutMenuOpen(false)}
+            >
+              <div 
+                className={`flex items-center space-x-1 whitespace-nowrap cursor-pointer hover:text-brand-teal transition-colors py-2 ${
+                  location.pathname === '/about-us' || location.pathname === '/company-profile' ? 'text-brand-teal font-bold' : ''
+                }`}
+              >
+                <span>About</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${aboutMenuOpen ? 'rotate-180 text-brand-teal' : ''}`} />
+              </div>
+
+              {aboutMenuOpen && (
+                <div className="absolute top-full left-0 w-52 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
+                  <Link 
+                    to="/about-us" 
+                    onClick={() => setAboutMenuOpen(false)}
+                    className={`flex items-center space-x-2.5 px-4 py-2.5 text-xs font-semibold hover:bg-brand-soft hover:text-brand-teal transition-colors ${
+                      location.pathname === '/about-us' ? 'text-brand-teal bg-brand-soft/60 font-extrabold' : 'text-slate-700'
+                    }`}
+                  >
+                    <Building2 className="w-4 h-4 text-brand-teal shrink-0" />
+                    <span>About Us</span>
+                  </Link>
+                  
+                  <Link 
+                    to="/company-profile" 
+                    onClick={() => setAboutMenuOpen(false)}
+                    className={`flex items-center space-x-2.5 px-4 py-2.5 text-xs font-semibold hover:bg-brand-soft hover:text-brand-teal transition-colors ${
+                      location.pathname === '/company-profile' ? 'text-brand-teal bg-brand-soft/60 font-extrabold' : 'text-slate-700'
+                    }`}
+                  >
+                    <FileText className="w-4 h-4 text-brand-teal shrink-0" />
+                    <span>Company Profile</span>
+                  </Link>
+                </div>
+              )}
+            </div>
 
             <Link to="/contact-us" className={`whitespace-nowrap shrink-0 hover:text-brand-teal transition-colors ${location.pathname === '/contact-us' ? 'text-brand-teal font-bold' : ''}`}>
               Contact Us
@@ -531,9 +571,15 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
               <Link to="/products" className="block py-2 text-slate-800 hover:text-brand-teal border-b border-slate-100">
                 Products & Categories ({categoriesData.length} Lines)
               </Link>
-              <Link to="/about-us" className="block py-2 text-slate-800 hover:text-brand-teal border-b border-slate-100">
-                About Us
-              </Link>
+              <div className="py-1 border-b border-slate-100">
+                <div className="text-xs font-bold text-slate-400 uppercase tracking-wider py-1 font-display">About</div>
+                <Link to="/about-us" className="block py-1.5 text-slate-800 hover:text-brand-teal pl-2">
+                  About Us
+                </Link>
+                <Link to="/company-profile" className="block py-1.5 text-slate-800 hover:text-brand-teal pl-2">
+                  Company Profile
+                </Link>
+              </div>
               <Link to="/contact-us" className="block py-2 text-slate-800 hover:text-brand-teal border-b border-slate-100">
                 Contact Us
               </Link>
