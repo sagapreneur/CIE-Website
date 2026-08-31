@@ -4,7 +4,7 @@ import { Container, Badge, Button } from './Primitives';
 import { 
   Building2, PackageCheck, Factory, ChevronLeft, ChevronRight, Play, Pause,
   Globe2, ShieldCheck, Award, FileText, ArrowRight, CheckCircle2, Sparkles,
-  Microscope, Stethoscope, Layers, Eye
+  Microscope, Stethoscope, Layers, Eye, MapPin, Check, Info
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -19,21 +19,21 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
   const slides = [
     {
       id: 'profile',
-      tabTitle: '01. Company Profile',
-      subtitle: 'Greeting the Day, Greeting the Future!',
-      heading: '39 Years of Ophthalmic & Surgical Export Mastery',
+      tabTitle: '01. Corporate Profile & Reach',
+      subtitle: 'Precision in Vision, Trust in Every Export',
+      heading: '39 Years of Ophthalmic Manufacturing & Export Mastery',
     },
     {
       id: 'products',
-      tabTitle: '02. Main Product Series',
+      tabTitle: '02. Main Product Series (Specs)',
       subtitle: 'One-Stop Purchasing Solutions',
-      heading: 'Comprehensive Coverage Across 4 Core Product Verticals',
+      heading: 'Deep Technical Coverage Across 4 Primary Product Verticals',
     },
     {
       id: 'production',
-      tabTitle: '03. Production Lines',
-      subtitle: 'Manufacturing Excellence & Own Facilities',
-      heading: 'Cleanroom Infrastructure & Micron-Precision Assembly',
+      tabTitle: '03. Cleanroom Production Lines',
+      subtitle: 'Own Cleanrooms & Manufacturing Facilities',
+      heading: '3 Dedicated Nagpur Cleanroom Facilities & Growth Milestones',
     }
   ];
 
@@ -42,7 +42,7 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
     if (!isAutoplay) return;
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slides.length);
-    }, 7000);
+    }, 8000);
     return () => clearInterval(interval);
   }, [isAutoplay, slides.length]);
 
@@ -55,57 +55,57 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
   };
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-slate-900 via-[#0B1E38] to-slate-950 text-white relative overflow-hidden border-y border-slate-800">
-      {/* Blueprint Grid & Technical Ambient Background */}
+    <section className="py-12 md:py-16 bg-slate-50 text-slate-900 relative overflow-hidden border-y border-slate-200">
+      
+      {/* Light Blueprint Pattern Background */}
       <div 
-        className="absolute inset-0 opacity-[0.07] pointer-events-none"
+        className="absolute inset-0 opacity-40 pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(#2BB2A8 1px, transparent 1px), linear-gradient(to right, #2BB2A8 1px, transparent 1px)`,
-          backgroundSize: '40px 40px, 80px 80px'
+          backgroundImage: `radial-gradient(#2BB2A8 0.8px, transparent 0.8px), linear-gradient(to right, #EBF1F5 1px, transparent 1px)`,
+          backgroundSize: '32px 32px, 64px 64px'
         }}
       />
 
-      {/* Ambient Gradient Glow Spheres */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-brand-teal/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-brand-blue/30 rounded-full blur-3xl pointer-events-none" />
-
       <Container className="relative z-10 space-y-8">
         
-        {/* Presentation Header Bar (Competitor Slide Deck Frame Style) */}
-        <div className="bg-slate-900/90 backdrop-blur-md rounded-2xl border border-slate-700/60 p-4 md:p-6 shadow-2xl space-y-4">
+        {/* Presentation Header Bar (Clean Light Deck Frame) */}
+        <div className="bg-white rounded-3xl border border-slate-200/90 p-4 md:p-6 shadow-xl space-y-4">
           
-          {/* Top Banner Taglines */}
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-800 pb-3 gap-2">
+          {/* Top Banner Slogan & Metadata */}
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-100 pb-3 gap-2">
             <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 rounded-lg bg-brand-teal/20 border border-brand-teal/40 flex items-center justify-center text-brand-teal font-extrabold text-xs">
+              <div className="w-8 h-8 rounded-lg bg-brand-soft border border-brand-teal/30 flex items-center justify-center text-brand-teal font-extrabold text-xs">
                 CIE
               </div>
-              <span className="text-xs uppercase tracking-widest font-mono text-brand-teal font-semibold">
-                Central India Export Presentation Deck
-              </span>
+              <div>
+                <span className="text-xs uppercase tracking-widest font-mono text-brand-teal font-bold block">
+                  Central India Export Presentation Deck
+                </span>
+                <span className="text-[11px] text-slate-500 font-mono">HQ: Nagpur, Maharashtra, India · Est. 1985</span>
+              </div>
             </div>
             
-            <div className="text-xs font-mono text-slate-400 italic">
-              <span className="text-brand-teal font-semibold">Slogan: </span>
+            <div className="text-xs font-mono text-slate-600 italic bg-brand-soft/60 px-3 py-1 rounded-full border border-brand-teal/20">
+              <span className="text-brand-teal font-bold">Motto: </span>
               "Greeting the day, greeting the future! · The whole world runs on trust!"
             </div>
           </div>
 
-          {/* Presentation Tab Switcher & Navigation Controls */}
+          {/* Presentation Slide Tabs & Control Bar */}
           <div className="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-4">
             
             {/* Slide Tabs */}
-            <div className="grid grid-cols-3 gap-2 bg-slate-950 p-1.5 rounded-xl border border-slate-800 flex-1">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 bg-slate-100/80 p-1.5 rounded-2xl border border-slate-200 flex-1">
               {slides.map((slide, index) => {
                 const isActive = activeSlide === index;
                 return (
                   <button
                     key={slide.id}
                     onClick={() => setActiveSlide(index)}
-                    className={`py-3 px-3 rounded-lg text-xs sm:text-sm font-display font-bold transition-all duration-300 flex items-center justify-center space-x-2 text-center ${
+                    className={`py-3 px-3 rounded-xl text-xs sm:text-sm font-display font-bold transition-all duration-300 flex items-center justify-center space-x-2 text-center ${
                       isActive 
-                        ? 'bg-brand-teal text-white shadow-brand-glow shadow-brand-teal/30 scale-[1.02]' 
-                        : 'text-slate-400 hover:text-white hover:bg-slate-900'
+                        ? 'bg-brand-teal text-white shadow-md shadow-brand-teal/20 scale-[1.01]' 
+                        : 'text-slate-600 hover:text-slate-900 hover:bg-white/80'
                     }`}
                   >
                     <span>{slide.tabTitle}</span>
@@ -114,38 +114,38 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
               })}
             </div>
 
-            {/* Carousel Autoplay & Arrow Controls */}
-            <div className="flex items-center justify-between md:justify-end space-x-3 bg-slate-950 px-4 py-2 rounded-xl border border-slate-800 shrink-0">
-              <span className="text-xs font-mono text-slate-400">
-                Slide <strong className="text-brand-teal">{activeSlide + 1}</strong> / {slides.length}
+            {/* Presentation Controls */}
+            <div className="flex items-center justify-between md:justify-end space-x-3 bg-slate-100/80 px-4 py-2 rounded-2xl border border-slate-200 shrink-0">
+              <span className="text-xs font-mono text-slate-600">
+                Slide <strong className="text-brand-teal font-bold">{activeSlide + 1}</strong> of {slides.length}
               </span>
 
-              <div className="h-4 w-px bg-slate-800" />
+              <div className="h-4 w-px bg-slate-300" />
 
               <button
                 onClick={() => setIsAutoplay(!isAutoplay)}
                 className={`p-1.5 rounded-lg border text-xs flex items-center space-x-1.5 transition-colors ${
                   isAutoplay 
-                    ? 'bg-brand-teal/20 border-brand-teal text-brand-teal' 
-                    : 'border-slate-700 text-slate-400 hover:text-white'
+                    ? 'bg-brand-teal/15 border-brand-teal/40 text-brand-teal font-bold' 
+                    : 'border-slate-300 text-slate-600 hover:bg-white'
                 }`}
                 title={isAutoplay ? 'Pause Slideshow' : 'Autoplay Slideshow'}
               >
                 {isAutoplay ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
-                <span className="hidden sm:inline text-[11px] font-semibold">{isAutoplay ? 'Autoplay On' : 'Autoplay'}</span>
+                <span className="hidden sm:inline text-[11px]">{isAutoplay ? 'Autoplay On' : 'Autoplay'}</span>
               </button>
 
               <div className="flex items-center space-x-1">
                 <button
                   onClick={handlePrev}
-                  className="p-2 rounded-lg bg-slate-900 hover:bg-brand-teal/30 text-white border border-slate-700 hover:border-brand-teal transition-all"
+                  className="p-2 rounded-xl bg-white hover:bg-brand-soft text-slate-700 border border-slate-200 hover:border-brand-teal/40 transition-all shadow-2xs"
                   aria-label="Previous slide"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="p-2 rounded-lg bg-slate-900 hover:bg-brand-teal/30 text-white border border-slate-700 hover:border-brand-teal transition-all"
+                  className="p-2 rounded-xl bg-white hover:bg-brand-soft text-slate-700 border border-slate-200 hover:border-brand-teal/40 transition-all shadow-2xs"
                   aria-label="Next slide"
                 >
                   <ChevronRight className="w-4 h-4" />
@@ -157,127 +157,142 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
         </div>
 
         {/* Dynamic Presentation Slide Container */}
-        <div className="relative min-h-[500px]">
+        <div className="relative min-h-[520px]">
           <AnimatePresence mode="wait">
 
-            {/* SLIDE 1: COMPANY PROFILE / ABOUT US */}
+            {/* SLIDE 1: CORPORATE PROFILE & REACH */}
             {activeSlide === 0 && (
               <motion.div
-                key="slide-profile"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center"
+                key="slide-profile-light"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
               >
                 {/* Left Text Presentation Card */}
-                <div className="lg:col-span-7 space-y-6 bg-slate-900/80 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-slate-800 shadow-xl">
+                <div className="lg:col-span-7 space-y-6 bg-white rounded-3xl p-6 md:p-8 border border-slate-200/90 shadow-lg">
                   
-                  <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-teal/15 border border-brand-teal/30 text-xs font-semibold text-brand-teal">
-                    <Building2 className="w-3.5 h-3.5" />
-                    <span>Company Profile · Established 1985</span>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-brand-soft border border-brand-teal/30 text-xs font-bold text-brand-teal">
+                      <Building2 className="w-3.5 h-3.5" />
+                      <span>Company Profile · Established 1985</span>
+                    </span>
+                    <span className="inline-flex items-center space-x-1 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700">
+                      <span>GSTIN: 27AAEFC8743J1Z5</span>
+                    </span>
                   </div>
 
-                  <h2 className="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white leading-tight">
-                    Trusted Global Partner in <span className="text-brand-teal">Ophthalmic Medical Consumables</span> & Surgical Solutions
+                  <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 leading-tight">
+                    Central India Export — <span className="text-brand-teal">39-Year Global Export Legacy</span>
                   </h2>
 
-                  <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed font-normal">
+                  <div className="space-y-4 text-slate-700 text-sm leading-relaxed font-normal">
                     <p>
-                      Founded in 1985 in Nagpur, India, <strong className="text-white font-semibold">Central India Export (CIE)</strong> has grown into a trusted partner and recognized brand in the global ophthalmic and medical consumables market. Located at Nagpur's Zero Mile adjacent to the MIHAN cargo airport, we specialize in high-precision intraocular lenses (ioVue™), micro-surgical blades, surgical instruments, and diagnostic solutions.
+                      Founded in 1985 in Nagpur, India by CEO <strong className="text-slate-900 font-semibold">Sandeep Vaid</strong>, <strong className="text-brand-blue font-bold">Central India Export (CIE)</strong> has grown into a trusted partner and recognized brand in the global ophthalmic and medical consumables market. Situated at Nagpur's Zero Mile adjacent to the MIHAN cargo hub, CIE specializes in direct export manufacturing of ioVue™ intraocular lenses, micro-surgical blades, surgical instruments, diagnostic strips, viscoelastic solutions, and ocular prostheses.
                     </p>
 
                     <p>
-                      Thanks to our dedication to manufacturing excellence and long-term distributor partnerships, CIE products have been exported to <strong className="text-white font-semibold font-mono">over 50 countries</strong>, spanning regions such as the USA, UK, UAE, South Africa, Poland, Greece, Germany, France, South America, and Southeast Asia. We take immense pride in supporting ophthalmologists, clinics, and healthcare distributors worldwide.
-                    </p>
-
-                    <p className="text-slate-400 text-xs sm:text-sm italic border-l-2 border-brand-teal pl-3">
-                      "Looking ahead, Central India Export continues to strengthen its global presence, drive optical precision innovation, and strive to remain a leading force in ophthalmic surgical solutions worldwide."
+                      Thanks to our dedication to micron-precision quality, competitive B2B wholesale pricing, and long-term distributor partnerships, CIE products have been exported to <strong className="text-slate-900 font-bold font-mono">over 50 countries</strong> worldwide.
                     </p>
                   </div>
 
-                  {/* Highlight Stat Counters Grid */}
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-slate-800">
-                    <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-center">
+                  {/* Informative Key Regions Breakdown Grid */}
+                  <div className="bg-brand-soft/40 rounded-2xl p-4 border border-brand-teal/20 space-y-2">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-brand-blue font-display flex items-center space-x-1.5">
+                      <Globe2 className="w-4 h-4 text-brand-teal" />
+                      <span>Global Export Regions Covered (50+ Destinations)</span>
+                    </h4>
+
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-medium text-slate-800">
+                      <div className="bg-white p-2 rounded-lg border border-slate-200/80 shadow-2xs">
+                        <span className="font-bold text-brand-teal block">🇪🇺 Europe</span>
+                        <span className="text-[11px] text-slate-600">UK, Germany, Poland, Greece, France, Portugal</span>
+                      </div>
+
+                      <div className="bg-white p-2 rounded-lg border border-slate-200/80 shadow-2xs">
+                        <span className="font-bold text-brand-teal block">🇺🇸 Americas</span>
+                        <span className="text-[11px] text-slate-600">USA, Mexico, Brazil, Colombia, Chile</span>
+                      </div>
+
+                      <div className="bg-white p-2 rounded-lg border border-slate-200/80 shadow-2xs">
+                        <span className="font-bold text-brand-teal block">🇦🇪 Middle East & Africa</span>
+                        <span className="text-[11px] text-slate-600">UAE, Saudi Arabia, South Africa, Egypt</span>
+                      </div>
+
+                      <div className="bg-white p-2 rounded-lg border border-slate-200/80 shadow-2xs">
+                        <span className="font-bold text-brand-teal block">🌏 Asia-Pacific</span>
+                        <span className="text-[11px] text-slate-600">India, Thailand, Vietnam, Philippines</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Stat Counters Grid */}
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 border-t border-slate-200">
+                    <div className="p-3 rounded-2xl bg-slate-100/70 border border-slate-200 text-center">
                       <span className="font-display font-extrabold text-2xl text-brand-teal font-mono">39+</span>
-                      <p className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold font-display">Years Legacy</p>
+                      <p className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold font-display">Years History</p>
                     </div>
 
-                    <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-center">
-                      <span className="font-display font-extrabold text-2xl text-white font-mono">50+</span>
-                      <p className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold font-display">Export Countries</p>
+                    <div className="p-3 rounded-2xl bg-slate-100/70 border border-slate-200 text-center">
+                      <span className="font-display font-extrabold text-2xl text-slate-900 font-mono">50+</span>
+                      <p className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold font-display">Countries Exported</p>
                     </div>
 
-                    <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-center">
+                    <div className="p-3 rounded-2xl bg-slate-100/70 border border-slate-200 text-center">
                       <span className="font-display font-extrabold text-2xl text-brand-teal font-mono">457+</span>
-                      <p className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold font-display">Catalog Items</p>
+                      <p className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold font-display">Catalog Items</p>
                     </div>
 
-                    <div className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-center">
-                      <span className="font-display font-extrabold text-2xl text-white font-mono">10,000+</span>
-                      <p className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold font-display">Clients Served</p>
+                    <div className="p-3 rounded-2xl bg-slate-100/70 border border-slate-200 text-center">
+                      <span className="font-display font-extrabold text-2xl text-slate-900 font-mono">10,000+</span>
+                      <p className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold font-display">Surgeons Served</p>
                     </div>
-                  </div>
-
-                  {/* Action Link */}
-                  <div className="pt-2 flex flex-wrap items-center gap-4">
-                    <Link to="/about-us">
-                      <Button variant="primary" size="md" icon={<ArrowRight className="w-4 h-4" />}>
-                        Read Complete Company Profile
-                      </Button>
-                    </Link>
-
-                    <button
-                      onClick={() => onOpenRfq()}
-                      className="inline-flex items-center space-x-2 text-xs font-semibold text-brand-teal hover:underline px-3 py-2"
-                    >
-                      <FileText className="w-4 h-4" />
-                      <span>Request Company Profile & Certifications PDF</span>
-                    </button>
                   </div>
 
                 </div>
 
                 {/* Right Visual Image & Certifications Showcase */}
                 <div className="lg:col-span-5 space-y-4">
-                  <div className="relative rounded-2xl overflow-hidden border border-slate-700/80 shadow-2xl group">
+                  <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-xl group bg-white">
                     <img 
                       src="/facility-cleanroom.jpg" 
                       alt="Central India Export Cleanroom Facility" 
                       className="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
                     
-                    <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-900/95 backdrop-blur-md border border-slate-700/80 space-y-1">
+                    <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-lg space-y-1">
                       <div className="flex items-center space-x-2 text-brand-teal">
                         <Sparkles className="w-4 h-4" />
                         <span className="text-xs font-bold font-display uppercase tracking-wider">Nagpur Manufacturing Hub</span>
                       </div>
-                      <p className="text-xs text-slate-300">
-                        ISO Class 5/7 Certified Cleanrooms for IOL Assembly & Micron Blade Honing
+                      <p className="text-xs text-slate-700">
+                        ISO Class 5 & 7 Certified Cleanroom Units for IOL Assembly & Micron Blade Sharpening
                       </p>
                     </div>
                   </div>
 
-                  {/* Certification Badges Row */}
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center space-x-3">
-                      <div className="w-8 h-8 rounded-lg bg-brand-teal/20 text-brand-teal flex items-center justify-center shrink-0">
-                        <ShieldCheck className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <h4 className="text-xs font-bold text-white">ISO 13485:2016</h4>
-                        <p className="text-[10px] text-slate-400">Medical Quality Certified</p>
-                      </div>
-                    </div>
+                  {/* Certification Badges Card */}
+                  <div className="bg-white rounded-2xl p-4 border border-slate-200 shadow-sm space-y-3">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 font-display">
+                      Regulatory Credentials & Certifications
+                    </h4>
 
-                    <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center space-x-3">
-                      <div className="w-8 h-8 rounded-lg bg-brand-teal/20 text-brand-teal flex items-center justify-center shrink-0">
-                        <Award className="w-4 h-4" />
+                    <div className="grid grid-cols-2 gap-3 text-xs">
+                      <div className="p-3 rounded-xl bg-brand-soft/60 border border-brand-teal/20 flex items-center space-x-2.5">
+                        <ShieldCheck className="w-5 h-5 text-brand-teal shrink-0" />
+                        <div>
+                          <strong className="text-slate-900 block font-bold">ISO 13485:2016</strong>
+                          <span className="text-[10px] text-slate-600">Medical Devices Quality</span>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="text-xs font-bold text-white">CE Compliance</h4>
-                        <p className="text-[10px] text-slate-400">European Standards</p>
+
+                      <div className="p-3 rounded-xl bg-brand-soft/60 border border-brand-teal/20 flex items-center space-x-2.5">
+                        <Award className="w-5 h-5 text-brand-teal shrink-0" />
+                        <div>
+                          <strong className="text-slate-900 block font-bold">CE Compliance</strong>
+                          <span className="text-[10px] text-slate-600">European Standards</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -286,335 +301,385 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
               </motion.div>
             )}
 
-            {/* SLIDE 2: MAIN PRODUCTS SERIES */}
+            {/* SLIDE 2: MAIN PRODUCTS SERIES (DEEP TECHNICAL SPECS) */}
             {activeSlide === 1 && (
               <motion.div
-                key="slide-products"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                key="slide-products-light"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 className="space-y-6"
               >
-                <div className="text-center max-w-3xl mx-auto space-y-2">
-                  <Badge variant="teal" className="bg-brand-teal/20 text-brand-teal border-brand-teal/40">
-                    Product Coverage Presentation
-                  </Badge>
-                  <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-white">
-                    4 Core Product Verticals for Wholesale Distributors
-                  </h2>
-                  <p className="text-xs sm:text-sm text-slate-300">
-                    Meeting one-stop purchasing needs with manufactured precision across intraocular lenses, surgical blades, instruments, and diagnostic solutions.
-                  </p>
-                </div>
-
-                {/* 4 Main Series Cards Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                  
-                  {/* Card 1: IOLs & ioVue */}
-                  <div className="group bg-slate-900/90 hover:bg-slate-900 rounded-2xl border border-slate-800 hover:border-brand-teal/60 p-5 shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
-                    <div className="space-y-4">
-                      <div className="relative rounded-xl overflow-hidden h-40 bg-slate-950 border border-slate-800 flex items-center justify-center p-3">
-                        <img 
-                          src="/iovue/iovue-aspheric-acrylic.png" 
-                          alt="ioVue Intraocular Lenses" 
-                          className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <span className="absolute top-2 right-2 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-brand-teal text-white shadow-sm">
-                          Flagship Series
-                        </span>
-                      </div>
-
-                      <div>
-                        <span className="text-[11px] font-mono text-brand-teal font-semibold">Series 01</span>
-                        <h3 className="font-display font-bold text-lg text-white group-hover:text-brand-teal transition-colors">
-                          Intraocular Lenses & ioVue™
-                        </h3>
-                        <p className="text-xs text-slate-400 mt-1.5 leading-relaxed line-clamp-3">
-                          Aspheric Hydrophilic & Hydrophobic Acrylic Foldable IOLs, PMMA lenses, Iris Claw, and Capsular Tension Rings with 360° Square Edge optics.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="pt-4 border-t border-slate-800/80 mt-4 flex items-center justify-between">
-                      <span className="text-xs text-slate-400 font-mono">45+ Catalog Items</span>
-                      <button
-                        onClick={() => onOpenRfq('ioVue Intraocular Lenses')}
-                        className="text-xs font-bold text-brand-teal hover:underline flex items-center space-x-1"
-                      >
-                        <span>RFQ Quote</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
+                <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                  <div>
+                    <Badge variant="teal" className="bg-brand-soft text-brand-teal border-brand-teal/30 mb-2">
+                      4 Core Vertical Series
+                    </Badge>
+                    <h2 className="font-display font-extrabold text-2xl text-slate-900">
+                      Technical Overview of Main Manufactured Product Lines
+                    </h2>
+                    <p className="text-xs text-slate-600">
+                      Detailed specifications, diopters, materials, and blade geometry specs for B2B export buyers.
+                    </p>
                   </div>
 
-                  {/* Card 2: Micro Surgical Blades */}
-                  <div className="group bg-slate-900/90 hover:bg-slate-900 rounded-2xl border border-slate-800 hover:border-brand-teal/60 p-5 shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
-                    <div className="space-y-4">
-                      <div className="relative rounded-xl overflow-hidden h-40 bg-slate-950 border border-slate-800 flex items-center justify-center p-3">
-                        <img 
-                          src="/Micro Surgical Blades-01.svg" 
-                          alt="Micro Surgical Blades" 
-                          className="max-h-28 max-w-full object-contain filter invert brightness-200 group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <span className="absolute top-2 right-2 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-300 border border-slate-700">
-                          Micron Honed
-                        </span>
-                      </div>
-
-                      <div>
-                        <span className="text-[11px] font-mono text-brand-teal font-semibold">Series 02</span>
-                        <h3 className="font-display font-bold text-lg text-white group-hover:text-brand-teal transition-colors">
-                          Micro Surgical Blades & Knives
-                        </h3>
-                        <p className="text-xs text-slate-400 mt-1.5 leading-relaxed line-clamp-3">
-                          Ultra-sharp Slit, Lance, Keratome, MVR, Crescent, and Sideport blades with safety handles for cataract and refractive surgery.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="pt-4 border-t border-slate-800/80 mt-4 flex items-center justify-between">
-                      <span className="text-xs text-slate-400 font-mono">35+ Blade Types</span>
-                      <button
-                        onClick={() => onOpenRfq('Micro Surgical Blades')}
-                        className="text-xs font-bold text-brand-teal hover:underline flex items-center space-x-1"
-                      >
-                        <span>RFQ Quote</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Card 3: Surgical Instruments */}
-                  <div className="group bg-slate-900/90 hover:bg-slate-900 rounded-2xl border border-slate-800 hover:border-brand-teal/60 p-5 shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
-                    <div className="space-y-4">
-                      <div className="relative rounded-xl overflow-hidden h-40 bg-slate-950 border border-slate-800 flex items-center justify-center p-3">
-                        <img 
-                          src="/Instruments-01.svg" 
-                          alt="Precision Surgical Instruments" 
-                          className="max-h-28 max-w-full object-contain filter invert brightness-200 group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <span className="absolute top-2 right-2 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-300 border border-slate-700">
-                          Hand Crafted
-                        </span>
-                      </div>
-
-                      <div>
-                        <span className="text-[11px] font-mono text-brand-teal font-semibold">Series 03</span>
-                        <h3 className="font-display font-bold text-lg text-white group-hover:text-brand-teal transition-colors">
-                          Ophthalmic Instruments
-                        </h3>
-                        <p className="text-xs text-slate-400 mt-1.5 leading-relaxed line-clamp-3">
-                          Swiss stainless steel and titanium forceps, micro scissors, needle holders, cannulas, speculums, and calipers for microsurgery.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="pt-4 border-t border-slate-800/80 mt-4 flex items-center justify-between">
-                      <span className="text-xs text-slate-400 font-mono">280+ Instruments</span>
-                      <button
-                        onClick={() => onOpenRfq('Ophthalmic Surgical Instruments')}
-                        className="text-xs font-bold text-brand-teal hover:underline flex items-center space-x-1"
-                      >
-                        <span>RFQ Quote</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Card 4: Solutions & Diagnostics */}
-                  <div className="group bg-slate-900/90 hover:bg-slate-900 rounded-2xl border border-slate-800 hover:border-brand-teal/60 p-5 shadow-xl transition-all duration-300 flex flex-col justify-between hover:-translate-y-1">
-                    <div className="space-y-4">
-                      <div className="relative rounded-xl overflow-hidden h-40 bg-slate-950 border border-slate-800 flex items-center justify-center p-3">
-                        <img 
-                          src="/Ophthalmic Solutions-01.svg" 
-                          alt="Ophthalmic Solutions & Diagnostic Strips" 
-                          className="max-h-28 max-w-full object-contain filter invert brightness-200 group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <span className="absolute top-2 right-2 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-800 text-slate-300 border border-slate-700">
-                          Sterile BFS
-                        </span>
-                      </div>
-
-                      <div>
-                        <span className="text-[11px] font-mono text-brand-teal font-semibold">Series 04</span>
-                        <h3 className="font-display font-bold text-lg text-white group-hover:text-brand-teal transition-colors">
-                          Solutions & Diagnostic Strips
-                        </h3>
-                        <p className="text-xs text-slate-400 mt-1.5 leading-relaxed line-clamp-3">
-                          Sodium Hyaluronate viscoelastics, Fluorescein/Schirmer diagnostic strips, ocular prostheses artificial eyes, and acuity charts.
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="pt-4 border-t border-slate-800/80 mt-4 flex items-center justify-between">
-                      <span className="text-xs text-slate-400 font-mono">95+ Solutions & Strips</span>
-                      <button
-                        onClick={() => onOpenRfq('Ophthalmic Solutions & Diagnostics')}
-                        className="text-xs font-bold text-brand-teal hover:underline flex items-center space-x-1"
-                      >
-                        <span>RFQ Quote</span>
-                        <ArrowRight className="w-3.5 h-3.5" />
-                      </button>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div className="text-center pt-2">
                   <Link to="/products">
-                    <Button variant="primary" size="md" icon={<ArrowRight className="w-4 h-4" />}>
-                      Explore Complete 457-Item Wholesale Catalog
+                    <Button variant="outline" size="sm" icon={<ArrowRight className="w-4 h-4" />}>
+                      Browse All 457 Catalog Items
                     </Button>
                   </Link>
                 </div>
+
+                {/* 4 Main Series Cards Grid with Deep Specs */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  
+                  {/* Vertical 1: IOLs & ioVue */}
+                  <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-md space-y-4 hover:border-brand-teal/50 transition-colors">
+                    <div className="flex justify-between items-start">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 rounded-2xl bg-brand-soft border border-brand-teal/30 p-2 text-brand-teal flex items-center justify-center shrink-0">
+                          <Eye className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <span className="text-[10px] font-mono text-brand-teal font-bold uppercase tracking-wider">Vertical Series 01</span>
+                          <h3 className="font-display font-bold text-xl text-slate-900">
+                            Intraocular Lenses & ioVue™ Brand
+                          </h3>
+                        </div>
+                      </div>
+                      <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-brand-teal text-white">
+                        45+ Items
+                      </span>
+                    </div>
+
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Hydrophilic & Hydrophobic Acrylic Foldable IOLs, PMMA single-piece & 3-piece lenses, Iris Fixation Claw lenses, and Capsular Tension Rings (CTR).
+                    </p>
+
+                    <div className="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-xs space-y-1.5 font-mono">
+                      <div className="text-[11px] font-bold text-brand-blue uppercase tracking-wider">Technical Specifications:</div>
+                      <div className="grid grid-cols-2 gap-2 text-[11px]">
+                        <div>• <strong>Diopter Range:</strong> -10.0 D to +35.0 D</div>
+                        <div>• <strong>Optic Design:</strong> 360° Square Edge</div>
+                        <div>• <strong>Optic Diameter:</strong> 6.0 mm</div>
+                        <div>• <strong>UV Protection:</strong> UV 400 Absorbing</div>
+                        <div>• <strong>A-Constant:</strong> 118.0 / 118.4</div>
+                        <div>• <strong>Sterilization:</strong> Steam / ETO Sterile</div>
+                      </div>
+                    </div>
+
+                    <div className="pt-2 flex items-center justify-between border-t border-slate-100">
+                      <Link to="/iovue" className="text-xs font-bold text-brand-teal hover:underline">
+                        Explore ioVue Brand Page →
+                      </Link>
+                      <button
+                        onClick={() => onOpenRfq('ioVue Intraocular Lenses')}
+                        className="px-3 py-1.5 bg-brand-teal text-white text-xs font-bold rounded-xl shadow-2xs hover:bg-[#20968E]"
+                      >
+                        Request IOL Quotation
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Vertical 2: Micro Surgical Blades */}
+                  <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-md space-y-4 hover:border-brand-teal/50 transition-colors">
+                    <div className="flex justify-between items-start">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 rounded-2xl bg-brand-soft border border-brand-teal/30 p-2 text-brand-teal flex items-center justify-center shrink-0">
+                          <Microscope className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <span className="text-[10px] font-mono text-brand-teal font-bold uppercase tracking-wider">Vertical Series 02</span>
+                          <h3 className="font-display font-bold text-xl text-slate-900">
+                            Micro Surgical Blades & Knives
+                          </h3>
+                        </div>
+                      </div>
+                      <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-slate-800 text-white">
+                        35+ Types
+                      </span>
+                    </div>
+
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Ultra-sharp Slit, Lance, Keratome, MVR, Crescent, and Sideport blades with safety handles engineered for precise corneal incisions.
+                    </p>
+
+                    <div className="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-xs space-y-1.5 font-mono">
+                      <div className="text-[11px] font-bold text-brand-blue uppercase tracking-wider">Technical Specifications:</div>
+                      <div className="grid grid-cols-2 gap-2 text-[11px]">
+                        <div>• <strong>Keratome Blades:</strong> 2.2mm to 3.2mm</div>
+                        <div>• <strong>Lance Blades:</strong> 15°, 30°, 45° angles</div>
+                        <div>• <strong>MVR Blades:</strong> 19G, 20G, 23G</div>
+                        <div>• <strong>Material:</strong> Swiss Stainless Steel</div>
+                        <div>• <strong>Edge Honing:</strong> Laser Micron Honed</div>
+                        <div>• <strong>Packaging:</strong> ETO Sterile Blister</div>
+                      </div>
+                    </div>
+
+                    <div className="pt-2 flex items-center justify-between border-t border-slate-100">
+                      <Link to="/products?category=Micro%20Surgical%20Blades" className="text-xs font-bold text-brand-teal hover:underline">
+                        View All Blades Catalog →
+                      </Link>
+                      <button
+                        onClick={() => onOpenRfq('Micro Surgical Blades')}
+                        className="px-3 py-1.5 bg-brand-teal text-white text-xs font-bold rounded-xl shadow-2xs hover:bg-[#20968E]"
+                      >
+                        Request Blades Quotation
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Vertical 3: Ophthalmic Instruments */}
+                  <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-md space-y-4 hover:border-brand-teal/50 transition-colors">
+                    <div className="flex justify-between items-start">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 rounded-2xl bg-brand-soft border border-brand-teal/30 p-2 text-brand-teal flex items-center justify-center shrink-0">
+                          <Stethoscope className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <span className="text-[10px] font-mono text-brand-teal font-bold uppercase tracking-wider">Vertical Series 03</span>
+                          <h3 className="font-display font-bold text-xl text-slate-900">
+                            Ophthalmic Surgical Instruments
+                          </h3>
+                        </div>
+                      </div>
+                      <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-slate-800 text-white">
+                        280+ Instruments
+                      </span>
+                    </div>
+
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Swiss stainless steel & titanium forceps, micro scissors, needle holders, speculums, lacrimal cannulas, markers, and calipers.
+                    </p>
+
+                    <div className="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-xs space-y-1.5 font-mono">
+                      <div className="text-[11px] font-bold text-brand-blue uppercase tracking-wider">Technical Specifications:</div>
+                      <div className="grid grid-cols-2 gap-2 text-[11px]">
+                        <div>• <strong>Alloys:</strong> Grade 5 Titanium & 316L SS</div>
+                        <div>• <strong>Craftsmanship:</strong> Hand-honed tips</div>
+                        <div>• <strong>Forceps Types:</strong> Tying, Fixation, Rhexis</div>
+                        <div>• <strong>Micro Scissors:</strong> Vannas, Castroviejo</div>
+                        <div>• <strong>Finish:</strong> Non-glare Satin/Blue Anodized</div>
+                        <div>• <strong>Autoclavable:</strong> 134°C Thermal Resistance</div>
+                      </div>
+                    </div>
+
+                    <div className="pt-2 flex items-center justify-between border-t border-slate-100">
+                      <Link to="/products?category=Instruments" className="text-xs font-bold text-brand-teal hover:underline">
+                        View All Instruments →
+                      </Link>
+                      <button
+                        onClick={() => onOpenRfq('Ophthalmic Surgical Instruments')}
+                        className="px-3 py-1.5 bg-brand-teal text-white text-xs font-bold rounded-xl shadow-2xs hover:bg-[#20968E]"
+                      >
+                        Request Instruments Quote
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Vertical 4: Solutions & Diagnostics */}
+                  <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-md space-y-4 hover:border-brand-teal/50 transition-colors">
+                    <div className="flex justify-between items-start">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-12 h-12 rounded-2xl bg-brand-soft border border-brand-teal/30 p-2 text-brand-teal flex items-center justify-center shrink-0">
+                          <Layers className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <span className="text-[10px] font-mono text-brand-teal font-bold uppercase tracking-wider">Vertical Series 04</span>
+                          <h3 className="font-display font-bold text-xl text-slate-900">
+                            Solutions, Diagnostics & Prostheses
+                          </h3>
+                        </div>
+                      </div>
+                      <span className="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-slate-800 text-white">
+                        95+ Items
+                      </span>
+                    </div>
+
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Sodium Hyaluronate viscoelastics, Fluorescein/Schirmer diagnostic strips, ocular prostheses artificial eyes, and acuity charts.
+                    </p>
+
+                    <div className="bg-slate-50 p-3 rounded-2xl border border-slate-200 text-xs space-y-1.5 font-mono">
+                      <div className="text-[11px] font-bold text-brand-blue uppercase tracking-wider">Technical Specifications:</div>
+                      <div className="grid grid-cols-2 gap-2 text-[11px]">
+                        <div>• <strong>Viscoelastics:</strong> 1.0% - 1.4% Sodium Hyaluronate</div>
+                        <div>• <strong>BFS Filling:</strong> Sterile pre-filled syringes</div>
+                        <div>• <strong>Diagnostic Strips:</strong> Fluorescein, Schirmer</div>
+                        <div>• <strong>Paper Grade:</strong> Lint-free medical absorbency</div>
+                        <div>• <strong>Prosthetics:</strong> Hand-polished PMMA Ocular</div>
+                        <div>• <strong>Charts:</strong> Vision Acuity Drum & Illuminated</div>
+                      </div>
+                    </div>
+
+                    <div className="pt-2 flex items-center justify-between border-t border-slate-100">
+                      <Link to="/products?category=Ophthalmic%20Solutions" className="text-xs font-bold text-brand-teal hover:underline">
+                        View Solutions Catalog →
+                      </Link>
+                      <button
+                        onClick={() => onOpenRfq('Ophthalmic Solutions & Diagnostics')}
+                        className="px-3 py-1.5 bg-brand-teal text-white text-xs font-bold rounded-xl shadow-2xs hover:bg-[#20968E]"
+                      >
+                        Request Solutions Quote
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
               </motion.div>
             )}
 
-            {/* SLIDE 3: PRODUCTION LINES & OWN FACTORIES */}
+            {/* SLIDE 3: CLEANROOM PRODUCTION LINES & FACILITIES */}
             {activeSlide === 2 && (
               <motion.div
-                key="slide-production"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                key="slide-production-light"
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -12 }}
+                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 className="space-y-8"
               >
                 {/* Infrastructure Overview Banner & Milestones */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                   
-                  <div className="lg:col-span-5 space-y-6 bg-slate-900/90 rounded-2xl p-6 border border-slate-800 shadow-xl">
-                    <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-teal/15 border border-brand-teal/30 text-xs font-semibold text-brand-teal">
+                  {/* Left Column: Factory Infrastructure & Milestones */}
+                  <div className="lg:col-span-5 space-y-6 bg-white rounded-3xl p-6 border border-slate-200 shadow-md">
+                    <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-soft border border-brand-teal/30 text-xs font-bold text-brand-teal">
                       <Factory className="w-3.5 h-3.5" />
-                      <span>Manufacturing Capacity & Own Infrastructure</span>
+                      <span>Cleanrooms & Infrastructure</span>
                     </div>
 
-                    <h3 className="font-display font-extrabold text-2xl text-white">
-                      3 Own Cleanroom Facilities & Strategic Partner Lines
+                    <h3 className="font-display font-extrabold text-2xl text-slate-900">
+                      3 Owned Cleanroom Facilities in Nagpur, India
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-                      We operate 3 state-of-the-art manufacturing facilities in Nagpur along with 5 strategic cooperation lines, providing an integrated export capacity of over <strong className="text-white font-mono font-bold">457+ catalog items</strong>.
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      We operate 3 dedicated manufacturing units in Nagpur equipped with ISO Class 5/7 cleanrooms, alongside 5 strategic manufacturing partner lines providing an integrated production capacity of <strong className="text-slate-900 font-mono font-bold">457+ catalog items</strong>.
                     </p>
 
-                    {/* Timeline Milestones (Competitor Slide 3 Adaptation) */}
-                    <div className="space-y-4 pt-2 border-t border-slate-800">
-                      <h4 className="text-xs uppercase font-mono tracking-widest text-brand-teal font-bold">
-                        Company Growth Milestones
+                    {/* Timeline Growth Milestones (Detailed Informative Adaptations) */}
+                    <div className="space-y-4 pt-3 border-t border-slate-100">
+                      <h4 className="text-xs uppercase font-mono tracking-widest text-brand-blue font-bold">
+                        Central India Export Growth Milestones
                       </h4>
 
                       <div className="space-y-3">
                         <div className="flex items-start space-x-3 text-xs">
-                          <span className="px-2 py-0.5 rounded bg-brand-teal/20 text-brand-teal font-mono font-bold shrink-0">1985</span>
-                          <span className="text-slate-300">Established Central India Export in Nagpur, India as a specialized medical exporter.</span>
+                          <span className="px-2 py-0.5 rounded bg-brand-soft text-brand-teal border border-brand-teal/30 font-mono font-bold shrink-0">1985</span>
+                          <span className="text-slate-700">Founded in Nagpur by CEO Sandeep Vaid as an ophthalmic equipment export merchant.</span>
                         </div>
 
                         <div className="flex items-start space-x-3 text-xs">
-                          <span className="px-2 py-0.5 rounded bg-brand-teal/20 text-brand-teal font-mono font-bold shrink-0">2004</span>
-                          <span className="text-slate-300">Commissioned ISO Class 5 Cleanrooms for ioVue™ IOL assembly & micro blade honing.</span>
+                          <span className="px-2 py-0.5 rounded bg-brand-soft text-brand-teal border border-brand-teal/30 font-mono font-bold shrink-0">1998</span>
+                          <span className="text-slate-700">Commissioned direct manufacturing line for surgical stainless steel instruments & cannulas.</span>
                         </div>
 
                         <div className="flex items-start space-x-3 text-xs">
-                          <span className="px-2 py-0.5 rounded bg-brand-teal/20 text-brand-teal font-mono font-bold shrink-0">2014</span>
-                          <span className="text-slate-300">Attained ISO 13485:2016 & CE Mark certifications; integrated direct MIHAN cargo dispatch.</span>
+                          <span className="px-2 py-0.5 rounded bg-brand-soft text-brand-teal border border-brand-teal/30 font-mono font-bold shrink-0">2004</span>
+                          <span className="text-slate-700">Established ISO Class 5 Cleanrooms for ioVue™ IOL lathe cutting & micro blade honing.</span>
                         </div>
 
                         <div className="flex items-start space-x-3 text-xs">
-                          <span className="px-2 py-0.5 rounded bg-brand-teal/20 text-brand-teal font-mono font-bold shrink-0">2022</span>
-                          <span className="text-slate-300">Expanded global distribution network to over 50 countries across 5 continents.</span>
+                          <span className="px-2 py-0.5 rounded bg-brand-soft text-brand-teal border border-brand-teal/30 font-mono font-bold shrink-0">2014</span>
+                          <span className="text-slate-700">Attained ISO 13485:2016 certification & CE Mark compliance for European export markets.</span>
+                        </div>
+
+                        <div className="flex items-start space-x-3 text-xs">
+                          <span className="px-2 py-0.5 rounded bg-brand-soft text-brand-teal border border-brand-teal/30 font-mono font-bold shrink-0">2022</span>
+                          <span className="text-slate-700">Expanded global distribution network to 50+ countries across 5 continents.</span>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* 4 Production Lines Cards (Competitor Slide 3 Layout) */}
+                  {/* Right Column: 4 Cleanroom Production Line Cards */}
                   <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     
                     {/* Line 1: IOL Assembly */}
-                    <div className="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden shadow-lg group hover:border-brand-teal/60 transition-all">
-                      <div className="h-36 overflow-hidden relative">
+                    <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md group hover:border-brand-teal/50 transition-all">
+                      <div className="h-40 overflow-hidden relative bg-slate-100">
                         <img 
                           src="/production-line-iol.jpg" 
                           alt="Cleanroom IOL Assembly Line" 
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
-                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-950/80 backdrop-blur-md text-brand-teal border border-brand-teal/30">
-                          Line 01
+                        <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/95 backdrop-blur-md text-brand-teal border border-brand-teal/30 shadow-2xs">
+                          Unit 01 · MIHAN Hub
                         </span>
                       </div>
                       <div className="p-4 space-y-1">
-                        <h4 className="font-display font-bold text-sm text-white group-hover:text-brand-teal transition-colors">
-                          Cleanroom IOL Assembly Line
+                        <h4 className="font-display font-bold text-sm text-slate-900 group-hover:text-brand-teal transition-colors">
+                          Cleanroom IOL Assembly & Lathe Line
                         </h4>
-                        <p className="text-[11px] text-slate-400">
-                          ISO Class 5 cleanrooms with high-precision optical polymer lathes and 100% hydration diopter testing.
+                        <p className="text-[11px] text-slate-600">
+                          ISO Class 5/7 cleanrooms equipped with CNC optical lathes, 100% hydration diopter testing, and interferometric surface inspection.
                         </p>
                       </div>
                     </div>
 
                     {/* Line 2: Micro Blade Honing */}
-                    <div className="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden shadow-lg group hover:border-brand-teal/60 transition-all">
-                      <div className="h-36 overflow-hidden relative">
+                    <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md group hover:border-brand-teal/50 transition-all">
+                      <div className="h-40 overflow-hidden relative bg-slate-100">
                         <img 
                           src="/production-line-blades.jpg" 
                           alt="Micro Surgical Blade Honing Line" 
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
-                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-950/80 backdrop-blur-md text-brand-teal border border-brand-teal/30">
-                          Line 02
+                        <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/95 backdrop-blur-md text-brand-teal border border-brand-teal/30 shadow-2xs">
+                          Unit 02 · Ramdaspeth
                         </span>
                       </div>
                       <div className="p-4 space-y-1">
-                        <h4 className="font-display font-bold text-sm text-white group-hover:text-brand-teal transition-colors">
+                        <h4 className="font-display font-bold text-sm text-slate-900 group-hover:text-brand-teal transition-colors">
                           Micro Blade Laser Honing Line
                         </h4>
-                        <p className="text-[11px] text-slate-400">
-                          Laser-guided edge sharpening and high-magnification digital microscope inspection for surgical sharpness.
+                        <p className="text-[11px] text-slate-600">
+                          Laser-guided edge honing and Swiss micro-grinding machines for 1.8mm–3.2mm keratome & lance blades inspected under 100x digital magnification.
                         </p>
                       </div>
                     </div>
 
                     {/* Line 3: Ophthalmic Solutions BFS */}
-                    <div className="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden shadow-lg group hover:border-brand-teal/60 transition-all">
-                      <div className="h-36 overflow-hidden relative">
+                    <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md group hover:border-brand-teal/50 transition-all">
+                      <div className="h-40 overflow-hidden relative bg-slate-100">
                         <img 
                           src="/production-line-solutions.jpg" 
                           alt="Ophthalmic Sterile Solution BFS Line" 
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
-                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-950/80 backdrop-blur-md text-brand-teal border border-brand-teal/30">
-                          Line 03
+                        <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/95 backdrop-blur-md text-brand-teal border border-brand-teal/30 shadow-2xs">
+                          Unit 03 · Sterile Packaging
                         </span>
                       </div>
                       <div className="p-4 space-y-1">
-                        <h4 className="font-display font-bold text-sm text-white group-hover:text-brand-teal transition-colors">
-                          Sterile Solutions BFS Filling Line
+                        <h4 className="font-display font-bold text-sm text-slate-900 group-hover:text-brand-teal transition-colors">
+                          Sterile Solutions BFS Liquid Filling
                         </h4>
-                        <p className="text-[11px] text-slate-400">
-                          Automated Blow-Fill-Seal (BFS) liquid packaging for sterile viscoelastic solutions & ampoules.
+                        <p className="text-[11px] text-slate-600">
+                          Automated Blow-Fill-Seal (BFS) liquid aseptic filling for 1.0%–1.4% Sodium Hyaluronate viscoelastics & tamper-proof sterile syringes.
                         </p>
                       </div>
                     </div>
 
                     {/* Line 4: Prosthetics & Diagnostics */}
-                    <div className="bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden shadow-lg group hover:border-brand-teal/60 transition-all">
-                      <div className="h-36 overflow-hidden relative">
+                    <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md group hover:border-brand-teal/50 transition-all">
+                      <div className="h-40 overflow-hidden relative bg-slate-100">
                         <img 
                           src="/production-line-prosthetics.jpg" 
                           alt="Prosthetics & Diagnostic Strips Line" 
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
-                        <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded text-[10px] font-mono font-bold bg-slate-950/80 backdrop-blur-md text-brand-teal border border-brand-teal/30">
-                          Line 04
+                        <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/95 backdrop-blur-md text-brand-teal border border-brand-teal/30 shadow-2xs">
+                          Unit 04 · Laboratory
                         </span>
                       </div>
                       <div className="p-4 space-y-1">
-                        <h4 className="font-display font-bold text-sm text-white group-hover:text-brand-teal transition-colors">
+                        <h4 className="font-display font-bold text-sm text-slate-900 group-hover:text-brand-teal transition-colors">
                           Prosthetics & Diagnostics Line
                         </h4>
-                        <p className="text-[11px] text-slate-400">
-                          Hand-polished custom acrylic ocular prosthetics and lint-free high-absorbency diagnostic test strips.
+                        <p className="text-[11px] text-slate-600">
+                          Precision polishing lab for custom PMMA ocular acrylic prosthetics and lint-free diagnostic paper strip precision slitting.
                         </p>
                       </div>
                     </div>

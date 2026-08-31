@@ -15,37 +15,33 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
   return (
     <div className="bg-white text-slate-900 font-body">
       
-      {/* Universal Page Hero Banner */}
+      {/* Universal Page Hero Banner (Light Medical Theme) */}
       <section 
-        className="relative bg-gradient-to-r from-slate-900 via-[#0B1E38] to-slate-950 text-white py-16 md:py-20 overflow-hidden border-b border-slate-800"
-        style={{ backgroundImage: `url('/universal-banner.png')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+        className="relative bg-gradient-to-r from-brand-soft/80 via-white to-brand-soft/80 text-slate-900 py-12 md:py-16 overflow-hidden border-b border-slate-200"
       >
-        {/* Dark Overlay gradient for contrast */}
-        <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-xs" />
-
         <Container className="relative z-10">
-          <div className="max-w-3xl space-y-5">
+          <div className="max-w-3xl space-y-4">
             
             {/* Breadcrumb */}
-            <div className="flex items-center space-x-2 text-xs font-mono text-slate-400">
+            <div className="flex items-center space-x-2 text-xs font-mono text-slate-500">
               <Link to="/" className="hover:text-brand-teal transition-colors">Home</Link>
-              <ChevronRight className="w-3 h-3 text-slate-500" />
+              <ChevronRight className="w-3 h-3 text-slate-400" />
               <Link to="/about-us" className="hover:text-brand-teal transition-colors">About</Link>
-              <ChevronRight className="w-3 h-3 text-slate-500" />
-              <span className="text-brand-teal font-semibold">Company Profile</span>
+              <ChevronRight className="w-3 h-3 text-slate-400" />
+              <span className="text-brand-teal font-bold">Company Profile</span>
             </div>
 
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-teal/20 border border-brand-teal/40 text-xs font-semibold text-brand-teal shadow-sm">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white border border-brand-teal/30 text-xs font-bold text-brand-teal shadow-2xs">
               <Building2 className="w-3.5 h-3.5" />
-              <span>Corporate Presentation & Infrastructure</span>
+              <span>Corporate Presentation & Technical Capabilities</span>
             </div>
 
-            <h1 className="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-tight">
+            <h1 className="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-slate-900 tracking-tight leading-tight">
               Company Profile & <span className="text-brand-teal">Manufacturing Lines</span>
             </h1>
 
-            <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Explore Central India Export's 39-year manufacturing heritage, 4 main product series, cleanroom production lines, and global export footprint from Nagpur's MIHAN hub.
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
+              Explore Central India Export's 39-year manufacturing heritage, 4 main product verticals with deep technical specifications, cleanroom production lines, and global export footprint from Nagpur's MIHAN hub.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-4 items-center">
@@ -62,7 +58,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
                 <Button 
                   variant="outline" 
                   size="md" 
-                  className="border-slate-600 text-slate-200 hover:bg-slate-800"
+                  className="border-slate-300 text-slate-800 hover:bg-slate-100"
                   icon={<PhoneCall className="w-4 h-4" />}
                 >
                   Contact Export Desk
