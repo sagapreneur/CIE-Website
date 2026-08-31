@@ -17,9 +17,10 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
   return (
     <div className="bg-white text-slate-900 font-body">
       
-      {/* Universal Page Hero Banner (Light Medical Theme) */}
-      <section 
-        className="relative bg-gradient-to-r from-brand-soft/80 via-white to-brand-soft/80 text-slate-900 py-12 md:py-16 overflow-hidden border-b border-slate-200"
+      {/* Header Banner (With Company Profile & Manufacturing Cover Image) */}
+      <div 
+        className="py-16 md:py-20 border-b border-slate-200 relative overflow-hidden bg-cover bg-center bg-no-repeat text-slate-900"
+        style={{ backgroundImage: `url('/about-cover.png')` }}
       >
         <Container className="relative z-10">
           <div className="max-w-3xl space-y-4">
@@ -70,7 +71,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
 
           </div>
         </Container>
-      </section>
+      </div>
 
       {/* 1. DEDICATED PRESENTATION SHOWCASE (Company Profile, Main Products, Production Lines) */}
       <CompanyProfileShowcase onOpenRfq={onOpenRfq} />
