@@ -15,6 +15,7 @@ import { ScrollToTop } from './components/ScrollToTop';
 import { FloatingWidgets } from './components/FloatingWidgets';
 
 import { FaqPage } from './pages/FaqPage';
+import { BackButtonHeader } from './components/BackButtonHeader';
 
 export const App: React.FC = () => {
   const [rfqModalOpen, setRfqModalOpen] = useState(false);
@@ -29,6 +30,7 @@ export const App: React.FC = () => {
     <div className="min-h-screen flex flex-col bg-white text-slate-900 font-body selection:bg-brand-teal selection:text-white">
       <ScrollToTop />
       <Navbar onOpenRfq={handleOpenRfq} />
+      <BackButtonHeader />
 
       <main className="flex-grow">
         <Routes>
