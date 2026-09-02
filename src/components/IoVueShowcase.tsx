@@ -15,7 +15,7 @@ interface IoVueProductItem {
 const IOVUE_PRODUCTS: IoVueProductItem[] = [
   {
     id: 'iovue-aspheric-acrylic',
-    name: 'ioVue Aspheric Hydrophilic Acrylic Foldable IOL',
+    name: 'IOVUE™ Aspheric Hydrophilic Acrylic Foldable IOL',
     tagline: 'Aberration-Free Monofocal Optics with 360° Continuous Square Edge',
     description: 'Precision-engineered hydrophilic acrylic intraocular lens with 360° posterior square edge technology to inhibit posterior capsule opacification (PCO). Designed for effortless micro-incision cataract surgery (MICS) with superb contrast sensitivity.',
     image: '/iovue/iovue-aspheric-acrylic.png',
@@ -40,7 +40,7 @@ const IOVUE_PRODUCTS: IoVueProductItem[] = [
   },
   {
     id: 'iovue-phob-hydrophobic',
-    name: 'ioVue PHOB - Hydrophobic Acrylic 3-Piece IOL',
+    name: 'IOVUE™ PHOB - Hydrophobic Acrylic 3-Piece IOL',
     tagline: 'Glisten-Free Hydrophobic Polymer with Superior Capsular Stability',
     description: 'Advanced hydrophobic acrylic 3-piece foldable intraocular lens featuring PVDF haptics angled at 5° for optimal capsular bag centration. Engineered for zero glistenings with exceptional rotational stability.',
     image: '/iovue/iovue-phob-hydrophobic.png',
@@ -65,7 +65,7 @@ const IOVUE_PRODUCTS: IoVueProductItem[] = [
   },
   {
     id: 'iovue-blue-filter-yellow',
-    name: 'ioVue Blue Filter Yellow Aspheric IOL',
+    name: 'IOVUE™ Blue Filter Yellow Aspheric IOL',
     tagline: 'Natural Photoprotective Blue-Light Blocking Chromophore',
     description: 'Natural yellow-chromophore hydrophobic acrylic IOL engineered to mimic the human crystalline lens. Filters harmful UV and high-energy blue light (400–450nm) to protect macular retina while preserving scotopic vision.',
     image: '/iovue/iovue-blue-filter-yellow.png',
@@ -204,7 +204,7 @@ const IOVUE_PRODUCTS: IoVueProductItem[] = [
   },
   {
     id: 'iovue-hydrophilic-acrylic',
-    name: 'ioVue Hydrophilic Acrylic Foldable IOL',
+    name: 'IOVUE™ Hydrophilic Acrylic Foldable IOL',
     tagline: 'Biocompatible 26% Water Content Hydrophilic MICS Lens',
     description: 'High-purity biocompatible hydrophilic acrylic intraocular lens designed for smooth folding and sub-2.2mm micro-incision cartridge injection into the capsular bag.',
     image: '/iovue/iovue-hydrophilic-acrylic.png',
@@ -226,7 +226,7 @@ const IOVUE_PRODUCTS: IoVueProductItem[] = [
   },
   {
     id: 'iovue-phobic-monofocal',
-    name: 'ioVue Phobic Hydrophobic Monofocal IOL',
+    name: 'IOVUE™ Phobic Hydrophobic Monofocal IOL',
     tagline: 'Single-Piece Glisten-Free Hydrophobic Acrylic Monofocal',
     description: 'High refractive index glisten-free hydrophobic acrylic monofocal lens featuring robust C-loop haptic geometry for exceptional capsular centration and minimal PCO.',
     image: '/iovue/iovue-phobic.png',
@@ -287,10 +287,10 @@ export const IoVueShowcase: React.FC<IoVueShowcaseProps> = ({ onOpenRfq }) => {
           <div className="space-y-1">
             <div className="inline-flex items-center space-x-2 px-3 py-0.5 rounded-full bg-white border border-brand-teal/30 text-xs font-bold text-brand-teal uppercase tracking-wider font-display shadow-2xs">
               <Award className="w-3.5 h-3.5" />
-              <span>Flagship Intraocular Lens Brand · ioVue Series</span>
+              <span>Flagship Intraocular Lens Brand · IOVUE™ Series</span>
             </div>
             <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 tracking-tight">
-              ioVue Premium Intraocular Lenses
+              IOVUE™ Premium Intraocular Lenses
             </h2>
           </div>
 
@@ -399,15 +399,15 @@ export const IoVueShowcase: React.FC<IoVueShowcaseProps> = ({ onOpenRfq }) => {
               </div>
 
               <span className="absolute top-2.5 left-2.5 px-2.5 py-0.5 bg-brand-teal text-white font-bold text-[10px] rounded uppercase tracking-wider shadow-2xs">
-                ioVue Flagship
+                IOVUE™ Flagship
               </span>
             </div>
 
             {/* Certifications Bar */}
             <div className="grid grid-cols-3 gap-2 text-center text-xs">
               <div className="p-2 bg-slate-50 rounded-lg border border-slate-200">
-                <span className="text-slate-500 block text-[9px] uppercase font-mono">Certification</span>
-                <strong className="text-brand-teal font-bold text-[11px]">CE & ISO 13485</strong>
+                <span className="text-slate-500 block text-[9px] uppercase font-mono">Standards</span>
+                <strong className="text-brand-teal font-bold text-[11px]">ISO 13485 & CE Mark</strong>
               </div>
               <div className="p-2 bg-slate-50 rounded-lg border border-slate-200">
                 <span className="text-slate-500 block text-[9px] uppercase font-mono">PCO Shield</span>

@@ -11,7 +11,7 @@ interface IoVuePageProps {
 }
 
 export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
-  const iovueProducts = productsData.filter(p => p.brand === 'ioVue' || p.category_path.includes('Intraocular Lenses'));
+  const iovueProducts = productsData.filter(p => p.brand === 'ioVue' || p.brand === 'IOVUE' || p.category_path.includes('Intraocular Lenses'));
 
   return (
     <div className="bg-slate-50 min-h-screen pb-20 font-body">
@@ -29,7 +29,7 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
             </div>
 
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-tight text-slate-900">
-              ioVue Intraocular Lenses (IOLs)
+              IOVUE™ Intraocular Lenses (IOLs)
             </h1>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
@@ -41,16 +41,16 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
                 variant="primary" 
                 size="lg" 
                 icon={<FileText className="w-5 h-5" />}
-                onClick={() => onOpenRfq('ioVue IOL Complete Series Catalog')}
+                onClick={() => onOpenRfq('IOVUE™ IOL Complete Series Catalog')}
               >
-                Request ioVue Wholesale Quote
+                Request IOVUE™ Wholesale Quote
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
                 className="border-slate-300 text-slate-800 hover:bg-slate-100"
                 icon={<Download className="w-5 h-5" />}
-                onClick={() => onOpenRfq('ioVue Technical Datasheet PDF')}
+                onClick={() => onOpenRfq('IOVUE™ Technical Datasheet PDF')}
               >
                 Request Technical Datasheets
               </Button>
@@ -67,7 +67,7 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
         <Container>
           <SectionHeading
             eyebrow="Precision Optical Engineering"
-            title="Why ioVue Lenses Stand Out in Surgical Performance"
+            title="Why IOVUE™ Lenses Stand Out in Surgical Performance"
             subtitle="Designed to meet stringent ISO 13485 standards with superior capsular stability."
             centered
           />
@@ -106,11 +106,11 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
         </Container>
       </Section>
 
-      {/* ioVue Models Matrix Table */}
+      {/* IOVUE™ Models Matrix Table */}
       <Section className="bg-slate-100/70">
         <Container>
           <SectionHeading
-            eyebrow="ioVue Specifications Matrix"
+            eyebrow="IOVUE™ Specifications Matrix"
             title="Technical Parameters & Model Specifications"
             subtitle="Full specifications for Hydrophilic, Hydrophobic, and PMMA formulations."
           />
@@ -130,49 +130,49 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
                 </thead>
                 <tbody className="divide-y divide-slate-200 text-slate-700">
                   <tr className="hover:bg-slate-50">
-                    <td className="py-3 px-4 font-bold text-slate-900">ioVue Hydrophilic Square Edge</td>
+                    <td className="py-3 px-4 font-bold text-slate-900">IOVUE™ Hydrophilic Square Edge</td>
                     <td className="py-3 px-4">Hydrophilic Acrylic (26% Water)</td>
                     <td className="py-3 px-4 font-mono">6.00mm / 12.50mm</td>
                     <td className="py-3 px-4 font-mono">+10.0D to +30.0D (0.5D steps)</td>
                     <td className="py-3 px-4 font-mono">118.5</td>
                     <td className="py-3 px-4 text-right">
-                      <Button variant="primary" size="sm" onClick={() => onOpenRfq('ioVue Hydrophilic Square Edge IOL')}>
+                      <Button variant="primary" size="sm" onClick={() => onOpenRfq('IOVUE Hydrophilic Square Edge IOL')}>
                         Quote
                       </Button>
                     </td>
                   </tr>
                   <tr className="hover:bg-slate-50">
-                    <td className="py-3 px-4 font-bold text-slate-900">ioVue Hydrophobic 3-Piece Acrylic</td>
+                    <td className="py-3 px-4 font-bold text-slate-900">IOVUE™ Hydrophobic 3-Piece Acrylic</td>
                     <td className="py-3 px-4">Hydrophobic Acrylic with PMMA Haptics</td>
                     <td className="py-3 px-4 font-mono">6.00mm / 13.00mm</td>
                     <td className="py-3 px-4 font-mono">+15.0D to +25.0D (0.5D steps)</td>
                     <td className="py-3 px-4 font-mono">118.9</td>
                     <td className="py-3 px-4 text-right">
-                      <Button variant="primary" size="sm" onClick={() => onOpenRfq('ioVue Hydrophobic 3-Piece Acrylic IOL')}>
+                      <Button variant="primary" size="sm" onClick={() => onOpenRfq('IOVUE Hydrophobic 3-Piece Acrylic IOL')}>
                         Quote
                       </Button>
                     </td>
                   </tr>
                   <tr className="hover:bg-slate-50">
-                    <td className="py-3 px-4 font-bold text-slate-900">ioVue PMMA PC IOL</td>
+                    <td className="py-3 px-4 font-bold text-slate-900">IOVUE™ PMMA PC IOL</td>
                     <td className="py-3 px-4">High Purified PMMA (UV Absorbing)</td>
                     <td className="py-3 px-4 font-mono">6.00mm / 12.50mm</td>
                     <td className="py-3 px-4 font-mono">+0.0D to +35.0D (0.5D steps)</td>
                     <td className="py-3 px-4 font-mono">118.2</td>
                     <td className="py-3 px-4 text-right">
-                      <Button variant="primary" size="sm" onClick={() => onOpenRfq('ioVue PMMA PC IOL')}>
+                      <Button variant="primary" size="sm" onClick={() => onOpenRfq('IOVUE PMMA PC IOL')}>
                         Quote
                       </Button>
                     </td>
                   </tr>
                   <tr className="hover:bg-slate-50">
-                    <td className="py-3 px-4 font-bold text-slate-900">ioVue Capsular Tension Ring (CTR)</td>
+                    <td className="py-3 px-4 font-bold text-slate-900">IOVUE™ Capsular Tension Ring (CTR)</td>
                     <td className="py-3 px-4">Medical Grade PMMA Filament</td>
                     <td className="py-3 px-4 font-mono">10mm / 11mm / 12mm Uncompressed</td>
                     <td className="py-3 px-4 font-mono">N/A (Cataract Bag Stability)</td>
                     <td className="py-3 px-4 font-mono">N/A</td>
                     <td className="py-3 px-4 text-right">
-                      <Button variant="primary" size="sm" onClick={() => onOpenRfq('ioVue Capsular Tension Ring')}>
+                      <Button variant="primary" size="sm" onClick={() => onOpenRfq('IOVUE Capsular Tension Ring')}>
                         Quote
                       </Button>
                     </td>
@@ -184,12 +184,12 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
         </Container>
       </Section>
 
-      {/* ioVue Products Grid */}
+      {/* IOVUE Products Grid */}
       <Section className="bg-white">
         <Container>
           <SectionHeading
             eyebrow="IOL Product Catalog"
-            title="Browse ioVue & Intraocular Lens Products"
+            title="Browse IOVUE™ & Intraocular Lens Products"
             subtitle="Request quotations on individual lens models and injector cartridges."
           />
 

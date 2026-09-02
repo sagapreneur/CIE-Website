@@ -100,7 +100,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
               </h3>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                To empower ophthalmologists, surgical clinics, and healthcare distributors worldwide with certified, micron-precision ophthalmic instruments/consumables/equipments and IOVUE™ intraocular lenses with a strict control over quality of products and quality of working.
+                To empower ophthalmologists, surgical clinics, and healthcare distributors worldwide with micron-precision ophthalmic instruments/consumables/equipments and IOVUE™ intraocular lenses with a strict control over quality of products and quality of working.
               </p>
             </div>
 
@@ -244,7 +244,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
               </h3>
 
               <p className="text-xs text-slate-600 leading-relaxed">
-                Our supply chain adheres to strict ISO 13485:2016 quality management standards for medical devices. All ioVue™ intraocular lenses, blades, and instruments carry European CE compliance technical dossiers and full batch test documentation.
+                Our supply chain adheres to strict ISO 13485:2016 quality management standards for medical devices. All IOVUE™ intraocular lenses, blades, and instruments carry European CE compliance technical dossiers and full batch test documentation.
               </p>
 
               <ul className="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-700">

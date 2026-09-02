@@ -115,8 +115,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
               <div className="flex items-center space-x-2">
                 <Badge variant="blue">{product.category_path}</Badge>
                 <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-brand-soft border border-brand-teal/40 text-brand-teal text-[10px] font-bold tracking-wider uppercase font-display">
-                  <span className="font-black text-brand-teal">ioVue™</span>
-                  <span className="text-slate-600 font-medium">Certified</span>
+                  <span className="font-black text-brand-teal">IOVUE™</span>
+                  <span className="text-slate-600 font-medium">Series</span>
                 </span>
               </div>
               <h1 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-slate-900 leading-tight">

@@ -36,7 +36,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
     return productsData.filter(p => {
       const matchCat = !selectedCategory || p.main_category.toLowerCase() === selectedCategory.toLowerCase() || p.category_path.toLowerCase().includes(selectedCategory.toLowerCase());
       const matchSearch = !searchQuery || p.name.toLowerCase().includes(searchQuery.toLowerCase()) || p.short_description.toLowerCase().includes(searchQuery.toLowerCase()) || p.slug.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchIovue = !onlyIovue || p.brand === 'ioVue';
+      const matchIovue = !onlyIovue || p.brand === 'ioVue' || p.brand === 'IOVUE';
       return matchCat && matchSearch && matchIovue;
     });
   }, [selectedCategory, searchQuery, onlyIovue]);

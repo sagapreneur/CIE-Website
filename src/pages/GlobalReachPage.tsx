@@ -14,7 +14,7 @@ export const GlobalReachPage: React.FC = () => {
             Worldwide Export Reach & Logistics
           </h1>
           <p className="text-slate-600 text-sm sm:text-base">
-            Supplying certified ophthalmic surgical instruments and ioVue IOLs to 50+ countries.
+            Supplying ophthalmic surgical instruments and IOVUE™ IOLs to over 31 countries.
           </p>
         </div>
 

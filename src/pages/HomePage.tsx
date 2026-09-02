@@ -41,7 +41,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
             </h1>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
-              Direct B2B export and supply of ioVue intraocular lenses, micro-blades, ophthalmic surgical instruments, diagnostic strips, viscoelastic solutions, and ocular prostheses. Dispatched globally from Nagpur Zero-Mile HQ, India.
+              Direct B2B export and supply of IOVUE™ intraocular lenses, micro-blades, ophthalmic surgical instruments, diagnostic strips, viscoelastic solutions, and ocular prostheses. Dispatched globally from Nagpur Zero-Mile HQ, India.
             </p>
 
             {/* Action CTAs */}
@@ -80,7 +80,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                 <div className="w-6 h-6 rounded-full bg-white border border-brand-teal flex items-center justify-center text-brand-teal shrink-0 shadow-sm">
                   <Award className="w-3.5 h-3.5 text-brand-teal" />
                 </div>
-                <span className="font-bold text-slate-900 leading-tight">GMP & ISO Certified</span>
+                <span className="font-bold text-slate-900 leading-tight">GMP & ISO Standards</span>
               </div>
 
               <div className="flex items-center space-x-2 py-1.5 px-2.5 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-lg shadow-sm">
@@ -286,18 +286,18 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
               Common B2B Export & Technical Questions
             </h2>
             <p className="text-xs sm:text-sm text-slate-600">
-              Key information regarding ISO 13485 certification, wholesale orders, ioVue™ IOLs, and shipping logistics.
+              Key information regarding ISO 13485 compliance, wholesale orders, IOVUE™ IOLs, and shipping logistics.
             </p>
           </div>
 
           <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-4">
             <details className="group border-b border-slate-100 pb-3">
               <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
-                What quality certifications do Central India Export products hold?
+                What quality standards do Central India Export products hold?
                 <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
               </summary>
               <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                All surgical instruments, blades, and ioVue™ IOLs are supplied under ISO 13485:2016 Quality Management Systems for Medical Devices, carry CE certification, and conform to WHO-GMP standards.
+                All surgical instruments, blades, and IOVUE™ IOLs are supplied under ISO 13485:2016 Quality Management Systems for Medical Devices, carry CE Mark technical dossiers, and conform to WHO-GMP guidelines.
               </p>
             </details>
 
@@ -353,7 +353,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">
-            Get direct wholesale supplier pricing on ophthalmic instruments, ioVue IOLs, and surgical equipment.
+            Get direct wholesale supplier pricing on ophthalmic instruments, IOVUE™ IOLs, and surgical equipment.
           </p>
 
           <div className="pt-2 flex flex-wrap justify-center gap-4">

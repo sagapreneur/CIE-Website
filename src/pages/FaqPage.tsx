@@ -16,7 +16,7 @@ const FAQ_DATA: FaqItem[] = [
     id: 'b2b-01',
     category: 'General',
     question: 'Who is Central India Export (CIE) and what products do you supply?',
-    answer: 'Central India Export (CIE) is a premier B2B supplier and global exporter of high-precision ophthalmic microsurgical instruments, intraocular lenses (ioVue™ brand), micro-surgical blades, ophthalmic solutions, diagnostic strips, ocular prostheses, and clinic vision testing equipment based in Nagpur, Maharashtra, India.'
+    answer: 'Central India Export (CIE) is a premier B2B supplier and global exporter of high-precision ophthalmic microsurgical instruments, intraocular lenses (IOVUE™ brand), micro-surgical blades, ophthalmic solutions, diagnostic strips, ocular prostheses, and clinic vision testing equipment based in Nagpur, Maharashtra, India.'
   },
   {
     id: 'b2b-02',
@@ -28,7 +28,7 @@ const FAQ_DATA: FaqItem[] = [
     id: 'b2b-03',
     category: 'Orders',
     question: 'What is your Minimum Order Quantity (MOQ) for international orders?',
-    answer: 'MOQs vary by product line: Surgical Instruments (10 units per pattern), ioVue IOLs (50 units assortment), Micro Surgical Blades (box of 100 units), Diagnostic Strips (10 boxes), and Ophthalmic Solutions (50 vials/syringes). Evaluation sample packs are available for qualified hospital buyers and medical distributors.'
+    answer: 'MOQs vary by product line: Surgical Instruments (10 units per pattern), IOVUE™ IOLs (50 units assortment), Micro Surgical Blades (box of 100 units), Diagnostic Strips (10 boxes), and Ophthalmic Solutions (50 vials/syringes). Evaluation sample packs are available for qualified hospital buyers and medical distributors.'
   },
   {
     id: 'b2b-04',
@@ -42,13 +42,13 @@ const FAQ_DATA: FaqItem[] = [
     id: 'qual-01',
     category: 'Quality',
     question: 'What quality certifications and standards do your instruments meet?',
-    answer: 'All Central India Export products are supplied under strict ISO 13485:2016 Quality Management Systems for Medical Devices. Our surgical instruments and ioVue IOLs carry European CE Mark technical dossiers and WHO-GMP compliance, ensuring international safety and performance.'
+    answer: 'All Central India Export products are supplied under strict ISO 13485:2016 Quality Management Systems for Medical Devices. Our surgical instruments and IOVUE™ IOLs carry European CE Mark technical dossiers and WHO-GMP compliance, ensuring international safety and performance.'
   },
   {
     id: 'qual-02',
     category: 'Quality',
     question: 'What surgical materials are used in your ophthalmic instruments?',
-    answer: 'We utilize premium-grade biocompatible materials including AISI 420 & 316L Swedish Stainless Steel, Grade 5 Titanium Alloy (Ti-6Al-4V), Clinical Grade PMMA CQ with UV blockers, and Hydrophilic/Hydrophobic Acrylic polymers for ioVue IOLs.'
+    answer: 'We utilize premium-grade biocompatible materials including AISI 420 & 316L Swedish Stainless Steel, Grade 5 Titanium Alloy (Ti-6Al-4V), Clinical Grade PMMA CQ with UV blockers, and Hydrophilic/Hydrophobic Acrylic polymers for IOVUE™ IOLs.'
   },
   {
     id: 'qual-03',
@@ -68,7 +68,7 @@ const FAQ_DATA: FaqItem[] = [
     id: 'log-02',
     category: 'Logistics',
     question: 'What is the typical lead time for production and dispatch?',
-    answer: 'Standard stock items (ioVue IOLs, blades, strips) are dispatched within 1–3 business weeks from order confirmation.'
+    answer: 'Standard stock items (IOVUE™ IOLs, blades, strips) are dispatched within 1–3 business weeks from order confirmation.'
   },
   {
     id: 'log-03',
@@ -121,7 +121,7 @@ export const FaqPage: React.FC<{ onOpenRfq: (productName?: string) => void }> = 
             Frequently Asked Questions (FAQ)
           </h1>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            Everything you need to know about Central India Export’s ophthalmic instruments, ioVue™ IOL brand, 
+            Everything you need to know about Central India Export’s ophthalmic instruments, IOVUE™ IOL brand, 
             ISO 13485 quality standards, wholesale order procedures, and international shipping logistics.
           </p>
         </div>
@@ -133,7 +133,7 @@ export const FaqPage: React.FC<{ onOpenRfq: (productName?: string) => void }> = 
             type="text"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search FAQs (e.g., ISO 13485, MOQ, ioVue, Incoterms, OEM)..."
+            placeholder="Search FAQs (e.g., ISO 13485, MOQ, IOVUE, Incoterms, OEM)..."
             className="w-full pl-12 pr-4 py-3 bg-white rounded-xl border border-slate-200 shadow-sm text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-brand-teal transition-all"
           />
         </div>

@@ -148,7 +148,7 @@ export const TermsPage: React.FC = () => (
             3. Quality Standards & Medical Device Regulations
           </h2>
           <p>
-            Central India Export certifies that all supplied surgical instruments, blades, and ioVue™ intraocular lenses comply with 
+            Central India Export certifies that all supplied surgical instruments, blades, and IOVUE™ intraocular lenses comply with 
             <strong className="text-slate-900"> ISO 13485:2016 Quality Management Systems</strong> and CE technical requirements. The Buyer is responsible for obtaining local health authority import permits, device registrations, or customs authorizations in the country of destination.
           </p>
         </section>
