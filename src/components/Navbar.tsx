@@ -323,7 +323,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
                     {/* Bottom Factory Quote Action Bar */}
                     <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
                       <span className="text-xs text-slate-500 font-medium">
-                        Need proforma quotes or OEM manufacturing?
+                        Need proforma quotes or OEM private labeling?
                       </span>
                       <button
                         onClick={() => {

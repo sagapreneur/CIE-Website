@@ -195,7 +195,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
           <SectionHeading
             eyebrow="Export Excellence & Trust"
             title="Why International Buyers Partner With Central India Export"
-            subtitle="Combining 39 years of manufacturing mastery with central logistics from Nagpur."
+            subtitle="Combining 21 years of export mastery with central logistics from Nagpur."
             centered
           />
 

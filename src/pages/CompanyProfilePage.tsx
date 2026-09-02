@@ -17,7 +17,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
   return (
     <div className="bg-white text-slate-900 font-body">
       
-      {/* Header Banner (With Company Profile & Manufacturing Cover Image) */}
+      {/* Header Banner (With Company Profile & Export Capabilities Cover Image) */}
       <div 
         className="py-16 md:py-20 border-b border-slate-200 relative overflow-hidden bg-cover bg-center bg-no-repeat text-slate-900"
         style={{ backgroundImage: `url('/about-cover.png')` }}
@@ -154,13 +154,13 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
         </Container>
       </Section>
 
-      {/* 3. MANUFACTURING & QUALITY ASSURANCE 4-STEP PROCESS */}
+      {/* 3. QUALITY ASSURANCE 4-STEP WORKFLOW */}
       <Section className="bg-slate-50">
         <Container className="space-y-12">
           
           <SectionHeading
-            eyebrow="Precision Manufacturing Workflow"
-            title="4-Stage Quality Assurance & Production Process"
+            eyebrow="Precision Quality Workflow"
+            title="4-Stage Quality Assurance Process"
             subtitle="From raw material spectrometry to cleanroom assembly and ETO gas sterilization."
             centered
           />
@@ -168,54 +168,50 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             {/* Step 1 */}
-            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm relative space-y-3">
-              <span className="w-8 h-8 rounded-xl bg-brand-teal text-white font-mono font-bold text-xs flex items-center justify-center">
-                01
-              </span>
-              <h4 className="font-display font-bold text-slate-900 text-lg">
-                Material Spectrometry
-              </h4>
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
+              <span className="text-4xl font-extrabold text-brand-teal/20 font-mono absolute top-2 right-4">01</span>
+              <div className="w-10 h-10 rounded-xl bg-brand-soft text-brand-teal flex items-center justify-center font-bold text-sm">
+                1
+              </div>
+              <h3 className="font-display font-bold text-base text-slate-900">Material Spectrometry</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Verification of pure PMMA, hydrophilic/hydrophobic optical polymers, and Swiss Grade 5 Titanium for zero cytotoxicity.
+                100% verification of pure PMMA, hydrophilic/hydrophobic polymers, and Swiss Grade 5 Titanium for zero cytotoxicity.
               </p>
             </div>
 
             {/* Step 2 */}
-            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm relative space-y-3">
-              <span className="w-8 h-8 rounded-xl bg-brand-teal text-white font-mono font-bold text-xs flex items-center justify-center">
-                02
-              </span>
-              <h4 className="font-display font-bold text-slate-900 text-lg">
-                Cleanroom Machining
-              </h4>
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
+              <span className="text-4xl font-extrabold text-brand-teal/20 font-mono absolute top-2 right-4">02</span>
+              <div className="w-10 h-10 rounded-xl bg-brand-soft text-brand-teal flex items-center justify-center font-bold text-sm">
+                2
+              </div>
+              <h3 className="font-display font-bold text-base text-slate-900">Cleanroom Honing</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                CNC optical lathe milling for 360° Square Edge IOL optics and micro-laser edge honing under ISO Class 5 air laminar flow.
+                Precision lathe cutting of 360° Square Edge IOL optics and 100x magnification laser honing of micro blades.
               </p>
             </div>
 
             {/* Step 3 */}
-            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm relative space-y-3">
-              <span className="w-8 h-8 rounded-xl bg-brand-teal text-white font-mono font-bold text-xs flex items-center justify-center">
-                03
-              </span>
-              <h4 className="font-display font-bold text-slate-900 text-lg">
-                Optical Inspection
-              </h4>
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
+              <span className="text-4xl font-extrabold text-brand-teal/20 font-mono absolute top-2 right-4">03</span>
+              <div className="w-10 h-10 rounded-xl bg-brand-soft text-brand-teal flex items-center justify-center font-bold text-sm">
+                3
+              </div>
+              <h3 className="font-display font-bold text-base text-slate-900">ETO & Blister Packaging</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                100% interferometric diopter power verification and 100x magnification digital microscope blade inspection.
+                Medical grade blister sealing and Ethylene Oxide gas sterilization with biological indicator incubation.
               </p>
             </div>
 
             {/* Step 4 */}
-            <div className="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm relative space-y-3">
-              <span className="w-8 h-8 rounded-xl bg-brand-teal text-white font-mono font-bold text-xs flex items-center justify-center">
-                04
-              </span>
-              <h4 className="font-display font-bold text-slate-900 text-lg">
-                Sterile BFS & ETO Packaging
-              </h4>
+            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
+              <span className="text-4xl font-extrabold text-brand-teal/20 font-mono absolute top-2 right-4">04</span>
+              <div className="w-10 h-10 rounded-xl bg-brand-soft text-brand-teal flex items-center justify-center font-bold text-sm">
+                4
+              </div>
+              <h3 className="font-display font-bold text-base text-slate-900">Interferometry Testing</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Automated Blow-Fill-Seal liquid filling, blister pouch sealing, and ETO gas sterilization with Certificate of Analysis.
+                100% optical power diopter verification and sterile lot release certification before international shipment.
               </p>
             </div>
 
@@ -224,21 +220,14 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
         </Container>
       </Section>
 
-      {/* 4. GLOBAL REACH WORLD MAP */}
-      <Section className="bg-white py-12">
-        <Container>
-          <WorldMap />
-        </Container>
-      </Section>
-
-      {/* 5. OEM & PRIVATE LABEL SERVICES FOR DISTRIBUTORS */}
+      {/* 4. EXPORT & DISTRIBUTOR SERVICES */}
       <Section className="bg-slate-50">
         <Container className="space-y-12">
           
           <SectionHeading
             eyebrow="Distributor Partnership Services"
             title="OEM Private Label & Custom Packaging Solutions"
-            subtitle="Tailored manufacturing, custom laser marking, and bespoke packaging for international medical networks."
+            subtitle="Tailored supply services, custom laser marking, and bespoke packaging for international medical networks."
             centered
           />
 
@@ -255,7 +244,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
               </h3>
 
               <p className="text-xs text-slate-600 leading-relaxed">
-                Our manufacturing facilities adhere to strict ISO 13485:2016 quality management standards for medical devices. All ioVue™ intraocular lenses, blades, and instruments carry European CE compliance certificates and full batch test documentation.
+                Our supply chain adheres to strict ISO 13485:2016 quality management standards for medical devices. All ioVue™ intraocular lenses, blades, and instruments carry European CE compliance technical dossiers and full batch test documentation.
               </p>
 
               <ul className="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-700">
@@ -265,11 +254,11 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
-                  <span>WHO-GMP Cleanroom Standards</span>
+                  <span>Traceable Batch Certificate of Analysis (COA)</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
-                  <span>Full Material Traceability & Certificate of Analysis</span>
+                  <span>WHO-GMP Quality Guidelines Compliance</span>
                 </li>
               </ul>
             </div>
@@ -291,15 +280,15 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
               <ul className="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-700">
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
-                  <span>Dispatch within 3–5 Business Days for In-Stock Items</span>
+                  <span>Dispatch within 1–3 Business Weeks for Orders</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
-                  <span>FOB, CIF & CFR Incoterms 2020 terms</span>
+                  <span>FOB (Nagpur/Mumbai), CIF, and CFR Incoterms 2020</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
-                  <span>Custom Export Clearance & Phytosanitary Packaging</span>
+                  <span>Fast Air Express Sample Dispatch in 48 Hours</span>
                 </li>
               </ul>
             </div>
@@ -311,7 +300,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
               </div>
 
               <h3 className="font-display font-bold text-xl text-slate-900">
-                OEM Private Label Manufacturing
+                OEM Private Label & Custom Branding
               </h3>
 
               <p className="text-xs text-slate-600 leading-relaxed">

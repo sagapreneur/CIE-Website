@@ -92,7 +92,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
         </Link>
 
         <p className="text-xs text-slate-600 line-clamp-2 leading-relaxed font-normal">
-          {product.short_description || 'Precision manufactured ophthalmic surgical instrument designed for micro-incisions and surgical procedures.'}
+          {product.short_description || 'High-precision ophthalmic surgical instrument designed for micro-incisions and surgical procedures.'}
         </p>
 
         {/* Key Specification Badges */}

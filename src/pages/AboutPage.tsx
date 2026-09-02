@@ -7,7 +7,7 @@ export const AboutPage: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) =>
   return (
     <div className="bg-slate-50 min-h-screen pb-20 font-body">
       
-      {/* Header Banner (With About & Manufacturing Cover Image - Pure) */}
+      {/* Header Banner (With About Cover Image - Pure) */}
       <div 
         className="py-16 md:py-24 border-b border-slate-200 relative overflow-hidden bg-cover bg-center bg-no-repeat text-slate-900"
         style={{ backgroundImage: `url('/about-cover.png')` }}
@@ -59,7 +59,7 @@ export const AboutPage: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) =>
                   </div>
                   <div className="p-3.5 bg-brand-soft/60 rounded-xl border border-brand-teal/20 space-y-1">
                     <strong className="text-brand-teal block font-bold font-display">WHO-GMP Guidelines</strong>
-                    <span className="text-slate-600">Conforms to WHO Good Manufacturing Practice</span>
+                    <span className="text-slate-600">Conforms to WHO Good Practice Quality Guidelines</span>
                   </div>
                   <div className="p-3.5 bg-brand-soft/60 rounded-xl border border-brand-teal/20 space-y-1">
                     <strong className="text-brand-teal block font-bold font-display">Interferometry QA</strong>

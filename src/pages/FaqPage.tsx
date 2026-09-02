@@ -42,7 +42,7 @@ const FAQ_DATA: FaqItem[] = [
     id: 'qual-01',
     category: 'Quality',
     question: 'What quality certifications and standards do your instruments meet?',
-    answer: 'All Central India Export products are manufactured under strict ISO 13485:2016 Quality Management Systems for Medical Devices. Our surgical instruments and ioVue IOLs carry CE certification and WHO-GMP compliance, ensuring international safety and performance.'
+    answer: 'All Central India Export products are supplied under strict ISO 13485:2016 Quality Management Systems for Medical Devices. Our surgical instruments and ioVue IOLs carry European CE Mark technical dossiers and WHO-GMP compliance, ensuring international safety and performance.'
   },
   {
     id: 'qual-02',
@@ -68,7 +68,7 @@ const FAQ_DATA: FaqItem[] = [
     id: 'log-02',
     category: 'Logistics',
     question: 'What is the typical lead time for production and dispatch?',
-    answer: 'Standard stock items (ioVue IOLs, blades, strips) are dispatched within 3–5 business days. Bulk hospital contracts and custom OEM orders are produced and shipped within 2–3 weeks from order confirmation.'
+    answer: 'Standard stock items (ioVue IOLs, blades, strips) are dispatched within 1–3 business weeks from order confirmation.'
   },
   {
     id: 'log-03',
@@ -81,8 +81,8 @@ const FAQ_DATA: FaqItem[] = [
   {
     id: 'oem-01',
     category: 'OEM',
-    question: 'Do you offer OEM private label manufacturing for distributors?',
-    answer: 'Yes, we provide complete OEM and Private Label manufacturing services. We can custom-laser mark distributor logos on instrument handles, customize blister pouch packaging, and produce bespoke diopter/model configurations.'
+    question: 'Do you offer OEM private label branding for distributors?',
+    answer: 'Yes, we provide complete OEM and Private Label supply services. We can custom-laser mark distributor logos on instrument handles, customize blister pouch packaging, and produce bespoke diopter/model configurations.'
   },
   {
     id: 'oem-02',

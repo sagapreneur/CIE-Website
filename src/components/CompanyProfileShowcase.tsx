@@ -274,7 +274,7 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                     <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-slate-200 shadow-lg space-y-1">
                       <div className="flex items-center space-x-2 text-brand-teal">
                         <Sparkles className="w-4 h-4" />
-                        <span className="text-xs font-bold font-display uppercase tracking-wider">Nagpur Manufacturing Hub</span>
+                        <span className="text-xs font-bold font-display uppercase tracking-wider">Nagpur Export Hub</span>
                       </div>
                       <p className="text-xs text-slate-700">
                         ISO Class 5 & 7 Certified Cleanroom Units for IOL Assembly & Micron Blade Sharpening
@@ -328,7 +328,7 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                       4 Core Vertical Series
                     </Badge>
                     <h2 className="font-display font-extrabold text-2xl text-slate-900">
-                      Technical Overview of Main Manufactured Product Lines
+                      Technical Overview of Main Export Product Series
                     </h2>
                     <p className="text-xs text-slate-600">
                       Detailed specifications, diopters, materials, and blade geometry specs for B2B export buyers.
@@ -337,7 +337,7 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
 
                   <Link to="/products">
                     <Button variant="outline" size="sm" icon={<ArrowRight className="w-4 h-4" />}>
-                      Browse All 457 Catalog Items
+                      Browse All 400+ Catalog Items
                     </Button>
                   </Link>
                 </div>
@@ -566,10 +566,10 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                     </h3>
 
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      We operate 3 dedicated manufacturing units in Nagpur equipped with ISO Class 5/7 cleanrooms, alongside 5 strategic manufacturing partner lines providing an integrated production capacity of <strong className="text-slate-900 font-mono font-bold">457+ catalog items</strong>.
+                      We operate dedicated cleanroom assembly and quality testing facilities in Nagpur equipped with ISO Class 5/7 cleanrooms, providing an integrated catalog of <strong className="text-slate-900 font-mono font-bold">400+ catalog items</strong>.
                     </p>
 
-                    {/* Timeline Growth Milestones (Detailed Informative Adaptations) */}
+                    {/* Timeline Growth Milestones (Official PDF Data) */}
                     <div className="space-y-4 pt-3 border-t border-slate-100">
                       <h4 className="text-xs uppercase font-mono tracking-widest text-brand-blue font-bold">
                         Central India Export Growth Milestones
@@ -577,28 +577,18 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
 
                       <div className="space-y-3">
                         <div className="flex items-start space-x-3 text-xs">
-                          <span className="px-2 py-0.5 rounded bg-brand-soft text-brand-teal border border-brand-teal/30 font-mono font-bold shrink-0">1985</span>
-                          <span className="text-slate-700">Founded in Nagpur by CEO Sandeep Vaid as an ophthalmic equipment export merchant.</span>
-                        </div>
-
-                        <div className="flex items-start space-x-3 text-xs">
-                          <span className="px-2 py-0.5 rounded bg-brand-soft text-brand-teal border border-brand-teal/30 font-mono font-bold shrink-0">1998</span>
-                          <span className="text-slate-700">Commissioned direct manufacturing line for surgical stainless steel instruments & cannulas.</span>
-                        </div>
-
-                        <div className="flex items-start space-x-3 text-xs">
                           <span className="px-2 py-0.5 rounded bg-brand-soft text-brand-teal border border-brand-teal/30 font-mono font-bold shrink-0">2004</span>
-                          <span className="text-slate-700">Established ISO Class 5 Cleanrooms for ioVue™ IOL lathe cutting & micro blade honing.</span>
+                          <span className="text-slate-700"><strong>Company Foundation:</strong> Founded in Nagpur, India by CEO Sandeep Vaid as an ophthalmic medical equipment export merchant.</span>
                         </div>
 
                         <div className="flex items-start space-x-3 text-xs">
-                          <span className="px-2 py-0.5 rounded bg-brand-soft text-brand-teal border border-brand-teal/30 font-mono font-bold shrink-0">2014</span>
-                          <span className="text-slate-700">Attained ISO 13485:2016 certification & CE Mark compliance for European export markets.</span>
+                          <span className="px-2 py-0.5 rounded bg-brand-soft text-brand-teal border border-brand-teal/30 font-mono font-bold shrink-0">2009</span>
+                          <span className="text-slate-700"><strong>International Regulatory Accreditation:</strong> Attained Trademarks, ISO certifications, and European CE Mark technical dossiers.</span>
                         </div>
 
                         <div className="flex items-start space-x-3 text-xs">
                           <span className="px-2 py-0.5 rounded bg-brand-soft text-brand-teal border border-brand-teal/30 font-mono font-bold shrink-0">2022</span>
-                          <span className="text-slate-700">Expanded global distribution network to 50+ countries across 5 continents.</span>
+                          <span className="text-slate-700"><strong>Global Reach Scale:</strong> Expanded export network to over 31 countries with strict One Country One Distributor Policy, offering 400+ products under one roof.</span>
                         </div>
                       </div>
                     </div>

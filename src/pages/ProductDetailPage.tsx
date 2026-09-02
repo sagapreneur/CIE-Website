@@ -126,7 +126,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
 
             {/* Short Description */}
             <div className="p-4 bg-brand-soft/60 rounded-xl border border-brand-teal/20 text-sm text-slate-700 leading-relaxed font-normal">
-              {product.short_description || 'High-precision ophthalmic instrument manufactured under ISO 13485 quality standards for precision cataract and micro-incision surgery.'}
+              {product.short_description || 'High-precision ophthalmic instrument supplied under ISO 13485 quality standards for precision cataract and micro-incision surgery.'}
             </div>
 
             {/* Primary RFQ Action Box */}
