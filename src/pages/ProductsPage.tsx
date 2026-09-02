@@ -65,7 +65,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
               Complete Ophthalmic Export Catalog
             </span>
             <h1 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-slate-900">
-              Ophthalmic Products ({productsData.length} Items)
+              Ophthalmic Equipment & Instruments ({productsData.length} Items)
             </h1>
             <p className="text-sm sm:text-base text-slate-600">
               Filter by category, search specific products, or request a wholesale quotation directly.

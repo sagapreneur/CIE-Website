@@ -15,8 +15,8 @@ const FAQ_DATA: FaqItem[] = [
   {
     id: 'b2b-01',
     category: 'General',
-    question: 'Who is Central India Export (CIE) and what products do you manufacture?',
-    answer: 'Central India Export (CIE) is a premier manufacturer and global exporter of high-precision ophthalmic microsurgical instruments, intraocular lenses (ioVue™ brand), micro-surgical blades, ophthalmic solutions, diagnostic strips, ocular prostheses, and clinic vision testing equipment based in Nagpur, Maharashtra, India.'
+    question: 'Who is Central India Export (CIE) and what products do you supply?',
+    answer: 'Central India Export (CIE) is a premier B2B supplier and global exporter of high-precision ophthalmic microsurgical instruments, intraocular lenses (ioVue™ brand), micro-surgical blades, ophthalmic solutions, diagnostic strips, ocular prostheses, and clinic vision testing equipment based in Nagpur, Maharashtra, India.'
   },
   {
     id: 'b2b-02',

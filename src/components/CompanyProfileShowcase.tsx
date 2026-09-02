@@ -21,7 +21,7 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
       id: 'profile',
       tabTitle: '01. Corporate Profile & Reach',
       subtitle: 'Precision in Vision, Trust in Every Export',
-      heading: '39 Years of Ophthalmic Manufacturing & Export Mastery',
+      heading: '21 Years of Ophthalmic Export Mastery (Est. 2004)',
     },
     {
       id: 'products',
@@ -31,8 +31,8 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
     },
     {
       id: 'production',
-      tabTitle: '03. Cleanroom Production Lines',
-      subtitle: 'Own Cleanrooms & Manufacturing Facilities',
+      tabTitle: '03. Cleanroom Facilities & Quality',
+      subtitle: 'Own Cleanrooms & Assembly Facilities',
       heading: '3 Dedicated Nagpur Cleanroom Facilities & Growth Milestones',
     }
   ];
@@ -81,7 +81,7 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                 <span className="text-xs uppercase tracking-widest font-mono text-brand-teal font-bold block">
                   Central India Export Presentation Deck
                 </span>
-                <span className="text-[11px] text-slate-500 font-mono">HQ: Nagpur, Maharashtra, India · Est. 1985</span>
+                <span className="text-[11px] text-slate-500 font-mono">HQ: Nagpur, Maharashtra, India · Est. 2004</span>
               </div>
             </div>
             
@@ -119,36 +119,32 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
               <span className="text-xs font-mono text-slate-600">
                 Slide <strong className="text-brand-teal font-bold">{activeSlide + 1}</strong> of {slides.length}
               </span>
-
-              <div className="h-4 w-px bg-slate-300" />
-
-              <button
-                onClick={() => setIsAutoplay(!isAutoplay)}
-                className={`p-1.5 rounded-lg border text-xs flex items-center space-x-1.5 transition-colors ${
-                  isAutoplay 
-                    ? 'bg-brand-teal/15 border-brand-teal/40 text-brand-teal font-bold' 
-                    : 'border-slate-300 text-slate-600 hover:bg-white'
-                }`}
-                title={isAutoplay ? 'Pause Slideshow' : 'Autoplay Slideshow'}
-              >
-                {isAutoplay ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
-                <span className="hidden sm:inline text-[11px]">{isAutoplay ? 'Autoplay On' : 'Autoplay'}</span>
-              </button>
-
+              
               <div className="flex items-center space-x-1">
-                <button
-                  onClick={handlePrev}
-                  className="p-2 rounded-xl bg-white hover:bg-brand-soft text-slate-700 border border-slate-200 hover:border-brand-teal/40 transition-all shadow-2xs"
-                  aria-label="Previous slide"
+                <button 
+                  onClick={() => setIsAutoplay(!isAutoplay)}
+                  className={`p-2 rounded-lg transition-colors ${
+                    isAutoplay 
+                      ? 'bg-brand-teal text-white' 
+                      : 'bg-white text-slate-700 hover:text-slate-900 border border-slate-200'
+                  }`}
+                  title={isAutoplay ? "Pause Slideshow" : "Play Auto-Slideshow"}
                 >
-                  <ChevronLeft className="w-4 h-4" />
+                  {isAutoplay ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
                 </button>
-                <button
-                  onClick={handleNext}
-                  className="p-2 rounded-xl bg-white hover:bg-brand-soft text-slate-700 border border-slate-200 hover:border-brand-teal/40 transition-all shadow-2xs"
-                  aria-label="Next slide"
+                <button 
+                  onClick={handlePrev}
+                  className="p-2 rounded-lg bg-white text-slate-700 hover:text-slate-900 border border-slate-200 transition-colors"
+                  title="Previous Slide"
                 >
-                  <ChevronRight className="w-4 h-4" />
+                  <ChevronLeft className="w-3.5 h-3.5" />
+                </button>
+                <button 
+                  onClick={handleNext}
+                  className="p-2 rounded-lg bg-white text-slate-700 hover:text-slate-900 border border-slate-200 transition-colors"
+                  title="Next Slide"
+                >
+                  <ChevronRight className="w-3.5 h-3.5" />
                 </button>
               </div>
             </div>
@@ -156,87 +152,102 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
           </div>
         </div>
 
-        {/* Dynamic Presentation Slide Container */}
-        <div className="relative min-h-[520px]">
+        {/* Slide Deck Stage Window */}
+        <div className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden min-h-[480px]">
           <AnimatePresence mode="wait">
-
-            {/* SLIDE 1: CORPORATE PROFILE & REACH */}
+            
+            {/* SLIDE 01: CORPORATE PROFILE & EXPORT FOOTPRINT */}
             {activeSlide === 0 && (
               <motion.div
-                key="slide-profile-light"
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -12 }}
-                transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start"
+                key="profile"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.3 }}
+                className="p-6 md:p-10 space-y-8"
               >
-                {/* Left Text Presentation Card */}
-                <div className="lg:col-span-7 space-y-6 bg-white rounded-3xl p-6 md:p-8 border border-slate-200/90 shadow-lg">
+                
+                {/* Header Header Info */}
+                <div className="border-b border-slate-100 pb-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                  <div>
+                    <span className="text-xs font-mono uppercase tracking-widest text-brand-teal font-bold">
+                      {slides[0].subtitle}
+                    </span>
+                    <h3 className="font-display font-extrabold text-2xl md:text-3xl text-slate-900 mt-1">
+                      {slides[0].heading}
+                    </h3>
+                  </div>
+
+                  <Button 
+                    variant="primary" 
+                    size="sm"
+                    icon={<FileText className="w-4 h-4" />}
+                    onClick={() => onOpenRfq('Corporate Profile & Catalog Request')}
+                  >
+                    Request Corporate Dossier
+                  </Button>
+                </div>
+
+                {/* Main Content Grid */}
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                   
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-brand-soft border border-brand-teal/30 text-xs font-bold text-brand-teal">
-                      <Building2 className="w-3.5 h-3.5" />
-                      <span>Company Profile · Established 1985</span>
-                    </span>
-                    <span className="inline-flex items-center space-x-1 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-mono text-slate-700">
-                      <span>GSTIN: 27AAEFC8743J1Z5</span>
-                    </span>
-                  </div>
+                  {/* Left Column: Text Summary & Metrics */}
+                  <div className="lg:col-span-7 space-y-6">
+                    
+                    <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 leading-tight">
+                      Central India Export — <span className="text-brand-teal">21-Year Global Export Legacy</span>
+                    </h2>
 
-                  <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900 leading-tight">
-                    Central India Export — <span className="text-brand-teal">39-Year Global Export Legacy</span>
-                  </h2>
+                    <div className="space-y-4 text-slate-700 text-sm leading-relaxed font-normal">
+                      <p>
+                        Founded in 2004 in Nagpur, India by CEO <strong className="text-slate-900 font-semibold">Sandeep Vaid</strong>, <strong className="text-brand-blue font-bold">Central India Export (CIE)</strong> has grown into a trusted partner and recognized brand in the global ophthalmic equipment and medical consumables market. Situated at Nagpur's Zero Mile in the heart of the city, CIE specializes in direct B2B export and supply of ioVue™ intraocular lenses, micro-surgical blades, surgical instruments, diagnostic strips, viscoelastic solutions, and ocular prostheses.
+                      </p>
 
-                  <div className="space-y-4 text-slate-700 text-sm leading-relaxed font-normal">
-                    <p>
-                      Founded in 1985 in Nagpur, India by CEO <strong className="text-slate-900 font-semibold">Sandeep Vaid</strong>, <strong className="text-brand-blue font-bold">Central India Export (CIE)</strong> has grown into a trusted partner and recognized brand in the global ophthalmic and medical consumables market. Situated at Nagpur's Zero Mile adjacent to the MIHAN cargo hub, CIE specializes in direct export manufacturing of ioVue™ intraocular lenses, micro-surgical blades, surgical instruments, diagnostic strips, viscoelastic solutions, and ocular prostheses.
-                    </p>
+                      <p>
+                        Thanks to our dedication to micron-precision quality, competitive B2B wholesale pricing, and long-term distributor partnerships, CIE products are exported to <strong className="text-slate-900 font-bold font-mono">over 31 countries</strong> worldwide with a strict policy of <strong className="text-brand-teal font-bold">ONE COUNTRY ONE DISTRIBUTOR NETWORK</strong>.
+                      </p>
+                    </div>
 
-                    <p>
-                      Thanks to our dedication to micron-precision quality, competitive B2B wholesale pricing, and long-term distributor partnerships, CIE products have been exported to <strong className="text-slate-900 font-bold font-mono">over 50 countries</strong> worldwide.
-                    </p>
-                  </div>
+                    {/* Informative Key Regions Breakdown Grid */}
+                    <div className="bg-brand-soft/40 rounded-2xl p-4 border border-brand-teal/20 space-y-2">
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-brand-blue font-display flex items-center space-x-1.5">
+                        <Globe2 className="w-4 h-4 text-brand-teal" />
+                        <span>Global Export Network (31+ Countries · One Country One Distributor)</span>
+                      </h4>
 
-                  {/* Informative Key Regions Breakdown Grid */}
-                  <div className="bg-brand-soft/40 rounded-2xl p-4 border border-brand-teal/20 space-y-2">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-brand-blue font-display flex items-center space-x-1.5">
-                      <Globe2 className="w-4 h-4 text-brand-teal" />
-                      <span>Global Export Regions Covered (50+ Destinations)</span>
-                    </h4>
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-medium text-slate-800">
+                        <div className="bg-white p-2 rounded-lg border border-slate-200/80 shadow-2xs">
+                          <span className="font-bold text-brand-teal block">🇪🇺 Europe</span>
+                          <span className="text-[11px] text-slate-600">UK, Turkey, Spain</span>
+                        </div>
 
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs font-medium text-slate-800">
-                      <div className="bg-white p-2 rounded-lg border border-slate-200/80 shadow-2xs">
-                        <span className="font-bold text-brand-teal block">🇪🇺 Europe</span>
-                        <span className="text-[11px] text-slate-600">UK, Germany, Poland, Greece, France, Portugal</span>
-                      </div>
+                        <div className="bg-white p-2 rounded-lg border border-slate-200/80 shadow-2xs">
+                          <span className="font-bold text-brand-teal block">🇺🇸 Americas</span>
+                          <span className="text-[11px] text-slate-600">Guatemala, Brazil, Mexico, Colombia</span>
+                        </div>
 
-                      <div className="bg-white p-2 rounded-lg border border-slate-200/80 shadow-2xs">
-                        <span className="font-bold text-brand-teal block">🇺🇸 Americas</span>
-                        <span className="text-[11px] text-slate-600">USA, Mexico, Brazil, Colombia, Chile</span>
-                      </div>
+                        <div className="bg-white p-2 rounded-lg border border-slate-200/80 shadow-2xs">
+                          <span className="font-bold text-brand-teal block">🇦🇪 Middle East & Africa</span>
+                          <span className="text-[11px] text-slate-600">UAE, South Africa, Kenya, Nigeria</span>
+                        </div>
 
-                      <div className="bg-white p-2 rounded-lg border border-slate-200/80 shadow-2xs">
-                        <span className="font-bold text-brand-teal block">🇦🇪 Middle East & Africa</span>
-                        <span className="text-[11px] text-slate-600">UAE, Saudi Arabia, South Africa, Egypt</span>
-                      </div>
-
-                      <div className="bg-white p-2 rounded-lg border border-slate-200/80 shadow-2xs">
-                        <span className="font-bold text-brand-teal block">🌏 Asia-Pacific</span>
-                        <span className="text-[11px] text-slate-600">India, Thailand, Vietnam, Philippines</span>
+                        <div className="bg-white p-2 rounded-lg border border-slate-200/80 shadow-2xs">
+                          <span className="font-bold text-brand-teal block">🌏 Asia-Pacific</span>
+                          <span className="text-[11px] text-slate-600">India, Thailand, Vietnam, Philippines</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
                   {/* Stat Counters Grid */}
                   <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-3 border-t border-slate-200">
                     <div className="p-3 rounded-2xl bg-slate-100/70 border border-slate-200 text-center">
-                      <span className="font-display font-extrabold text-2xl text-brand-teal font-mono">39+</span>
-                      <p className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold font-display">Years History</p>
+                      <span className="font-display font-extrabold text-2xl text-brand-teal font-mono">21+</span>
+                      <p className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold font-display">Years Export Mastery</p>
                     </div>
 
                     <div className="p-3 rounded-2xl bg-slate-100/70 border border-slate-200 text-center">
-                      <span className="font-display font-extrabold text-2xl text-slate-900 font-mono">50+</span>
-                      <p className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold font-display">Countries Exported</p>
+                      <span className="font-display font-extrabold text-2xl text-slate-900 font-mono">31+</span>
+                      <p className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold font-display">Export Countries</p>
                     </div>
 
                     <div className="p-3 rounded-2xl bg-slate-100/70 border border-slate-200 text-center">
@@ -249,7 +260,6 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                       <p className="text-[11px] uppercase tracking-wider text-slate-600 font-semibold font-display">Surgeons Served</p>
                     </div>
                   </div>
-
                 </div>
 
                 {/* Right Visual Image & Certifications Showcase */}
@@ -298,7 +308,8 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                   </div>
 
                 </div>
-              </motion.div>
+              </div>
+            </motion.div>
             )}
 
             {/* SLIDE 2: MAIN PRODUCTS SERIES (DEEP TECHNICAL SPECS) */}
@@ -605,7 +616,7 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/95 backdrop-blur-md text-brand-teal border border-brand-teal/30 shadow-2xs">
-                          Unit 01 · MIHAN Hub
+                          Unit 01 · Nagpur HQ
                         </span>
                       </div>
                       <div className="p-4 space-y-1">

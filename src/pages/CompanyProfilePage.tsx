@@ -40,11 +40,11 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
             </div>
 
             <h1 className="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl text-slate-900 tracking-tight leading-tight">
-              Company Profile & <span className="text-brand-teal">Manufacturing Lines</span>
+              Company Profile & <span className="text-brand-teal">Export Capabilities</span>
             </h1>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
-              Explore Central India Export's 39-year manufacturing heritage, 4 main product verticals with deep technical specifications, cleanroom production lines, and global export footprint from Nagpur's MIHAN hub.
+              Explore Central India Export's 21-year export mastery (Est. 2004), 4 main product verticals with deep technical specifications, cleanroom facilities, and global footprint across 31+ countries with strict One Country One Distributor Policy.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-4 items-center">
@@ -54,7 +54,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
                 icon={<FileText className="w-4 h-4" />}
                 onClick={() => onOpenRfq('Company Profile & Catalog Inquiry')}
               >
-                Request Corporate Profile PDF & Proforma Quote
+                Request Corporate Profile & Proforma Quote
               </Button>
 
               <Link to="/contact-us">
@@ -83,7 +83,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
           <SectionHeading
             eyebrow="Corporate Philosophy"
             title="Mission, Vision & Strategic Pillars"
-            subtitle="Guiding our growth as a leading manufacturer and exporter of ophthalmic medical consumables."
+            subtitle="Guiding our growth as a leading supplier and exporter of ophthalmic surgical equipment, instruments, and consumables."
             centered
           />
 
@@ -100,7 +100,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
               </h3>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                To empower ophthalmologists, surgical clinics, and healthcare distributors worldwide with certified, micron-precision ophthalmic instruments and ioVue™ intraocular lenses at direct manufacturer wholesale rates.
+                To empower ophthalmologists, surgical clinics, and healthcare distributors worldwide with certified, micron-precision ophthalmic instruments/consumables/equipments and IOVUE™ intraocular lenses with a strict control over quality of products and quality of working.
               </p>
             </div>
 
@@ -281,11 +281,11 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
               </div>
 
               <h3 className="font-display font-bold text-xl text-slate-900">
-                MIHAN Air Cargo Logistics Advantage
+                Nagpur Central Air Logistics Advantage
               </h3>
 
               <p className="text-xs text-slate-600 leading-relaxed">
-                Situated at Nagpur's Zero Mile in central India, our export desk leverages direct proximity to the MIHAN international cargo airport for rapid air freight dispatches worldwide via DHL, FedEx, and international air cargo carriers.
+                Situated at Nagpur's Zero Mile in central India, our export desk provides rapid air freight dispatches worldwide via DHL, FedEx, and international air cargo carriers.
               </p>
 
               <ul className="space-y-2 pt-2 border-t border-slate-100 text-xs text-slate-700">

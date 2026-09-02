@@ -15,13 +15,13 @@ export const AboutPage: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) =>
         <Container className="relative z-10">
           <div className="max-w-3xl space-y-4">
             <span className="text-xs font-bold uppercase tracking-wider text-brand-teal bg-white px-3 py-1 rounded border border-brand-teal/30 shadow-sm font-display inline-block">
-              39 Years of Manufacturing & Export Legacy (Est. 1985)
+              21 Years of Ophthalmic Export Mastery (Est. 2004)
             </span>
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl text-slate-900">
               About Central India Export
             </h1>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal">
-              Headquartered at Zero Mile Nagpur, India, Central India Export is a global B2B manufacturer and exporter serving over 10,000 global customers across 5 continents.
+              Headquartered at Zero Mile Nagpur, India, Central India Export is a global B2B supplier and exporter serving over 31 countries with a strict policy of One Country One Distributor Network.
             </p>
           </div>
         </Container>
@@ -37,10 +37,10 @@ export const AboutPage: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) =>
                 Our Foundation & Vision
               </span>
               <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 leading-tight">
-                Pioneering Precision Ophthalmic Craftsmanship Since 1985
+                Pioneering Precision Ophthalmic Export Mastery Since 2004
               </h2>
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Founded by Sandeep Vaid in 1985, Central India Export has built a documented client base exceeding 10,000 global customers. We maintain successful market penetration across Europe, North America (including Canada), Latin America, Central America, and the African continent.
+                Founded by CEO Sandeep Vaid in 2004, Central India Export has built a documented export network across 31+ countries with a strict policy of One Country One Distributor Network. We maintain market penetration across Europe, Americas, Middle East, Africa, and Asia-Pacific.
               </p>
 
               {/* Regulatory Compliance & Quality Assurance Grid */}
@@ -50,40 +50,30 @@ export const AboutPage: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) =>
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                   <div className="p-3.5 bg-brand-soft/60 rounded-xl border border-brand-teal/20 space-y-1">
-                    <strong className="text-brand-teal block font-bold font-display">FDA Compliance</strong>
-                    <span className="text-slate-600">Adheres to strict U.S. FDA regulatory standards</span>
+                    <strong className="text-brand-teal block font-bold font-display">ISO 13485:2016</strong>
+                    <span className="text-slate-600">Quality Management System for Medical Devices</span>
                   </div>
                   <div className="p-3.5 bg-brand-soft/60 rounded-xl border border-brand-teal/20 space-y-1">
-                    <strong className="text-brand-teal block font-bold font-display">CE Marking (Conformité Européenne)</strong>
-                    <span className="text-slate-600">Conforms to European medical directive standards</span>
+                    <strong className="text-brand-teal block font-bold font-display">CE Mark Dossiers</strong>
+                    <span className="text-slate-600">European CE compliance technical dossiers</span>
                   </div>
                   <div className="p-3.5 bg-brand-soft/60 rounded-xl border border-brand-teal/20 space-y-1">
-                    <strong className="text-brand-teal block font-bold font-display">GMP Manufacturing Guidelines</strong>
-                    <span className="text-slate-600">Good Manufacturing Practice facility protocols</span>
+                    <strong className="text-brand-teal block font-bold font-display">WHO-GMP Guidelines</strong>
+                    <span className="text-slate-600">Conforms to WHO Good Manufacturing Practice</span>
                   </div>
                   <div className="p-3.5 bg-brand-soft/60 rounded-xl border border-brand-teal/20 space-y-1">
-                    <strong className="text-brand-teal block font-bold font-display">ISO Certifications</strong>
-                    <span className="text-slate-600">Certified ISO 13485 quality management systems</span>
+                    <strong className="text-brand-teal block font-bold font-display">Interferometry QA</strong>
+                    <span className="text-slate-600">100% optical power diopter & edge honing inspection</span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-2 grid grid-cols-2 gap-4 text-xs">
-                <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                  <strong className="font-display font-bold text-lg text-slate-900 block">Sandeep Vaid</strong>
-                  <span className="text-slate-500">Founder & CEO</span>
-                </div>
-                <div className="p-4 bg-slate-50 rounded-xl border border-slate-200">
-                  <strong className="font-display font-bold text-lg text-brand-teal block">27AAEFC8743J1Z5</strong>
-                  <span className="text-slate-500">Registered GSTIN</span>
-                </div>
-              </div>
             </div>
 
             <div className="lg:col-span-5 bg-gradient-to-br from-brand-soft via-white to-slate-100 text-slate-900 p-8 rounded-2xl border border-slate-200 shadow-lg space-y-6">
-              <h3 className="font-display font-bold text-2xl text-slate-900">The MIHAN Nagpur Logistics Advantage</h3>
+              <h3 className="font-display font-bold text-2xl text-slate-900">The Central Nagpur Logistics Advantage</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Nagpur is geographically recognized as the "Zero Mile" center of India. Situated adjacent to the MIHAN Multi-modal International Cargo Hub, Central India Export operates with unmatched air cargo connectivity.
+                Nagpur is geographically recognized as the "Zero Mile" center of India. Central India Export operates with efficient air cargo connectivity worldwide.
               </p>
               <ul className="space-y-2.5 text-xs text-slate-700">
                 <li className="flex items-center space-x-2">

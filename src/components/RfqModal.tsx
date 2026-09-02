@@ -267,7 +267,7 @@ export const RfqModal: React.FC<RfqModalProps> = ({ isOpen, onClose, productName
               <div className="pt-2 flex items-center justify-between">
                 <span className="text-[11px] text-slate-500 flex items-center space-x-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-brand-teal" />
-                  <span>Direct Export Manufacturer Quote · No Spam</span>
+                  <span>Direct Export Supplier Quote · No Spam</span>
                 </span>
                 <Button
                   variant="primary"

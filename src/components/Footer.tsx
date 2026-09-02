@@ -16,18 +16,23 @@ export const Footer: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) => {
           {/* Column 1: Company Profile with Logo Only */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3">
-              <img src="/cie-logo.png" alt="Central India Export" className="h-14 w-auto bg-white p-2 rounded-lg border border-slate-200 shadow-sm" />
+              <img src="/cie-logo.png" alt="Central India Export" className="h-12 w-auto bg-white p-1.5 rounded-lg border border-slate-200 shadow-sm" />
+              <div className="h-12 px-4 bg-gradient-to-br from-[#0D3666] to-[#1A2638] border border-[#28B2A8] rounded-lg flex items-center justify-center shadow-sm">
+                <span className="font-display font-extrabold text-white text-base tracking-widest">
+                  IOVUE<span className="text-brand-teal">™</span>
+                </span>
+              </div>
             </div>
 
             <p className="text-sm text-slate-600 leading-relaxed pr-4 font-normal">
-              Central India Export (est. 1985) is a manufacturer and international exporter of high-precision ophthalmic surgical instruments, ioVue intraocular lenses (IOLs), micro-surgical blades, and eye equipment based in Nagpur, India.
+              Central India Export (est. 2004) is a premier supplier and international exporter of high-precision ophthalmic surgical instruments, ioVue intraocular lenses (IOLs), micro-surgical blades, and ophthalmic equipment based in Nagpur, India.
             </p>
 
             {/* Badges */}
             <div className="flex flex-wrap items-center gap-3 pt-2">
               <span className="inline-flex items-center space-x-1.5 px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-brand-teal shadow-sm">
                 <Award className="w-3.5 h-3.5" />
-                <span>39+ Years Export Legacy</span>
+                <span>21+ Years Export Mastery</span>
               </span>
               <span className="inline-flex items-center space-x-1.5 px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-700 font-mono shadow-sm">
                 <ShieldCheck className="w-3.5 h-3.5 text-brand-teal" />

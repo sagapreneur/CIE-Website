@@ -33,15 +33,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
             
             <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-soft border border-brand-teal/30 text-xs font-semibold text-brand-teal shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-brand-teal" />
-              <span>39-Year Export Legacy · Nagpur, India (Est. 1985)</span>
+              <span>21-Year Export Legacy · Nagpur, India (Est. 2004)</span>
             </div>
 
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1] text-slate-900">
-              Ophthalmic Products <span className="text-brand-teal">& IOLs</span>
+              Ophthalmic Equipment <span className="text-brand-teal">& Instruments</span>
             </h1>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
-              Direct export manufacturing of ioVue intraocular lenses, micro-blades, ophthalmic solutions, diagnostic strips, and ocular prostheses. Dispatched globally from Nagpur's Zero-Mile MIHAN cargo hub.
+              Direct B2B export and supply of ioVue intraocular lenses, micro-blades, ophthalmic surgical instruments, diagnostic strips, viscoelastic solutions, and ocular prostheses. Dispatched globally from Nagpur Zero-Mile HQ, India.
             </p>
 
             {/* Action CTAs */}
@@ -73,7 +73,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                 <div className="w-6 h-6 rounded-full bg-white border border-brand-teal flex items-center justify-center text-brand-teal shrink-0 shadow-sm">
                   <ShieldCheck className="w-3.5 h-3.5 text-brand-teal" />
                 </div>
-                <span className="font-bold text-slate-900 leading-tight">FDA & CE Compliant</span>
+                <span className="font-bold text-slate-900 leading-tight">ISO 13485 & CE Mark</span>
               </div>
 
               <div className="flex items-center space-x-2 py-1.5 px-2.5 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-lg shadow-sm">
@@ -94,7 +94,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                 <div className="w-6 h-6 rounded-full bg-white border border-brand-teal flex items-center justify-center text-brand-teal shrink-0 shadow-sm">
                   <Truck className="w-3.5 h-3.5 text-brand-teal" />
                 </div>
-                <span className="font-bold text-slate-900 leading-tight">MIHAN Cargo Dispatch</span>
+                <span className="font-bold text-slate-900 leading-tight">Nagpur HQ Dispatch</span>
               </div>
             </div>
 
@@ -107,16 +107,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
         <Container>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-brand-teal/20">
             <div className="space-y-1">
-              <span className="font-display font-extrabold text-3xl sm:text-4xl text-brand-teal">39+</span>
-              <p className="text-xs uppercase tracking-wider text-slate-700 font-semibold font-display">Years Manufacturing</p>
+              <span className="font-display font-extrabold text-3xl sm:text-4xl text-brand-teal">21+</span>
+              <p className="text-xs uppercase tracking-wider text-slate-700 font-semibold font-display">Years Export Mastery</p>
             </div>
             <div className="space-y-1">
-              <span className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">457+</span>
+              <span className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">400+</span>
               <p className="text-xs uppercase tracking-wider text-slate-700 font-semibold font-display">Catalog Items</p>
             </div>
             <div className="space-y-1">
-              <span className="font-display font-extrabold text-3xl sm:text-4xl text-brand-teal">50+</span>
-              <p className="text-xs uppercase tracking-wider text-slate-700 font-semibold font-display">Export Destinations</p>
+              <span className="font-display font-extrabold text-3xl sm:text-4xl text-brand-teal">31+</span>
+              <p className="text-xs uppercase tracking-wider text-slate-700 font-semibold font-display">Export Countries</p>
             </div>
             <div className="space-y-1">
               <span className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">10,000+</span>
@@ -214,9 +214,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
               <div className="w-12 h-12 rounded-xl bg-brand-soft text-brand-teal flex items-center justify-center">
                 <Truck className="w-6 h-6" />
               </div>
-              <h3 className="font-display font-bold text-slate-900 text-lg">MIHAN Cargo Hub Logistics</h3>
+              <h3 className="font-display font-bold text-slate-900 text-lg">Central Nagpur Air Logistics</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Located at Nagpur's Zero Mile adjacent to the MIHAN cargo airport for direct international freight dispatches.
+                Located at Nagpur's Zero Mile in central India for direct, efficient international air freight dispatches worldwide.
               </p>
             </div>
 
@@ -255,9 +255,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
         <Container>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
             <SectionHeading
-              eyebrow="Featured Ophthalmic Products"
+              eyebrow="Featured Ophthalmic Equipment & Instruments"
               title="Top Export Items & Surgical Instruments"
-              subtitle="High-demand surgical instruments and lenses selected from our 457 catalog items."
+              subtitle="High-demand surgical instruments and lenses selected from our 400+ catalog items."
               className="mb-0"
             />
             <Link to="/products">
@@ -297,7 +297,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                 <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
               </summary>
               <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                All surgical instruments, blades, and ioVue™ IOLs are manufactured under ISO 13485:2016 Quality Management Systems for Medical Devices, carry CE certification, and conform to WHO-GMP manufacturing standards.
+                All surgical instruments, blades, and ioVue™ IOLs are supplied under ISO 13485:2016 Quality Management Systems for Medical Devices, carry CE certification, and conform to WHO-GMP standards.
               </p>
             </details>
 
@@ -317,7 +317,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                 <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
               </summary>
               <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                We offer FOB (Nagpur/Mumbai), CIF, and CFR Incoterms 2020 via air express (DHL, FedEx) or air cargo. In-stock products are dispatched within 3–5 days; bulk contracts ship within 2–3 weeks.
+                We offer FOB (Nagpur/Mumbai), CIF, and CFR Incoterms 2020 via air express (DHL, FedEx) or air cargo. In-stock products are dispatched within 1–3 business weeks.
               </p>
             </details>
 
@@ -353,7 +353,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">
-            Get direct manufacturer pricing on ophthalmic instruments, ioVue IOLs, and surgical equipment.
+            Get direct wholesale supplier pricing on ophthalmic instruments, ioVue IOLs, and surgical equipment.
           </p>
 
           <div className="pt-2 flex flex-wrap justify-center gap-4">

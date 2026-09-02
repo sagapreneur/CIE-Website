@@ -37,13 +37,13 @@ export const WorldMap: React.FC = () => {
             <div className="space-y-3 max-w-2xl">
               <div className="inline-flex items-center space-x-2 px-3.5 py-1 bg-brand-soft border border-brand-teal/30 rounded-full text-xs font-semibold text-brand-teal uppercase tracking-wider font-display">
                 <Globe className="w-3.5 h-3.5 text-brand-teal" />
-                <span>39-Year International Supply Chain</span>
+                <span>21-Year International Supply Chain (Est. 2004)</span>
               </div>
               <h2 className="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-slate-900 tracking-tight leading-tight">
                 Global Export Footprint & Target Markets
               </h2>
               <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-                Direct export manufacturing of ophthalmic instruments and ioVue IOLs dispatched globally from Nagpur's Zero-Mile MIHAN cargo hub to 10,000+ healthcare buyers.
+                Direct B2B export and supply of ophthalmic equipment, instruments, and ioVue IOLs dispatched globally from Nagpur Zero-Mile HQ, India.
               </p>
             </div>
 
@@ -51,15 +51,15 @@ export const WorldMap: React.FC = () => {
             <div className="flex flex-wrap gap-2">
               <span className="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-brand-soft border border-brand-teal/30 rounded-lg text-xs font-bold text-slate-800 shadow-sm">
                 <ShieldCheck className="w-4 h-4 text-brand-teal" />
-                <span>FDA Compliant</span>
+                <span>ISO 13485:2016</span>
               </span>
               <span className="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-brand-soft border border-brand-teal/30 rounded-lg text-xs font-bold text-slate-800 shadow-sm">
                 <Award className="w-4 h-4 text-brand-teal" />
-                <span>CE Mark Certified</span>
+                <span>CE Mark Dossiers</span>
               </span>
               <span className="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-brand-soft border border-brand-teal/30 rounded-lg text-xs font-bold text-slate-800 shadow-sm">
                 <CheckCircle2 className="w-4 h-4 text-brand-teal" />
-                <span>GMP & ISO 13485</span>
+                <span>WHO-GMP Guidelines</span>
               </span>
             </div>
           </div>
@@ -67,23 +67,23 @@ export const WorldMap: React.FC = () => {
           {/* 4 Creative Glassmorphic Metric Cards */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/90 shadow-sm space-y-1">
-              <span className="font-display font-extrabold text-2xl sm:text-3xl text-brand-teal">10,000+</span>
-              <p className="text-xs text-slate-600 font-semibold uppercase tracking-wider font-display">Global Customers</p>
+              <span className="font-display font-extrabold text-2xl sm:text-3xl text-brand-teal">21+ Years</span>
+              <p className="text-xs text-slate-600 font-semibold uppercase tracking-wider font-display">Export Mastery</p>
             </div>
 
             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/90 shadow-sm space-y-1">
-              <span className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">50+</span>
+              <span className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">31+</span>
               <p className="text-xs text-slate-600 font-semibold uppercase tracking-wider font-display">Export Countries</p>
             </div>
 
             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/90 shadow-sm space-y-1">
-              <span className="font-display font-extrabold text-2xl sm:text-3xl text-brand-teal">5 Continents</span>
-              <p className="text-xs text-slate-600 font-semibold uppercase tracking-wider font-display">Market Penetration</p>
+              <span className="font-display font-extrabold text-2xl sm:text-3xl text-brand-teal">400+</span>
+              <p className="text-xs text-slate-600 font-semibold uppercase tracking-wider font-display">Catalog Items</p>
             </div>
 
             <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/90 shadow-sm space-y-1">
-              <span className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">MIHAN Air</span>
-              <p className="text-xs text-slate-600 font-semibold uppercase tracking-wider font-display">Nagpur Express Hub</p>
+              <span className="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">Zero Mile</span>
+              <p className="text-xs text-slate-600 font-semibold uppercase tracking-wider font-display">Nagpur Export HQ</p>
             </div>
           </div>
 
@@ -143,7 +143,7 @@ export const WorldMap: React.FC = () => {
             </div>
             
             <span className="font-mono text-[11px] text-brand-teal font-bold bg-white border border-brand-teal/30 px-2.5 py-0.5 rounded">
-              Dispatch: Zero Mile Nagpur (MIHAN Airport Hub)
+              Dispatch: Zero Mile Nagpur (Central Export Desk)
             </span>
           </div>
 
@@ -246,7 +246,7 @@ export const WorldMap: React.FC = () => {
               Natural Earth 1:110m verified real country borders. Hover any marker for country details.
             </span>
             <span className="text-brand-teal font-bold font-mono text-[11px]">
-              Nagpur Zero-Mile MIHAN Cargo Hub (India)
+              Nagpur Zero-Mile Corporate HQ (India)
             </span>
           </div>
 

@@ -116,17 +116,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
       }`}>
         <Container className="flex items-center justify-between gap-4">
           
-          {/* Logo with ioVue™ Trademark Badge */}
-          <Link to="/" className="flex items-center space-x-2 group shrink-0">
+          {/* Equal Size Side-by-Side Logos: Central India Export & IOVUE™ */}
+          <Link to="/" className="flex items-center space-x-3 group shrink-0">
             <img 
               src="/cie-logo.png" 
               alt="Central India Export" 
-              className="h-9 sm:h-12 md:h-14 w-auto object-contain transition-transform group-hover:scale-105" 
+              className="h-9 sm:h-12 md:h-13 w-auto object-contain transition-transform group-hover:scale-105" 
             />
-            <span className="hidden sm:inline-flex items-center space-x-1 px-2.5 py-1 rounded-md bg-brand-soft border border-brand-teal/40 text-brand-teal text-[10px] font-bold tracking-wider uppercase shadow-2xs font-display">
-              <span className="font-black text-brand-teal">ioVue™</span>
-              <span className="text-slate-600 font-medium">Brand</span>
-            </span>
+            <div className="h-9 sm:h-12 md:h-13 px-3.5 bg-gradient-to-br from-[#0D3666] to-[#1A2638] border border-[#28B2A8] rounded-lg flex items-center justify-center shadow-xs">
+              <span className="font-display font-extrabold text-white text-xs sm:text-base tracking-widest">
+                IOVUE<span className="text-brand-teal">™</span>
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Nav Links & Search Bar (Fixed Flex Layout - Zero Shift) */}

@@ -415,7 +415,7 @@ export const IoVueShowcase: React.FC<IoVueShowcaseProps> = ({ onOpenRfq }) => {
               </div>
               <div className="p-2 bg-slate-50 rounded-lg border border-slate-200">
                 <span className="text-slate-500 block text-[9px] uppercase font-mono">Export Hub</span>
-                <strong className="text-slate-900 font-bold text-[11px]">Nagpur MIHAN</strong>
+                <strong className="text-slate-900 font-bold text-[11px]">Nagpur HQ</strong>
               </div>
             </div>
           </div>

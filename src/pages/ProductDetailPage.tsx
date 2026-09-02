@@ -100,7 +100,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div className="p-3 bg-slate-50 rounded-lg border border-slate-200">
                 <span className="text-slate-500 block text-[10px] uppercase">Export Origin</span>
-                <strong className="text-slate-900 font-semibold">Nagpur, India (MIHAN)</strong>
+                <strong className="text-slate-900 font-semibold">Nagpur, India (HQ)</strong>
               </div>
               <div className="p-3 bg-slate-50 rounded-lg border border-slate-200">
                 <span className="text-slate-500 block text-[10px] uppercase">Sterilization</span>
