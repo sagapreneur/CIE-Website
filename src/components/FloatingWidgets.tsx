@@ -44,7 +44,7 @@ export const FloatingWidgets: React.FC = () => {
 
       {/* Floating WhatsApp Button */}
       <a
-        href={`https://wa.me/919823023023?text=${whatsappMessage}`}
+        href={`https://wa.me/919822200622?text=${whatsappMessage}`}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"

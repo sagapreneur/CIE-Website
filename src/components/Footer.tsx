@@ -96,8 +96,8 @@ export const Footer: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) => {
               <div className="flex items-start space-x-3">
                 <Phone className="w-4 h-4 text-brand-teal shrink-0 mt-1" />
                 <div className="flex flex-col space-y-0.5">
-                  <a href="tel:+917122522500" className="hover:text-brand-teal transition-colors font-semibold">+91-712-2522500</a>
-                  <a href="tel:+919823023023" className="hover:text-brand-teal transition-colors font-semibold">+91-9823023023</a>
+                  <a href="tel:+917122429168" className="hover:text-brand-teal transition-colors font-semibold">Phone: +91-712-2429168</a>
+                  <a href="https://wa.me/919822200622" target="_blank" rel="noopener noreferrer" className="hover:text-brand-teal transition-colors font-semibold">WhatsApp: +91-9822200622</a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">

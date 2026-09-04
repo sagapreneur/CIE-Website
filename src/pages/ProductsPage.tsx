@@ -33,10 +33,36 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
 
   // Filter products dynamically
   const filteredProducts = useMemo(() => {
+    const selectedCatLower = selectedCategory.trim().toLowerCase();
+    const searchLower = searchQuery.trim().toLowerCase();
+
     return productsData.filter(p => {
-      const matchCat = !selectedCategory || p.main_category.toLowerCase() === selectedCategory.toLowerCase() || p.category_path.toLowerCase().includes(selectedCategory.toLowerCase());
-      const matchSearch = !searchQuery || p.name.toLowerCase().includes(searchQuery.toLowerCase()) || p.short_description.toLowerCase().includes(searchQuery.toLowerCase()) || p.slug.toLowerCase().includes(searchQuery.toLowerCase());
+      let matchCat = true;
+      if (selectedCatLower) {
+        // Check if selectedCategory is one of the top-level main categories
+        const isKnownMainCategory = categoriesData.some(
+          c => c.name.toLowerCase() === selectedCatLower
+        );
+
+        if (isKnownMainCategory) {
+          // Strictly show only products whose main_category matches the chosen category
+          matchCat = p.main_category.toLowerCase() === selectedCatLower;
+        } else {
+          // If a specific subcategory or path was requested, match main category or exact path segment
+          matchCat = p.main_category.toLowerCase() === selectedCatLower ||
+            (p.category_path
+              ? p.category_path.toLowerCase().split('>').map(s => s.trim()).includes(selectedCatLower)
+              : false);
+        }
+      }
+
+      const matchSearch = !searchLower || 
+        p.name.toLowerCase().includes(searchLower) || 
+        p.short_description.toLowerCase().includes(searchLower) || 
+        p.slug.toLowerCase().includes(searchLower);
+
       const matchIovue = !onlyIovue || p.brand === 'ioVue' || p.brand === 'IOVUE';
+
       return matchCat && matchSearch && matchIovue;
     });
   }, [selectedCategory, searchQuery, onlyIovue]);

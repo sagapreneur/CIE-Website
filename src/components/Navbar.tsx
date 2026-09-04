@@ -96,9 +96,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
           </div>
 
           <div className="hidden sm:flex items-center space-x-6 text-xs">
-            <a href="tel:+917122522500" className="hover:text-brand-teal transition-colors font-medium flex items-center space-x-1.5">
+            <a href="tel:+917122429168" className="hover:text-brand-teal transition-colors font-medium flex items-center space-x-1.5">
               <Phone className="w-3.5 h-3.5 text-brand-teal shrink-0" />
-              <span>+91-712-2522500</span>
+              <span>+91-712-2429168</span>
             </a>
             <a href="mailto:vaidsandeep100@yahoo.co.in" className="hover:text-brand-teal transition-colors font-medium flex items-center space-x-1.5">
               <Mail className="w-3.5 h-3.5 text-brand-teal shrink-0" />
