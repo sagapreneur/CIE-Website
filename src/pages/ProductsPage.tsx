@@ -219,7 +219,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
             {/* Long Prominent Catalog Search Bar */}
             <div className="bg-white rounded-2xl p-4 border border-brand-teal/30 shadow-sm space-y-2">
               <label className="block text-xs font-bold uppercase tracking-wider text-slate-800 font-display">
-                Search Ophthalmic Catalog (457 Items)
+                Search Ophthalmic Catalog ({productsData.length} Items)
               </label>
               <div className="relative">
                 <input
@@ -293,7 +293,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
                 </div>
                 <h3 className="font-display font-bold text-xl text-slate-800">No matching products found</h3>
                 <p className="text-sm text-slate-500 max-w-md mx-auto">
-                  Try adjusting your search terms or clearing category filters to view all 457 products.
+                  Try adjusting your search terms or clearing category filters to view all {productsData.length} products.
                 </p>
                 <Button variant="outline" size="sm" onClick={() => { setSelectedCategory(''); setSearchQuery(''); setOnlyIovue(false); }}>
                   Reset Search Filters

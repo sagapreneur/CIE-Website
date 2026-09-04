@@ -3317,32 +3317,6 @@
     "image_url": "/products/deitz-gauge.jpg"
   },
   {
-    "id": 123,
-    "name": "Diagnostic Strips Retina Equipments",
-    "slug": "diagnostic-strips-retina-equipments",
-    "brand": null,
-    "category_path": "Fluorescein & Schirmer Strips | Iris Retractor",
-    "main_category": "Fluorescein & Schirmer Strips | Iris Retractor",
-    "short_description": "Sterile Fluorescein Ophthalmic Diagnostic Strips for corneal defect staining & applanation tonometry.",
-    "long_description": "Fluorescein Sodium Ophthalmic Strips are sterile diagnostic strips containing 1mg fluorescein sodium dye. Designed to stain corneal epithelial abrasions, evaluate contact lens fitting, and facilitate Goldmann applanation tonometry.",
-    "specifications": {
-      "Active Dye": "Fluorescein Sodium 1.0 mg per strip",
-      "Indication": "Corneal Epithelial Staining & Tonometry",
-      "Packaging": "Box of 100 Individually Wrapped Sterile Pouches",
-      "Quality Standard": "ISO 13485 / USP Standard",
-      "Usage": "Single-Use Diagnostic Strip",
-      "Instrument Classification": "Ophthalmic Ophthalmic Strips",
-      "Material": "AISI 420 Surgical Stainless Steel / Grade 5 Titanium",
-      "Finish": "Anti-Reflective Satin Matte Finish",
-      "Sterilization": "Autoclavable up to 134°C (273°F) & EO Gas Compatible",
-      "Reusability": "Reusable / Fully Autoclavable",
-      "Export Origin": "Nagpur, India (Central India Export)"
-    },
-    "image": "/products/diagnostic-strips-retina-equipments.png",
-    "is_featured": false,
-    "image_url": "/products/diagnostic-strips-retina-equipments.png"
-  },
-  {
     "id": 125,
     "name": "Distant Vision Drum With Remote Cyber Charts",
     "slug": "distant-vision-drum-with-remote-cyber-charts",
