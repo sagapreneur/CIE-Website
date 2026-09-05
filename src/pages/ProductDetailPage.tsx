@@ -145,7 +145,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
             <div className="p-5 bg-brand-soft rounded-xl border border-brand-teal/30 space-y-4 shadow-sm">
               <div className="flex justify-between items-center">
                 <span className="text-xs text-brand-teal font-bold uppercase tracking-wider">
-                  B2B Wholesale Export Inquiries
+                  B2B Export Inquiries
                 </span>
                 <span className="text-[10px] bg-brand-teal text-white px-2 py-0.5 rounded font-mono font-bold">
                   Direct Factory Pricing

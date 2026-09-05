@@ -509,11 +509,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
               )}
             </div>
 
-            {/* Wholesale Inquiry Cart Button (Desktop) */}
+            {/* Inquiry Cart Button (Desktop) */}
             <button
               onClick={openCart}
               className="relative p-2 rounded-xl text-slate-700 hover:text-brand-teal hover:bg-brand-soft transition-colors flex items-center justify-center cursor-pointer"
-              title="Wholesale Inquiry Cart"
+              title="Inquiry Cart"
               aria-label="View quotation cart"
             >
               <ShoppingCart className="w-5 h-5" />

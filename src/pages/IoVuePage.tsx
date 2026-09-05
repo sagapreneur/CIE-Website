@@ -45,7 +45,7 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
                 icon={<FileText className="w-5 h-5" />}
                 onClick={() => onOpenRfq('IOVUE™ IOL Complete Series Catalog')}
               >
-                Request IOVUE™ Wholesale Quote
+                Request IOVUE™ Export Quote
               </Button>
               <Button 
                 variant="outline" 

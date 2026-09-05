@@ -317,7 +317,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
         </Container>
       </Section>
 
-      {/* 6. WHOLESALE EXPORT FAQ ACCORDION SECTION */}
+      {/* 6. EXPORT FAQ ACCORDION SECTION */}
       <section className="bg-white py-14 border-t border-slate-200">
         <Container className="max-w-4xl space-y-8">
           <div className="text-center space-y-2">

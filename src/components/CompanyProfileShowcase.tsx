@@ -204,7 +204,7 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                       </p>
 
                       <p>
-                        Thanks to our dedication to micron-precision quality, competitive B2B wholesale pricing, and long-term distributor partnerships, CIE products are exported to <strong className="text-slate-900 font-bold font-mono">over 31 countries</strong> worldwide with a strict policy of <strong className="text-brand-teal font-bold">ONE COUNTRY ONE DISTRIBUTOR NETWORK</strong>.
+                        Thanks to our dedication to micron-precision quality, competitive B2B export pricing, and long-term distributor partnerships, CIE products are exported to <strong className="text-slate-900 font-bold font-mono">over 31 countries</strong> worldwide with a strict policy of <strong className="text-brand-teal font-bold">ONE COUNTRY ONE DISTRIBUTOR NETWORK</strong>.
                       </p>
                     </div>
 

@@ -90,7 +90,7 @@ export const AboutPage: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) =>
                 </li>
               </ul>
               <Button variant="primary" className="w-full justify-center text-xs" onClick={onOpenRfq}>
-                Request Wholesale Export Terms
+                Request Export Terms
               </Button>
             </div>
 

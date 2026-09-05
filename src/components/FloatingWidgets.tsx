@@ -27,7 +27,7 @@ export const FloatingWidgets: React.FC = () => {
   };
 
   const whatsappMessage = encodeURIComponent(
-    "Hello Central India Export, I am interested in wholesale ophthalmic surgical products and would like to request information."
+    "Hello Central India Export, I am interested in ophthalmic surgical products and would like to request export quotation information."
   );
 
   return (
@@ -55,7 +55,7 @@ export const FloatingWidgets: React.FC = () => {
           onClick={openCart}
           aria-label="View quotation cart"
           className="w-11 h-11 rounded-full bg-brand-teal text-white shadow-lg hover:bg-[#20968E] hover:scale-110 transition-all duration-300 flex items-center justify-center border-2 border-white focus:outline-none focus:ring-2 focus:ring-brand-teal relative cursor-pointer group"
-          title="Wholesale RFQ Cart"
+          title="RFQ Cart"
         >
           <ShoppingCart className="w-5 h-5 text-white" />
           {cartItems.length > 0 && (
@@ -65,7 +65,7 @@ export const FloatingWidgets: React.FC = () => {
           )}
           {/* Tooltip on hover */}
           <span className="absolute right-14 bg-slate-900 text-white text-xs px-2.5 py-1 rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-md font-bold">
-            Wholesale Cart {totalItemsCount > 0 ? `(${totalItemsCount} pcs)` : ''}
+            Quotation Cart {totalItemsCount > 0 ? `(${totalItemsCount} pcs)` : ''}
           </span>
         </button>
 

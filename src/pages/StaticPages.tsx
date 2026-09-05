@@ -39,7 +39,7 @@ export const PrivacyPolicyPage: React.FC = () => (
           <h2 className="font-display font-bold text-xl text-slate-900 border-b border-slate-200 pb-2">
             2. Business Information We Collect
           </h2>
-          <p>We collect information exclusively necessary to process wholesale export quotations, issue proforma invoices, and dispatch sample evaluation packs:</p>
+          <p>We collect information exclusively necessary to process commercial export quotations, issue proforma invoices, and dispatch sample evaluation packs:</p>
           <ul className="list-disc pl-5 space-y-1.5 text-slate-700">
             <li><strong className="text-slate-900">Business Identity Data</strong>: Full name, job title, hospital/company name, and medical license or registration numbers.</li>
             <li><strong className="text-slate-900">Contact Details</strong>: Work email address, direct telephone/WhatsApp numbers, and company website URL.</li>
@@ -115,7 +115,7 @@ export const TermsPage: React.FC = () => (
           Terms & Conditions of Export
         </h1>
         <p className="text-sm text-slate-600 leading-relaxed font-normal">
-          These standard wholesale terms govern all international quotations, proforma orders, supply agreements, and export shipments executed by Central India Export (Nagpur, India).
+          These standard export terms govern all international quotations, proforma orders, supply agreements, and export shipments executed by Central India Export (Nagpur, India).
         </p>
       </div>
 
@@ -136,7 +136,7 @@ export const TermsPage: React.FC = () => (
             2. Quotations, Pricing & Courier Charges
           </h2>
           <ul className="list-disc pl-5 space-y-1.5">
-            <li>All price quotes issued by Central India Export are wholesale B2B quotes denominated in US Dollars ($ USD) or Euros (€ EUR).</li>
+            <li>All price quotes issued by Central India Export are international B2B export quotes denominated in US Dollars ($ USD) or Euros (€ EUR).</li>
             <li>Unless otherwise specified, proforma quotations are valid for 30 calendar days from date of issuance.</li>
             <li>The standard MOQ is approximately 100 pieces, depending on the product line.</li>
             <li><strong className="text-slate-900">Courier & Freight Charges:</strong> All international air express, courier, and customs clearance charges are to be borne directly by the importer / buyer. Consignments can be dispatched on the buyer's corporate courier account (DHL/FedEx/UPS).</li>

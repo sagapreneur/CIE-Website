@@ -36,7 +36,7 @@ export const CartDrawer: React.FC = () => {
             </div>
             <div>
               <h3 className="font-display font-bold text-lg text-slate-900 leading-tight">
-                Wholesale Inquiry Cart
+                Quotation Inquiry Cart
               </h3>
               <p className="text-xs text-slate-600">
                 {cartItems.length} {cartItems.length === 1 ? 'product' : 'products'} selected ({totalItemsCount} pcs total)
@@ -187,7 +187,7 @@ export const CartDrawer: React.FC = () => {
                 icon={<ArrowRight className="w-4 h-4" />}
                 onClick={openCartRfq}
               >
-                Proceed to Wholesale RFQ ({cartItems.length} Products)
+                Proceed to RFQ ({cartItems.length} Products)
               </Button>
 
               <button

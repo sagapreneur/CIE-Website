@@ -65,7 +65,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                 icon={<FileText className="w-5 h-5" />}
                 onClick={() => onOpenRfq()}
               >
-                Request a Wholesale Quote
+                Request an Export Quote
               </Button>
 
               <Link to="/products">
@@ -144,7 +144,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
         <Container>
           <SectionHeading
             eyebrow="Ophthalmic Catalog Categories"
-            title="Browse Complete Wholesale Product Inventory"
+            title="Browse Complete Product Catalog"
             subtitle="Explore our comprehensive export catalog organized across 10 primary medical product categories."
           />
 
@@ -247,7 +247,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
               <div className="w-12 h-12 rounded-xl bg-brand-soft text-brand-teal flex items-center justify-center">
                 <FileCheck className="w-6 h-6" />
               </div>
-              <h3 className="font-display font-bold text-slate-900 text-lg">Wholesale Export Quotations</h3>
+              <h3 className="font-display font-bold text-slate-900 text-lg">Direct Export Quotations</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
                 Dedicated export desk offering competitive FOB/CIF quotation terms, custom packaging, and sample dispatches.
               </p>
@@ -313,7 +313,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
               Common B2B Export & Technical Questions
             </h2>
             <p className="text-xs sm:text-sm text-slate-600">
-              Key information regarding ISO 13485 compliance, wholesale orders, IOVUE™ IOLs, and shipping logistics.
+              Key information regarding ISO 13485 compliance, bulk export orders, IOVUE™ IOLs, and shipping logistics.
             </p>
           </div>
 
@@ -352,7 +352,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto">
-            Get direct wholesale supplier pricing on ophthalmic instruments, IOVUE™ IOLs, and surgical equipment.
+            Get direct manufacturer and supplier export pricing on ophthalmic instruments, IOVUE™ IOLs, and surgical equipment.
           </p>
 
           <div className="pt-2 flex flex-wrap justify-center gap-4">

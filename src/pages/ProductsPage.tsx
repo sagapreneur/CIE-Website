@@ -94,7 +94,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
               Ophthalmic Equipment & Instruments ({productsData.length} Items)
             </h1>
             <p className="text-sm sm:text-base text-slate-600">
-              Filter by category, search specific products, or request a wholesale quotation directly.
+              Filter by category, search specific products, or request an export quotation directly.
             </p>
           </div>
         </Container>
@@ -196,7 +196,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
             <div className="bg-white border border-brand-teal/30 rounded-2xl p-5 space-y-3 shadow-sm hover:shadow-md transition-all">
               <div className="flex items-center space-x-2 border-b border-slate-100 pb-2">
                 <FileText className="w-4 h-4 text-brand-teal shrink-0" />
-                <h4 className="font-display font-extrabold text-slate-900 text-sm">Bulk Wholesale Orders</h4>
+                <h4 className="font-display font-extrabold text-slate-900 text-sm">Bulk Export Orders</h4>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed font-normal">
                 Need a custom proforma quotation for distributor orders, tender bids, or hospital contracts?
@@ -207,7 +207,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
                 className="w-full justify-center text-xs" 
                 onClick={() => onOpenRfq()}
               >
-                Request Wholesale Quote
+                Request Export Quote
               </Button>
             </div>
 

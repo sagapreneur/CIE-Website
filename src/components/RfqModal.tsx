@@ -114,7 +114,7 @@ export const RfqModal: React.FC<RfqModalProps> = ({
               </span>
             </div>
             <h3 className="font-display font-bold text-xl md:text-2xl mt-1.5 text-slate-900">
-              {isCartRfq ? 'Wholesale Cart Quotation Request (RFQ)' : 'Request a Formal Wholesale Quote'}
+              {isCartRfq ? 'Cart Quotation Request (RFQ)' : 'Request a Formal Export Quote'}
             </h3>
             <p className="text-xs text-slate-600 mt-0.5">
               Direct factory pricing & ISO 13485 / CE technical dossiers from Nagpur HQ (India)
@@ -301,8 +301,8 @@ export const RfqModal: React.FC<RfqModalProps> = ({
                     >
                       <option value="Evaluation Sample Pack (10-50 units)">Evaluation Sample Pack (10 - 50 units)</option>
                       <option value="100 - 500 units (Standard MOQ Range)">100 - 500 units (Standard MOQ Range)</option>
-                      <option value="500 - 2,000 units (Wholesale Tier)">500 - 2,000 units (Wholesale Tier)</option>
-                      <option value="2,000+ Wholesale Container Batch">2,000+ Wholesale Container Batch</option>
+                      <option value="500 - 2,000 units (Volume Tier)">500 - 2,000 units (Volume Tier)</option>
+                      <option value="2,000+ Container Batch">2,000+ Container Batch</option>
                     </select>
                     <Layers className="w-4 h-4 text-slate-400 absolute left-3 top-3.5 pointer-events-none" />
                   </div>

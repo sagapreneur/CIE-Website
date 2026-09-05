@@ -34,7 +34,7 @@ export const FaqPage: React.FC<{ onOpenRfq: (productName?: string) => void }> = 
           </h1>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
             Everything you need to know about Central India Export’s ophthalmic instruments, IOVUE™ IOL brand, 
-            ISO 13485 quality standards, wholesale order procedures, and international shipping logistics.
+            ISO 13485 quality standards, export order procedures, and international shipping logistics.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export const FaqPage: React.FC<{ onOpenRfq: (productName?: string) => void }> = 
                   : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
               }`}
             >
-              {tab === 'All' ? 'All Questions' : tab === 'General' ? 'General B2B' : tab === 'Quality' ? 'Quality & ISO' : tab === 'Orders' ? 'Wholesale Orders' : tab === 'Logistics' ? 'Export & Shipping' : 'OEM & Branding'}
+              {tab === 'All' ? 'All Questions' : tab === 'General' ? 'General B2B' : tab === 'Quality' ? 'Quality & ISO' : tab === 'Orders' ? 'Export Orders' : tab === 'Logistics' ? 'Export & Shipping' : 'OEM & Branding'}
             </button>
           ))}
         </div>
@@ -103,7 +103,7 @@ export const FaqPage: React.FC<{ onOpenRfq: (productName?: string) => void }> = 
         {/* Support & Export Desk Callout Box */}
         <div className="bg-gradient-to-r from-brand-teal to-brand-blue rounded-2xl p-8 text-white shadow-md flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
-            <h3 className="font-display font-bold text-xl">Have a Specific Wholesale or OEM Inquiry?</h3>
+            <h3 className="font-display font-bold text-xl">Have a Specific Export or OEM Inquiry?</h3>
             <p className="text-sm opacity-90">
               Our dedicated export desk in Nagpur, India is ready to assist with custom proforma quotes and technical specifications.
             </p>
