@@ -2,8 +2,9 @@ import React from 'react';
 import { Container, Section, SectionHeading, Button, Badge } from '../components/Primitives';
 import { EyeIrisIcon, PrecisionIcon, TrustCertificationIcon } from '../components/CustomIcons';
 import { ProductCard } from '../components/ProductCard';
-import { FileText, ArrowRight, CheckCircle2, ShieldCheck, Download, Award, Sparkles } from 'lucide-react';
+import { FileText, ArrowRight, CheckCircle2, ShieldCheck, Download, Award, Sparkles, ShoppingCart } from 'lucide-react';
 import { IoVueShowcase } from '../components/IoVueShowcase';
+import { useCart } from '../context/CartContext';
 import productsData from '../../public_html/data/products.json';
 
 interface IoVuePageProps {
@@ -11,6 +12,7 @@ interface IoVuePageProps {
 }
 
 export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
+  const { addToCart } = useCart();
   const iovueProducts = productsData.filter(p => p.brand === 'ioVue' || p.brand === 'IOVUE' || p.category_path.includes('Intraocular Lenses'));
 
   return (
@@ -136,9 +138,19 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
                     <td className="py-3 px-4 font-mono">+10.0D to +30.0D (0.5D steps)</td>
                     <td className="py-3 px-4 font-mono">118.5</td>
                     <td className="py-3 px-4 text-right">
-                      <Button variant="primary" size="sm" onClick={() => onOpenRfq('IOVUE Hydrophilic Square Edge IOL')}>
-                        Quote
-                      </Button>
+                      <button 
+                        onClick={() => addToCart({
+                          id: 1001,
+                          name: 'IOVUE™ Hydrophilic Square Edge IOL',
+                          slug: 'iovue-hydrophilic-square-edge-iol',
+                          main_category: 'Intraocular Lenses',
+                          image_url: '/products/anterior-chamber-iols.jpg'
+                        }, 100)}
+                        className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
+                      >
+                        <ShoppingCart className="w-3.5 h-3.5" />
+                        <span>Add to Cart</span>
+                      </button>
                     </td>
                   </tr>
                   <tr className="hover:bg-slate-50">
@@ -148,9 +160,19 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
                     <td className="py-3 px-4 font-mono">+15.0D to +25.0D (0.5D steps)</td>
                     <td className="py-3 px-4 font-mono">118.9</td>
                     <td className="py-3 px-4 text-right">
-                      <Button variant="primary" size="sm" onClick={() => onOpenRfq('IOVUE Hydrophobic 3-Piece Acrylic IOL')}>
-                        Quote
-                      </Button>
+                      <button 
+                        onClick={() => addToCart({
+                          id: 1002,
+                          name: 'IOVUE™ Hydrophobic 3-Piece Acrylic IOL',
+                          slug: 'iovue-hydrophobic-3-piece-acrylic-iol',
+                          main_category: 'Intraocular Lenses',
+                          image_url: '/products/anterior-chamber-iols.jpg'
+                        }, 100)}
+                        className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
+                      >
+                        <ShoppingCart className="w-3.5 h-3.5" />
+                        <span>Add to Cart</span>
+                      </button>
                     </td>
                   </tr>
                   <tr className="hover:bg-slate-50">
@@ -160,9 +182,19 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
                     <td className="py-3 px-4 font-mono">+0.0D to +35.0D (0.5D steps)</td>
                     <td className="py-3 px-4 font-mono">118.2</td>
                     <td className="py-3 px-4 text-right">
-                      <Button variant="primary" size="sm" onClick={() => onOpenRfq('IOVUE PMMA PC IOL')}>
-                        Quote
-                      </Button>
+                      <button 
+                        onClick={() => addToCart({
+                          id: 1003,
+                          name: 'IOVUE™ PMMA PC IOL',
+                          slug: 'iovue-pmma-pc-iol',
+                          main_category: 'Intraocular Lenses',
+                          image_url: '/products/anterior-chamber-iols.jpg'
+                        }, 100)}
+                        className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
+                      >
+                        <ShoppingCart className="w-3.5 h-3.5" />
+                        <span>Add to Cart</span>
+                      </button>
                     </td>
                   </tr>
                   <tr className="hover:bg-slate-50">
@@ -172,9 +204,19 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
                     <td className="py-3 px-4 font-mono">N/A (Cataract Bag Stability)</td>
                     <td className="py-3 px-4 font-mono">N/A</td>
                     <td className="py-3 px-4 text-right">
-                      <Button variant="primary" size="sm" onClick={() => onOpenRfq('IOVUE Capsular Tension Ring')}>
-                        Quote
-                      </Button>
+                      <button 
+                        onClick={() => addToCart({
+                          id: 1004,
+                          name: 'IOVUE™ Capsular Tension Ring (CTR)',
+                          slug: 'iovue-capsular-tension-ring-ctr',
+                          main_category: 'Intraocular Lenses',
+                          image_url: '/products/anterior-chamber-iols.jpg'
+                        }, 100)}
+                        className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
+                      >
+                        <ShoppingCart className="w-3.5 h-3.5" />
+                        <span>Add to Cart</span>
+                      </button>
                     </td>
                   </tr>
                 </tbody>

@@ -18,7 +18,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
   const [isHovered, setIsHovered] = useState(false);
   const [orderQty, setOrderQty] = useState(100);
   const [addedFeedback, setAddedFeedback] = useState(false);
-  const { addToCart, openCart } = useCart();
+  const { addToCart, openCart, totalItemsCount } = useCart();
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -185,10 +185,10 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
 
                   <button
                     onClick={handleAddToCart}
-                    className={`px-4 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center space-x-2 border shadow-sm cursor-pointer ${
+                    className={`px-5 py-2.5 rounded-xl text-sm font-bold font-display transition-all flex items-center space-x-2 border shadow-sm cursor-pointer ${
                       addedFeedback
                         ? 'bg-emerald-600 text-white border-emerald-600'
-                        : 'bg-white text-brand-teal hover:bg-brand-teal hover:text-white border-brand-teal/50'
+                        : 'bg-brand-teal text-white hover:bg-[#20968E] border-brand-teal'
                     }`}
                   >
                     {addedFeedback ? (
@@ -198,20 +198,19 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
                       </>
                     ) : (
                       <>
-                        <ShoppingCart className="w-4 h-4" />
+                        <ShoppingCart className="w-4 h-4 text-white" />
                         <span>Add to Cart ({orderQty} pcs)</span>
                       </>
                     )}
                   </button>
 
-                  <Button 
-                    variant="primary" 
-                    size="md" 
-                    icon={<FileText className="w-4 h-4" />}
-                    onClick={() => onOpenRfq(product.name, product.slug)}
+                  <button
+                    onClick={openCart}
+                    className="px-4 py-2.5 rounded-xl text-sm font-bold font-display transition-all flex items-center space-x-2 border border-slate-300 hover:border-brand-teal text-slate-700 hover:text-brand-teal bg-white shadow-2xs cursor-pointer"
                   >
-                    Get Instant Quote
-                  </Button>
+                    <ShoppingCart className="w-4 h-4 text-brand-teal" />
+                    <span>View Cart {totalItemsCount > 0 ? `(${totalItemsCount} pcs)` : ''}</span>
+                  </button>
                 </div>
               </div>
             </div>

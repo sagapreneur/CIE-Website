@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Button, Badge } from './Primitives';
-import { FileText, ChevronLeft, ChevronRight, ShieldCheck, Check, ZoomIn, ArrowRight, Eye, Award } from 'lucide-react';
+import { FileText, ChevronLeft, ChevronRight, ShieldCheck, Check, ZoomIn, ArrowRight, Eye, Award, ShoppingCart } from 'lucide-react';
+import { useCart } from '../context/CartContext';
 
 interface IoVueProductItem {
   id: string;
@@ -233,6 +234,7 @@ export const IoVueShowcase: React.FC<IoVueShowcaseProps> = ({ onOpenRfq }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [zoomPos, setZoomPos] = useState({ x: 50, y: 50 });
   const [isHovered, setIsHovered] = useState(false);
+  const { addToCart } = useCart();
 
   const currentProd = IOVUE_PRODUCTS[currentIndex];
 
@@ -452,14 +454,21 @@ export const IoVueShowcase: React.FC<IoVueShowcaseProps> = ({ onOpenRfq }) => {
 
             {/* Compact CTAs */}
             <div className="pt-1 flex flex-wrap gap-3 items-center">
-              <Button 
-                variant="primary" 
-                size="md" 
-                icon={<FileText className="w-4 h-4" />}
-                onClick={() => onOpenRfq(currentProd.name)}
+              <button 
+                onClick={() => {
+                  addToCart({
+                    id: currentProd.id,
+                    name: currentProd.name,
+                    slug: currentProd.id,
+                    main_category: 'Intraocular Lenses',
+                    image_url: currentProd.image
+                  }, 100);
+                }}
+                className="px-5 py-2.5 rounded-xl bg-brand-teal hover:bg-[#20968E] text-white font-bold font-display text-xs shadow-sm transition-all flex items-center space-x-2 cursor-pointer"
               >
-                Request Quote for {currentProd.name.split(' ')[0]} {currentProd.name.split(' ')[1]}
-              </Button>
+                <ShoppingCart className="w-4 h-4 text-white" />
+                <span>Add {currentProd.name.split(' ')[0]} {currentProd.name.split(' ')[1]} to Cart</span>
+              </button>
 
               <button
                 onClick={handleNext}

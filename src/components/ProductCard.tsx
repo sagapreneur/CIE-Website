@@ -120,38 +120,29 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
         )}
       </div>
 
-      {/* Action Footer with Add to Cart & Get Quote */}
-      <div className="px-4 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-2">
+      {/* Action Footer with Add to Cart */}
+      <div className="px-4 py-3 bg-slate-50 border-t border-slate-100 flex items-center gap-2">
         <button
           onClick={handleAddToCart}
-          className={`px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center space-x-1 border cursor-pointer ${
+          className={`w-full py-2.5 px-3 rounded-xl text-xs font-bold font-display transition-all flex items-center justify-center space-x-2 border cursor-pointer shadow-sm ${
             justAdded
-              ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs'
-              : 'bg-white text-slate-700 hover:bg-brand-soft hover:text-brand-teal border-slate-300 hover:border-brand-teal/50 shadow-2xs'
+              ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
+              : 'bg-brand-teal text-white hover:bg-[#20968E] border-brand-teal'
           }`}
           title="Add to quotation cart"
         >
           {justAdded ? (
             <>
-              <Check className="w-3.5 h-3.5 text-white" />
-              <span>Added ✓</span>
+              <Check className="w-4 h-4 text-white" />
+              <span>Added to Cart ✓</span>
             </>
           ) : (
             <>
-              <ShoppingCart className="w-3.5 h-3.5 text-brand-teal" />
+              <ShoppingCart className="w-4 h-4 text-white" />
               <span>Add to Cart</span>
             </>
           )}
         </button>
-
-        <Button
-          variant="primary"
-          size="sm"
-          icon={<FileText className="w-3.5 h-3.5" />}
-          onClick={() => onOpenRfq(product.name, product.slug)}
-        >
-          Get Quote
-        </Button>
       </div>
 
     </div>

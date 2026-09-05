@@ -8,14 +8,6 @@
     "icon_url": "/category-icons/Intraocular Lenses-01.svg"
   },
   {
-    "id": 7,
-    "name": "Ophthalmic Solutions",
-    "slug": "ophthalmic-solutions",
-    "subcategories": [],
-    "product_count": 6,
-    "icon_url": "/category-icons/Ophthalmic Solutions-01.svg"
-  },
-  {
     "id": 4,
     "name": "Micro Surgical Blades",
     "slug": "micro-surgical-blades-and-knives",
@@ -38,6 +30,14 @@
     "subcategories": [],
     "product_count": 2,
     "icon_url": "/category-icons/Strips-01.svg"
+  },
+  {
+    "id": 7,
+    "name": "Ophthalmic Solutions",
+    "slug": "ophthalmic-solutions",
+    "subcategories": [],
+    "product_count": 6,
+    "icon_url": "/category-icons/Ophthalmic Solutions-01.svg"
   },
   {
     "id": 2,

@@ -277,7 +277,7 @@ export const WorldMap: React.FC = () => {
                           fontWeight="bold" 
                           fontFamily="Plus Jakarta Sans"
                         >
-                          {m.flag} {m.name}
+                          {(m.flag || (m.name && COUNTRY_FLAGS[m.name])) || '🌐'} {m.name}
                         </text>
                       </g>
                     )}
@@ -300,145 +300,37 @@ export const WorldMap: React.FC = () => {
 
         </div>
 
-        {/* TARGET MARKETS DIRECTORY WITH FLAG ICONS */}
-        <div className="space-y-6 pt-2">
-          
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 pb-4">
-            <div>
-              <div className="inline-flex items-center space-x-1.5 text-xs font-bold text-brand-teal uppercase tracking-wider font-display mb-1">
-                <Globe className="w-3.5 h-3.5" />
-                <span>Verified International Distribution Network</span>
-              </div>
-              <h3 className="font-display font-extrabold text-xl sm:text-2xl text-slate-900">
-                Target Export Markets & Global Footprint
-              </h3>
+        {/* EXCLUSIVE POLICY: ONE COUNTRY ONE DISTRIBUTION NETWORK (Light Theme) */}
+        <div className="p-6 rounded-2xl bg-brand-soft/80 border-2 border-brand-teal/30 shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-5 text-slate-900">
+          <div className="flex items-start space-x-4">
+            <div className="w-12 h-12 rounded-xl bg-white border border-brand-teal/40 flex items-center justify-center shrink-0 mt-0.5 shadow-sm">
+              <ShieldCheck className="w-6 h-6 text-brand-teal" />
             </div>
-            
-            <div className="flex items-center space-x-2">
-              <span className="text-xs text-slate-500 font-medium">Currently viewing:</span>
-              <span className="px-3 py-1 bg-brand-soft text-brand-teal border border-brand-teal/30 rounded-lg text-xs font-bold font-display">
-                {activeRegion}
-              </span>
-            </div>
-          </div>
-
-          {/* Regional Country Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {exportCountriesData
-              .filter((r) => activeRegion === 'All Export Markets' || r.region === activeRegion)
-              .map((reg) => (
-                <div 
-                  key={reg.region} 
-                  className="bg-slate-50 rounded-2xl p-5 border border-slate-200 hover:border-brand-teal/40 transition-all shadow-xs flex flex-col justify-between"
-                >
-                  <div className="space-y-3">
-                    <div className="flex items-center justify-between border-b border-slate-200/80 pb-2.5">
-                      <span className="font-display font-bold text-sm text-slate-900 flex items-center space-x-2">
-                        <Building2 className="w-4 h-4 text-brand-teal" />
-                        <span>{reg.region}</span>
-                      </span>
-                      <span className="text-[11px] font-bold font-mono px-2 py-0.5 bg-white border border-slate-200 rounded-full text-slate-600">
-                        {reg.countries.length} Markets
-                      </span>
-                    </div>
-
-                    {/* Country Pills with Flags */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {reg.countries.map((countryName) => {
-                        const flag = COUNTRY_FLAGS[countryName] || '🌐';
-                        const matchingFeature = exportFeatures.find(
-                          (f) => f.name?.toLowerCase() === countryName.toLowerCase()
-                        );
-
-                        return (
-                          <div
-                            key={countryName}
-                            onMouseEnter={() => matchingFeature && setHoveredCountry(matchingFeature)}
-                            onMouseLeave={() => matchingFeature && setHoveredCountry(null)}
-                            className="flex items-center space-x-2 px-2.5 py-1.5 bg-white rounded-xl border border-slate-200/80 hover:border-brand-teal hover:bg-brand-soft/40 transition-all cursor-default group"
-                          >
-                            <span className="text-xl shrink-0 select-none" role="img" aria-label={countryName}>
-                              {flag}
-                            </span>
-                            <div className="min-w-0 flex-1">
-                              <p className="text-xs font-bold text-slate-800 truncate group-hover:text-brand-teal transition-colors">
-                                {countryName}
-                              </p>
-                            </div>
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" title="Active Market" />
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-
-                  <div className="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-[11px] text-slate-500">
-                    <span className="flex items-center space-x-1 font-medium">
-                      <Truck className="w-3 h-3 text-brand-teal" />
-                      <span>Direct Express Dispatch</span>
-                    </span>
-                    <span className="font-semibold text-brand-teal">Available</span>
-                  </div>
-                </div>
-              ))}
-          </div>
-
-          {/* Central Export Origin Card & One Country One Distribution Policy */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pt-2">
-            
-            {/* Origin Desk */}
-            <div className="p-5 rounded-2xl bg-white border-2 border-brand-teal/40 shadow-xs flex items-center space-x-4">
-              <span className="text-4xl select-none" role="img" aria-label="India">
-                🇮🇳
-              </span>
-              <div>
-                <span className="text-[10px] font-bold uppercase tracking-wider font-mono text-brand-teal bg-brand-soft px-2 py-0.5 rounded">
-                  Global Export Desk & Origin
+            <div className="space-y-1.5">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-xs font-bold text-brand-teal uppercase tracking-wider font-display">
+                  Exclusive Policy
                 </span>
-                <h4 className="font-display font-bold text-base text-slate-900 mt-1">
-                  India (Nagpur HQ Zero-Mile)
-                </h4>
-                <p className="text-xs text-slate-600">
-                  Central India Export Corporate HQ & Worldwide Dispatch
-                </p>
+                <span className="px-2.5 py-0.5 text-[10px] font-extrabold bg-brand-teal text-white rounded-full">
+                  Protected Importer Rights
+                </span>
               </div>
+              <h4 className="font-display font-extrabold text-lg sm:text-xl text-slate-900">
+                One Country One Distribution Network
+              </h4>
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
+                We maintain strict territorial exclusivity for qualified ophthalmic distributors. All export shipments include ISO 13485:2016, CE dossiers, and official Certificate of Origin.
+              </p>
             </div>
-
-            {/* One Country One Distribution Network Banner */}
-            <div className="lg:col-span-2 p-5 rounded-2xl bg-gradient-to-r from-slate-900 via-slate-800 to-brand-dark text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border border-brand-teal/30 shadow-md">
-              <div className="flex items-start space-x-3.5">
-                <div className="w-10 h-10 rounded-xl bg-brand-teal/20 border border-brand-teal/40 flex items-center justify-center shrink-0 mt-0.5">
-                  <ShieldCheck className="w-5 h-5 text-brand-teal" />
-                </div>
-                <div className="space-y-1">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-xs font-bold text-brand-teal uppercase tracking-wider font-display">
-                      Exclusive Policy
-                    </span>
-                    <span className="px-2 py-0.5 text-[10px] font-extrabold bg-brand-teal text-white rounded-full">
-                      Protected Importer Rights
-                    </span>
-                  </div>
-                  <h4 className="font-display font-bold text-base text-white">
-                    One Country One Distribution Network
-                  </h4>
-                  <p className="text-xs text-slate-300 leading-relaxed max-w-xl">
-                    We maintain strict territorial exclusivity for qualified ophthalmic distributors. All export shipments include ISO 13485:2016, CE dossiers, and official Certificate of Origin.
-                  </p>
-                </div>
-              </div>
-
-              <a
-                href="/contact-us"
-                className="inline-flex items-center space-x-2 px-4 py-2.5 bg-brand-teal hover:bg-brand-teal/90 text-white rounded-xl text-xs font-bold font-display shadow-sm transition-all shrink-0 hover:shadow-md"
-              >
-                <span>Apply for Agency</span>
-                <Plane className="w-3.5 h-3.5 ml-1" />
-              </a>
-            </div>
-
           </div>
 
+          <a
+            href="/contact-us"
+            className="inline-flex items-center space-x-2 px-5 py-2.5 bg-brand-teal hover:bg-[#20968E] text-white rounded-xl text-xs font-bold font-display shadow-sm transition-all shrink-0 hover:shadow-md cursor-pointer"
+          >
+            <span>Apply for Agency</span>
+            <Plane className="w-3.5 h-3.5 ml-1" />
+          </a>
         </div>
 
       </div>

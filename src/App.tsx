@@ -16,7 +16,7 @@ import { FloatingWidgets } from './components/FloatingWidgets';
 import { FaqPage } from './pages/FaqPage';
 import { BackButtonHeader } from './components/BackButtonHeader';
 import { CartProvider, useCart } from './context/CartContext';
-import { CartDrawer, FloatingCartButton } from './components/CartDrawer';
+import { CartDrawer } from './components/CartDrawer';
 
 const AppContent: React.FC = () => {
   const [rfqModalOpen, setRfqModalOpen] = useState(false);
@@ -43,9 +43,13 @@ const AppContent: React.FC = () => {
           <Route path="/products/:categorySlug/:productSlug" element={<ProductDetailPage onOpenRfq={handleOpenRfq} />} />
           <Route path="/iovue" element={<IoVuePage onOpenRfq={handleOpenRfq} />} />
           <Route path="/about-us" element={<AboutPage onOpenRfq={handleOpenRfq} />} />
+          <Route path="/about" element={<AboutPage onOpenRfq={handleOpenRfq} />} />
           <Route path="/company-profile" element={<CompanyProfilePage onOpenRfq={handleOpenRfq} />} />
+          <Route path="/global-reach" element={<CompanyProfilePage onOpenRfq={handleOpenRfq} />} />
           <Route path="/contact-us" element={<ContactPage onOpenRfq={handleOpenRfq} />} />
+          <Route path="/contact" element={<ContactPage onOpenRfq={handleOpenRfq} />} />
           <Route path="/faq" element={<FaqPage onOpenRfq={handleOpenRfq} />} />
+          <Route path="/faqs" element={<FaqPage onOpenRfq={handleOpenRfq} />} />
           <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
           <Route path="/terms" element={<TermsPage />} />
           <Route path="/terms-and-conditions" element={<TermsPage />} />
@@ -56,9 +60,8 @@ const AppContent: React.FC = () => {
       <Footer onOpenRfq={handleOpenRfq} />
       <FloatingWidgets />
 
-      {/* Cart Drawer & Floating Pill */}
+      {/* Cart Drawer */}
       <CartDrawer />
-      <FloatingCartButton />
 
       {/* Single Product RFQ Modal */}
       <RfqModal

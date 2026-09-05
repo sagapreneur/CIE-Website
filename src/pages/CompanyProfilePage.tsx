@@ -8,6 +8,7 @@ import {
   Target, Compass, Star, RefreshCw, PackageCheck, HelpCircle, Check, Shield
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { FAQ_DATA } from '../data/faqs';
 
 interface CompanyProfilePageProps {
   onOpenRfq: (productName?: string) => void;
@@ -332,45 +333,17 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
           </div>
 
           <div className="bg-slate-50 rounded-3xl border border-slate-200 shadow-sm p-6 space-y-4">
-            <details className="group border-b border-slate-200 pb-3" open>
-              <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
-                What are Central India Export's Minimum Order Quantities (MOQs)?
-                <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
-              </summary>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                The MOQ is approximately 100 pieces, depending on the specific product line and category. Flexible trial batches and custom sample evaluation packages are accommodated for accredited hospital buyers and medical distributors.
-              </p>
-            </details>
-
-            <details className="group border-b border-slate-200 pb-3">
-              <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
-                How can international buyers request product samples, and who pays courier charges?
-                <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
-              </summary>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Evaluation sample packs can be dispatched via FedEx, DHL, or air express within 48 business hours upon request. Please note that all international courier and air express freight charges have to be borne directly by the importers / buyers (or billed against the buyer's corporate courier account).
-              </p>
-            </details>
-
-            <details className="group border-b border-slate-200 pb-3">
-              <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
-                What international payment terms and payment methods do you accept?
-                <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
-              </summary>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                We accept payments via PayPal and direct Bank Wire Transfer (T/T). All international consignments and orders are processed on a 100% full advance payment basis prior to production scheduling and order dispatch.
-              </p>
-            </details>
-
-            <details className="group">
-              <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
-                How do I receive formal proforma quotes and quality certificates?
-                <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
-              </summary>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Click any "Request Quote" button or email cie@cieindia.com. Our export desk issues formal proforma invoices. All compliance certificates—including ISO 13485 accreditations, CE Mark technical dossiers, Certificate of Origin, and COA—will be provided along with the order invoices within 24 business hours.
-              </p>
-            </details>
+            {FAQ_DATA.slice(0, 5).map((faq, idx) => (
+              <details key={faq.id} className="group border-b border-slate-200 pb-3 last:border-0 last:pb-0" open={idx === 0}>
+                <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal transition-colors">
+                  {faq.question}
+                  <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold text-lg">+</span>
+                </summary>
+                <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
           </div>
         </Container>
       </section>

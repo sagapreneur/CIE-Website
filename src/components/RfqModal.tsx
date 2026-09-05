@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Send, CheckCircle2, Building, Mail, Phone, Globe, ShieldCheck, ShoppingCart, Info, Globe2 } from 'lucide-react';
+import { X, Send, CheckCircle2, Building, Mail, Phone, Globe, ShieldCheck, ShoppingCart, Info, Globe2, User, Layers } from 'lucide-react';
 import { Button } from './Primitives';
 import { useCart } from '../context/CartContext';
 
@@ -196,21 +196,24 @@ export const RfqModal: React.FC<RfqModalProps> = ({
               {/* Field 2: Company / Clinic Name */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5 truncate">
                     Full Name *
                   </label>
-                  <input
-                    type="text"
-                    required
-                    placeholder="Dr. Full Name / Purchase Director"
-                    value={formData.fullName}
-                    onChange={e => setFormData({ ...formData, fullName: e.target.value })}
-                    className="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-teal focus:border-transparent outline-none"
-                  />
+                  <div className="relative">
+                    <input
+                      type="text"
+                      required
+                      placeholder="Dr. Full Name / Purchase Director"
+                      value={formData.fullName}
+                      onChange={e => setFormData({ ...formData, fullName: e.target.value })}
+                      className="w-full h-11 pl-9 pr-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-teal outline-none"
+                    />
+                    <User className="w-4 h-4 text-slate-400 absolute left-3 top-3.5 pointer-events-none" />
+                  </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5 truncate">
                     Company / Clinic Name *
                   </label>
                   <div className="relative">
@@ -220,18 +223,18 @@ export const RfqModal: React.FC<RfqModalProps> = ({
                       placeholder="Hospital, Clinic, or Medical Distributor"
                       value={formData.companyName}
                       onChange={e => setFormData({ ...formData, companyName: e.target.value })}
-                      className="w-full pl-9 pr-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-teal outline-none"
+                      className="w-full h-11 pl-9 pr-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-teal outline-none"
                     />
-                    <Building className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+                    <Building className="w-4 h-4 text-slate-400 absolute left-3 top-3.5 pointer-events-none" />
                   </div>
                 </div>
               </div>
 
               {/* Field 3: Business Email */}
-              {/* Field 4: Destination Country (Dropdown Menu) */}
+              {/* Field 4: Destination Country */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5 truncate">
                     Business Email *
                   </label>
                   <div className="relative">
@@ -241,27 +244,27 @@ export const RfqModal: React.FC<RfqModalProps> = ({
                       placeholder="purchasing@hospital.com"
                       value={formData.email}
                       onChange={e => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full pl-9 pr-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-teal outline-none"
+                      className="w-full h-11 pl-9 pr-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-teal outline-none"
                     />
-                    <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+                    <Mail className="w-4 h-4 text-slate-400 absolute left-3 top-3.5 pointer-events-none" />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
-                    Destination Country (Dropdown Menu) *
+                  <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5 truncate">
+                    Destination Country *
                   </label>
                   <div className="relative">
                     <select
                       required
                       value={formData.country}
                       onChange={e => setFormData({ ...formData, country: e.target.value })}
-                      className="w-full pl-9 pr-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-teal outline-none bg-white cursor-pointer"
+                      className="w-full h-11 pl-9 pr-8 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-teal outline-none bg-white cursor-pointer"
                     >
                       <option value="">Select Destination Country...</option>
                       {COUNTRIES.map(c => <option key={c} value={c}>{c}</option>)}
                     </select>
-                    <Globe className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+                    <Globe className="w-4 h-4 text-slate-400 absolute left-3 top-3.5 pointer-events-none" />
                   </div>
                 </div>
               </div>
@@ -270,7 +273,7 @@ export const RfqModal: React.FC<RfqModalProps> = ({
               {/* Field 6: Estimated Order Quantity */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">
+                  <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5 truncate">
                     Phone / WhatsApp Number *
                   </label>
                   <div className="relative">
@@ -280,31 +283,29 @@ export const RfqModal: React.FC<RfqModalProps> = ({
                       placeholder="+1 (555) 000-0000 / +44 ..."
                       value={formData.phone}
                       onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full pl-9 pr-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-teal outline-none"
+                      className="w-full h-11 pl-9 pr-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-teal outline-none"
                     />
-                    <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+                    <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-3.5 pointer-events-none" />
                   </div>
                 </div>
 
                 <div>
-                  <div className="flex justify-between items-center mb-1">
-                    <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider">
-                      Estimated Order Quantity *
-                    </label>
-                    <span className="text-[10px] text-brand-teal font-semibold">
-                      MOQ: 100 pcs (depends on product)
-                    </span>
+                  <label className="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1.5 truncate">
+                    Estimated Order Quantity *
+                  </label>
+                  <div className="relative">
+                    <select
+                      value={formData.quantity}
+                      onChange={e => setFormData({ ...formData, quantity: e.target.value })}
+                      className="w-full h-11 pl-9 pr-8 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-teal outline-none bg-white cursor-pointer"
+                    >
+                      <option value="Evaluation Sample Pack (10-50 units)">Evaluation Sample Pack (10 - 50 units)</option>
+                      <option value="100 - 500 units (Standard MOQ Range)">100 - 500 units (Standard MOQ Range)</option>
+                      <option value="500 - 2,000 units (Wholesale Tier)">500 - 2,000 units (Wholesale Tier)</option>
+                      <option value="2,000+ Wholesale Container Batch">2,000+ Wholesale Container Batch</option>
+                    </select>
+                    <Layers className="w-4 h-4 text-slate-400 absolute left-3 top-3.5 pointer-events-none" />
                   </div>
-                  <select
-                    value={formData.quantity}
-                    onChange={e => setFormData({ ...formData, quantity: e.target.value })}
-                    className="w-full px-3.5 py-2.5 border border-slate-300 rounded-lg text-sm focus:ring-2 focus:ring-brand-teal outline-none bg-white cursor-pointer"
-                  >
-                    <option value="Evaluation Sample Pack (10-50 units)">Evaluation Sample Pack (10 - 50 units)</option>
-                    <option value="100 - 500 units (Standard MOQ Range)">100 - 500 units (Standard MOQ Range)</option>
-                    <option value="500 - 2,000 units (Wholesale Tier)">500 - 2,000 units (Wholesale Tier)</option>
-                    <option value="2,000+ Wholesale Container Batch">2,000+ Wholesale Container Batch</option>
-                  </select>
                 </div>
               </div>
 

@@ -10,6 +10,7 @@ import {
 import productsData from '../../public_html/data/products.json';
 import categoriesData from '../../public_html/data/categories.json';
 import { IoVueShowcase } from '../components/IoVueShowcase';
+import { FAQ_DATA } from '../data/faqs';
 
 interface HomePageProps {
   onOpenRfq: (productName?: string, productSlug?: string) => void;
@@ -46,8 +47,9 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
               </div>
             </div>
 
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1] text-slate-900">
-              Ophthalmic Equipment, Instruments <span className="text-brand-teal">& Consumables</span>
+            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.15] text-slate-900">
+              Ophthalmic Equipment,<br />
+              <span className="text-brand-teal">Instruments & Consumables</span>
             </h1>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
@@ -301,45 +303,17 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
           </div>
 
           <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 space-y-4">
-            <details className="group border-b border-slate-100 pb-3">
-              <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
-                What quality standards do Central India Export products hold?
-                <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
-              </summary>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                All surgical instruments, blades, and IOVUE™ IOLs are supplied under ISO 13485:2016 Quality Management Systems for Medical Devices, carry CE Mark technical dossiers, and conform to WHO-GMP guidelines.
-              </p>
-            </details>
-
-            <details className="group border-b border-slate-100 pb-3">
-              <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
-                How can international buyers request proforma wholesale quotations?
-                <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
-              </summary>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                You can click any "Request Quote" button across our website or email cie@cieindia.com. Our export desk in Nagpur, India will issue a formal FOB/CIF proforma invoice within 24 business hours.
-              </p>
-            </details>
-
-            <details className="group border-b border-slate-100 pb-3">
-              <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
-                What are your shipping Incoterms and international lead times?
-                <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
-              </summary>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                We offer FOB (Nagpur/Mumbai), CIF, and CFR Incoterms 2020 via air express (DHL, FedEx) or air cargo. In-stock products are dispatched within 1–3 business weeks.
-              </p>
-            </details>
-
-            <details className="group">
-              <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
-                Do you provide OEM private label branding for medical distributors?
-                <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
-              </summary>
-              <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Yes! We offer full OEM private labeling, custom laser-marking on instrument handles, bespoke blister packaging, and tailored diopter ranges for distributor networks worldwide.
-              </p>
-            </details>
+            {FAQ_DATA.slice(0, 4).map((faq, idx) => (
+              <details key={faq.id} className="group border-b border-slate-100 pb-3 last:border-0 last:pb-0" open={idx === 0}>
+                <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal transition-colors">
+                  {faq.question}
+                  <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold text-lg">+</span>
+                </summary>
+                <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </details>
+            ))}
           </div>
 
           <div className="text-center">
