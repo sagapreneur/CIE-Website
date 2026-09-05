@@ -1,26 +1,5 @@
 [
   {
-    "id": 17,
-    "name": "Anterior Chamber Iols",
-    "slug": "anterior-chamber-iols",
-    "brand": "ioVue",
-    "category_path": "Instruments > Surgical Implants",
-    "main_category": "Instruments",
-    "short_description": "High-precision ophthalmic anterior chamber iols crafted under ISO 13485 standards for professional microsurgical procedures.",
-    "long_description": "The Anterior Chamber Iols is an essential precision instrument designed for micro-incision ophthalmic surgery. Manufactured from premium-grade biocompatible materials, it offers exceptional tactile control, minimal tissue disruption, and long-term durability. Each unit undergoes rigorous optical inspection to satisfy international surgical quality benchmarks.",
-    "specifications": {
-      "Material": "AISI 420 Medical Grade Stainless Steel / Titanium Alloy",
-      "Finish": "Satin Matte Anti-Glare / Electro-polished",
-      "Quality Certification": "ISO 13485 : 2016 / CE Certified",
-      "Sterilization Compatibility": "Autoclavable (134°C) & EO Gas Sterilized",
-      "Reusability": "Reusable / Fully Autoclavable",
-      "Manufacturing Origin": "Nagpur, India (MIHAN SEZ Export Desk)"
-    },
-    "image": "/products/anterior-chamber-iols.jpg",
-    "is_featured": true,
-    "image_url": "/products/anterior-chamber-iols.jpg"
-  },
-  {
     "id": 150,
     "name": "Foldable IOL Force Foldable IOL Forceps",
     "slug": "foldable-iol-force-foldable-iol-forceps",

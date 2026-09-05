@@ -144,7 +144,7 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
                           name: 'IOVUE™ Hydrophilic Square Edge IOL',
                           slug: 'iovue-hydrophilic-square-edge-iol',
                           main_category: 'Intraocular Lenses',
-                          image_url: '/products/anterior-chamber-iols.jpg'
+                          image_url: '/products/iovue-clear-hydrophilic-acrylic-foldable-iol-fs-6025.jpg'
                         }, 100)}
                         className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
                       >
@@ -166,7 +166,7 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
                           name: 'IOVUE™ Hydrophobic 3-Piece Acrylic IOL',
                           slug: 'iovue-hydrophobic-3-piece-acrylic-iol',
                           main_category: 'Intraocular Lenses',
-                          image_url: '/products/anterior-chamber-iols.jpg'
+                          image_url: '/products/iovue-aspheric-hydrophobic-foldable-iol-fp-6025.jpg'
                         }, 100)}
                         className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
                       >
@@ -188,7 +188,7 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
                           name: 'IOVUE™ PMMA PC IOL',
                           slug: 'iovue-pmma-pc-iol',
                           main_category: 'Intraocular Lenses',
-                          image_url: '/products/anterior-chamber-iols.jpg'
+                          image_url: '/products/iovue-high-quality-pmma-posterior-chamber-iol.jpg'
                         }, 100)}
                         className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
                       >
@@ -210,7 +210,7 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
                           name: 'IOVUE™ Capsular Tension Ring (CTR)',
                           slug: 'iovue-capsular-tension-ring-ctr',
                           main_category: 'Intraocular Lenses',
-                          image_url: '/products/anterior-chamber-iols.jpg'
+                          image_url: '/products/iovue-capsular-tension-rings-ctr-model-pr-1109-pr-1210.jpg'
                         }, 100)}
                         className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
                       >

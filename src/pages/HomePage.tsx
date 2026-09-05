@@ -5,7 +5,7 @@ import { WorldMap } from '../components/WorldMap';
 import { ProductCard } from '../components/ProductCard';
 import { 
   Eye, PackageCheck, Award, ShieldCheck, Globe2, Factory, Truck, Search,
-  Microscope, FileCheck, ArrowRight, FileText, CheckCircle2, Shield, Sparkles, PhoneCall, ChevronRight, Layers, Stethoscope
+  Microscope, FileCheck, ArrowRight, FileText, CheckCircle2, Shield, Sparkles, PhoneCall, ChevronRight, Layers, Stethoscope, ChevronDown
 } from 'lucide-react';
 import productsData from '../../public_html/data/products.json';
 import categoriesData from '../../public_html/data/categories.json';
@@ -18,6 +18,7 @@ interface HomePageProps {
 
 export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
   const [heroSearch, setHeroSearch] = useState('');
+  const [visibleCount, setVisibleCount] = useState(8);
   const navigate = useNavigate();
   const iolProducts = productsData.filter(p => p.main_category === 'Intraocular Lenses');
 
@@ -280,10 +281,24 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {iolProducts.map((prod) => (
+            {iolProducts.slice(0, visibleCount).map((prod) => (
               <ProductCard key={prod.id} product={prod} onOpenRfq={onOpenRfq} />
             ))}
           </div>
+
+          {visibleCount < iolProducts.length && (
+            <div className="mt-12 text-center">
+              <Button
+                variant="outline"
+                size="md"
+                onClick={() => setVisibleCount((prev) => prev + 8)}
+                icon={<ChevronDown className="w-4 h-4" />}
+                className="hover:border-brand-teal hover:bg-brand-teal hover:text-white transition-all shadow-xs"
+              >
+                Load More Products
+              </Button>
+            </div>
+          )}
         </Container>
       </Section>
 
