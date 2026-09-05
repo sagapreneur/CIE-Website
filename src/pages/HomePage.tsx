@@ -74,7 +74,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                   className="border-2 border-brand-teal text-brand-teal bg-white hover:bg-brand-teal hover:text-white hover:border-brand-teal shadow-sm font-bold"
                   icon={<ArrowRight className="w-5 h-5" />}
                 >
-                  Browse All 457 Products
+                  Browse All {productsData.length} Products
                 </Button>
               </Link>
             </div>

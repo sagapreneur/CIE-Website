@@ -3,8 +3,49 @@
     "id": 3,
     "name": "Intraocular Lenses",
     "slug": "intraocular-lenses",
-    "subcategories": [],
-    "product_count": 13,
+    "subcategories": [
+      {
+        "name": "Hydrophilic Acrylic Foldable IOLs",
+        "slug": "hydrophilic-acrylic-foldable-iols",
+        "count": 8
+      },
+      {
+        "name": "Hydrophobic Acrylic Foldable IOLs",
+        "slug": "hydrophobic-acrylic-foldable-iols",
+        "count": 3
+      },
+      {
+        "name": "PMMA Posterior Chamber IOLs",
+        "slug": "pmma-posterior-chamber-iols",
+        "count": 7
+      },
+      {
+        "name": "Capsular Tension Rings (CTR)",
+        "slug": "capsular-tension-rings-ctr",
+        "count": 5
+      },
+      {
+        "name": "Specialty IOLs (Toric, Multifocal, Iris-Claw)",
+        "slug": "specialty-iols-toric-multifocal-iris-claw",
+        "count": 3
+      },
+      {
+        "name": "Anterior Chamber Intraocular Lenses",
+        "slug": "anterior-chamber-intraocular-lenses",
+        "count": 3
+      },
+      {
+        "name": "Posterior Chamber PMMA Lenses",
+        "slug": "posterior-chamber-pmma-lenses",
+        "count": 2
+      },
+      {
+        "name": "IOL Delivery Systems",
+        "slug": "iol-delivery-systems",
+        "count": 1
+      }
+    ],
+    "product_count": 32,
     "icon_url": "/category-icons/Intraocular Lenses-01.svg"
   },
   {
