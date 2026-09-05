@@ -16,7 +16,7 @@ interface IoVueProductItem {
 const IOVUE_PRODUCTS: IoVueProductItem[] = [
   {
     id: 'iovue-aspheric-acrylic',
-    name: 'IOVUE™ FLEXIOL AO / ASPROLENZ - Aspheric Hydrophilic Acrylic Foldable IOL',
+    name: 'IOVUE™ AO Aspheric Hydrophilic Acrylic Foldable IOL',
     tagline: 'Aberration-Neutral Negative Aspheric Optics with 360° Step Square Edge',
     description: 'Fabricated from ultra-pure 26% water content pHEMA polymer with zero silicone oil adhesion. Features pre-vaulted haptics and negative spherical aberration optics to nullify corneal spherical aberration.',
     image: '/iovue/iovue-aspheric-acrylic.png',
@@ -58,7 +58,7 @@ const IOVUE_PRODUCTS: IoVueProductItem[] = [
   },
   {
     id: 'iovue-blue-filter-yellow',
-    name: 'IOVUE™ Hyphovue Yellow Filter Aspheric IOL',
+    name: 'IOVUE™ Yellow Filter Aspheric Hydrophobic Foldable IOL',
     tagline: 'Natural Photoprotective Violet-Blue Light Cut-off Chromophore',
     description: 'Natural yellow-chromophore hydrophobic acrylic IOL designed to filter UV-A and high-energy violet-blue light (<450nm) to protect the macular retina while preserving scotopic contrast sensitivity.',
     image: '/iovue/iovue-blue-filter-yellow.png',
@@ -100,7 +100,7 @@ const IOVUE_PRODUCTS: IoVueProductItem[] = [
   },
   {
     id: 'iovue-pmma-single-piece',
-    name: 'IOVUE™ PROXYLENZ / GLOWEDGE Aspheric PMMA IOL',
+    name: 'IOVUE™ 360° Sharp Square Edge PMMA IOL',
     tagline: 'High Molecular Weight Clinical PMMA with 360° Advance Square Edge',
     description: 'High molecular weight clinical-grade PMMA intraocular lens with integrated UV absorber and 360° advance square edge. Ideal for extra-capsular cataract extraction (ECCE) and anterior/posterior chamber placement.',
     image: '/iovue/iovue-pmma-single-piece.png',
@@ -121,7 +121,7 @@ const IOVUE_PRODUCTS: IoVueProductItem[] = [
   },
   {
     id: 'iovue-iris-fixation',
-    name: 'IOVUE™ Irisglow Iris-Claw Fixation PMMA IOL',
+    name: 'IOVUE™ Iris-Claw Fixation PMMA IOL',
     tagline: 'Specialized Iris-Claw Stroma Fixation Anterior Reconstruction Lens',
     description: 'Iris-claw design PMMA lens for aphakia correction in eyes lacking posterior capsular support. Securely clips to the iris stroma with zero endothelial tissue touch.',
     image: '/iovue/iovue-iris-fixation-pmma.png',
@@ -163,7 +163,7 @@ const IOVUE_PRODUCTS: IoVueProductItem[] = [
   },
   {
     id: 'yellow-filter-hydrophilic',
-    name: 'IOVUE™ ACCURAVUE Yellow Hydrophilic Aspheric 360 Edge IOL',
+    name: 'IOVUE™ Yellow Hydrophilic Aspheric 360° Edge IOL',
     tagline: 'Premium Yellow-Tint Hydrophilic MICS Lens with 26% Water Content',
     description: 'Natural yellow chromophore hydrophilic acrylic lens combining 26% pHEMA water content comfort with 360° step square edge optical clarity for sub-2.2mm MICS delivery.',
     image: '/iovue/iovue-yellow-filter-hydrophilic.png',
@@ -184,7 +184,7 @@ const IOVUE_PRODUCTS: IoVueProductItem[] = [
   },
   {
     id: 'iovue-hydrophilic-acrylic',
-    name: 'IOVUE™ HEMAFOLD / GLOWFOLD Hydrophilic Acrylic Foldable IOL',
+    name: 'IOVUE™ Hydrophilic Acrylic Foldable IOL',
     tagline: 'Biocompatible Workhorse 26% Water Content Hydrophilic MICS Lens',
     description: 'High-purity biocompatible pHEMA hydrophilic acrylic intraocular lens designed for smooth folding and sub-2.2mm micro-incision cartridge injection into the capsular bag.',
     image: '/iovue/iovue-hydrophilic-acrylic.png',
@@ -205,7 +205,7 @@ const IOVUE_PRODUCTS: IoVueProductItem[] = [
   },
   {
     id: 'iovue-phobic-monofocal',
-    name: 'IOVUE™ FLEXIOL PHOBIC Aspheric / HYPHOFLEX Hydrophobic Monofocal IOL',
+    name: 'IOVUE™ Aspheric Hydrophobic Monofocal Foldable IOL',
     tagline: 'Single-Piece Cryo-Lathed Glisten-Free Hydrophobic Monofocal',
     description: 'High refractive index (1.49 / 1.56) glisten-free hydrophobic PEA/PEMA copolymer monofocal lens featuring modified 5° C-loop haptic geometry for exceptional capsular ELP stability.',
     image: '/iovue/iovue-phobic.png',
@@ -220,7 +220,7 @@ const IOVUE_PRODUCTS: IoVueProductItem[] = [
       { label: 'Optic Diameter / Length', value: '6.00 mm / 12.50 mm (13.00 mm)' },
       { label: 'Diopter Range', value: '+4.0 D to +35.0 D (0.5D increments)' },
       { label: 'Estimated ACD', value: '5.1 mm' },
-      { label: 'Refractive Index', value: '1.49 (FLEXIOL) / 1.56 (HYPHOFLEX)' },
+      { label: 'Refractive Index', value: '1.49 / 1.56 High-Purity Acrylic' },
       { label: 'Sterilization', value: 'Ethylene Oxide (ETO Gas)' }
     ]
   }
