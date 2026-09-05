@@ -518,21 +518,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
             >
               <ShoppingCart className="w-5 h-5" />
               {cartItems.length > 0 && (
-                <span className="absolute -top-1 -right-1 bg-brand-teal text-white text-[10px] font-mono font-bold w-4.5 h-4.5 rounded-full flex items-center justify-center border-2 border-white shadow-2xs">
+                <span className="absolute -top-1.5 -right-1.5 bg-brand-teal text-white text-[10px] font-mono font-extrabold min-w-5 h-5 px-1 rounded-full flex items-center justify-center border-2 border-white shadow-2xs leading-none">
                   {cartItems.length}
                 </span>
               )}
             </button>
-
-            {/* Request Quote Button */}
-            <Button 
-              variant="primary" 
-              size="sm"
-              icon={<FileText className="w-4 h-4" />}
-              onClick={() => onOpenRfq()}
-            >
-              Request Quote
-            </Button>
           </nav>
 
           {/* Action CTAs for mobile */}
@@ -545,20 +535,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
             >
               <ShoppingCart className="w-5 h-5" />
               {cartItems.length > 0 && (
-                <span className="absolute -top-1 -right-1 bg-brand-teal text-white text-[10px] font-mono font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-2xs">
+                <span className="absolute -top-1.5 -right-1.5 bg-brand-teal text-white text-[10px] font-mono font-extrabold min-w-5 h-5 px-1 rounded-full flex items-center justify-center border-2 border-white shadow-2xs leading-none">
                   {cartItems.length}
                 </span>
               )}
             </button>
-
-            <Button 
-              variant="primary" 
-              size="sm"
-              icon={<FileText className="w-4 h-4" />}
-              onClick={() => onOpenRfq()}
-            >
-              Quote
-            </Button>
 
             {/* Mobile Hamburger Button */}
             <button
