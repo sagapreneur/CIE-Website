@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Globe, ShieldCheck, Award, CheckCircle2, Plane, Building2, Truck } from 'lucide-react';
-import exportCountriesData from '../../public_html/data/export-countries.json';
 import worldPaths from './worldPaths.json';
 
 interface CountryFeature {
@@ -63,8 +62,54 @@ const COUNTRY_FLAGS: Record<string, string> = {
   'India (Nagpur HQ)': '🇮🇳',
 };
 
+export interface ExportCountryFlagItem {
+  name: string;
+  code: string;
+  flag: string;
+}
+
+export const EXPORT_COUNTRIES_LIST: ExportCountryFlagItem[] = [
+  { name: 'Canada', code: 'ca', flag: '🇨🇦' },
+  { name: 'United States', code: 'us', flag: '🇺🇸' },
+  { name: 'Mexico', code: 'mx', flag: '🇲🇽' },
+  { name: 'Costa Rica', code: 'cr', flag: '🇨🇷' },
+  { name: 'Panama', code: 'pa', flag: '🇵🇦' },
+  { name: 'Guatemala', code: 'gt', flag: '🇬🇹' },
+  { name: 'Dominican Republic', code: 'do', flag: '🇩🇴' },
+  { name: 'Brazil', code: 'br', flag: '🇧🇷' },
+  { name: 'Colombia', code: 'co', flag: '🇨🇴' },
+  { name: 'Peru', code: 'pe', flag: '🇵🇪' },
+  { name: 'Chile', code: 'cl', flag: '🇨🇱' },
+  { name: 'Argentina', code: 'ar', flag: '🇦🇷' },
+  { name: 'Germany', code: 'de', flag: '🇩🇪' },
+  { name: 'United Kingdom', code: 'gb', flag: '🇬🇧' },
+  { name: 'France', code: 'fr', flag: '🇫🇷' },
+  { name: 'Italy', code: 'it', flag: '🇮🇹' },
+  { name: 'Spain', code: 'es', flag: '🇪🇸' },
+  { name: 'Netherlands', code: 'nl', flag: '🇳🇱' },
+  { name: 'Poland', code: 'pl', flag: '🇵🇱' },
+  { name: 'Turkey', code: 'tr', flag: '🇹🇷' },
+  { name: 'Kenya', code: 'ke', flag: '🇰🇪' },
+  { name: 'Nigeria', code: 'ng', flag: '🇳🇬' },
+  { name: 'South Africa', code: 'za', flag: '🇿🇦' },
+  { name: 'Egypt', code: 'eg', flag: '🇪🇬' },
+  { name: 'Tanzania', code: 'tz', flag: '🇹🇿' },
+  { name: 'Ethiopia', code: 'et', flag: '🇪🇹' },
+  { name: 'Ghana', code: 'gh', flag: '🇬🇭' },
+  { name: 'Uganda', code: 'ug', flag: '🇺🇬' },
+  { name: 'UAE', code: 'ae', flag: '🇦🇪' },
+  { name: 'Saudi Arabia', code: 'sa', flag: '🇸🇦' },
+  { name: 'Oman', code: 'om', flag: '🇴🇲' },
+  { name: 'Vietnam', code: 'vn', flag: '🇻🇳' },
+  { name: 'Indonesia', code: 'id', flag: '🇮🇩' },
+  { name: 'Thailand', code: 'th', flag: '🇹🇭' },
+  { name: 'Malaysia', code: 'my', flag: '🇲🇾' },
+  { name: 'Nepal', code: 'np', flag: '🇳🇵' },
+];
+
+const SLIDING_FLAGS = [...EXPORT_COUNTRIES_LIST, ...EXPORT_COUNTRIES_LIST];
+
 export const WorldMap: React.FC = () => {
-  const [activeRegion, setActiveRegion] = useState<string>('All Export Markets');
   const [hoveredCountry, setHoveredCountry] = useState<CountryFeature | null>(null);
 
   const allFeatures = worldPaths as CountryFeature[];
@@ -137,62 +182,110 @@ export const WorldMap: React.FC = () => {
 
         </div>
 
-        {/* Region Filter Bar */}
-        <div className="flex flex-wrap items-center justify-between gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-500 font-display mr-2">
-              Filter Target Region:
+        {/* Small Flags Sliding to the Right (Exactly 6 Visible at a Time) */}
+        <div className="space-y-2">
+          <div className="flex items-center justify-between px-1">
+            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500 font-display flex items-center space-x-1.5">
+              <Globe className="w-3.5 h-3.5 text-brand-teal" />
+              <span>International Export Markets ({EXPORT_COUNTRIES_LIST.length} Direct Destinations)</span>
             </span>
-            <button
-              onClick={() => setActiveRegion('All Export Markets')}
-              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all font-display ${
-                activeRegion === 'All Export Markets'
-                  ? 'bg-brand-teal text-white shadow-sm'
-                  : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-200'
-              }`}
-            >
-              All Export Markets
-            </button>
-            {exportCountriesData.map((reg) => (
-              <button
-                key={reg.region}
-                onClick={() => setActiveRegion(reg.region)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all font-display ${
-                  activeRegion === reg.region
-                    ? 'bg-brand-teal text-white shadow-sm'
-                    : 'bg-white text-slate-700 hover:bg-slate-200 border border-slate-200'
-                }`}
-              >
-                {reg.region}
-              </button>
-            ))}
+            <span className="text-[11px] text-slate-400 font-medium hidden sm:inline">
+              Hover any flag to pause & highlight on map
+            </span>
           </div>
 
-          {/* Color Legend */}
-          <div className="flex items-center space-x-4 text-xs">
-            <span className="flex items-center space-x-1.5">
-              <span className="w-3 h-3 rounded-sm bg-brand-teal inline-block" />
-              <span className="font-semibold text-slate-800">Export Market</span>
-            </span>
-            <span className="flex items-center space-x-1.5">
-              <span className="w-3 h-3 rounded-sm bg-slate-200 inline-block border border-slate-300" />
-              <span className="text-slate-500">Other Countries</span>
-            </span>
+          <div className="relative overflow-hidden w-full bg-slate-50/90 py-2.5 px-1 rounded-2xl border border-slate-200">
+            {/* Soft Edge Gradient Masks */}
+            <div className="absolute left-0 top-0 bottom-0 w-10 sm:w-16 bg-gradient-to-r from-slate-50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-10 sm:w-16 bg-gradient-to-l from-slate-50 to-transparent z-10 pointer-events-none" />
+
+            <style>{`
+              @keyframes slideFlagsToRight {
+                0% {
+                  transform: translateX(-50%);
+                }
+                100% {
+                  transform: translateX(0%);
+                }
+              }
+              .animate-flags-slide-right {
+                animation: slideFlagsToRight 40s linear infinite;
+              }
+              .animate-flags-slide-right:hover {
+                animation-play-state: paused;
+              }
+            `}</style>
+
+            <div
+              className="flex items-center animate-flags-slide-right"
+              style={{ width: '1200%' }}
+            >
+              {SLIDING_FLAGS.map((c, idx) => {
+                const countryFeature = allFeatures.find((f) => f.name === c.name);
+                const isHovered = hoveredCountry?.name === c.name;
+
+                return (
+                  <div
+                    key={`${c.code}-${idx}`}
+                    style={{ width: `${100 / 72}%` }}
+                    className="px-1.5 shrink-0"
+                    onMouseEnter={() => countryFeature && setHoveredCountry(countryFeature)}
+                    onMouseLeave={() => setHoveredCountry(null)}
+                  >
+                    <div
+                      className={`flex items-center justify-center sm:justify-start space-x-2 px-2.5 py-1.5 bg-white rounded-xl border transition-all cursor-pointer shadow-2xs h-10 ${
+                        isHovered
+                          ? 'border-brand-teal bg-brand-soft ring-2 ring-brand-teal/30 shadow-xs'
+                          : 'border-slate-200 hover:border-brand-teal'
+                      }`}
+                      title={c.name}
+                    >
+                      <img
+                        src={`https://flagcdn.com/w40/${c.code}.png`}
+                        srcSet={`https://flagcdn.com/w80/${c.code}.png 2x`}
+                        alt={c.name}
+                        className="w-5 h-3.5 object-cover rounded-xs border border-slate-200 shadow-2xs shrink-0"
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.style.display = 'none';
+                          const fb = e.currentTarget.nextElementSibling;
+                          if (fb) fb.classList.remove('hidden');
+                        }}
+                      />
+                      <span className="hidden text-sm shrink-0 leading-none">{c.flag}</span>
+                      <span className="text-xs font-bold text-slate-800 truncate font-display hidden sm:inline">
+                        {c.name}
+                      </span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
 
         {/* 100% REAL GEOGRAPHIC WORLD MAP (Flat Minimal 2D SaaS Style) */}
         <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 relative overflow-hidden flex flex-col justify-between min-h-[460px]">
           
-          <div className="flex justify-between items-center text-xs text-slate-600 mb-2 border-b border-slate-200 pb-3">
+          <div className="flex flex-wrap justify-between items-center text-xs text-slate-600 mb-2 border-b border-slate-200 pb-3 gap-2">
             <div className="flex items-center space-x-2 font-display font-bold text-slate-800">
               <Globe className="w-4 h-4 text-brand-teal" />
-              <span>Verified Geographic Map (Hover any marker to reveal country name)</span>
+              <span>Verified Geographic Map (Hover any marker or flag to reveal details)</span>
             </div>
             
-            <span className="font-mono text-[11px] text-brand-teal font-bold bg-white border border-brand-teal/30 px-2.5 py-0.5 rounded">
-              Dispatch: Zero Mile Nagpur (Central Export Desk)
-            </span>
+            <div className="flex items-center space-x-4">
+              <span className="flex items-center space-x-1.5 font-medium">
+                <span className="w-2.5 h-2.5 rounded-xs bg-brand-teal inline-block" />
+                <span className="text-slate-800 text-[11px] font-bold">Export Market</span>
+              </span>
+              <span className="flex items-center space-x-1.5 font-medium">
+                <span className="w-2.5 h-2.5 rounded-xs bg-slate-200 inline-block border border-slate-300" />
+                <span className="text-slate-500 text-[11px]">Other Countries</span>
+              </span>
+              <span className="font-mono text-[11px] text-brand-teal font-bold bg-white border border-brand-teal/30 px-2.5 py-0.5 rounded shadow-2xs">
+                Nagpur Export HQ
+              </span>
+            </div>
           </div>
 
           {/* Authentic Real SVG World Map */}
@@ -205,15 +298,11 @@ export const WorldMap: React.FC = () => {
               {/* 177 REAL WORLD COUNTRY PATHS */}
               {allFeatures.map((country) => {
                 const isExport = country.is_export;
-                const isRegionMatch = activeRegion === 'All Export Markets' || country.region === activeRegion;
+                const isHovered = hoveredCountry?.id === country.id || hoveredCountry?.name === country.name;
 
                 let fillColor = '#E2E8F0'; // Default non-export country (neutral light grey)
                 if (isExport) {
-                  if (isRegionMatch) {
-                    fillColor = '#28B2A8'; // Solid uniform brand teal for all export markets
-                  } else {
-                    fillColor = '#A3E3DE'; // Soft teal when filtered
-                  }
+                  fillColor = isHovered ? '#0D3666' : '#28B2A8'; // Solid uniform brand teal for all export markets
                 }
 
                 return (
