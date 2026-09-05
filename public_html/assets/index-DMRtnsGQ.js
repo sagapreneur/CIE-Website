@@ -32,7 +32,7 @@ Error generating stack: `+r.message+`
                 }
               }
               .animate-flags-slide-right {
-                animation: slideFlagsToRight 40s linear infinite;
+                animation: slideFlagsToRight 100s linear infinite;
               }
               .animate-flags-slide-right:hover {
                 animation-play-state: paused;
