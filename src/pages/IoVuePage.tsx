@@ -209,7 +209,7 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
                           id: 1004,
                           name: 'IOVUE™ Capsular Tension Ring (CTR)',
                           slug: 'iovue-capsular-tension-ring-ctr',
-                          main_category: 'Intraocular Lenses',
+                          main_category: 'Retina Equipments',
                           image_url: '/products/iovue-capsular-tension-rings-ctr-model-pr-1109-pr-1210.jpg'
                         }, 100)}
                         className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
