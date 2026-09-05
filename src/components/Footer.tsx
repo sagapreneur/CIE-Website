@@ -29,7 +29,7 @@ export const Footer: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) => {
             </p>
 
             {/* Badges */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-3 pt-1">
               <span className="inline-flex items-center space-x-1.5 px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-brand-teal shadow-sm">
                 <Award className="w-3.5 h-3.5" />
                 <span>21+ Years Export Mastery</span>
@@ -38,6 +38,20 @@ export const Footer: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) => {
                 <ShieldCheck className="w-3.5 h-3.5 text-brand-teal" />
                 <span>GSTIN: 27AAEFC8743J1Z5</span>
               </span>
+              <span className="inline-flex items-center space-x-1.5 px-3 py-1 bg-brand-soft border border-brand-teal/30 rounded-lg text-xs font-bold text-[#0D3666] shadow-2xs">
+                <Globe className="w-3.5 h-3.5 text-brand-teal" />
+                <span>One Country One Distribution Network</span>
+              </span>
+            </div>
+
+            {/* Sister Concern */}
+            <div className="pt-3 border-t border-brand-teal/20 space-y-1">
+              <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block font-display">
+                Sister Concern:
+              </span>
+              <p className="text-sm font-bold text-slate-900 tracking-wide font-display">
+                Indian Ophthalmic Private Limited
+              </p>
             </div>
           </div>
 
@@ -55,7 +69,7 @@ export const Footer: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) => {
               <li><Link to="/contact-us" className="hover:text-brand-teal transition-colors">Contact Us</Link></li>
               <li><Link to="/faq" className="hover:text-brand-teal transition-colors font-semibold">FAQ & Help Center</Link></li>
               <li>
-                <button onClick={onOpenRfq} className="text-brand-teal font-bold hover:underline flex items-center space-x-1">
+                <button onClick={onOpenRfq} className="text-brand-teal font-bold hover:underline flex items-center space-x-1 cursor-pointer">
                   <span>Request Quotation</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </button>
@@ -89,7 +103,7 @@ export const Footer: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) => {
                 <MapPin className="w-4 h-4 text-brand-teal shrink-0 mt-1" />
                 <span>
                   Central India Export,<br />
-                  6-7, Shri Vardhan Complex Ramdaspeth,<br />
+                  5-6-7, Ground Floor, Shri Vardhan Complex, Ramdaspeth,<br />
                   Wardha Road, Nagpur-440012, Maharashtra (India)
                 </span>
               </div>
@@ -105,9 +119,10 @@ export const Footer: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) => {
               </div>
               <div className="flex items-start space-x-3">
                 <Mail className="w-4 h-4 text-brand-teal shrink-0 mt-1" />
-                <div className="flex flex-col space-y-0.5">
+                <div className="flex flex-col space-y-1">
                   <a href="mailto:vaidsandeep100@yahoo.co.in" className="hover:text-brand-teal transition-colors">vaidsandeep100@yahoo.co.in</a>
                   <a href="mailto:cie@cieindia.com" className="hover:text-brand-teal transition-colors">cie@cieindia.com</a>
+                  <a href="mailto:vaidsandeep100@gmail.com" className="hover:text-brand-teal transition-colors">vaidsandeep100@gmail.com</a>
                 </div>
               </div>
               <div className="flex items-center space-x-3">

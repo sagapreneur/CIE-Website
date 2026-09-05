@@ -31,9 +31,9 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
     },
     {
       id: 'production',
-      tabTitle: '03. Cleanroom Facilities & Quality',
-      subtitle: 'Own Cleanrooms & Assembly Facilities',
-      heading: '3 Dedicated Nagpur Cleanroom Facilities & Growth Milestones',
+      tabTitle: '03. Quality Standards & Milestones',
+      subtitle: 'Certified Quality & Compliance',
+      heading: 'Rigorous Quality Control & 21-Year Export Growth Milestones',
     }
   ];
 
@@ -551,25 +551,25 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                 transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
                 className="space-y-8"
               >
-                {/* Infrastructure Overview Banner & Milestones */}
+                {/* Quality Standards Overview Banner & Milestones */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                   
-                  {/* Left Column: Factory Infrastructure & Milestones */}
+                  {/* Left Column: Quality Control Infrastructure & Milestones */}
                   <div className="lg:col-span-5 space-y-6 bg-white rounded-3xl p-6 border border-slate-200 shadow-md">
                     <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-soft border border-brand-teal/30 text-xs font-bold text-brand-teal">
-                      <Factory className="w-3.5 h-3.5" />
-                      <span>Cleanrooms & Infrastructure</span>
+                      <ShieldCheck className="w-3.5 h-3.5" />
+                      <span>Quality Assurance & Standards</span>
                     </div>
 
                     <h3 className="font-display font-extrabold text-2xl text-slate-900">
-                      3 Owned Cleanroom Facilities in Nagpur, India
+                      Certified Manufacturing Partners & Rigorous QA
                     </h3>
 
                     <p className="text-xs text-slate-600 leading-relaxed">
-                      We operate dedicated cleanroom assembly and quality testing facilities in Nagpur equipped with ISO Class 5/7 cleanrooms, providing an integrated catalog of <strong className="text-slate-900 font-mono font-bold">400+ catalog items</strong>.
+                      Headquartered at Nagpur's Zero Mile, Central India Export works in close synergy with accredited, state-of-the-art manufacturing facilities under strict ISO 13485:2016 and CE compliance. We enforce 100% pre-dispatch quality verification across our <strong className="text-slate-900 font-mono font-bold">400+ catalog items</strong>.
                     </p>
 
-                    {/* Timeline Growth Milestones (Official PDF Data) */}
+                    {/* Timeline Growth Milestones (Official Corporate Doc) */}
                     <div className="space-y-4 pt-3 border-t border-slate-100">
                       <h4 className="text-xs uppercase font-mono tracking-widest text-brand-blue font-bold">
                         Central India Export Growth Milestones
@@ -594,54 +594,54 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                     </div>
                   </div>
 
-                  {/* Right Column: 4 Cleanroom Production Line Cards */}
+                  {/* Right Column: 4 Quality Assured Product Streams */}
                   <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
                     
-                    {/* Line 1: IOL Assembly */}
+                    {/* Stream 1: IOL Assembly */}
                     <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md group hover:border-brand-teal/50 transition-all">
                       <div className="h-40 overflow-hidden relative bg-slate-100">
                         <img 
                           src="/production-line-iol.jpg" 
-                          alt="Cleanroom IOL Assembly Line" 
+                          alt="Precision IOL Optics Inspection" 
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/95 backdrop-blur-md text-brand-teal border border-brand-teal/30 shadow-2xs">
-                          Unit 01 · Nagpur HQ
+                          ioVue™ Optical Standards
                         </span>
                       </div>
                       <div className="p-4 space-y-1">
                         <h4 className="font-display font-bold text-sm text-slate-900 group-hover:text-brand-teal transition-colors">
-                          Cleanroom IOL Assembly & Lathe Line
+                          Precision IOL Lathe Cutting & Optics
                         </h4>
                         <p className="text-[11px] text-slate-600">
-                          ISO Class 5/7 cleanrooms equipped with CNC optical lathes, 100% hydration diopter testing, and interferometric surface inspection.
+                          Lathe-cut 360° Continuous Square Edge optics with 100% hydration diopter power testing and interferometric surface inspection.
                         </p>
                       </div>
                     </div>
 
-                    {/* Line 2: Micro Blade Honing */}
+                    {/* Stream 2: Micro Blade Honing */}
                     <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md group hover:border-brand-teal/50 transition-all">
                       <div className="h-40 overflow-hidden relative bg-slate-100">
                         <img 
                           src="/production-line-blades.jpg" 
-                          alt="Micro Surgical Blade Honing Line" 
+                          alt="Micro Surgical Blade Honing" 
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/95 backdrop-blur-md text-brand-teal border border-brand-teal/30 shadow-2xs">
-                          Unit 02 · Ramdaspeth
+                          Micron Sharpening
                         </span>
                       </div>
                       <div className="p-4 space-y-1">
                         <h4 className="font-display font-bold text-sm text-slate-900 group-hover:text-brand-teal transition-colors">
-                          Micro Blade Laser Honing Line
+                          Micro Blade Laser Edge Honing
                         </h4>
                         <p className="text-[11px] text-slate-600">
-                          Laser-guided edge honing and Swiss micro-grinding machines for 1.8mm–3.2mm keratome & lance blades inspected under 100x digital magnification.
+                          Laser-guided edge honing and Swiss micro-grinding for 1.8mm–3.2mm keratome & lance blades inspected under 100x digital magnification.
                         </p>
                       </div>
                     </div>
 
-                    {/* Line 3: Ophthalmic Solutions BFS */}
+                    {/* Stream 3: Ophthalmic Solutions BFS */}
                     <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md group hover:border-brand-teal/50 transition-all">
                       <div className="h-40 overflow-hidden relative bg-slate-100">
                         <img 
@@ -650,7 +650,7 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/95 backdrop-blur-md text-brand-teal border border-brand-teal/30 shadow-2xs">
-                          Unit 03 · Sterile Packaging
+                          BFS Aseptic Filling
                         </span>
                       </div>
                       <div className="p-4 space-y-1">
@@ -658,12 +658,12 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                           Sterile Solutions BFS Liquid Filling
                         </h4>
                         <p className="text-[11px] text-slate-600">
-                          Automated Blow-Fill-Seal (BFS) liquid aseptic filling for 1.0%–1.4% Sodium Hyaluronate viscoelastics & tamper-proof sterile syringes.
+                          Automated Blow-Fill-Seal (BFS) liquid filling for 1.0%–1.4% Sodium Hyaluronate viscoelastics & tamper-proof sterile syringes.
                         </p>
                       </div>
                     </div>
 
-                    {/* Line 4: Prosthetics & Diagnostics */}
+                    {/* Stream 4: Prosthetics & Diagnostics */}
                     <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md group hover:border-brand-teal/50 transition-all">
                       <div className="h-40 overflow-hidden relative bg-slate-100">
                         <img 
@@ -672,15 +672,15 @@ export const CompanyProfileShowcase: React.FC<CompanyProfileShowcaseProps> = ({ 
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                         <span className="absolute bottom-2 left-2 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-white/95 backdrop-blur-md text-brand-teal border border-brand-teal/30 shadow-2xs">
-                          Unit 04 · Laboratory
+                          Diagnostic & Lab Testing
                         </span>
                       </div>
                       <div className="p-4 space-y-1">
                         <h4 className="font-display font-bold text-sm text-slate-900 group-hover:text-brand-teal transition-colors">
-                          Prosthetics & Diagnostics Line
+                          Prosthetics & Diagnostic Quality Testing
                         </h4>
                         <p className="text-[11px] text-slate-600">
-                          Precision polishing lab for custom PMMA ocular acrylic prosthetics and lint-free diagnostic paper strip precision slitting.
+                          Precision optical polishing for custom PMMA ocular acrylic prosthetics and lint-free diagnostic paper strip precision slitting.
                         </p>
                       </div>
                     </div>

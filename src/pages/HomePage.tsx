@@ -31,17 +31,27 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
         <Container className="relative z-10">
           <div className="max-w-3xl space-y-6">
             
-            <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-soft border border-brand-teal/30 text-xs font-semibold text-brand-teal shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-brand-teal" />
-              <span>21-Year Export Legacy · Nagpur, India (Est. 2004)</span>
+            <div className="flex flex-wrap items-center gap-2.5">
+              <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-soft border border-brand-teal/30 text-xs font-semibold text-brand-teal shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 text-brand-teal" />
+                <span>21+ Years Export Mastery · Nagpur, India (Est. 2004)</span>
+              </div>
+              <div className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-white border border-slate-200 text-xs font-mono font-bold text-slate-700 shadow-sm">
+                <ShieldCheck className="w-3.5 h-3.5 text-brand-teal" />
+                <span>GSTIN: 27AAEFC8743J1Z5</span>
+              </div>
+              <div className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-full bg-brand-soft border border-brand-teal/40 text-xs font-bold text-[#0D3666] shadow-sm">
+                <Globe2 className="w-3.5 h-3.5 text-brand-teal" />
+                <span>One Country One Distribution Network</span>
+              </div>
             </div>
 
             <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.1] text-slate-900">
-              Ophthalmic Equipment <span className="text-brand-teal">& Instruments</span>
+              Ophthalmic Equipment, Instruments <span className="text-brand-teal">& Consumables</span>
             </h1>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
-              Direct B2B export and supply of IOVUE™ intraocular lenses, micro-blades, ophthalmic surgical instruments, diagnostic strips, viscoelastic solutions, and ocular prostheses. Dispatched globally from Nagpur Zero-Mile HQ, India.
+              Central India Export (est. 2004) is a premier supplier and international exporter of high-precision ophthalmic surgical instruments, ioVue intraocular lenses (IOLs), micro-surgical blades, and ophthalmic equipment based in Nagpur, India.
             </p>
 
             {/* Action CTAs */}
@@ -58,11 +68,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
               <Link to="/products">
                 <Button 
                   variant="outline" 
-                  size="lg"
+                  size="lg" 
                   className="border-2 border-brand-teal text-brand-teal bg-white hover:bg-brand-teal hover:text-white hover:border-brand-teal shadow-sm font-bold"
                   icon={<ArrowRight className="w-5 h-5" />}
                 >
-                  Browse All 460 Products
+                  Browse All 457 Products
                 </Button>
               </Link>
             </div>
@@ -80,7 +90,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                 <div className="w-6 h-6 rounded-full bg-white border border-brand-teal flex items-center justify-center text-brand-teal shrink-0 shadow-sm">
                   <Award className="w-3.5 h-3.5 text-brand-teal" />
                 </div>
-                <span className="font-bold text-slate-900 leading-tight">GMP & ISO Standards</span>
+                <span className="font-bold text-slate-900 leading-tight">MOQ: 100 pcs (by product)</span>
               </div>
 
               <div className="flex items-center space-x-2 py-1.5 px-2.5 bg-white/95 backdrop-blur-sm border border-slate-200 rounded-lg shadow-sm">

@@ -42,7 +42,7 @@ export const ContactPage: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) 
                   <div>
                     <strong className="block font-bold text-slate-900">Address:</strong>
                     <span>Central India Export</span><br />
-                    <span>6-7, Shri Vardhan Complex Ramdaspeth,</span><br />
+                    <span>5-6-7, Ground Floor, Shri Vardhan Complex, Ramdaspeth,</span><br />
                     <span>Wardha Road, Nagpur-440012, Maharashtra (India)</span>
                   </div>
                 </div>
@@ -69,9 +69,10 @@ export const ContactPage: React.FC<{ onOpenRfq: () => void }> = ({ onOpenRfq }) 
                   <Mail className="w-5 h-5 text-brand-teal shrink-0 mt-1" />
                   <div>
                     <strong className="block font-bold text-slate-900 mb-1">Email Contacts:</strong>
-                    <div className="flex flex-col space-y-0.5">
+                    <div className="flex flex-col space-y-1">
                       <a href="mailto:vaidsandeep100@yahoo.co.in" className="text-brand-teal font-semibold hover:underline">vaidsandeep100@yahoo.co.in</a>
                       <a href="mailto:cie@cieindia.com" className="text-brand-teal font-semibold hover:underline">cie@cieindia.com</a>
+                      <a href="mailto:vaidsandeep100@gmail.com" className="text-brand-teal font-semibold hover:underline">vaidsandeep100@gmail.com</a>
                     </div>
                   </div>
                 </div>

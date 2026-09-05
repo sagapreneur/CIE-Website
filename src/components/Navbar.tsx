@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Container, Button } from './Primitives';
-import { Search, ChevronDown, ChevronRight, Menu, X, FileText, Globe, Phone, Mail, TrendingUp, ArrowRight, Layers, Building2 } from 'lucide-react';
+import { Search, ChevronDown, ChevronRight, Menu, X, FileText, Globe, Phone, Mail, TrendingUp, ArrowRight, Layers, Building2, ShoppingCart } from 'lucide-react';
 import categoriesData from '../../public_html/data/categories.json';
 import productsData from '../../public_html/data/products.json';
+import { useCart } from '../context/CartContext';
 
 interface NavbarProps {
   onOpenRfq: (productName?: string) => void;
@@ -17,6 +18,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
   const [navSearch, setNavSearch] = useState('');
   const [isSearchFocused, setIsSearchFocused] = useState(false);
   
+  const { openCart, cartItems } = useCart();
+
   const [activeCategory, setActiveCategory] = useState<number | string>(categoriesData[0]?.id || 'intraocular-lenses');
   const [activeSubcategory, setActiveSubcategory] = useState<string>('All');
 
@@ -42,6 +45,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
     return prods.slice(0, 24);
   }, [selectedCategoryObj, activeSubcategory]);
 
+  // Scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -57,10 +61,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
     setIsSearchFocused(false);
   }, [location]);
 
-  // Click outside to close search dropdown
+  // Close menus on click outside
   useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (searchContainerRef.current && !searchContainerRef.current.contains(e.target as Node)) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchContainerRef.current && !searchContainerRef.current.contains(event.target as Node)) {
         setIsSearchFocused(false);
       }
     };
@@ -68,15 +72,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Filter preview products for live search popup (Returns ALL matching items for search term)
+  // Filter products for fast instant search
   const matchingProducts = useMemo(() => {
-    if (!navSearch.trim()) {
-      return productsData.filter(p => p.is_featured || p.image_url || p.image).slice(0, 8);
-    }
+    if (!navSearch.trim()) return productsData.slice(0, 8);
     const query = navSearch.toLowerCase().trim();
     return productsData.filter(p => 
-      p.name.toLowerCase().includes(query) || 
-      p.main_category.toLowerCase().includes(query) ||
+      p.name.toLowerCase().includes(query) ||
       (p.category_path && p.category_path.toLowerCase().includes(query)) ||
       (p.short_description && p.short_description.toLowerCase().includes(query)) ||
       p.slug.toLowerCase().includes(query)
@@ -96,9 +97,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
           </div>
 
           <div className="hidden sm:flex items-center space-x-6 text-xs">
-            <a href="tel:+917122429168" className="hover:text-brand-teal transition-colors font-medium flex items-center space-x-1.5">
+            <a href="tel:+919822200622" className="hover:text-brand-teal transition-colors font-medium flex items-center space-x-1.5">
               <Phone className="w-3.5 h-3.5 text-brand-teal shrink-0" />
-              <span>+91-712-2429168</span>
+              <span>+91-9822200622</span>
             </a>
             <a href="mailto:vaidsandeep100@yahoo.co.in" className="hover:text-brand-teal transition-colors font-medium flex items-center space-x-1.5">
               <Mail className="w-3.5 h-3.5 text-brand-teal shrink-0" />
@@ -508,6 +509,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
               )}
             </div>
 
+            {/* Wholesale Inquiry Cart Button (Desktop) */}
+            <button
+              onClick={openCart}
+              className="relative p-2 rounded-xl text-slate-700 hover:text-brand-teal hover:bg-brand-soft transition-colors flex items-center justify-center cursor-pointer"
+              title="Wholesale Inquiry Cart"
+              aria-label="View quotation cart"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              {cartItems.length > 0 && (
+                <span className="absolute -top-1 -right-1 bg-brand-teal text-white text-[10px] font-mono font-bold w-4.5 h-4.5 rounded-full flex items-center justify-center border-2 border-white shadow-2xs">
+                  {cartItems.length}
+                </span>
+              )}
+            </button>
+
             {/* Request Quote Button */}
             <Button 
               variant="primary" 
@@ -520,7 +536,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
           </nav>
 
           {/* Action CTAs for mobile */}
-          <div className="flex lg:hidden items-center space-x-3">
+          <div className="flex lg:hidden items-center space-x-2">
+            {/* Mobile Cart Button */}
+            <button
+              onClick={openCart}
+              className="relative p-2 rounded-lg text-slate-700 hover:text-brand-teal hover:bg-slate-100 transition-colors flex items-center justify-center cursor-pointer"
+              aria-label="View quotation cart"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              {cartItems.length > 0 && (
+                <span className="absolute -top-1 -right-1 bg-brand-teal text-white text-[10px] font-mono font-bold w-4 h-4 rounded-full flex items-center justify-center shadow-2xs">
+                  {cartItems.length}
+                </span>
+              )}
+            </button>
+
             <Button 
               variant="primary" 
               size="sm"
@@ -533,7 +563,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
             {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none"
+              className="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none cursor-pointer"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

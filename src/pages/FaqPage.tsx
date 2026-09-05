@@ -11,30 +11,52 @@ interface FaqItem {
 }
 
 const FAQ_DATA: FaqItem[] = [
-  // General & B2B Orders
+  // 1. Payment Terms
   {
     id: 'b2b-01',
-    category: 'General',
-    question: 'Who is Central India Export (CIE) and what products do you supply?',
-    answer: 'Central India Export (CIE) is a premier B2B supplier and global exporter of high-precision ophthalmic microsurgical instruments, intraocular lenses (IOVUE™ brand), micro-surgical blades, ophthalmic solutions, diagnostic strips, ocular prostheses, and clinic vision testing equipment based in Nagpur, Maharashtra, India.'
+    category: 'Orders',
+    question: 'What international payment terms and payment methods do you accept?',
+    answer: 'We accept international payments exclusively via PayPal and direct Bank Wire Transfer (T/T). All export orders, custom consignments, and evaluation sample dispatches are processed on a 100% full advance payment basis prior to production allocation and export shipping dispatch.'
   },
+
+  // 2. Courier / Freight Charges
   {
     id: 'b2b-02',
-    category: 'Orders',
-    question: 'How do I request a Proforma Quotation for wholesale export?',
-    answer: 'You can request a formal wholesale quotation by clicking the "Request Quote" button on any product page or header, or by emailing our export desk directly at cie@cieindia.com. Please specify the product names, model codes, target quantities, and destination port.'
+    category: 'Logistics',
+    question: 'Who is responsible for international courier and shipping freight charges?',
+    answer: 'All international courier, air express, and destination customs clearance charges must be borne directly by the importer / buyer. Consignments can be dispatched on your existing corporate courier account (e.g., DHL, FedEx, UPS) or freight charges will be itemized directly on the proforma invoice upon mutual agreement.'
   },
+
+  // 3. Minimum Order Quantity (MOQ)
   {
     id: 'b2b-03',
     category: 'Orders',
     question: 'What is your Minimum Order Quantity (MOQ) for international orders?',
-    answer: 'MOQs vary by product line: Surgical Instruments (10 units per pattern), IOVUE™ IOLs (50 units assortment), Micro Surgical Blades (box of 100 units), Diagnostic Strips (10 boxes), and Ophthalmic Solutions (50 vials/syringes). Evaluation sample packs are available for qualified hospital buyers and medical distributors.'
+    answer: 'The standard Minimum Order Quantity (MOQ) is 100 pieces, depending on the specific product line and category. For initial hospital clinic trials and newly appointed distributor assessments, flexible evaluation packs and mixed product batches are accommodated.'
   },
+
+  // 4. Proforma Quotation & Certificates Turnaround
   {
     id: 'b2b-04',
     category: 'Orders',
-    question: 'What international payment terms do you accept?',
-    answer: 'We accept Irrevocable Letter of Credit (L/C at sight) from prime international banks, Telegraphic Transfer (T/T Wire Transfer), and Advance Bank Wire Transfers for sample evaluation shipments.'
+    question: 'How do I request a formal Proforma Quotation and regulatory technical dossiers?',
+    answer: 'Click any "Request Quote" button across our portal or email our export desk directly at cie@cieindia.com. Our dedicated export sales desk will issue a formal proforma invoice. All required international certificates—including ISO 13485:2016 quality accreditations, European CE Mark technical dossiers, Certificate of Origin, and Certificate of Analysis (COA)—will be provided alongside the order invoices within 24 business hours.'
+  },
+
+  // 5. One Country One Distribution Network
+  {
+    id: 'b2b-05',
+    category: 'General',
+    question: 'What is Central India Export\'s "One Country One Distribution Network" policy?',
+    answer: 'Central India Export strictly enforces a "One Country One Distribution Network" policy worldwide. Approved regional distributors receive protected exclusive territorial rights within their designated country, ensuring sustainable long-term profitability and direct factory technical collaboration.'
+  },
+
+  // 6. Company Scope & Overview
+  {
+    id: 'b2b-06',
+    category: 'General',
+    question: 'Who is Central India Export (CIE) and what products do you supply?',
+    answer: 'Central India Export (est. 2004) is a premier supplier and international exporter of high-precision ophthalmic surgical instruments, ioVue intraocular lenses (IOLs), micro-surgical blades, ophthalmic solutions, diagnostic strips, and ophthalmic equipment based at Zero Mile Nagpur, India.'
   },
 
   // Quality & ISO Standards
@@ -68,7 +90,7 @@ const FAQ_DATA: FaqItem[] = [
     id: 'log-02',
     category: 'Logistics',
     question: 'What is the typical lead time for production and dispatch?',
-    answer: 'Standard stock items (IOVUE™ IOLs, blades, strips) are dispatched within 1–3 business weeks from order confirmation.'
+    answer: 'Standard stock items (IOVUE™ IOLs, blades, strips) are dispatched within 1–3 business weeks from order confirmation and receipt of full advance payment.'
   },
   {
     id: 'log-03',
@@ -88,7 +110,7 @@ const FAQ_DATA: FaqItem[] = [
     id: 'oem-02',
     category: 'OEM',
     question: 'Can I request sample evaluation packs prior to placing a bulk order?',
-    answer: 'Absolutely. We encourage medical distributors and hospital procurement heads to evaluate sample packs for surgical feedback before signing annual supply contracts. Contact our export desk to arrange sample dispatch.'
+    answer: 'Absolutely. We encourage medical distributors and hospital procurement heads to evaluate sample packs for surgical feedback before signing annual supply contracts. Contact our export desk at cie@cieindia.com to arrange sample dispatch.'
   }
 ];
 

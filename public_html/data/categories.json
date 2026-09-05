@@ -8,6 +8,38 @@
     "icon_url": "/category-icons/Intraocular Lenses-01.svg"
   },
   {
+    "id": 7,
+    "name": "Ophthalmic Solutions",
+    "slug": "ophthalmic-solutions",
+    "subcategories": [],
+    "product_count": 6,
+    "icon_url": "/category-icons/Ophthalmic Solutions-01.svg"
+  },
+  {
+    "id": 4,
+    "name": "Micro Surgical Blades",
+    "slug": "micro-surgical-blades-and-knives",
+    "subcategories": [],
+    "product_count": 20,
+    "icon_url": "/category-icons/Micro Surgical Blades-01.svg"
+  },
+  {
+    "id": 6,
+    "name": "Eye Drape & Eye Shield",
+    "slug": "eye-drape-and-eye-shield",
+    "subcategories": [],
+    "product_count": 3,
+    "icon_url": "/category-icons/Eye Drape & Eye Shield-01.svg"
+  },
+  {
+    "id": 8,
+    "name": "Fluorescein & Schirmer Strips | Iris Retractor",
+    "slug": "ophthalmic-strips",
+    "subcategories": [],
+    "product_count": 2,
+    "icon_url": "/category-icons/Strips-01.svg"
+  },
+  {
     "id": 2,
     "name": "Instruments",
     "slug": "instruments",
@@ -59,38 +91,6 @@
     ],
     "product_count": 363,
     "icon_url": "/category-icons/Instruments-01.svg"
-  },
-  {
-    "id": 4,
-    "name": "Micro Surgical Blades",
-    "slug": "micro-surgical-blades-and-knives",
-    "subcategories": [],
-    "product_count": 20,
-    "icon_url": "/category-icons/Micro Surgical Blades-01.svg"
-  },
-  {
-    "id": 6,
-    "name": "Eye Drape & Eye Shield",
-    "slug": "eye-drape-and-eye-shield",
-    "subcategories": [],
-    "product_count": 3,
-    "icon_url": "/category-icons/Eye Drape & Eye Shield-01.svg"
-  },
-  {
-    "id": 8,
-    "name": "Fluorescein & Schirmer Strips | Iris Retractor",
-    "slug": "ophthalmic-strips",
-    "subcategories": [],
-    "product_count": 2,
-    "icon_url": "/category-icons/Strips-01.svg"
-  },
-  {
-    "id": 7,
-    "name": "Ophthalmic Solutions",
-    "slug": "ophthalmic-solutions",
-    "subcategories": [],
-    "product_count": 6,
-    "icon_url": "/category-icons/Ophthalmic Solutions-01.svg"
   },
   {
     "id": 9,

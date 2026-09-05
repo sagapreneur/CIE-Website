@@ -13,13 +13,15 @@ import { PrivacyPolicyPage, TermsPage, NotFoundPage } from './pages/StaticPages'
 import { RfqModal } from './components/RfqModal';
 import { ScrollToTop } from './components/ScrollToTop';
 import { FloatingWidgets } from './components/FloatingWidgets';
-
 import { FaqPage } from './pages/FaqPage';
 import { BackButtonHeader } from './components/BackButtonHeader';
+import { CartProvider, useCart } from './context/CartContext';
+import { CartDrawer, FloatingCartButton } from './components/CartDrawer';
 
-export const App: React.FC = () => {
+const AppContent: React.FC = () => {
   const [rfqModalOpen, setRfqModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<{ name?: string; slug?: string }>({});
+  const { isCartRfqOpen, closeCartRfq } = useCart();
 
   const handleOpenRfq = (productName?: string, productSlug?: string) => {
     setSelectedProduct({ name: productName, slug: productSlug });
@@ -54,13 +56,34 @@ export const App: React.FC = () => {
       <Footer onOpenRfq={handleOpenRfq} />
       <FloatingWidgets />
 
+      {/* Cart Drawer & Floating Pill */}
+      <CartDrawer />
+      <FloatingCartButton />
+
+      {/* Single Product RFQ Modal */}
       <RfqModal
         isOpen={rfqModalOpen}
         onClose={() => setRfqModalOpen(false)}
         productName={selectedProduct.name}
         productSlug={selectedProduct.slug}
       />
+
+      {/* Cart Multi-Product RFQ Modal */}
+      <RfqModal
+        isOpen={isCartRfqOpen}
+        onClose={closeCartRfq}
+        isCartRfq={true}
+      />
     </div>
   );
 };
+
+export const App: React.FC = () => {
+  return (
+    <CartProvider>
+      <AppContent />
+    </CartProvider>
+  );
+};
+
 export default App;

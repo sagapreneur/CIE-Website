@@ -28,8 +28,8 @@ export const PrivacyPolicyPage: React.FC = () => (
             1. Commitment to B2B Data Privacy
           </h2>
           <p>
-            Central India Export ("CIE", "we", "our", "us"), operating at 6-7 Shrivardhan Complex, Ramdaspeth, Wardha Road, 
-            Nagpur, Maharashtra, India, respects the privacy of our international hospital clients, medical distributors, and 
+            Central India Export ("CIE", "we", "our", "us"), operating at 5-6-7, Ground Floor, Shri Vardhan Complex, Ramdaspeth, Wardha Road, 
+            Nagpur-440012, Maharashtra (India), respects the privacy of our international hospital clients, medical distributors, and 
             ophthalmic procurement partners. This Privacy Policy outlines how we collect, store, process, and safeguard business 
             contact information submitted through <strong className="text-slate-900">centralindiaexport.com</strong>.
           </p>
@@ -90,9 +90,10 @@ export const PrivacyPolicyPage: React.FC = () => (
             If you wish to update your company contact information, request deletion of inquiry records, or inquire about our data retention policies, please contact our export desk:
           </p>
           <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 font-mono text-xs text-slate-800 space-y-1">
-            <p><strong>Central India Export — Privacy Desk</strong></p>
-            <p>6-7, Shrivardhan Complex, Ramdaspeth, Wardha Road, Nagpur-440012, Maharashtra, India</p>
-            <p>Email: <a href="mailto:cie@cieindia.com" className="text-brand-teal underline">cie@cieindia.com</a> | Phone: +91-712-2429168</p>
+            <p><strong>Central India Export — Headquarters & Export Desk</strong></p>
+            <p>5-6-7, Ground Floor, Shri Vardhan Complex, Ramdaspeth, Wardha Road, Nagpur-440012, Maharashtra (India)</p>
+            <p>Emails: <a href="mailto:cie@cieindia.com" className="text-brand-teal underline">cie@cieindia.com</a> | <a href="mailto:vaidsandeep100@yahoo.co.in" className="text-brand-teal underline">vaidsandeep100@yahoo.co.in</a> | <a href="mailto:vaidsandeep100@gmail.com" className="text-brand-teal underline">vaidsandeep100@gmail.com</a></p>
+            <p>Phone: +91-712-2429168 | WhatsApp: +91-9822200622</p>
           </div>
         </section>
 
@@ -108,37 +109,37 @@ export const TermsPage: React.FC = () => (
       <div className="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm space-y-4">
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-soft border border-brand-teal/30 text-xs font-bold text-brand-teal uppercase tracking-wider">
           <FileText className="w-4 h-4" />
-          <span>International Trade Terms & Incoterms 2020</span>
+          <span>International Commercial B2B Terms</span>
         </div>
-        <h1 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900 tracking-tight">
-          Terms & Conditions of Export Trade
+        <h1 className="font-display font-extrabold text-3xl sm:text-4xl text-slate-900">
+          Terms & Conditions of Export
         </h1>
-        <p className="text-xs text-slate-500 font-mono">
-          Standard B2B Export Contract Terms | Central India Export (CIE)
+        <p className="text-sm text-slate-600 leading-relaxed font-normal">
+          These standard wholesale terms govern all international quotations, proforma orders, supply agreements, and export shipments executed by Central India Export (Nagpur, India).
         </p>
       </div>
 
-      {/* Main Content */}
-      <div className="bg-white p-8 sm:p-12 rounded-2xl border border-slate-200 shadow-sm space-y-8 text-slate-700 text-sm leading-relaxed">
+      {/* Terms Body */}
+      <div className="bg-white p-8 sm:p-10 rounded-2xl border border-slate-200 shadow-sm space-y-8 text-sm text-slate-700 leading-relaxed">
         
         <section className="space-y-3">
           <h2 className="font-display font-bold text-xl text-slate-900 border-b border-slate-200 pb-2">
-            1. Scope of Agreement
+            1. Exclusive Distribution Policy
           </h2>
           <p>
-            These Terms and Conditions govern all commercial quotations, proforma invoices, purchase orders, and wholesale supply 
-            contracts executed between Central India Export ("Exporter") and international buyers, medical distributors, or hospitals ("Buyer"). 
-            Submitting a Request for Quotation (RFQ) or issuing a Purchase Order constitutes full acceptance of these terms.
+            Central India Export operates on a strict <strong className="text-slate-900">One Country One Distribution Network</strong> policy. Approved regional distributors receive exclusive supply rights within their designated geographical territory upon executing mutual distribution agreements.
           </p>
         </section>
 
         <section className="space-y-3">
           <h2 className="font-display font-bold text-xl text-slate-900 border-b border-slate-200 pb-2">
-            2. Wholesale Proforma Quotations (FOB / CIF / CFR)
+            2. Quotations, Pricing & Courier Charges
           </h2>
           <ul className="list-disc pl-5 space-y-1.5">
             <li>All price quotes issued by Central India Export are wholesale B2B quotes denominated in US Dollars ($ USD) or Euros (€ EUR).</li>
             <li>Unless otherwise specified, proforma quotations are valid for 30 calendar days from date of issuance.</li>
+            <li>The standard MOQ is approximately 100 pieces, depending on the product line.</li>
+            <li><strong className="text-slate-900">Courier & Freight Charges:</strong> All international air express, courier, and customs clearance charges are to be borne directly by the importer / buyer. Consignments can be dispatched on the buyer's corporate courier account (DHL/FedEx/UPS).</li>
             <li>Incoterms 2020 apply: FOB (Nagpur/Mumbai Port), CIF (Destination Airport/Seaport), or CFR based on mutual written agreement.</li>
           </ul>
         </section>
@@ -155,11 +156,11 @@ export const TermsPage: React.FC = () => (
 
         <section className="space-y-3">
           <h2 className="font-display font-bold text-xl text-slate-900 border-b border-slate-200 pb-2">
-            4. Payment Terms & Letter of Credit (L/C)
+            4. Payment Terms (100% Full Advance Payment)
           </h2>
           <ul className="list-disc pl-5 space-y-1.5">
-            <li><strong className="text-slate-900">Telegraphic Transfer (T/T)</strong>: Advance bank wire transfer as outlined in the proforma invoice.</li>
-            <li><strong className="text-slate-900">Letter of Credit (L/C)</strong>: Irrevocable, confirmed L/C payable at sight issued by a top-tier international bank.</li>
+            <li>We accept international payments exclusively via <strong className="text-slate-900">PayPal</strong> and direct <strong className="text-slate-900">Bank Wire Transfer (T/T)</strong>.</li>
+            <li>All orders and sample evaluation consignments are processed on a <strong className="text-slate-900">100% full advance payment</strong> basis prior to order production scheduling and shipment dispatch.</li>
             <li>Goods remain the legal property of Central India Export until full payment is received and credited to our bank account.</li>
           </ul>
         </section>

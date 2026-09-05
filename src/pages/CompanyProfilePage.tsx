@@ -44,7 +44,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
             </h1>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal">
-              Explore Central India Export's 21-year export mastery (Est. 2004), 4 main product verticals with deep technical specifications, cleanroom facilities, and global footprint across 31+ countries with strict One Country One Distributor Policy.
+              Explore Central India Export's 21-year export mastery (Est. 2004), 4 main product verticals with deep technical specifications, certified manufacturing supply chains, and global footprint across 31+ countries with strict One Country One Distributor Policy.
             </p>
 
             <div className="pt-2 flex flex-wrap gap-4 items-center">
@@ -115,7 +115,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
               </h3>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                To establish Central India Export as Asia's premier zero-defect exporter of ophthalmic surgical products, continuously innovating cleanroom assembly lines and optical technologies from Nagpur's zero-mile cargo hub.
+                To establish Central India Export as Asia's premier zero-defect exporter of ophthalmic surgical products, continuously delivering precision-crafted instruments and optical technologies from Nagpur's zero-mile cargo hub.
               </p>
             </div>
 
@@ -140,7 +140,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
-                  <span>WHO-GMP Cleanroom Standards</span>
+                  <span>WHO-GMP Manufacturing Standards</span>
                 </li>
                 <li className="flex items-center space-x-2">
                   <CheckCircle2 className="w-4 h-4 text-brand-teal shrink-0" />
@@ -154,18 +154,18 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
         </Container>
       </Section>
 
-      {/* 3. QUALITY ASSURANCE 4-STEP WORKFLOW */}
+      {/* 3. QUALITY ASSURANCE 3-STEP WORKFLOW */}
       <Section className="bg-slate-50">
         <Container className="space-y-12">
           
           <SectionHeading
             eyebrow="Precision Quality Workflow"
-            title="4-Stage Quality Assurance Process"
-            subtitle="From raw material spectrometry to cleanroom assembly and ETO gas sterilization."
+            title="3-Stage Quality Assurance Process"
+            subtitle="From raw material spectrometry to precision cleanroom lathe cutting and 100% optical interferometry testing."
             centered
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             {/* Step 1 */}
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
@@ -185,9 +185,9 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
               <div className="w-10 h-10 rounded-xl bg-brand-soft text-brand-teal flex items-center justify-center font-bold text-sm">
                 2
               </div>
-              <h3 className="font-display font-bold text-base text-slate-900">Cleanroom Honing</h3>
+              <h3 className="font-display font-bold text-base text-slate-900">Precision Lathe Honing & Cutting</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Precision lathe cutting of 360° Square Edge IOL optics and 100x magnification laser honing of micro blades.
+                Precision lathe cutting of 360° Square Edge IOL optics and 100x digital magnification laser edge honing of micro blades.
               </p>
             </div>
 
@@ -197,21 +197,9 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
               <div className="w-10 h-10 rounded-xl bg-brand-soft text-brand-teal flex items-center justify-center font-bold text-sm">
                 3
               </div>
-              <h3 className="font-display font-bold text-base text-slate-900">ETO & Blister Packaging</h3>
+              <h3 className="font-display font-bold text-base text-slate-900">100% Interferometry & Release Testing</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                Medical grade blister sealing and Ethylene Oxide gas sterilization with biological indicator incubation.
-              </p>
-            </div>
-
-            {/* Step 4 */}
-            <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3 relative overflow-hidden">
-              <span className="text-4xl font-extrabold text-brand-teal/20 font-mono absolute top-2 right-4">04</span>
-              <div className="w-10 h-10 rounded-xl bg-brand-soft text-brand-teal flex items-center justify-center font-bold text-sm">
-                4
-              </div>
-              <h3 className="font-display font-bold text-base text-slate-900">Interferometry Testing</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                100% optical power diopter verification and sterile lot release certification before international shipment.
+                100% optical power diopter verification on laser interferometers and sterile lot release certification before international shipment.
               </p>
             </div>
 
@@ -344,33 +332,33 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
           </div>
 
           <div className="bg-slate-50 rounded-3xl border border-slate-200 shadow-sm p-6 space-y-4">
-            <details className="group border-b border-slate-200 pb-3">
+            <details className="group border-b border-slate-200 pb-3" open>
               <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
                 What are Central India Export's Minimum Order Quantities (MOQs)?
                 <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
               </summary>
               <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                We offer flexible MOQ terms for initial clinic/distributor evaluation orders. Tiered volume pricing is available for container and air cargo shipments.
+                The MOQ is approximately 100 pieces, depending on the specific product line and category. Flexible trial batches and custom sample evaluation packages are accommodated for accredited hospital buyers and medical distributors.
               </p>
             </details>
 
             <details className="group border-b border-slate-200 pb-3">
               <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
-                How can international buyers request product samples for evaluation?
+                How can international buyers request product samples, and who pays courier charges?
                 <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
               </summary>
               <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Evaluation samples for micro blades, cannulas, and ioVue™ IOLs can be dispatched within 48 business hours via FedEx or DHL air express upon request.
+                Evaluation sample packs can be dispatched via FedEx, DHL, or air express within 48 business hours upon request. Please note that all international courier and air express freight charges have to be borne directly by the importers / buyers (or billed against the buyer's corporate courier account).
               </p>
             </details>
 
             <details className="group border-b border-slate-200 pb-3">
               <summary className="font-display font-bold text-base text-slate-900 cursor-pointer flex justify-between items-center group-hover:text-brand-teal">
-                What international payment & shipping Incoterms do you support?
+                What international payment terms and payment methods do you accept?
                 <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
               </summary>
               <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                We support Wire Transfer (T/T), Irrevocable Letter of Credit (L/C at sight), and CAD terms. Incoterms include FOB (Nagpur/Mumbai), CIF, and CFR Incoterms 2020.
+                We accept payments via PayPal and direct Bank Wire Transfer (T/T). All international consignments and orders are processed on a 100% full advance payment basis prior to production scheduling and order dispatch.
               </p>
             </details>
 
@@ -380,7 +368,7 @@ export const CompanyProfilePage: React.FC<CompanyProfilePageProps> = ({ onOpenRf
                 <span className="text-brand-teal group-open:rotate-180 transition-transform font-bold">+</span>
               </summary>
               <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Click any "Request Quote" button or email cie@cieindia.com. Our export desk issues formal proforma invoices along with ISO 13485 & CE technical dossiers within 24 business hours.
+                Click any "Request Quote" button or email cie@cieindia.com. Our export desk issues formal proforma invoices. All compliance certificates—including ISO 13485 accreditations, CE Mark technical dossiers, Certificate of Origin, and COA—will be provided along with the order invoices within 24 business hours.
               </p>
             </details>
           </div>

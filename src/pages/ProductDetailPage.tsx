@@ -3,8 +3,9 @@ import { useParams, Link } from 'react-router-dom';
 import { Container, Section, Button, Badge } from '../components/Primitives';
 import { ProductCard } from '../components/ProductCard';
 import { PrecisionIcon } from '../components/CustomIcons';
-import { FileText, ArrowLeft, ShieldCheck, CheckCircle, Truck, Award, ZoomIn } from 'lucide-react';
+import { FileText, ArrowLeft, ShieldCheck, CheckCircle, Truck, Award, ZoomIn, ShoppingCart, Check, Package, Globe2 } from 'lucide-react';
 import productsData from '../../public_html/data/products.json';
+import { useCart } from '../context/CartContext';
 
 interface ProductDetailPageProps {
   onOpenRfq: (productName?: string, productSlug?: string) => void;
@@ -15,6 +16,9 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
   const currentSlug = productSlug || slug;
   const [zoomPos, setZoomPos] = useState({ x: 50, y: 50 });
   const [isHovered, setIsHovered] = useState(false);
+  const [orderQty, setOrderQty] = useState(100);
+  const [addedFeedback, setAddedFeedback] = useState(false);
+  const { addToCart, openCart } = useCart();
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -25,6 +29,14 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
   
   const product = productsData.find(p => p.slug === currentSlug) || productsData.find(p => p.slug.toLowerCase() === currentSlug?.toLowerCase()) || productsData[0];
   const relatedProducts = productsData.filter(p => p.main_category === product.main_category && p.id !== product.id).slice(0, 4);
+
+  const handleAddToCart = () => {
+    addToCart(product, orderQty);
+    setAddedFeedback(true);
+    setTimeout(() => {
+      setAddedFeedback(false);
+    }, 2000);
+  };
 
   return (
     <div className="bg-slate-50 min-h-screen pb-20">
@@ -129,8 +141,8 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
               {product.short_description || 'High-precision ophthalmic instrument supplied under ISO 13485 quality standards for precision cataract and micro-incision surgery.'}
             </div>
 
-            {/* Primary RFQ Action Box */}
-            <div className="p-5 bg-brand-soft rounded-xl border border-brand-teal/30 space-y-3 shadow-sm">
+            {/* Primary RFQ & Cart Action Box */}
+            <div className="p-5 bg-brand-soft rounded-xl border border-brand-teal/30 space-y-4 shadow-sm">
               <div className="flex justify-between items-center">
                 <span className="text-xs text-brand-teal font-bold uppercase tracking-wider">
                   B2B Wholesale Export Inquiries
@@ -139,23 +151,68 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
                   Direct Factory Pricing
                 </span>
               </div>
+
+              {/* MOQ and Distribution Policy Badges */}
+              <div className="flex flex-wrap gap-2 text-xs">
+                <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-white border border-brand-teal/30 rounded-lg text-slate-700 font-semibold shadow-2xs">
+                  <Package className="w-3.5 h-3.5 text-brand-teal" />
+                  <span>The MOQ 100 piece depends on the product</span>
+                </div>
+                <div className="inline-flex items-center space-x-1.5 px-3 py-1 bg-white border border-brand-teal/30 rounded-lg text-[#0D3666] font-semibold shadow-2xs">
+                  <Globe2 className="w-3.5 h-3.5 text-brand-teal" />
+                  <span>One Country One Distribution Network</span>
+                </div>
+              </div>
+
               <p className="text-xs text-slate-700">
-                Available for bulk hospital procurement, distributor sample evaluation packs, and OEM export orders.
+                Available for bulk hospital procurement, distributor sample evaluation packs, and OEM export orders. Formal proforma invoices with ISO 13485 & CE technical dossiers issued within 24 business hours.
               </p>
-              <div className="pt-1 flex flex-wrap gap-3">
-                <Button 
-                  variant="primary" 
-                  size="lg" 
-                  icon={<FileText className="w-4 h-4" />}
-                  onClick={() => onOpenRfq(product.name, product.slug)}
-                >
-                  Request a Formal Quote
-                </Button>
-                <Link to="/contact-us">
-                  <Button variant="outline" size="lg" className="border-slate-300 text-slate-800 hover:bg-slate-100">
-                    Contact Export Desk
+
+              {/* Quantity Selector & Action Buttons */}
+              <div className="pt-1 space-y-3">
+                <div className="flex flex-wrap items-center gap-3">
+                  <div className="flex items-center space-x-2 bg-white border border-slate-300 rounded-lg px-3 py-2 shadow-2xs">
+                    <label className="text-xs font-bold text-slate-700 font-display">Qty (Units):</label>
+                    <input
+                      type="number"
+                      min="1"
+                      step="50"
+                      value={orderQty}
+                      onChange={(e) => setOrderQty(Math.max(1, parseInt(e.target.value) || 1))}
+                      className="w-20 font-mono font-bold text-sm text-slate-900 outline-none"
+                    />
+                  </div>
+
+                  <button
+                    onClick={handleAddToCart}
+                    className={`px-4 py-2.5 rounded-lg text-sm font-bold transition-all flex items-center space-x-2 border shadow-sm cursor-pointer ${
+                      addedFeedback
+                        ? 'bg-emerald-600 text-white border-emerald-600'
+                        : 'bg-white text-brand-teal hover:bg-brand-teal hover:text-white border-brand-teal/50'
+                    }`}
+                  >
+                    {addedFeedback ? (
+                      <>
+                        <Check className="w-4 h-4 text-white" />
+                        <span>Added to Cart ✓</span>
+                      </>
+                    ) : (
+                      <>
+                        <ShoppingCart className="w-4 h-4" />
+                        <span>Add to Cart ({orderQty} pcs)</span>
+                      </>
+                    )}
+                  </button>
+
+                  <Button 
+                    variant="primary" 
+                    size="md" 
+                    icon={<FileText className="w-4 h-4" />}
+                    onClick={() => onOpenRfq(product.name, product.slug)}
+                  >
+                    Get Instant Quote
                   </Button>
-                </Link>
+                </div>
               </div>
             </div>
 

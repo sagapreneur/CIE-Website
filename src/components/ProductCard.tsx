@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Product } from '../types';
 import { Badge, Button } from './Primitives';
-import { FileText, ArrowRight, ShieldCheck, ZoomIn } from 'lucide-react';
+import { FileText, ArrowRight, ShieldCheck, ZoomIn, ShoppingCart, Check } from 'lucide-react';
+import { useCart } from '../context/CartContext';
 
 interface ProductCardProps {
   product: Product;
@@ -12,12 +13,24 @@ interface ProductCardProps {
 export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) => {
   const [zoomPos, setZoomPos] = React.useState({ x: 50, y: 50 });
   const [isHovered, setIsHovered] = React.useState(false);
+  const [justAdded, setJustAdded] = useState(false);
+  const { addToCart } = useCart();
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
     setZoomPos({ x, y });
+  };
+
+  const handleAddToCart = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    addToCart(product, 100);
+    setJustAdded(true);
+    setTimeout(() => {
+      setJustAdded(false);
+    }, 1500);
   };
 
   return (
@@ -107,15 +120,29 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
         )}
       </div>
 
-      {/* Action Footer */}
-      <div className="px-5 py-3.5 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-2">
-        <Link
-          to={`/product/${product.slug}`}
-          className="text-xs font-semibold text-brand-blue hover:text-brand-teal inline-flex items-center space-x-1"
+      {/* Action Footer with Add to Cart & Get Quote */}
+      <div className="px-4 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between gap-2">
+        <button
+          onClick={handleAddToCart}
+          className={`px-2.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center space-x-1 border cursor-pointer ${
+            justAdded
+              ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs'
+              : 'bg-white text-slate-700 hover:bg-brand-soft hover:text-brand-teal border-slate-300 hover:border-brand-teal/50 shadow-2xs'
+          }`}
+          title="Add to quotation cart"
         >
-          <span>View Specs</span>
-          <ArrowRight className="w-3 h-3" />
-        </Link>
+          {justAdded ? (
+            <>
+              <Check className="w-3.5 h-3.5 text-white" />
+              <span>Added ✓</span>
+            </>
+          ) : (
+            <>
+              <ShoppingCart className="w-3.5 h-3.5 text-brand-teal" />
+              <span>Add to Cart</span>
+            </>
+          )}
+        </button>
 
         <Button
           variant="primary"
