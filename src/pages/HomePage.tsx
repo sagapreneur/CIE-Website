@@ -19,7 +19,7 @@ interface HomePageProps {
 export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
   const [heroSearch, setHeroSearch] = useState('');
   const navigate = useNavigate();
-  const featuredProducts = productsData.filter(p => p.is_featured).slice(0, 8);
+  const iolProducts = productsData.filter(p => p.main_category === 'Intraocular Lenses');
 
   return (
     <div className="space-y-0 font-body bg-white text-slate-900">
@@ -262,25 +262,25 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
         </Container>
       </Section>
 
-      {/* FEATURED PRODUCTS */}
+      {/* FEATURED PRODUCTS - ALL INTRAOCULAR LENSES ONLY */}
       <Section className="bg-white">
         <Container>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
             <SectionHeading
               eyebrow="Featured Ophthalmic Equipment & Instruments"
               title="Top Export Items & Surgical Instruments"
-              subtitle="High-demand surgical instruments and lenses selected from our 400+ catalog items."
+              subtitle="High-precision IOVUE™ intraocular lenses (IOLs) manufactured to international CE and ISO 13485 standards."
               className="mb-0"
             />
-            <Link to="/products">
+            <Link to={`/products?category=${encodeURIComponent('Intraocular Lenses')}`}>
               <Button variant="outline" size="sm" icon={<ArrowRight className="w-4 h-4" />}>
-                View All Products
+                View All Intraocular Lenses ({iolProducts.length})
               </Button>
             </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((prod) => (
+            {iolProducts.map((prod) => (
               <ProductCard key={prod.id} product={prod} onOpenRfq={onOpenRfq} />
             ))}
           </div>
