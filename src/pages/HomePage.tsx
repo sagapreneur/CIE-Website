@@ -30,7 +30,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
         style={{ backgroundImage: `url('/hero-bg.png')` }}
       >
         <Container className="relative z-10">
-          <div className="max-w-3xl space-y-6">
+          <div className="max-w-4xl xl:max-w-5xl space-y-6">
             
             <div className="flex flex-wrap items-center gap-2.5">
               <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-brand-soft border border-brand-teal/30 text-xs font-semibold text-brand-teal shadow-sm">
@@ -47,12 +47,12 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
               </div>
             </div>
 
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-[1.15] text-slate-900">
-              Ophthalmic Equipment,<br />
-              <span className="text-brand-teal">Instruments & Consumables</span>
+            <h1 className="font-display font-extrabold text-3xl sm:text-4xl md:text-5xl lg:text-[52px] xl:text-[56px] tracking-tight leading-[1.14] text-slate-900">
+              <span className="block sm:whitespace-nowrap">Ophthalmic Equipment,</span>
+              <span className="block text-brand-teal sm:whitespace-nowrap">Instruments &amp; Consumables</span>
             </h1>
 
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
+            <p className="max-w-2xl text-slate-600 text-base sm:text-lg leading-relaxed font-normal">
               Central India Export (est. 2004) is a premier supplier and international exporter of high-precision ophthalmic surgical instruments, ioVue intraocular lenses (IOLs), micro-surgical blades, and ophthalmic equipment based in Nagpur, India.
             </p>
 
