@@ -242,7 +242,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
                 <h3 className="font-display font-bold text-slate-900 text-base border-b border-slate-200 pb-2">
                   Detailed Product Description
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed whitespace-pre-line">
                   {product.long_description}
                 </p>
               </div>

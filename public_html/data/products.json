@@ -7661,20 +7661,27 @@
   },
   {
     "id": 340,
-    "name": "Occugel 2% HPMC Pre-Filled Syringes 2ml / 3ml",
+    "name": "HPMC Pre-Filled Syringes 2ml / 3ml",
     "slug": "pre-filled-syringes-pfs-2ml-visco-elastic",
     "brand": null,
     "category_path": "Ophthalmic Solutions",
     "main_category": "Ophthalmic Solutions",
-    "short_description": "High-precision ophthalmic pre filled syringes pfs 2ml visco elastic crafted under ISO 13485 standards for professional microsurgical procedures.",
-    "long_description": "The Pre Filled Syringes Pfs 2ml Visco Elastic is an essential precision instrument designed for micro-incision ophthalmic surgery. Manufactured from premium-grade biocompatible materials, it offers exceptional tactile control, minimal tissue disruption, and long-term durability. Each unit undergoes rigorous optical inspection to satisfy international surgical quality benchmarks.",
+    "short_description": "Sterile 2% w/v Hydroxypropyl Methylcellulose (HPMC) ophthalmic viscosurgical device (OVD) for anterior segment surgical chamber maintenance.",
+    "long_description": "2% w/v Hydroxypropyl Methylcellulose (HPMC)\n\nThe ophthalmic viscosurgical device (OVD) is a sterile, isotonic, apyrogenic viscoelastic solution of highly purified, non inflammatory hydroxy propyl methyl cellulose (HPMC) solution with a high molecular weight greater than 80,000 Daltons for intraocular use during the surgery of the anterior segment of the eye.\nFor a 2% w/v HPMC solution each ml of solution provides 20mg of HPMC dissolved in balanced salt solution.\nThe viscosity of this solution is 4000 to 5500 cps.\n\nIndications:\nThe OVD is indicated for use as an ophthalmic surgical aid in anterior segment surgical procedures, such as cataract extraction and intraocular lens implantation. The OVD maintains a deep chamber during anterior segment surgery and thereby allowing for more efficient manipulation with significantly less trauma to the corneal endothelium and other ocular tissues.\n\nContraindications:\nAt present, there are no known contraindications, when used by a trained ophthalmic surgeon, as indicated.\n\nWarnings:\n• Do not use the package if the integrity of the sterile package is compromised\n• The OVD is for intraocular use only\n• The OVD is for single use only\n• The device is not to be placed in the direct sunlight or temperature exceeding 40°C\n• Do not resterilize the device\n\nStorage:\nStore at a temperature between 15°C and 35°C and a relative humidity less than 65%. Protect from freezing. Do not expose containers to direct sunlight.\n\nSupply:\nSterile solution of 2% w/v hydroxypropyl methylcellulose is available in 2 ml, 3 ml PFS in pouch pack. 5 ml vial with pouch in pack of ten.",
     "specifications": {
-      "Material": "AISI 420 Medical Grade Stainless Steel / Titanium Alloy",
-      "Finish": "Satin Matte Anti-Glare / Electro-polished",
-      "Quality Certification": "ISO 13485 : 2016 / CE Certified",
-      "Sterilization Compatibility": "Autoclavable (134°C) & EO Gas Sterilized",
-      "Reusability": "Reusable / Fully Autoclavable",
-      "Manufacturing Origin": "Nagpur, India (MIHAN SEZ Export Desk)"
+      "Composition": "2% w/v Hydroxypropyl Methylcellulose (HPMC)",
+      "Concentration": "20 mg/ml in Balanced Salt Solution",
+      "Molecular Weight": ">80,000 Daltons",
+      "Viscosity": "4000 to 5500 cps",
+      "Indications": "Anterior Segment Surgery / Cataract Extraction & IOL Implantation",
+      "Contraindications": "None known when used by trained ophthalmic surgeon as indicated",
+      "Warnings": "Single Use Only · Intraocular Use Only · Do not resterilize · Store <40°C",
+      "Packaging & Supply": "2 ml / 3 ml PFS in pouch pack; 5 ml vial with pouch in pack of 10",
+      "Storage Conditions": "15°C to 35°C (Humidity <65%), Protect from Freezing & Direct Sunlight",
+      "Quality Standard": "ISO 13485 : 2016 / CE Certified",
+      "Sterilization": "Sterile, Isotonic, Apyrogenic Viscoelastic Solution",
+      "Reusability": "Single Use Only",
+      "Manufacturing Origin": "Nagpur, India (Central India Export)"
     },
     "image": "/products/pre-filled-syringes-pfs-2ml-visco-elastic.png",
     "is_featured": false,
@@ -10296,8 +10303,7 @@
     ],
     "image": "/products/iovue-hydrophilic-foldable-acrylate-model-fs-6025-d.jpg",
     "image_url": "/products/iovue-hydrophilic-foldable-acrylate-model-fs-6025-d.jpg",
-    "is_featured": true,
-    "category": null
+    "is_featured": true
   },
   {
     "id": 9102,
@@ -10335,8 +10341,7 @@
     ],
     "image": "/products/iovue-yellow-aspheric-hydrophilic-foldable-iol.jpg",
     "image_url": "/products/iovue-yellow-aspheric-hydrophilic-foldable-iol.jpg",
-    "is_featured": true,
-    "category": null
+    "is_featured": true
   },
   {
     "id": 9103,
@@ -10377,8 +10382,7 @@
     ],
     "image": "/products/iovue-hydrophilic-acrylic-foldable-iol-fs-6025d.jpg",
     "image_url": "/products/iovue-hydrophilic-acrylic-foldable-iol-fs-6025d.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9104,
@@ -10420,8 +10424,7 @@
     ],
     "image": "/products/iovue-ao-aspheric-hydrophilic-acrylic-foldable-iol.jpg",
     "image_url": "/products/iovue-ao-aspheric-hydrophilic-acrylic-foldable-iol.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9105,
@@ -10466,8 +10469,7 @@
     ],
     "image": "/products/iovue-aspheric-hydrophilic-foldable-iol-al-6025.jpg",
     "image_url": "/products/iovue-aspheric-hydrophilic-foldable-iol-al-6025.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9106,
@@ -10511,8 +10513,7 @@
     ],
     "image": "/products/iovue-clear-hydrophilic-acrylic-foldable-iol-fs-6025.jpg",
     "image_url": "/products/iovue-clear-hydrophilic-acrylic-foldable-iol-fs-6025.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9107,
@@ -10551,8 +10552,7 @@
     ],
     "image": "/products/iovue-micro-incision-hydrophilic-acrylic-foldable-iol-fs-6025-d.jpg",
     "image_url": "/products/iovue-micro-incision-hydrophilic-acrylic-foldable-iol-fs-6025-d.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9108,
@@ -10596,8 +10596,7 @@
     ],
     "image": "/products/iovue-hydrophilic-acrylic-foldable-iol-ofs-6025-d.jpg",
     "image_url": "/products/iovue-hydrophilic-acrylic-foldable-iol-ofs-6025-d.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9109,
@@ -10640,8 +10639,7 @@
     ],
     "image": "/products/iovue-aspheric-hydrophobic-foldable-iol-fp-6025.jpg",
     "image_url": "/products/iovue-aspheric-hydrophobic-foldable-iol-fp-6025.jpg",
-    "is_featured": true,
-    "category": null
+    "is_featured": true
   },
   {
     "id": 9110,
@@ -10683,8 +10681,7 @@
     ],
     "image": "/products/iovue-aspheric-hydrophobic-foldable-iol-hm-6025.jpg",
     "image_url": "/products/iovue-aspheric-hydrophobic-foldable-iol-hm-6025.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9111,
@@ -10728,8 +10725,7 @@
     ],
     "image": "/products/iovue-yellow-hydrophobic-foldable-iol-hy-6025.jpg",
     "image_url": "/products/iovue-yellow-hydrophobic-foldable-iol-hy-6025.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9112,
@@ -10773,8 +10769,7 @@
     ],
     "image": "/products/iovue-yellow-aspheric-square-edge-pmma-iol.jpg",
     "image_url": "/products/iovue-yellow-aspheric-square-edge-pmma-iol.jpg",
-    "is_featured": true,
-    "category": null
+    "is_featured": true
   },
   {
     "id": 9113,
@@ -10810,8 +10805,7 @@
     ],
     "image": "/products/iovue-high-quality-pmma-posterior-chamber-iol.jpg",
     "image_url": "/products/iovue-high-quality-pmma-posterior-chamber-iol.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9114,
@@ -10853,8 +10847,7 @@
     ],
     "image": "/products/iovue-360-sharp-edge-pmma-posterior-chamber-iol.jpg",
     "image_url": "/products/iovue-360-sharp-edge-pmma-posterior-chamber-iol.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9115,
@@ -10895,8 +10888,7 @@
     ],
     "image": "/products/iovue-aspheric-360-square-edge-pmma-iol-pa-5225.jpg",
     "image_url": "/products/iovue-aspheric-360-square-edge-pmma-iol-pa-5225.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9116,
@@ -10939,8 +10931,7 @@
     ],
     "image": "/products/iovue-gold-yellow-aspheric-square-edge-pmma-iol.jpg",
     "image_url": "/products/iovue-gold-yellow-aspheric-square-edge-pmma-iol.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9117,
@@ -10976,8 +10967,7 @@
     ],
     "image": "/products/iovue-high-purity-pmma-posterior-chamber-iol-cps-6025.jpg",
     "image_url": "/products/iovue-high-purity-pmma-posterior-chamber-iol-cps-6025.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9118,
@@ -11015,15 +11005,14 @@
     ],
     "image": "/products/iovue-single-piece-biconvex-pmma-posterior-chamber-iol.jpg",
     "image_url": "/products/iovue-single-piece-biconvex-pmma-posterior-chamber-iol.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9119,
     "name": "IOVUE™ Capsular Tension Rings (CTR) (Model PR 1109 / PR 1210)",
     "slug": "iovue-capsular-tension-rings-ctr-model-pr-1109-pr-1210",
     "brand": "IOVUE",
-    "category_path": "Intraocular Lenses > Capsular Tension Rings (CTR)",
+    "category_path": "Retina Equipments > Capsular Tension Rings (CTR)",
     "main_category": "Retina Equipments",
     "short_description": "IOVUE™ CTR\nprevents vitreous herniation and maintain the circular contour of the capsular bag.",
     "long_description": "IOVUE™ CTR\nprevents vitreous herniation and maintain the circular contour of the capsular bag. IOVUE™ CTR also tend to reduce intraocular lens de-centralization, which improves vision and gives additional support to the IOL. They may also inhibit epithelial cell proliferation, thus reducing the chances of capsule opacification.",
@@ -11051,15 +11040,14 @@
     ],
     "image": "/products/iovue-capsular-tension-rings-ctr-model-pr-1109-pr-1210.jpg",
     "image_url": "/products/iovue-capsular-tension-rings-ctr-model-pr-1109-pr-1210.jpg",
-    "is_featured": true,
-    "category": null
+    "is_featured": true
   },
   {
     "id": 9120,
     "name": "IOVUE™ Capsular Tension Ring (Model PR 1210L / PR 1311L)",
     "slug": "iovue-capsular-tension-ring-model-pr-1210l-pr-1311l",
     "brand": "IOVUE",
-    "category_path": "Intraocular Lenses > Capsular Tension Rings (CTR)",
+    "category_path": "Retina Equipments > Capsular Tension Rings (CTR)",
     "main_category": "Retina Equipments",
     "short_description": "IOVUE™ CTR\nprevents vitreous herniation and maintain the circular contour of the capsular bag.",
     "long_description": "IOVUE™ CTR\nprevents vitreous herniation and maintain the circular contour of the capsular bag. IOVUE™ CTR also tend to reduce intraocular lens de-centralization, which improves vision and gives additional support to the IOL. They may also inhibit epithelial cell proliferation, thus reducing the chances of capsule opacification.",
@@ -11087,15 +11075,14 @@
     ],
     "image": "/products/iovue-capsular-tension-ring-model-pr-1210l-pr-1311l.jpg",
     "image_url": "/products/iovue-capsular-tension-ring-model-pr-1210l-pr-1311l.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9121,
     "name": "IOVUE™ Capsular Tension Ring (Model PR 1210R / PR 1311R)",
     "slug": "iovue-capsular-tension-ring-model-pr-1210r-pr-1311r",
     "brand": "IOVUE",
-    "category_path": "Intraocular Lenses > Capsular Tension Rings (CTR)",
+    "category_path": "Retina Equipments > Capsular Tension Rings (CTR)",
     "main_category": "Retina Equipments",
     "short_description": "IOVUE™ CTR\nprevents vitreous herniation and maintain the circular contour of the capsular bag.",
     "long_description": "IOVUE™ CTR\nprevents vitreous herniation and maintain the circular contour of the capsular bag. IOVUE™ CTR also tend to reduce intraocular lens de-centralization, which improves vision and gives additional support to the IOL. They may also inhibit epithelial cell proliferation, thus reducing the chances of capsule opacification.",
@@ -11123,15 +11110,14 @@
     ],
     "image": "/products/iovue-capsular-tension-ring-model-pr-1210r-pr-1311r.jpg",
     "image_url": "/products/iovue-capsular-tension-ring-model-pr-1210r-pr-1311r.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9122,
     "name": "IOVUE™ Capsular Tension Ring (Model PR 1210LR / PR 1311LR)",
     "slug": "iovue-capsular-tension-ring-model-pr-1210lr-pr-1311lr",
     "brand": "IOVUE",
-    "category_path": "Intraocular Lenses > Capsular Tension Rings (CTR)",
+    "category_path": "Retina Equipments > Capsular Tension Rings (CTR)",
     "main_category": "Retina Equipments",
     "short_description": "IOVUE™ CTR\nprevents vitreous herniation and maintain the circular contour of the capsular bag.",
     "long_description": "IOVUE™ CTR\nprevents vitreous herniation and maintain the circular contour of the capsular bag. IOVUE™ CTR also tend to reduce intraocular lens de-centralization, which improves vision and gives additional support to the IOL. They may also inhibit epithelial cell proliferation, thus reducing the chances of capsule opacification.",
@@ -11159,15 +11145,14 @@
     ],
     "image": "/products/iovue-capsular-tension-ring-model-pr-1210lr-pr-1311lr.jpg",
     "image_url": "/products/iovue-capsular-tension-ring-model-pr-1210lr-pr-1311lr.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9123,
     "name": "IOVUE™ Capsular Tension Ring (Model PR 1311 / PR 1412)",
     "slug": "iovue-capsular-tension-ring-model-pr-1311-pr-1412",
     "brand": "IOVUE",
-    "category_path": "Intraocular Lenses > Capsular Tension Rings (CTR)",
+    "category_path": "Retina Equipments > Capsular Tension Rings (CTR)",
     "main_category": "Retina Equipments",
     "short_description": "IOVUE™ CTR\nprevents vitreous herniation and maintain the circular contour of the capsular bag.",
     "long_description": "IOVUE™ CTR\nprevents vitreous herniation and maintain the circular contour of the capsular bag. IOVUE™ CTR also tend to reduce intraocular lens de-centralization, which improves vision and gives additional support to the IOL. They may also inhibit epithelial cell proliferation, thus reducing the chances of capsule opacification.",
@@ -11196,8 +11181,7 @@
     ],
     "image": "/products/iovue-capsular-tension-ring-model-pr-1311-pr-1412.jpg",
     "image_url": "/products/iovue-capsular-tension-ring-model-pr-1311-pr-1412.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9124,
@@ -11235,8 +11219,7 @@
     ],
     "image": "/products/iovue-hydrophobic-acrylic-multifocal-toric-multifocal-toric-foldable-iol.jpg",
     "image_url": "/products/iovue-hydrophobic-acrylic-multifocal-toric-multifocal-toric-foldable-iol.jpg",
-    "is_featured": true,
-    "category": null
+    "is_featured": true
   },
   {
     "id": 9125,
@@ -11275,8 +11258,7 @@
     ],
     "image": "/products/iovue-yellow-hydrophobic-acrylic-multifocal-toric-multifocal-toric-iol.jpg",
     "image_url": "/products/iovue-yellow-hydrophobic-acrylic-multifocal-toric-multifocal-toric-iol.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9126,
@@ -11315,8 +11297,7 @@
     ],
     "image": "/products/iovue-iris-claw-fixation-pmma-iol.jpg",
     "image_url": "/products/iovue-iris-claw-fixation-pmma-iol.jpg",
-    "is_featured": true,
-    "category": null
+    "is_featured": true
   },
   {
     "id": 9127,
@@ -11355,8 +11336,7 @@
     ],
     "image": "/products/iovue-anterior-chamber-intraocular-lens-oac-6025.jpg",
     "image_url": "/products/iovue-anterior-chamber-intraocular-lens-oac-6025.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9128,
@@ -11396,8 +11376,7 @@
     ],
     "image": "/products/iovue-anterior-chamber-pmma-iol-cac-6025.jpg",
     "image_url": "/products/iovue-anterior-chamber-pmma-iol-cac-6025.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9129,
@@ -11438,8 +11417,7 @@
     ],
     "image": "/products/iovue-anterior-chamber-pmma-iol-ac-6025.jpg",
     "image_url": "/products/iovue-anterior-chamber-pmma-iol-ac-6025.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9130,
@@ -11475,8 +11453,7 @@
     ],
     "image": "/products/iovue-posterior-chamber-pmma-lens-model-ops-6025.jpg",
     "image_url": "/products/iovue-posterior-chamber-pmma-lens-model-ops-6025.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9131,
@@ -11516,8 +11493,7 @@
     ],
     "image": "/products/iovue-pmma-lens-model-s6003h2c.jpg",
     "image_url": "/products/iovue-pmma-lens-model-s6003h2c.jpg",
-    "is_featured": false,
-    "category": null
+    "is_featured": false
   },
   {
     "id": 9133,
@@ -11543,7 +11519,6 @@
     ],
     "image": "/products/iovue-single-use-iol-delivery-injector-cartridge-system.jpg",
     "image_url": "/products/iovue-single-use-iol-delivery-injector-cartridge-system.jpg",
-    "is_featured": true,
-    "category": null
+    "is_featured": true
   }
 ]
