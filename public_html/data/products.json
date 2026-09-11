@@ -1249,9 +1249,9 @@
       "Reusability": "Reusable / Fully Autoclavable",
       "Manufacturing Origin": "Nagpur, India (MIHAN SEZ Export Desk)"
     },
-    "image": "/products/bipolar-coagulator.jpg",
+    "image": "/products/bipolar-coagulator.png",
     "is_featured": false,
-    "image_url": "/products/bipolar-coagulator.jpg"
+    "image_url": "/products/bipolar-coagulator.png"
   },
   {
     "id": 49,
@@ -3185,9 +3185,9 @@
       "Reusability": "Reusable / Fully Autoclavable",
       "Manufacturing Origin": "Nagpur, India (MIHAN SEZ Export Desk)"
     },
-    "image": "/products/exophthalmometer.jpg",
+    "image": "/products/exophthalmometer.png",
     "is_featured": false,
-    "image_url": "/products/exophthalmometer.jpg"
+    "image_url": "/products/exophthalmometer.png"
   },
   {
     "id": 136,
@@ -4577,9 +4577,9 @@
       "Reusability": "Reusable / Fully Autoclavable",
       "Manufacturing Origin": "Nagpur, India (MIHAN SEZ Export Desk)"
     },
-    "image": "/products/iris-button.jpg",
+    "image": "/products/iris-button.png",
     "is_featured": false,
-    "image_url": "/products/iris-button.jpg"
+    "image_url": "/products/iris-button.png"
   },
   {
     "id": 200,
@@ -8878,9 +8878,9 @@
       "Reusability": "Reusable / Fully Autoclavable",
       "Manufacturing Origin": "Nagpur, India (MIHAN SEZ Export Desk)"
     },
-    "image": "/products/suction-pump.jpg",
+    "image": "/products/suction-pump.png",
     "is_featured": false,
-    "image_url": "/products/suction-pump.jpg"
+    "image_url": "/products/suction-pump.png"
   },
   {
     "id": 395,
@@ -9371,9 +9371,9 @@
       "Reusability": "Reusable / Fully Autoclavable",
       "Manufacturing Origin": "Nagpur, India (MIHAN SEZ Export Desk)"
     },
-    "image": "/products/trial-frame.jpg",
+    "image": "/products/trial-frame.png",
     "is_featured": false,
-    "image_url": "/products/trial-frame.jpg"
+    "image_url": "/products/trial-frame.png"
   },
   {
     "id": 418,
@@ -10263,7 +10263,7 @@
   },
   {
     "id": 9101,
-    "name": "IOVUE™ Hydrophilic Foldable Acrylate (Model FS-6025-D)",
+    "name": "Hydrophilic Foldable Acrylate (Model FS-6025-D)",
     "slug": "iovue-hydrophilic-foldable-acrylate-model-fs-6025-d",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Hydrophilic Acrylic Foldable IOLs",
@@ -10307,7 +10307,7 @@
   },
   {
     "id": 9102,
-    "name": "IOVUE™ Yellow Aspheric Hydrophilic Foldable IOL",
+    "name": "Yellow Aspheric Hydrophilic Foldable IOL",
     "slug": "iovue-yellow-aspheric-hydrophilic-foldable-iol",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Hydrophilic Acrylic Foldable IOLs",
@@ -10345,7 +10345,7 @@
   },
   {
     "id": 9103,
-    "name": "IOVUE™ Hydrophilic Acrylic Foldable IOL (Model FS-6025D)",
+    "name": "Hydrophilic Acrylic Foldable IOL (Model FS-6025D)",
     "slug": "iovue-hydrophilic-acrylic-foldable-iol-fs-6025d",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Hydrophilic Acrylic Foldable IOLs",
@@ -10386,7 +10386,7 @@
   },
   {
     "id": 9104,
-    "name": "IOVUE™ AO Aspheric Hydrophilic Acrylic Foldable IOL",
+    "name": "AO Aspheric Hydrophilic Acrylic Foldable IOL",
     "slug": "iovue-ao-aspheric-hydrophilic-acrylic-foldable-iol",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Hydrophilic Acrylic Foldable IOLs",
@@ -10428,7 +10428,7 @@
   },
   {
     "id": 9105,
-    "name": "IOVUE™ Aspheric Hydrophilic Foldable IOL (Model AL-6025)",
+    "name": "Aspheric Hydrophilic Foldable IOL (Model AL-6025)",
     "slug": "iovue-aspheric-hydrophilic-foldable-iol-al-6025",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Hydrophilic Acrylic Foldable IOLs",
@@ -10473,7 +10473,7 @@
   },
   {
     "id": 9106,
-    "name": "IOVUE™ Clear Hydrophilic Acrylic Foldable IOL (Model FS-6025)",
+    "name": "Clear Hydrophilic Acrylic Foldable IOL (Model FS-6025)",
     "slug": "iovue-clear-hydrophilic-acrylic-foldable-iol-fs-6025",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Hydrophilic Acrylic Foldable IOLs",
@@ -10517,7 +10517,7 @@
   },
   {
     "id": 9107,
-    "name": "IOVUE™ Micro-Incision Hydrophilic Acrylic Foldable IOL (Model FS-6025-D)",
+    "name": "Micro-Incision Hydrophilic Acrylic Foldable IOL (Model FS-6025-D)",
     "slug": "iovue-micro-incision-hydrophilic-acrylic-foldable-iol-fs-6025-d",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Hydrophilic Acrylic Foldable IOLs",
@@ -10556,7 +10556,7 @@
   },
   {
     "id": 9108,
-    "name": "IOVUE™ Hydrophilic Acrylic Foldable IOL (Model OFS-6025-D)",
+    "name": "Hydrophilic Acrylic Foldable IOL (Model OFS-6025-D)",
     "slug": "iovue-hydrophilic-acrylic-foldable-iol-ofs-6025-d",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Hydrophilic Acrylic Foldable IOLs",
@@ -10600,7 +10600,7 @@
   },
   {
     "id": 9109,
-    "name": "IOVUE™ Aspheric Hydrophobic Foldable IOL (Model FP-6025)",
+    "name": "Aspheric Hydrophobic Foldable IOL (Model FP-6025)",
     "slug": "iovue-aspheric-hydrophobic-foldable-iol-fp-6025",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Hydrophobic Acrylic Foldable IOLs",
@@ -10643,7 +10643,7 @@
   },
   {
     "id": 9110,
-    "name": "IOVUE™ Aspheric Hydrophobic Foldable Intraocular Lens (Model HM-6025)",
+    "name": "Aspheric Hydrophobic Foldable Intraocular Lens (Model HM-6025)",
     "slug": "iovue-aspheric-hydrophobic-foldable-iol-hm-6025",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Hydrophobic Acrylic Foldable IOLs",
@@ -10685,7 +10685,7 @@
   },
   {
     "id": 9111,
-    "name": "IOVUE™ Yellow Hydrophobic Foldable IOL (Model HY-6025)",
+    "name": "Yellow Hydrophobic Foldable IOL (Model HY-6025)",
     "slug": "iovue-yellow-hydrophobic-foldable-iol-hy-6025",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Hydrophobic Acrylic Foldable IOLs",
@@ -10729,7 +10729,7 @@
   },
   {
     "id": 9112,
-    "name": "IOVUE™ Yellow Aspheric Square Edge PMMA IOL",
+    "name": "Yellow Aspheric Square Edge PMMA IOL",
     "slug": "iovue-yellow-aspheric-square-edge-pmma-iol",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > PMMA Posterior Chamber IOLs",
@@ -10773,7 +10773,7 @@
   },
   {
     "id": 9113,
-    "name": "IOVUE™ High-Quality PMMA Posterior Chamber IOL",
+    "name": "High-Quality PMMA Posterior Chamber IOL",
     "slug": "iovue-high-quality-pmma-posterior-chamber-iol",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > PMMA Posterior Chamber IOLs",
@@ -10809,7 +10809,7 @@
   },
   {
     "id": 9114,
-    "name": "IOVUE™ 360° Sharp Edge PMMA Posterior Chamber IOL",
+    "name": "360° Sharp Edge PMMA Posterior Chamber IOL",
     "slug": "iovue-360-sharp-edge-pmma-posterior-chamber-iol",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > PMMA Posterior Chamber IOLs",
@@ -10851,7 +10851,7 @@
   },
   {
     "id": 9115,
-    "name": "IOVUE™ Aspheric 360° Square Edge PMMA IOL (Model PA-5225)",
+    "name": "Aspheric 360° Square Edge PMMA IOL (Model PA-5225)",
     "slug": "iovue-aspheric-360-square-edge-pmma-iol-pa-5225",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > PMMA Posterior Chamber IOLs",
@@ -10892,7 +10892,7 @@
   },
   {
     "id": 9116,
-    "name": "IOVUE™ Gold Yellow Aspheric Square Edge PMMA IOL",
+    "name": "Gold Yellow Aspheric Square Edge PMMA IOL",
     "slug": "iovue-gold-yellow-aspheric-square-edge-pmma-iol",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > PMMA Posterior Chamber IOLs",
@@ -10935,7 +10935,7 @@
   },
   {
     "id": 9117,
-    "name": "IOVUE™ High-Purity PMMA Posterior Chamber IOL (Model CPS-6025)",
+    "name": "High-Purity PMMA Posterior Chamber IOL (Model CPS-6025)",
     "slug": "iovue-high-purity-pmma-posterior-chamber-iol-cps-6025",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > PMMA Posterior Chamber IOLs",
@@ -10971,7 +10971,7 @@
   },
   {
     "id": 9118,
-    "name": "IOVUE™ Single-Piece Biconvex PMMA Posterior Chamber IOL (Model IPS-6025)",
+    "name": "Single-Piece Biconvex PMMA Posterior Chamber IOL (Model IPS-6025)",
     "slug": "iovue-single-piece-biconvex-pmma-posterior-chamber-iol",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > PMMA Posterior Chamber IOLs",
@@ -11009,7 +11009,7 @@
   },
   {
     "id": 9119,
-    "name": "IOVUE™ Capsular Tension Rings (CTR) (Model PR 1109 / PR 1210)",
+    "name": "Capsular Tension Rings (CTR) (Model PR 1109 / PR 1210)",
     "slug": "iovue-capsular-tension-rings-ctr-model-pr-1109-pr-1210",
     "brand": "IOVUE",
     "category_path": "Retina Equipments > Capsular Tension Rings (CTR)",
@@ -11044,7 +11044,7 @@
   },
   {
     "id": 9120,
-    "name": "IOVUE™ Capsular Tension Ring (Model PR 1210L / PR 1311L)",
+    "name": "Capsular Tension Ring (Model PR 1210L / PR 1311L)",
     "slug": "iovue-capsular-tension-ring-model-pr-1210l-pr-1311l",
     "brand": "IOVUE",
     "category_path": "Retina Equipments > Capsular Tension Rings (CTR)",
@@ -11079,7 +11079,7 @@
   },
   {
     "id": 9121,
-    "name": "IOVUE™ Capsular Tension Ring (Model PR 1210R / PR 1311R)",
+    "name": "Capsular Tension Ring (Model PR 1210R / PR 1311R)",
     "slug": "iovue-capsular-tension-ring-model-pr-1210r-pr-1311r",
     "brand": "IOVUE",
     "category_path": "Retina Equipments > Capsular Tension Rings (CTR)",
@@ -11114,7 +11114,7 @@
   },
   {
     "id": 9122,
-    "name": "IOVUE™ Capsular Tension Ring (Model PR 1210LR / PR 1311LR)",
+    "name": "Capsular Tension Ring (Model PR 1210LR / PR 1311LR)",
     "slug": "iovue-capsular-tension-ring-model-pr-1210lr-pr-1311lr",
     "brand": "IOVUE",
     "category_path": "Retina Equipments > Capsular Tension Rings (CTR)",
@@ -11149,7 +11149,7 @@
   },
   {
     "id": 9123,
-    "name": "IOVUE™ Capsular Tension Ring (Model PR 1311 / PR 1412)",
+    "name": "Capsular Tension Ring (Model PR 1311 / PR 1412)",
     "slug": "iovue-capsular-tension-ring-model-pr-1311-pr-1412",
     "brand": "IOVUE",
     "category_path": "Retina Equipments > Capsular Tension Rings (CTR)",
@@ -11185,7 +11185,7 @@
   },
   {
     "id": 9124,
-    "name": "IOVUE™ Hydrophobic Acrylic Multifocal / Toric / Multifocal Toric Foldable IOL",
+    "name": "Hydrophobic Acrylic Multifocal / Toric / Multifocal Toric Foldable IOL",
     "slug": "iovue-hydrophobic-acrylic-multifocal-toric-multifocal-toric-foldable-iol",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Specialty IOLs (Toric, Multifocal, Iris-Claw)",
@@ -11223,7 +11223,7 @@
   },
   {
     "id": 9125,
-    "name": "IOVUE™ Yellow Hydrophobic Acrylic Multifocal / Toric / Multifocal Toric IOL",
+    "name": "Yellow Hydrophobic Acrylic Multifocal / Toric / Multifocal Toric IOL",
     "slug": "iovue-yellow-hydrophobic-acrylic-multifocal-toric-multifocal-toric-iol",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Specialty IOLs (Toric, Multifocal, Iris-Claw)",
@@ -11262,7 +11262,7 @@
   },
   {
     "id": 9126,
-    "name": "IOVUE™ Iris-Claw Fixation PMMA IOL",
+    "name": "Iris-Claw Fixation PMMA IOL",
     "slug": "iovue-iris-claw-fixation-pmma-iol",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Specialty IOLs (Toric, Multifocal, Iris-Claw)",
@@ -11301,7 +11301,7 @@
   },
   {
     "id": 9127,
-    "name": "IOVUE™ Anterior Chamber Intraocular Lens (Model OAC-6025)",
+    "name": "Anterior Chamber Intraocular Lens (Model OAC-6025)",
     "slug": "iovue-anterior-chamber-intraocular-lens-oac-6025",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Anterior Chamber Intraocular Lenses",
@@ -11340,7 +11340,7 @@
   },
   {
     "id": 9128,
-    "name": "IOVUE™ Anterior Chamber PMMA IOL (Model CAC-6025)",
+    "name": "Anterior Chamber PMMA IOL (Model CAC-6025)",
     "slug": "iovue-anterior-chamber-pmma-iol-cac-6025",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Anterior Chamber Intraocular Lenses",
@@ -11380,7 +11380,7 @@
   },
   {
     "id": 9129,
-    "name": "IOVUE™ Anterior Chamber PMMA IOL (Model AC-6025)",
+    "name": "Anterior Chamber PMMA IOL (Model AC-6025)",
     "slug": "iovue-anterior-chamber-pmma-iol-ac-6025",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Anterior Chamber Intraocular Lenses",
@@ -11421,7 +11421,7 @@
   },
   {
     "id": 9130,
-    "name": "IOVUE™ Posterior Chamber PMMA Lens (Model OPS-6025)",
+    "name": "Posterior Chamber PMMA Lens (Model OPS-6025)",
     "slug": "iovue-posterior-chamber-pmma-lens-model-ops-6025",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Posterior Chamber PMMA Lenses",
@@ -11457,7 +11457,7 @@
   },
   {
     "id": 9131,
-    "name": "IOVUE™ Posterior Chamber PMMA Lens (Model S6003H2C)",
+    "name": "Posterior Chamber PMMA Lens (Model S6003H2C)",
     "slug": "iovue-pmma-lens-model-s6003h2c",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > Posterior Chamber PMMA Lenses",
@@ -11497,7 +11497,7 @@
   },
   {
     "id": 9133,
-    "name": "IOVUE™ Single-Use IOL Delivery Injector & Cartridge System",
+    "name": "Single-Use IOL Delivery Injector & Cartridge System",
     "slug": "iovue-single-use-iol-delivery-injector-cartridge-system",
     "brand": "IOVUE",
     "category_path": "Intraocular Lenses > IOL Delivery Systems",

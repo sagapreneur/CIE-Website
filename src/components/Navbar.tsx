@@ -152,10 +152,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
               </Link>
 
               {megaMenuOpen && (
-                <div className="absolute top-full -left-28 w-[960px] bg-white rounded-2xl shadow-2xl border border-slate-200/90 overflow-hidden flex min-h-[460px] max-h-[500px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="absolute top-full -left-36 w-[1040px] bg-white rounded-2xl shadow-2xl border border-slate-200/90 overflow-hidden flex min-h-[460px] max-h-[500px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                   
                   {/* LEVEL 1: Left Sidebar - Main Categories List */}
-                  <div className="w-[260px] bg-white border-r border-slate-100 py-3 shrink-0 flex flex-col justify-between">
+                  <div className="w-[250px] bg-white border-r border-slate-100 py-3 shrink-0 flex flex-col justify-between">
                     <div>
                       <div className="px-4 py-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-400 font-display">
                         Ophthalmic Categories
@@ -216,7 +216,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
 
                   {/* LEVEL 2: Middle Sidebar - Subcategories Group (Only rendered if subcategories exist) */}
                   {selectedCategoryObj && selectedCategoryObj.subcategories && selectedCategoryObj.subcategories.length > 0 && (
-                    <div className="w-[220px] bg-slate-50/80 border-r border-slate-100 py-3 shrink-0 flex flex-col justify-between">
+                    <div className="w-[245px] bg-slate-50/80 border-r border-slate-100 py-3 shrink-0 flex flex-col justify-between">
                       <div className="h-full flex flex-col justify-between space-y-2">
                         <div>
                           <div className="px-4 py-1.5 text-[11px] font-bold uppercase tracking-wider text-slate-400 font-display truncate">
@@ -299,19 +299,23 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
                         </div>
                       )}
 
-                      {/* 3-Column Grid of Items (Matches Screenshot Pattern) */}
-                      <div className="grid grid-cols-3 gap-x-4 gap-y-2.5">
-                        {activeProductsList.map((prod) => (
-                          <Link
-                            key={prod.id}
-                            to={`/product/${prod.slug}`}
-                            onClick={() => setMegaMenuOpen(false)}
-                            className="group flex items-start space-x-2 p-1.5 rounded-lg hover:bg-brand-soft/70 transition-colors text-xs text-slate-700 hover:text-brand-teal font-medium truncate"
-                          >
-                            <span className="w-1.5 h-1.5 rounded-full bg-brand-teal/60 mt-1.5 shrink-0 group-hover:bg-brand-teal group-hover:scale-125 transition-all" />
-                            <span className="truncate leading-snug">{prod.name}</span>
-                          </Link>
-                        ))}
+                      {/* Items Grid: 2-column when subcategories sidebar is present for maximum readability */}
+                      <div className={`grid gap-x-5 gap-y-2.5 ${selectedCategoryObj && selectedCategoryObj.subcategories && selectedCategoryObj.subcategories.length > 0 ? 'grid-cols-2' : 'grid-cols-3'}`}>
+                        {activeProductsList.map((prod) => {
+                          const displayName = prod.name.replace(/^IOVUE[™\s]*/i, '');
+                          return (
+                            <Link
+                              key={prod.id}
+                              to={`/product/${prod.slug}`}
+                              onClick={() => setMegaMenuOpen(false)}
+                              title={displayName}
+                              className="group flex items-start space-x-2 p-1.5 rounded-lg hover:bg-brand-soft/70 transition-colors text-xs text-slate-700 hover:text-brand-teal font-medium min-w-0"
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-brand-teal/60 mt-1.5 shrink-0 group-hover:bg-brand-teal group-hover:scale-125 transition-all" />
+                              <span className="truncate leading-snug">{displayName}</span>
+                            </Link>
+                          );
+                        })}
                       </div>
 
                       {activeProductsList.length === 0 && (
