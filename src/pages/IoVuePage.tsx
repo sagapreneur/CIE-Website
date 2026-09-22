@@ -58,13 +58,13 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
   const filteredMatrixModels = useMemo(() => {
     switch (matrixTab) {
       case 'hydrophobic':
-        return registeredModels.filter(p => p.category_path.includes('Hydrophobic'));
+        return registeredModels.filter(p => p.category_path.toLowerCase().includes('hydrophobic'));
       case 'hydrophilic':
-        return registeredModels.filter(p => p.category_path.includes('Hydrophilic'));
+        return registeredModels.filter(p => p.category_path.toLowerCase().includes('hydrophil') || p.category_path.toLowerCase().includes('hydrophyl'));
       case 'pmma':
-        return registeredModels.filter(p => p.category_path.includes('PMMA') || p.category_path.includes('Anterior Chamber') || p.model === 'IPS 5580');
+        return registeredModels.filter(p => p.category_path.toUpperCase().includes('PMMA') || p.model === 'IPS 5580');
       case 'edof':
-        return registeredModels.filter(p => p.model?.includes('CE') || p.model?.includes('YE'));
+        return registeredModels.filter(p => p.category_path.toLowerCase().includes('edof') || p.model?.includes('CE') || p.model?.includes('YE'));
       case 'preloaded':
         return registeredModels.filter(p => p.model?.endsWith('P'));
       case 'all':

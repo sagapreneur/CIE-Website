@@ -5,37 +5,47 @@
     "slug": "intraocular-lenses",
     "subcategories": [
       {
-        "name": "Hydrophilic Acrylic Foldable IOLs",
-        "slug": "hydrophilic-acrylic-foldable-iols",
+        "name": "PMMA Lenses single piece",
+        "slug": "pmma-lenses-single-piece",
         "count": 5
       },
       {
-        "name": "Hydrophobic Acrylic Foldable IOLs",
-        "slug": "hydrophobic-acrylic-foldable-iols",
+        "name": "Hydrophylic foldable single piece",
+        "slug": "hydrophylic-foldable-single-piece",
+        "count": 3
+      },
+      {
+        "name": "Hydrophobic Foldable single piece",
+        "slug": "hydrophobic-foldable-single-piece",
         "count": 6
       },
       {
-        "name": "PMMA Posterior Chamber IOLs",
-        "slug": "pmma-posterior-chamber-iols",
-        "count": 3
+        "name": "Edof lenses",
+        "slug": "edof-lenses",
+        "count": 4
       },
       {
-        "name": "Specialty IOLs (Toric, Multifocal, Iris-Claw)",
-        "slug": "specialty-iols-toric-multifocal-iris-claw",
-        "count": 3
-      },
-      {
-        "name": "Anterior Chamber Intraocular Lenses",
-        "slug": "anterior-chamber-intraocular-lenses",
+        "name": "PMMA 3 Piece",
+        "slug": "pmma-3-piece",
         "count": 1
       },
       {
-        "name": "IOL Delivery Systems",
-        "slug": "iol-delivery-systems",
+        "name": "Foldable 3 Piece",
+        "slug": "foldable-3-piece",
         "count": 1
+      },
+      {
+        "name": "Capsular Tension Ring (CTR)",
+        "slug": "capsular-tension-ring-ctr",
+        "count": 6
+      },
+      {
+        "name": "Injector System",
+        "slug": "injector-system",
+        "count": 3
       }
     ],
-    "product_count": 19,
+    "product_count": 29,
     "icon_url": "/category-icons/Intraocular Lenses-01.svg"
   },
   {
@@ -130,7 +140,7 @@
         "count": 8
       }
     ],
-    "product_count": 376,
+    "product_count": 374,
     "icon_url": "/category-icons/Instruments-01.svg"
   },
   {
@@ -138,7 +148,7 @@
     "name": "Retina Equipments",
     "slug": "retina-equipments",
     "subcategories": [],
-    "product_count": 42,
+    "product_count": 36,
     "icon_url": "/category-icons/Retina Equipments-01.svg"
   },
   {
