@@ -248,7 +248,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
                                 onMouseEnter={() => setActiveSubcategory(sub.name)}
                                 onClick={() => {
                                   setMegaMenuOpen(false);
-                                  navigate(`/products?category=${encodeURIComponent(selectedCategoryObj.name)}&search=${encodeURIComponent(sub.name)}`);
+                                  navigate(`/products?category=${encodeURIComponent(selectedCategoryObj.name)}&subcategory=${encodeURIComponent(sub.name)}`);
                                 }}
                                 className={`w-full text-left px-4 py-2 flex items-center justify-between text-xs font-medium transition-all ${
                                   activeSubcategory === sub.name
