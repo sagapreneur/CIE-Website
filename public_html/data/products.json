@@ -10215,10 +10215,10 @@
     "name": "IOVUE™ Aspheric Square Edge PMMA IOL",
     "slug": "iovue-aspheric-square-edge-pmma-iol",
     "brand": "IOVUE",
-    "model": "IPA 6025 / IPY 6025",
+    "model": "IPA 6025",
     "category_path": "Intraocular Lenses > PMMA Posterior Chamber IOLs",
     "main_category": "Intraocular Lenses",
-    "short_description": "Aspheric aberration-neutral single piece PMMA lens engineered with 360° step square edge to eliminate posterior capsule opacification.",
+    "short_description": "Aberration-neutral single piece clear PMMA lens engineered with 360° step square edge to eliminate posterior capsule opacification.",
     "long_description": "IOVUE™ Aspheric Square Edge PMMA IOL combines aberration-correcting optics with clinical-grade PMMA rigidity. Available in clear optical polymer (Model IPA 6025) and natural yellow photoprotective chromophore (Model IPY 6025) for high-contrast scotopic visual outcomes.",
     "image": "/products/iovue-360-sharp-edge-pmma-posterior-chamber-iol.jpg",
     "image_url": "/products/iovue-360-sharp-edge-pmma-posterior-chamber-iol.jpg",
@@ -10248,7 +10248,38 @@
           "Minimum Order Quantity": "100 Piece",
           "Reusability": "Single Use (Sterile Packaging)"
         }
-      },
+      }
+    ],
+    "specifications": {
+      "Available Models": "IPA 6025, IPY 6025",
+      "Optic Diameter": "6.00 mm",
+      "Overall Diameter": "12.50 mm",
+      "Diopter Power Range": "+8.0 D to +32.0 D (0.5D increments)",
+      "Estimated A-Constant": "118.2",
+      "PCO Protection": "360° Step Square Edge Optical Boundary",
+      "Haptic Architecture": "Modified C-Loop with 360° Advance Step Edge",
+      "Sterilization": "Ethylene Oxide (ETO Gas)",
+      "Quality Certification": "ISO 13485 : 2016 / CE Certified",
+      "Manufacturing Origin": "Central India Export (Nagpur, India)",
+      "Minimum Order Quantity": "100 Piece",
+      "Reusability": "Single Use (Sterile Packaging)",
+      "Model Number": "IPA 6025"
+    }
+  },
+  {
+    "id": 9120,
+    "name": "IOVUE™ Yellow Single Piece PMMA Aspheric Square Edge IOL",
+    "slug": "iovue-yellow-single-piece-pmma-aspheric-square-edge-iol",
+    "brand": "IOVUE",
+    "model": "IPY 6025",
+    "category_path": "Intraocular Lenses > PMMA Posterior Chamber IOLs",
+    "main_category": "Intraocular Lenses",
+    "short_description": "Natural Yellow chromophore single piece PMMA lens engineered with blue light filtration and 360° step square edge.",
+    "long_description": "IOVUE™ Yellow Aspheric PMMA Intraocular Lens incorporates a specialized bonded yellow chromophore that mimics the human adult crystalline lens, filtering harmful high-energy visible (HEV) blue light and UV radiation without compromising color perception. Engineered with 360° step square edge optics to prevent posterior capsular opacification (PCO).",
+    "image": "/iovue/iovue-blue-filter-yellow.png",
+    "image_url": "/iovue/iovue-blue-filter-yellow.png",
+    "is_featured": false,
+    "variants": [
       {
         "model": "IPY 6025",
         "name": "IOVUE™ Yellow Aspheric Square Edge PMMA IOL (Model IPY 6025)",
@@ -10276,14 +10307,14 @@
       }
     ],
     "specifications": {
-      "Available Models": "IPA 6025, IPY 6025",
+      "Model Number": "IPY 6025",
       "Optic Diameter": "6.00 mm",
       "Overall Diameter": "12.50 mm",
-      "Diopter Power Range": "+8.0 D to +32.0 D (0.5D increments)",
+      "Diopter Power Range": "+10.0 D to +30.0 D (0.5D increments)",
       "Estimated A-Constant": "118.2",
-      "PCO Protection": "360° Step Square Edge Optical Boundary",
-      "Haptic Architecture": "Modified C-Loop with 360° Advance Step Edge",
-      "Sterilization": "Ethylene Oxide (ETO Gas)",
+      "PCO Protection": "360° Step Square Edge Optics",
+      "Haptic Architecture": "Modified C-Loop (0° Vault) with Yellow Chromophore",
+      "Sterilization": "Ethylene Oxide (ETO)",
       "Quality Certification": "ISO 13485 : 2016 / CE Certified",
       "Manufacturing Origin": "Central India Export (Nagpur, India)",
       "Minimum Order Quantity": "100 Piece",
@@ -10485,7 +10516,7 @@
     "name": "IOVUE™ Hydrophilic Acrylic Aspheric Foldable IOL",
     "slug": "iovue-hydrophilic-acrylic-aspheric-foldable-iol",
     "brand": "IOVUE",
-    "model": "IFA & IYA Series",
+    "model": "IFA Series (IFA 6025, IFA 6025D, IFA 6010)",
     "category_path": "Intraocular Lenses > Hydrophilic Acrylic Foldable IOLs",
     "main_category": "Intraocular Lenses",
     "short_description": "Aberration-neutral negative aspheric optic hydrophilic lens designed to compensate for corneal spherical aberration.",
@@ -10568,7 +10599,37 @@
           "Minimum Order Quantity": "100 Piece",
           "Reusability": "Single Use (Sterile Packaging)"
         }
-      },
+      }
+    ],
+    "specifications": {
+      "Available Models": "IFA 6025, IFA 6025D, IFA 6010",
+      "Optic Diameter": "6.00 mm",
+      "Overall Diameter": "12.50 mm",
+      "Diopter Power Range": "-5.0 D to +35.0 D (0.5D increments)",
+      "Estimated A-Constant": "118.0",
+      "PCO Protection": "360° Continuous Square Edge",
+      "Haptic Architecture": "Aberration-Neutral Negative Aspheric / Modified C-Loop",
+      "Sterilization": "Steam Autoclaved",
+      "Quality Certification": "ISO 13485 : 2016 / CE Certified",
+      "Manufacturing Origin": "Central India Export (Nagpur, India)",
+      "Minimum Order Quantity": "100 Piece",
+      "Reusability": "Single Use (Sterile Packaging)"
+    }
+  },
+  {
+    "id": 9121,
+    "name": "IOVUE™ Yellow Hydrophilic Acrylic Aspheric Foldable IOL",
+    "slug": "iovue-yellow-hydrophilic-acrylic-aspheric-foldable-iol",
+    "brand": "IOVUE",
+    "model": "IYA Series (IYA 6025, IYA 6025D, IYA 6010)",
+    "category_path": "Intraocular Lenses > Hydrophilic Acrylic Foldable IOLs",
+    "main_category": "Intraocular Lenses",
+    "short_description": "Natural Yellow chromophore hydrophilic acrylic foldable IOL with blue light filtration and aberration-neutral negative aspheric optics.",
+    "long_description": "IOVUE™ Yellow Hydrophilic Acrylic Aspheric Foldable IOL features a proprietary biocompatible yellow chromophore that provides natural protection against phototoxic retinal damage by selectively filtering high-energy violet-blue light (400-475 nm). Manufactured from high-purity 26% water content pHEMA with 360° continuous step square edge optics to prevent PCO. Available in standard 12.50mm, 0° pre-vaulted, and compact 11.00mm overall length options.",
+    "image": "/iovue/iovue-yellow-filter-hydrophilic.png",
+    "image_url": "/iovue/iovue-yellow-filter-hydrophilic.png",
+    "is_featured": true,
+    "variants": [
       {
         "model": "IYA 6025",
         "name": "IOVUE™ Yellow Aspheric 12.5mm (Model IYA 6025)",
@@ -10646,13 +10707,13 @@
       }
     ],
     "specifications": {
-      "Available Models": "IFA 6025, IFA 6025D, IFA 6010, IYA 6025, IYA 6025D, IYA 6010",
+      "Available Models": "IYA 6025, IYA 6025D, IYA 6010",
       "Optic Diameter": "6.00 mm",
-      "Overall Diameter": "12.50 mm",
+      "Overall Diameter": "12.50 mm (11.00 mm for IYA 6010)",
       "Diopter Power Range": "-5.0 D to +35.0 D (0.5D increments)",
       "Estimated A-Constant": "118.0",
-      "PCO Protection": "360° Continuous Square Edge",
-      "Haptic Architecture": "Aberration-Neutral Negative Aspheric / Modified C-Loop",
+      "PCO Protection": "360° Step Square Edge",
+      "Haptic Architecture": "Modified C-Loop (0° Vault) with Yellow Chromophore",
       "Sterilization": "Steam Autoclaved",
       "Quality Certification": "ISO 13485 : 2016 / CE Certified",
       "Manufacturing Origin": "Central India Export (Nagpur, India)",
@@ -10665,7 +10726,7 @@
     "name": "IOVUE™ Hydrophilic Foldable EDOF Aspheric IOL",
     "slug": "iovue-hydrophilic-foldable-edof-aspheric-iol",
     "brand": "IOVUE",
-    "model": "IFCE & IFYE Series",
+    "model": "IFCE Series (IFCE 6025, IFCE 6025D)",
     "category_path": "Intraocular Lenses > Hydrophilic Acrylic Foldable IOLs",
     "main_category": "Intraocular Lenses",
     "short_description": "Next-generation Extended Depth of Focus (EDOF) hydrophilic intraocular lens delivering continuous intermediate and distance vision.",
@@ -10723,7 +10784,37 @@
           "Minimum Order Quantity": "100 Piece",
           "Reusability": "Single Use (Sterile Packaging)"
         }
-      },
+      }
+    ],
+    "specifications": {
+      "Available Models": "IFCE 6025, IFCE 6025D",
+      "Optic Diameter": "6.00 mm",
+      "Overall Diameter": "12.50 mm",
+      "Diopter Power Range": "+10.0 D to +30.0 D (0.5D increments)",
+      "Estimated A-Constant": "118.2",
+      "PCO Protection": "360° Step Square Edge",
+      "Haptic Architecture": "Extended Depth of Focus Modified C-Loop",
+      "Sterilization": "Steam Autoclaved",
+      "Quality Certification": "ISO 13485 : 2016 / CE Certified",
+      "Manufacturing Origin": "Central India Export (Nagpur, India)",
+      "Minimum Order Quantity": "100 Piece",
+      "Reusability": "Single Use (Sterile Packaging)"
+    }
+  },
+  {
+    "id": 9122,
+    "name": "IOVUE™ Yellow Hydrophilic Foldable EDOF Aspheric IOL",
+    "slug": "iovue-yellow-hydrophilic-foldable-edof-aspheric-iol",
+    "brand": "IOVUE",
+    "model": "IFYE Series (IFYE 6025, IFYE 6025D)",
+    "category_path": "Intraocular Lenses > Hydrophilic Acrylic Foldable IOLs",
+    "main_category": "Intraocular Lenses",
+    "short_description": "Natural Yellow Extended Depth of Focus (EDOF) hydrophilic IOL delivering continuous intermediate vision with macular blue light filtration.",
+    "long_description": "IOVUE™ Yellow Hydrophilic Foldable EDOF Aspheric IOL combines cutting-edge extended depth of focus optic technology with a protective yellow chromophore. Provides continuous visual range from distance to intermediate activities with minimal dysphotopsia, while filtering UV and high-energy blue wavelengths.",
+    "image": "/iovue/iovue-yellow-filter-hydrophilic.png",
+    "image_url": "/iovue/iovue-yellow-filter-hydrophilic.png",
+    "is_featured": false,
+    "variants": [
       {
         "model": "IFYE 6025",
         "name": "IOVUE™ Yellow EDOF Hydrophilic (Model IFYE 6025)",
@@ -10776,13 +10867,13 @@
       }
     ],
     "specifications": {
-      "Available Models": "IFCE 6025, IFCE 6025D, IFYE 6025, IFYE 6025D",
+      "Available Models": "IFYE 6025, IFYE 6025D",
       "Optic Diameter": "6.00 mm",
       "Overall Diameter": "12.50 mm",
       "Diopter Power Range": "+10.0 D to +30.0 D (0.5D increments)",
-      "Estimated A-Constant": "118.2",
-      "PCO Protection": "360° Step Square Edge",
-      "Haptic Architecture": "Extended Depth of Focus Modified C-Loop",
+      "Estimated A-Constant": "118.0",
+      "PCO Protection": "360° Step Square Edge Optics",
+      "Haptic Architecture": "Extended Depth of Focus / Step Square Edge with Yellow Filter",
       "Sterilization": "Steam Autoclaved",
       "Quality Certification": "ISO 13485 : 2016 / CE Certified",
       "Manufacturing Origin": "Central India Export (Nagpur, India)",
@@ -10795,7 +10886,7 @@
     "name": "IOVUE™ Hydrophobic Acrylic Aspheric Foldable IOL",
     "slug": "iovue-hydrophobic-acrylic-aspheric-foldable-iol",
     "brand": "IOVUE",
-    "model": "IHA & IHY Series",
+    "model": "IHA Series (IHA 6025, IHA 6030)",
     "category_path": "Intraocular Lenses > Hydrophobic Acrylic Foldable IOLs",
     "main_category": "Intraocular Lenses",
     "short_description": "Glisten-free cryo-lathed hydrophobic acrylic aspheric lens with 5° angulated haptics for robust capsular bag centration.",
@@ -10853,7 +10944,37 @@
           "Minimum Order Quantity": "100 Piece",
           "Reusability": "Single Use (Sterile Packaging)"
         }
-      },
+      }
+    ],
+    "specifications": {
+      "Available Models": "IHA 6025, IHA 6030",
+      "Optic Diameter": "6.00 mm",
+      "Overall Diameter": "12.50 mm",
+      "Diopter Power Range": "+4.0 D to +35.0 D (0.5D increments)",
+      "Estimated A-Constant": "118.7",
+      "PCO Protection": "360° Continuous Step Square Edge",
+      "Haptic Architecture": "Modified C-Loop (5° Angulation)",
+      "Sterilization": "Ethylene Oxide (ETO Gas)",
+      "Quality Certification": "ISO 13485 : 2016 / CE Certified",
+      "Manufacturing Origin": "Central India Export (Nagpur, India)",
+      "Minimum Order Quantity": "100 Piece",
+      "Reusability": "Single Use (Sterile Packaging)"
+    }
+  },
+  {
+    "id": 9123,
+    "name": "IOVUE™ Yellow Hydrophobic Acrylic Aspheric Foldable IOL",
+    "slug": "iovue-yellow-hydrophobic-acrylic-aspheric-foldable-iol",
+    "brand": "IOVUE",
+    "model": "IHY Series (IHY 6025, IHY 6030)",
+    "category_path": "Intraocular Lenses > Hydrophobic Acrylic Foldable IOLs",
+    "main_category": "Intraocular Lenses",
+    "short_description": "Glisten-free yellow hydrophobic acrylic aspheric lens with blue light protection and 360° square edge optics.",
+    "long_description": "IOVUE™ Yellow Hydrophobic Acrylic Aspheric Foldable IOL is manufactured using cryo-lathed high refractive index (1.50) hydrophobic copolymer material bonded with yellow chromophore. Ensures excellent rotational stability, glisten-free optical clarity, and blue-light absorption mimicking the crystalline lens. Available in standard 12.50mm and 13.00mm overall diameter options.",
+    "image": "/iovue/iovue-blue-filter-yellow.png",
+    "image_url": "/iovue/iovue-blue-filter-yellow.png",
+    "is_featured": true,
+    "variants": [
       {
         "model": "IHY 6025",
         "name": "IOVUE™ Yellow Hydrophobic 12.5mm (Model IHY 6025)",
@@ -10906,14 +11027,14 @@
       }
     ],
     "specifications": {
-      "Available Models": "IHA 6025, IHA 6030, IHY 6025, IHY 6030",
+      "Available Models": "IHY 6025, IHY 6030",
       "Optic Diameter": "6.00 mm",
-      "Overall Diameter": "12.50 mm",
-      "Diopter Power Range": "+4.0 D to +35.0 D (0.5D increments)",
-      "Estimated A-Constant": "118.7",
-      "PCO Protection": "360° Continuous Step Square Edge",
-      "Haptic Architecture": "Modified C-Loop (5° Angulation)",
-      "Sterilization": "Ethylene Oxide (ETO Gas)",
+      "Overall Diameter": "12.50 mm / 13.00 mm",
+      "Diopter Power Range": "+6.0 D to +30.0 D (0.5D increments)",
+      "Estimated A-Constant": "118.4",
+      "PCO Protection": "360° Continuous Posterior Square Edge",
+      "Haptic Architecture": "Modified C-Loop 5° Angulation with Yellow Chromophore",
+      "Sterilization": "Ethylene Oxide (ETO)",
       "Quality Certification": "ISO 13485 : 2016 / CE Certified",
       "Manufacturing Origin": "Central India Export (Nagpur, India)",
       "Minimum Order Quantity": "100 Piece",
@@ -10925,7 +11046,7 @@
     "name": "IOVUE™ EDOF Hydrophobic Aspheric IOL",
     "slug": "iovue-edof-hydrophobic-aspheric-iol",
     "brand": "IOVUE",
-    "model": "IHCE & IHYE Series",
+    "model": "IHCE Series (IHCE 6025, IHCE 6030)",
     "category_path": "Intraocular Lenses > Hydrophobic Acrylic Foldable IOLs",
     "main_category": "Intraocular Lenses",
     "short_description": "Premium Extended Depth of Focus (EDOF) hydrophobic lens delivering continuous intermediate through distance vision with crisp contrast.",
@@ -10983,7 +11104,37 @@
           "Minimum Order Quantity": "100 Piece",
           "Reusability": "Single Use (Sterile Packaging)"
         }
-      },
+      }
+    ],
+    "specifications": {
+      "Available Models": "IHCE 6025, IHCE 6030",
+      "Optic Diameter": "6.00 mm",
+      "Overall Diameter": "12.50 mm",
+      "Diopter Power Range": "+10.0 D to +30.0 D (0.5D increments)",
+      "Estimated A-Constant": "118.9",
+      "PCO Protection": "360° Continuous Step Square Edge",
+      "Haptic Architecture": "Extended Depth of Focus Modified C-Loop",
+      "Sterilization": "Ethylene Oxide (ETO Gas)",
+      "Quality Certification": "ISO 13485 : 2016 / CE Certified",
+      "Manufacturing Origin": "Central India Export (Nagpur, India)",
+      "Minimum Order Quantity": "100 Piece",
+      "Reusability": "Single Use (Sterile Packaging)"
+    }
+  },
+  {
+    "id": 9124,
+    "name": "IOVUE™ Yellow EDOF Hydrophobic Aspheric IOL",
+    "slug": "iovue-yellow-edof-hydrophobic-aspheric-iol",
+    "brand": "IOVUE",
+    "model": "IHYE Series (IHYE 6025, IHYE 6030)",
+    "category_path": "Intraocular Lenses > Hydrophobic Acrylic Foldable IOLs",
+    "main_category": "Intraocular Lenses",
+    "short_description": "Yellow chromophore EDOF hydrophobic lens providing continuous visual range from intermediate to distance with retinal blue light protection.",
+    "long_description": "IOVUE™ Yellow EDOF Hydrophobic Aspheric IOL provides extended depth of focus with an integrated yellow chromophore. Clinically designed for active lifestyles requiring computer and intermediate vision without glare or halos, alongside retinal protection against short-wavelength blue light.",
+    "image": "/iovue/iovue-blue-filter-yellow.png",
+    "image_url": "/iovue/iovue-blue-filter-yellow.png",
+    "is_featured": false,
+    "variants": [
       {
         "model": "IHYE 6025",
         "name": "IOVUE™ Yellow EDOF Hydrophobic 12.5mm (Model IHYE 6025)",
@@ -11036,14 +11187,14 @@
       }
     ],
     "specifications": {
-      "Available Models": "IHCE 6025, IHCE 6030, IHYE 6025, IHYE 6030",
+      "Available Models": "IHYE 6025, IHYE 6030",
       "Optic Diameter": "6.00 mm",
-      "Overall Diameter": "12.50 mm",
+      "Overall Diameter": "12.50 mm / 13.00 mm",
       "Diopter Power Range": "+10.0 D to +30.0 D (0.5D increments)",
-      "Estimated A-Constant": "118.9",
-      "PCO Protection": "360° Continuous Step Square Edge",
-      "Haptic Architecture": "Extended Depth of Focus Modified C-Loop",
-      "Sterilization": "Ethylene Oxide (ETO Gas)",
+      "Estimated A-Constant": "118.4",
+      "PCO Protection": "360° Continuous Posterior Square Edge",
+      "Haptic Architecture": "EDOF Wavefront Modified C-Loop 5° Angulation (Yellow)",
+      "Sterilization": "Ethylene Oxide (ETO)",
       "Quality Certification": "ISO 13485 : 2016 / CE Certified",
       "Manufacturing Origin": "Central India Export (Nagpur, India)",
       "Minimum Order Quantity": "100 Piece",
@@ -11055,7 +11206,7 @@
     "name": "IOVUE™ Pre-Loaded Hydrophobic Aspheric IOL System",
     "slug": "iovue-preloaded-hydrophobic-aspheric-iol-system",
     "brand": "IOVUE",
-    "model": "IHA-P & IHY-P Series",
+    "model": "IHA-P Series (IHA 6025P, IHA 6030P)",
     "category_path": "Intraocular Lenses > Hydrophobic Acrylic Foldable IOLs",
     "main_category": "Intraocular Lenses",
     "short_description": "Factory pre-loaded hydrophobic aspheric lens in sterile single-use injector for touchless, error-free sub-2.2mm MICS delivery.",
@@ -11113,7 +11264,37 @@
           "Minimum Order Quantity": "100 Piece",
           "Reusability": "Single Use (Sterile Packaging)"
         }
-      },
+      }
+    ],
+    "specifications": {
+      "Available Models": "IHA 6025P, IHA 6030P",
+      "Optic Diameter": "6.00 mm",
+      "Overall Diameter": "12.50 mm",
+      "Diopter Power Range": "+10.0 D to +30.0 D (0.5D increments)",
+      "Estimated A-Constant": "118.9",
+      "PCO Protection": "360° Step Square Edge",
+      "Haptic Architecture": "Pre-Loaded Single-Use Injector Cartridge",
+      "Sterilization": "Ethylene Oxide (ETO Gas)",
+      "Quality Certification": "ISO 13485 : 2016 / CE Certified",
+      "Manufacturing Origin": "Central India Export (Nagpur, India)",
+      "Minimum Order Quantity": "100 Piece",
+      "Reusability": "Single Use (Sterile Packaging)"
+    }
+  },
+  {
+    "id": 9125,
+    "name": "IOVUE™ Yellow Pre-Loaded Hydrophobic Aspheric IOL System",
+    "slug": "iovue-yellow-preloaded-hydrophobic-aspheric-iol-system",
+    "brand": "IOVUE",
+    "model": "IHY-P Series (IHY 6025P, IHY 6030P)",
+    "category_path": "Intraocular Lenses > Hydrophobic Acrylic Foldable IOLs",
+    "main_category": "Intraocular Lenses",
+    "short_description": "Touchless factory pre-loaded yellow hydrophobic aspheric IOL in single-use delivery system with blue light protection.",
+    "long_description": "IOVUE™ Yellow Pre-Loaded Hydrophobic Aspheric IOL System features a sterile, ready-to-inject delivery injector pre-mounted with the yellow hydrophobic aspheric lens. Ensures 100% touchless, hygienic micro-incision insertion through <= 2.2mm incisions, combined with blue-light filtering chromophore for retinal protection.",
+    "image": "/iovue/iovue-preloaded-hydrophobic.png",
+    "image_url": "/iovue/iovue-preloaded-hydrophobic.png",
+    "is_featured": true,
+    "variants": [
       {
         "model": "IHY 6025P",
         "name": "IOVUE™ Yellow Pre-Loaded Hydrophobic 12.5mm (Model IHY 6025P)",
@@ -11166,14 +11347,14 @@
       }
     ],
     "specifications": {
-      "Available Models": "IHA 6025P, IHA 6030P, IHY 6025P, IHY 6030P",
+      "Available Models": "IHY 6025P, IHY 6030P",
       "Optic Diameter": "6.00 mm",
-      "Overall Diameter": "12.50 mm",
-      "Diopter Power Range": "+10.0 D to +30.0 D (0.5D increments)",
-      "Estimated A-Constant": "118.9",
-      "PCO Protection": "360° Step Square Edge",
-      "Haptic Architecture": "Pre-Loaded Single-Use Injector Cartridge",
-      "Sterilization": "Ethylene Oxide (ETO Gas)",
+      "Overall Diameter": "12.50 mm / 13.00 mm",
+      "Diopter Power Range": "+6.0 D to +30.0 D (0.5D increments)",
+      "Estimated A-Constant": "118.4",
+      "PCO Protection": "360° Continuous Posterior Square Edge",
+      "Haptic Architecture": "Pre-Loaded Modified C-Loop with Yellow Blue-Light Filter",
+      "Sterilization": "Ethylene Oxide (ETO)",
       "Quality Certification": "ISO 13485 : 2016 / CE Certified",
       "Manufacturing Origin": "Central India Export (Nagpur, India)",
       "Minimum Order Quantity": "100 Piece",

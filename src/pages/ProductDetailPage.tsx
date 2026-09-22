@@ -147,11 +147,16 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
           {/* Right Column: Product Detail Details */}
           <div className="lg:col-span-7 space-y-6">
             <div className="space-y-2">
-              <div className="flex items-center space-x-2">
+              <div className="flex flex-wrap items-center gap-2">
                 <Badge variant="blue">{product.category_path}</Badge>
                 {activeModel && (
                   <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-brand-teal text-white text-[10px] font-bold tracking-wider uppercase font-mono shadow-2xs">
                     Model: {activeModel}
+                  </span>
+                )}
+                {(product.name.toLowerCase().includes('yellow') || (activeVariant && activeVariant.model.includes('Y') && !activeVariant.model.includes('YE'))) && (
+                  <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-[10px] font-bold tracking-wider uppercase font-mono shadow-2xs">
+                    Natural Yellow · Blue Light Filter
                   </span>
                 )}
                 {product.brand && (
