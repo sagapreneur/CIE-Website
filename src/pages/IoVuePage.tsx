@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Section, SectionHeading, Button, Badge } from '../components/Primitives';
 import { EyeIrisIcon, PrecisionIcon, TrustCertificationIcon } from '../components/CustomIcons';
 import { ProductCard } from '../components/ProductCard';
-import { FileText, ArrowRight, CheckCircle2, ShieldCheck, Download, Award, Sparkles, ShoppingCart } from 'lucide-react';
+import { FileText, ArrowRight, CheckCircle2, ShieldCheck, Download, Award, Sparkles, ShoppingCart, Check, Eye } from 'lucide-react';
 import { IoVueShowcase } from '../components/IoVueShowcase';
 import { useCart } from '../context/CartContext';
 import productsData from '../../public_html/data/products.json';
@@ -13,7 +14,42 @@ interface IoVuePageProps {
 
 export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
   const { addToCart } = useCart();
-  const iovueProducts = productsData.filter(p => p.brand === 'ioVue' || p.brand === 'IOVUE' || p.category_path.includes('Intraocular Lenses'));
+  const [matrixTab, setMatrixTab] = useState<'all' | 'hydrophobic' | 'hydrophilic' | 'pmma' | 'edof' | 'preloaded'>('all');
+  const [justAddedModel, setJustAddedModel] = useState<string | null>(null);
+
+  const iovueProducts = useMemo(() => {
+    return productsData.filter(p => p.brand === 'ioVue' || p.brand === 'IOVUE' || p.category_path.includes('Intraocular Lenses'));
+  }, []);
+
+  const registeredModels = useMemo(() => {
+    return iovueProducts.filter(p => p.model && (p.id >= 9101 && p.id <= 9130));
+  }, [iovueProducts]);
+
+  const filteredMatrixModels = useMemo(() => {
+    switch (matrixTab) {
+      case 'hydrophobic':
+        return registeredModels.filter(p => p.category_path.includes('Hydrophobic'));
+      case 'hydrophilic':
+        return registeredModels.filter(p => p.category_path.includes('Hydrophilic'));
+      case 'pmma':
+        return registeredModels.filter(p => p.category_path.includes('PMMA') || p.category_path.includes('Anterior Chamber') || p.model === 'IPS 5580');
+      case 'edof':
+        return registeredModels.filter(p => p.model?.includes('CE') || p.model?.includes('YE'));
+      case 'preloaded':
+        return registeredModels.filter(p => p.model?.endsWith('P'));
+      case 'all':
+      default:
+        return registeredModels;
+    }
+  }, [registeredModels, matrixTab]);
+
+  const handleAddToCart = (product: any) => {
+    addToCart(product, 100);
+    setJustAddedModel(product.model || product.name);
+    setTimeout(() => {
+      setJustAddedModel(null);
+    }, 2000);
+  };
 
   return (
     <div className="bg-slate-50 min-h-screen pb-20 font-body">
@@ -111,114 +147,173 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
       {/* IOVUE™ Models Matrix Table */}
       <Section className="bg-slate-100/70">
         <Container>
-          <SectionHeading
-            eyebrow="IOVUE™ Specifications Matrix"
-            title="Technical Parameters & Model Specifications"
-            subtitle="Full specifications for Hydrophilic, Hydrophobic, and PMMA formulations."
-          />
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+            <SectionHeading
+              eyebrow="IOVUE™ Specifications Matrix"
+              title="Official 30-Model Registered Technical Matrix"
+              subtitle="Comprehensive specifications for Hydrophobic, Hydrophilic, EDOF, Pre-Loaded, and PMMA formulations."
+            />
+            <div className="text-xs text-slate-500 font-mono bg-white px-3 py-1.5 rounded-lg border border-slate-200 shadow-2xs shrink-0">
+              Showing <span className="font-bold text-brand-teal">{filteredMatrixModels.length}</span> of 30 Models
+            </div>
+          </div>
 
+          {/* Tab Filter Navigation */}
+          <div className="flex flex-wrap items-center gap-2 mb-6 border-b border-slate-200 pb-3">
+            {[
+              { id: 'all', label: 'All Registered Models', count: 30 },
+              { id: 'hydrophobic', label: 'Hydrophobic Acrylic', count: 12 },
+              { id: 'hydrophilic', label: 'Hydrophilic Acrylic', count: 12 },
+              { id: 'pmma', label: 'PMMA Series', count: 6 },
+              { id: 'edof', label: 'EDOF Technology', count: 8 },
+              { id: 'preloaded', label: 'Pre-Loaded Systems', count: 4 }
+            ].map(tab => (
+              <button
+                key={tab.id}
+                onClick={() => setMatrixTab(tab.id as any)}
+                className={`px-3.5 py-2 rounded-xl text-xs font-bold font-display transition-all flex items-center space-x-2 cursor-pointer ${
+                  matrixTab === tab.id
+                    ? 'bg-brand-teal text-white shadow-sm'
+                    : 'bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 shadow-2xs'
+                }`}
+              >
+                <span>{tab.label}</span>
+                <span className={`px-1.5 py-0.2 rounded-full text-[10px] font-mono ${
+                  matrixTab === tab.id ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-600'
+                }`}>
+                  {tab.count}
+                </span>
+              </button>
+            ))}
+          </div>
+
+          {/* Matrix Table Container */}
           <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden text-xs">
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="bg-brand-teal text-white font-display uppercase tracking-wider text-[11px]">
-                    <th className="py-3.5 px-4">Model Variant</th>
-                    <th className="py-3.5 px-4">Material Formulation</th>
-                    <th className="py-3.5 px-4">Optic / Overall Size</th>
-                    <th className="py-3.5 px-4">Diopter Power Range</th>
-                    <th className="py-3.5 px-4">A-Constant</th>
-                    <th className="py-3.5 px-4 text-right">Action</th>
+                    <th className="py-3.5 px-4 font-bold">Model No.</th>
+                    <th className="py-3.5 px-4 font-bold">Lens Type / Generic Description</th>
+                    <th className="py-3.5 px-4 font-bold">Optic / Overall Size</th>
+                    <th className="py-3.5 px-4 font-bold">Material & Architecture</th>
+                    <th className="py-3.5 px-4 font-bold">Power & A-Constant</th>
+                    <th className="py-3.5 px-4 text-right font-bold">Actions</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-200 text-slate-700">
-                  <tr className="hover:bg-slate-50">
-                    <td className="py-3 px-4 font-bold text-slate-900">IOVUE™ Hydrophilic Square Edge</td>
-                    <td className="py-3 px-4">Hydrophilic Acrylic (26% Water)</td>
-                    <td className="py-3 px-4 font-mono">6.00mm / 12.50mm</td>
-                    <td className="py-3 px-4 font-mono">+10.0D to +30.0D (0.5D steps)</td>
-                    <td className="py-3 px-4 font-mono">118.5</td>
-                    <td className="py-3 px-4 text-right">
-                      <button 
-                        onClick={() => addToCart({
-                          id: 1001,
-                          name: 'IOVUE™ Hydrophilic Square Edge IOL',
-                          slug: 'iovue-hydrophilic-square-edge-iol',
-                          main_category: 'Intraocular Lenses',
-                          image_url: '/products/iovue-clear-hydrophilic-acrylic-foldable-iol-fs-6025.jpg'
-                        }, 100)}
-                        className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
-                      >
-                        <ShoppingCart className="w-3.5 h-3.5" />
-                        <span>Add to Cart</span>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-slate-50">
-                    <td className="py-3 px-4 font-bold text-slate-900">IOVUE™ Hydrophobic 3-Piece Acrylic</td>
-                    <td className="py-3 px-4">Hydrophobic Acrylic with PMMA Haptics</td>
-                    <td className="py-3 px-4 font-mono">6.00mm / 13.00mm</td>
-                    <td className="py-3 px-4 font-mono">+15.0D to +25.0D (0.5D steps)</td>
-                    <td className="py-3 px-4 font-mono">118.9</td>
-                    <td className="py-3 px-4 text-right">
-                      <button 
-                        onClick={() => addToCart({
-                          id: 1002,
-                          name: 'IOVUE™ Hydrophobic 3-Piece Acrylic IOL',
-                          slug: 'iovue-hydrophobic-3-piece-acrylic-iol',
-                          main_category: 'Intraocular Lenses',
-                          image_url: '/products/iovue-aspheric-hydrophobic-foldable-iol-fp-6025.jpg'
-                        }, 100)}
-                        className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
-                      >
-                        <ShoppingCart className="w-3.5 h-3.5" />
-                        <span>Add to Cart</span>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-slate-50">
-                    <td className="py-3 px-4 font-bold text-slate-900">IOVUE™ PMMA PC IOL</td>
-                    <td className="py-3 px-4">High Purified PMMA (UV Absorbing)</td>
-                    <td className="py-3 px-4 font-mono">6.00mm / 12.50mm</td>
-                    <td className="py-3 px-4 font-mono">+0.0D to +35.0D (0.5D steps)</td>
-                    <td className="py-3 px-4 font-mono">118.2</td>
-                    <td className="py-3 px-4 text-right">
-                      <button 
-                        onClick={() => addToCart({
-                          id: 1003,
-                          name: 'IOVUE™ PMMA PC IOL',
-                          slug: 'iovue-pmma-pc-iol',
-                          main_category: 'Intraocular Lenses',
-                          image_url: '/products/iovue-high-quality-pmma-posterior-chamber-iol.jpg'
-                        }, 100)}
-                        className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
-                      >
-                        <ShoppingCart className="w-3.5 h-3.5" />
-                        <span>Add to Cart</span>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr className="hover:bg-slate-50">
-                    <td className="py-3 px-4 font-bold text-slate-900">IOVUE™ Capsular Tension Ring (CTR)</td>
-                    <td className="py-3 px-4">Medical Grade PMMA Filament</td>
-                    <td className="py-3 px-4 font-mono">10mm / 11mm / 12mm Uncompressed</td>
-                    <td className="py-3 px-4 font-mono">N/A (Cataract Bag Stability)</td>
-                    <td className="py-3 px-4 font-mono">N/A</td>
-                    <td className="py-3 px-4 text-right">
-                      <button 
-                        onClick={() => addToCart({
-                          id: 1004,
-                          name: 'IOVUE™ Capsular Tension Ring (CTR)',
-                          slug: 'iovue-capsular-tension-ring-ctr',
-                          main_category: 'Retina Equipments',
-                          image_url: '/products/iovue-capsular-tension-rings-ctr-model-pr-1109-pr-1210.jpg'
-                        }, 100)}
-                        className="px-3 py-1.5 rounded-lg bg-brand-teal hover:bg-[#20968E] text-white text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 ml-auto cursor-pointer"
-                      >
-                        <ShoppingCart className="w-3.5 h-3.5" />
-                        <span>Add to Cart</span>
-                      </button>
-                    </td>
-                  </tr>
+                  {filteredMatrixModels.map((prod) => {
+                    const specs = prod.specifications || {};
+                    const isPreloaded = prod.model?.endsWith('P');
+                    const isEdof = prod.model?.includes('CE') || prod.model?.includes('YE');
+                    const isYellow = prod.model?.includes('Y');
+                    const isAdded = justAddedModel === prod.model;
+
+                    return (
+                      <tr key={prod.id} className="hover:bg-slate-50/80 transition-colors">
+                        {/* Model Number */}
+                        <td className="py-3.5 px-4 whitespace-nowrap">
+                          <div className="flex items-center space-x-1.5">
+                            <Link 
+                              to={`/product/${prod.slug}`} 
+                              className="font-mono font-bold text-slate-900 hover:text-brand-teal text-xs underline decoration-brand-teal/30 hover:decoration-brand-teal"
+                            >
+                              {prod.model}
+                            </Link>
+                            {isPreloaded && (
+                              <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-amber-100 text-amber-800 uppercase font-mono">
+                                Preloaded
+                              </span>
+                            )}
+                            {isEdof && (
+                              <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-purple-100 text-purple-800 uppercase font-mono">
+                                EDOF
+                              </span>
+                            )}
+                            {isYellow && (
+                              <span className="px-1.5 py-0.5 rounded text-[9px] font-bold bg-yellow-100 text-yellow-800 uppercase font-mono">
+                                Yellow
+                              </span>
+                            )}
+                          </div>
+                          <span className="text-[10px] text-slate-500 font-mono block">
+                            CIE-{prod.id.toString().padStart(4, '0')}
+                          </span>
+                        </td>
+
+                        {/* Generic / Product Description */}
+                        <td className="py-3.5 px-4 max-w-[280px]">
+                          <Link 
+                            to={`/product/${prod.slug}`} 
+                            className="font-bold text-slate-900 hover:text-brand-teal block line-clamp-1"
+                          >
+                            {prod.name}
+                          </Link>
+                          <span className="text-[11px] text-slate-500 line-clamp-1">
+                            {specs['Haptic Architecture'] || prod.short_description}
+                          </span>
+                        </td>
+
+                        {/* Dimensions */}
+                        <td className="py-3.5 px-4 whitespace-nowrap font-mono">
+                          <span className="font-semibold text-slate-900">{specs['Optic Diameter'] || '6.00 mm'}</span>
+                          <span className="text-slate-400"> / </span>
+                          <span className="font-semibold text-brand-teal">{specs['Overall Diameter'] || '12.50 mm'}</span>
+                        </td>
+
+                        {/* Material Formulation */}
+                        <td className="py-3.5 px-4 max-w-[200px]">
+                          <span className="text-slate-800 font-medium block truncate">
+                            {specs['Material'] || 'Biocompatible Acrylate'}
+                          </span>
+                          <span className="text-[10px] text-emerald-700 flex items-center space-x-1">
+                            <span>✓</span>
+                            <span>{specs['PCO Protection'] || '360° Step Square Edge'}</span>
+                          </span>
+                        </td>
+
+                        {/* Power & A-Constant */}
+                        <td className="py-3.5 px-4 whitespace-nowrap font-mono text-[11px]">
+                          <div className="text-slate-900 font-semibold">{specs['Diopter Power Range'] || '+10.0D to +30.0D'}</div>
+                          <div className="text-slate-500 text-[10px]">A-Const: <strong className="text-slate-700">{specs['Estimated A-Constant'] || '118.0'}</strong></div>
+                        </td>
+
+                        {/* Action Buttons */}
+                        <td className="py-3.5 px-4 text-right whitespace-nowrap">
+                          <div className="flex items-center justify-end space-x-1.5">
+                            <button
+                              onClick={() => handleAddToCart(prod)}
+                              className={`px-3 py-1.5 rounded-lg text-xs font-bold font-display shadow-2xs transition-all flex items-center space-x-1 cursor-pointer ${
+                                isAdded 
+                                  ? 'bg-emerald-600 text-white' 
+                                  : 'bg-brand-teal hover:bg-[#20968E] text-white'
+                              }`}
+                              title="Add 100 units to inquiry cart"
+                            >
+                              {isAdded ? (
+                                <>
+                                  <Check className="w-3.5 h-3.5" />
+                                  <span>Added ✓</span>
+                                </>
+                              ) : (
+                                <>
+                                  <ShoppingCart className="w-3.5 h-3.5" />
+                                  <span>Add</span>
+                                </>
+                              )}
+                            </button>
+                            <button
+                              onClick={() => onOpenRfq(prod.name, prod.slug)}
+                              className="px-2.5 py-1.5 rounded-lg border border-slate-200 hover:border-brand-teal text-slate-700 hover:text-brand-teal bg-white text-xs font-bold font-display shadow-2xs transition-all cursor-pointer"
+                              title="Request specific quotation"
+                            >
+                              RFQ
+                            </button>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>

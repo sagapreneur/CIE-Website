@@ -15,212 +15,107 @@ interface IoVueProductItem {
 
 const IOVUE_PRODUCTS: IoVueProductItem[] = [
   {
-    id: 'iovue-aspheric-acrylic',
-    name: 'IOVUE™ AO Aspheric Hydrophilic Acrylic Foldable IOL',
-    tagline: 'Aberration-Neutral Negative Aspheric Optics with 360° Step Square Edge',
-    description: 'Fabricated from ultra-pure 26% water content pHEMA polymer with zero silicone oil adhesion. Features pre-vaulted haptics and negative spherical aberration optics to nullify corneal spherical aberration.',
+    id: 'iovue-preloaded-hydrophobic',
+    name: 'IOVUE™ Pre-Loaded Hydrophobic Aspheric Series (IHA-P & IHY-P)',
+    tagline: 'Sterile Touchless Pre-Loaded Delivery System for Sub-2.2mm Incisions',
+    description: 'Factory pre-loaded hydrophobic aspheric intraocular lens integrated with a sterile, single-use injector cartridge system. Guarantees touchless loading, precise incision entry, and zero lens damage during implantation.',
+    image: '/iovue/iovue-phobic.png',
+    features: [
+      'Touchless sterile pre-loaded injector mechanism',
+      'Sub-2.2mm micro-incision cataract surgery (MICS) delivery',
+      'Glisten-free hydrophobic acrylic polymer with 1.49 refractive index',
+      '360° continuous step square edge for PCO prevention'
+    ],
+    specs: [
+      { label: 'Registered Models', value: 'IHA 6025P, IHA 6030P, IHY 6025P, IHY 6030P' },
+      { label: 'Optic Profile', value: 'Aberration-Neutral Negative Aspheric' },
+      { label: 'Optic / Overall Dia', value: '6.00 mm / 12.50 mm & 13.00 mm' },
+      { label: 'Diopter Power Range', value: '+10.0 D to +30.0 D (0.5D increments)' },
+      { label: 'Estimated A-Constant', value: '118.9' },
+      { label: 'Sterilization', value: 'Ethylene Oxide (ETO Gas)' }
+    ]
+  },
+  {
+    id: 'iovue-edof-series',
+    name: 'IOVUE™ EDOF Extended Depth of Focus Series (IHCE & IFCE)',
+    tagline: 'Continuous Intermediate-to-Distance Visual Acuity with Minimal Glare',
+    description: 'Engineered with specialized non-diffractive wavefront-shaping optics providing extended depth of focus. Offers exceptional distance and intermediate (computer/dashboard) vision without the halos and glare of diffractive multifocals.',
     image: '/iovue/iovue-aspheric-acrylic.png',
     features: [
-      '360° Continuous Step Square Edge to inhibit PCO',
-      'Aberration-Neutral Negative Aspheric Optics',
-      'Ultra-Pure pHEMA 26% Equilibrium Water Content',
-      'Sub-2.2mm MICS incision compatible'
+      'Extended intermediate visual range for computer & mobile use',
+      'Minimal nocturnal halos or glare (non-diffractive profile)',
+      'Available in both Hydrophobic (IHCE/IHYE) and Hydrophilic (IFCE/IFYE)',
+      'Available in Clear and Macular-Protective Natural Yellow Tint'
     ],
     specs: [
-      { label: 'Optic Profile', value: 'Aberration-Neutral Negative Aspheric Biconvex' },
-      { label: 'Optic Diameter / Length', value: '6.00 mm / 12.50 mm' },
-      { label: 'Diopter Range', value: '-5.0 D to +35.0 D (0.5D increments)' },
-      { label: 'Estimated A-Constant / ACD', value: '118.0 / 4.96 mm' },
-      { label: 'Refractive Index', value: '1.46 (Hydrated at 20°C)' },
-      { label: 'Sterilization', value: 'Steam Autoclaved' }
+      { label: 'Registered Models', value: 'IHCE 6025/6030, IHYE 6025/6030, IFCE 6025/D, IFYE 6025/D' },
+      { label: 'Optic Profile', value: 'Wavefront Extended Depth of Focus (EDOF)' },
+      { label: 'Optic / Overall Dia', value: '6.00 mm / 12.50 mm & 13.00 mm' },
+      { label: 'Diopter Range', value: '+10.0 D to +30.0 D (0.5D increments)' },
+      { label: 'Estimated A-Constant', value: '118.2 (Hydrophilic) / 118.9 (Hydrophobic)' },
+      { label: 'Sterilization', value: 'Steam Autoclave / ETO Gas' }
     ]
   },
   {
-    id: 'iovue-phob-hydrophobic',
-    name: 'IOVUE™ AMH Series Hydrophobic Acrylic 3-Piece IOL',
-    tagline: 'Glisten-Free Hydrophobic Polymer with 5° Angulated PMMA Haptics',
-    description: 'Synthesized from cross-linked hydrophobic acrylate polymer. Features 5° angulated PMMA haptics for robust capsular bag centration, high refractive index (1.49), and 360° step square edge.',
-    image: '/iovue/iovue-phob-hydrophobic.png',
-    features: [
-      'Glisten-Free Cross-Linked Hydrophobic Acrylate',
-      'PMMA Haptics with 5° angulation for capsular stability',
-      '360° Step Square Edge for PCO defense',
-      'High Refractive Index (1.49) for thin optic profile'
-    ],
-    specs: [
-      { label: 'Optic Profile', value: 'Biconvex Hydrophobic Monofocal' },
-      { label: 'Optic Diameter / Length', value: '6.00 mm / 13.00 mm' },
-      { label: 'Diopter Range', value: '+5.0 D to +35.0 D (0.5D increments)' },
-      { label: 'Estimated A-Constant / ACD', value: '118.7 / 5.1 mm' },
-      { label: 'Haptic Architecture', value: 'PMMA Haptics (5° Angulation)' },
-      { label: 'Sterilization', value: 'Ethylene Oxide (ETO Gas)' }
-    ]
-  },
-  {
-    id: 'iovue-blue-filter-yellow',
-    name: 'IOVUE™ Yellow Filter Aspheric Hydrophobic Foldable IOL',
-    tagline: 'Natural Photoprotective Violet-Blue Light Cut-off Chromophore',
-    description: 'Natural yellow-chromophore hydrophobic acrylic IOL designed to filter UV-A and high-energy violet-blue light (<450nm) to protect the macular retina while preserving scotopic contrast sensitivity.',
+    id: 'iovue-hydrophobic-acrylic',
+    name: 'IOVUE™ IHA / IHY Series Hydrophobic Acrylic Foldable IOL',
+    tagline: 'Glisten-Free Hydrophobic Acrylate with 360° Continuous Step Square Edge',
+    description: 'High refractive index (1.49 / 1.56) glisten-free hydrophobic PEA/PEMA copolymer monofocal lens featuring modified 5° C-loop haptic geometry for exceptional capsular bag stability and low PCO rates.',
     image: '/iovue/iovue-blue-filter-yellow.png',
     features: [
-      'Natural Yellow Chromophore for Macular Protection',
-      'Violet-Blue Light Cut-off (<450nm wavelength)',
+      'Glisten-Free Cryo-Lathed PEA/PEMA Hydrophobic Polymer',
       'Aberration-Neutral Negative Aspheric Optics',
-      'Cryo-lathed Glisten-Free Hydrophobic Acrylate'
+      '360° Step Square Edge Optical Boundary',
+      'Available in standard 12.50mm and large 13.00mm diameters'
     ],
     specs: [
+      { label: 'Registered Models', value: 'IHA 6025, IHA 6030, IHY 6025, IHY 6030' },
       { label: 'Optic Profile', value: 'Aberration-Neutral Negative Aspheric' },
-      { label: 'Optic Diameter / Length', value: '6.00 mm / 12.50 mm' },
-      { label: 'Diopter Range', value: '-5.0 D to +35.0 D' },
-      { label: 'Estimated A-Constant / ACD', value: '118.0 / 4.96 mm' },
-      { label: 'Light Transmission', value: 'UV-A & Violet-Blue Cut-off (<450nm)' },
-      { label: 'Sterilization', value: 'Steam Autoclaved' }
-    ]
-  },
-  {
-    id: 'iovue-quad-haptic',
-    name: 'IOVUE™ FA 6005 / YA 6005 Quad Haptic Hydrophilic Foldable IOL',
-    tagline: '4-Point Quad Haptic Centration for Superior Capsular Bag Stability',
-    description: 'Unique 4-point quad haptic geometry engineered for zero-tilt centration in compromised capsular bags, providing maximum rotational stability and uniform equatorial friction.',
-    image: '/iovue/iovue-aspheric-quad-haptic.png',
-    features: [
-      '4-Point Quad Haptic Geometry for zero-tilt stability',
-      'Ideal for compromised capsular bags or weak zonules',
-      'Aberration-neutral optics for reduced halos',
-      '360° continuous step square edge for PCO defense'
-    ],
-    specs: [
-      { label: 'Optic Profile', value: 'Aspheric Quad-Haptic (4-Point Plate)' },
-      { label: 'Optic Diameter / Length', value: '6.00 mm / 11.50 mm (12.00 mm)' },
-      { label: 'Diopter Range', value: '+12.0 D to +28.0 D' },
-      { label: 'Estimated A-Constant', value: '118.4' },
-      { label: 'Refractive Index', value: '1.46' },
-      { label: 'Sterilization', value: 'Steam Autoclaved' }
-    ]
-  },
-  {
-    id: 'iovue-pmma-single-piece',
-    name: 'IOVUE™ 360° Sharp Square Edge PMMA IOL',
-    tagline: 'High Molecular Weight Clinical PMMA with 360° Advance Square Edge',
-    description: 'High molecular weight clinical-grade PMMA intraocular lens with integrated UV absorber and 360° advance square edge. Ideal for extra-capsular cataract extraction (ECCE) and anterior/posterior chamber placement.',
-    image: '/iovue/iovue-pmma-single-piece.png',
-    features: [
-      'High Molecular Weight Clinical-Grade CQ PMMA',
-      'Integrated UV-A & UV-B Absorbing Chromophore',
-      '360° Advance Step Square Edge Optical Boundary',
-      'Micro-lathed optical surface for crystal clarity'
-    ],
-    specs: [
-      { label: 'Optic Profile', value: 'Equibiconvex PMMA Monofocal' },
-      { label: 'Optic Diameter / Length', value: '6.00 mm / 12.50 mm (13.00 mm)' },
-      { label: 'Diopter Range', value: '+8.0 D to +32.0 D (0.5D increments)' },
-      { label: 'Estimated A-Constant', value: '118.2' },
-      { label: 'Material', value: 'CQ PMMA with UV Absorber' },
+      { label: 'Optic / Overall Dia', value: '6.00 mm / 12.50 mm (6025) & 13.00 mm (6030)' },
+      { label: 'Diopter Power Range', value: '+4.0 D to +35.0 D (0.5D increments)' },
+      { label: 'Estimated A-Constant', value: '118.7' },
       { label: 'Sterilization', value: 'Ethylene Oxide (ETO Gas)' }
-    ]
-  },
-  {
-    id: 'iovue-iris-fixation',
-    name: 'IOVUE™ Iris-Claw Fixation PMMA IOL',
-    tagline: 'Specialized Iris-Claw Stroma Fixation Anterior Reconstruction Lens',
-    description: 'Iris-claw design PMMA lens for aphakia correction in eyes lacking posterior capsular support. Securely clips to the iris stroma with zero endothelial tissue touch.',
-    image: '/iovue/iovue-iris-fixation-pmma.png',
-    features: [
-      'Iris-Claw Stroma Fixation for aphakic anterior segment',
-      'Minimal risk of corneal endothelial contact',
-      'Versatile Anterior or Retro-pupillary placement',
-      'CQ PMMA with built-in UV protection'
-    ],
-    specs: [
-      { label: 'Optic Profile', value: 'Convexo-Concave PMMA' },
-      { label: 'Optic Diameter / Length', value: '5.40 mm / 8.50 mm' },
-      { label: 'Diopter Range', value: '+10.0 D to +25.0 D' },
-      { label: 'Estimated A-Constant', value: '115.0' },
-      { label: 'Fixation Mechanism', value: 'Iris Claw Stroma Fixation' },
-      { label: 'Sterilization', value: 'Ethylene Oxide (ETO Gas)' }
-    ]
-  },
-  {
-    id: 'pmma-3-piece-uv',
-    name: 'IOVUE™ PS 6535 Scleral Fixation PMMA 3-Piece IOL',
-    tagline: 'Proven 3-Piece Architecture for Sulcus & Scleral Suturing',
-    description: '3-Piece PMMA intraocular lens featuring flexible polypropylene (Prolene) haptics angled at 10° for scleral suturing or sulcus fixation when capsular support is absent.',
-    image: '/iovue/iovue-pmma-3piece-uv.png',
-    features: [
-      'Flexible Blue Prolene Haptics angled at 10°',
-      'Designed for Sulcus & Scleral Fixation procedures',
-      'UV-Absorbing PMMA Optic disc (6.50mm large optic)',
-      'Large optical zone for maximum visual field'
-    ],
-    specs: [
-      { label: 'Optic Profile', value: 'Biconvex PMMA 3-Piece' },
-      { label: 'Optic Diameter / Length', value: '6.50 mm / 13.50 mm' },
-      { label: 'Diopter Range', value: '+10.0 D to +30.0 D' },
-      { label: 'Estimated A-Constant', value: '118.5' },
-      { label: 'Haptic Material', value: 'Prolene / Polypropylene (10° Angle)' },
-      { label: 'Sterilization', value: 'Ethylene Oxide (ETO Gas)' }
-    ]
-  },
-  {
-    id: 'yellow-filter-hydrophilic',
-    name: 'IOVUE™ Yellow Hydrophilic Aspheric 360° Edge IOL',
-    tagline: 'Premium Yellow-Tint Hydrophilic MICS Lens with 26% Water Content',
-    description: 'Natural yellow chromophore hydrophilic acrylic lens combining 26% pHEMA water content comfort with 360° step square edge optical clarity for sub-2.2mm MICS delivery.',
-    image: '/iovue/iovue-yellow-filter-hydrophilic.png',
-    features: [
-      '26% High Water Content Hydrophilic pHEMA Acrylate',
-      'Integrated Yellow Chromophore for UV & Violet-Blue Cut-off',
-      '360° Step Square Edge Optics for PCO defense',
-      'Smooth MICS cartridge delivery'
-    ],
-    specs: [
-      { label: 'Optic Profile', value: 'Aspheric Yellow Hydrophilic' },
-      { label: 'Optic Diameter / Length', value: '6.00 mm / 12.50 mm' },
-      { label: 'Diopter Range', value: '-5.0 D to +35.0 D' },
-      { label: 'Estimated A-Constant / ACD', value: '118.0 / 4.96 mm' },
-      { label: 'Water Content', value: '26% Hydrated at 20°C' },
-      { label: 'Sterilization', value: 'Steam Autoclaved' }
     ]
   },
   {
     id: 'iovue-hydrophilic-acrylic',
-    name: 'IOVUE™ Hydrophilic Acrylic Foldable IOL',
-    tagline: 'Biocompatible Workhorse 26% Water Content Hydrophilic MICS Lens',
-    description: 'High-purity biocompatible pHEMA hydrophilic acrylic intraocular lens designed for smooth folding and sub-2.2mm micro-incision cartridge injection into the capsular bag.',
-    image: '/iovue/iovue-hydrophilic-acrylic.png',
+    name: 'IOVUE™ IFS / IFA / IYA Series Hydrophilic Acrylic Foldable IOL',
+    tagline: '26% High Biocompatibility Water Content with Aberration-Neutral Optics',
+    description: 'Synthesized from medical-grade 26% equilibrium water content pHEMA copolymer. Features 0° pre-vaulted and modified C-loop haptics, available in Clear and Yellow tints across standard 12.5mm and compact 11.0mm lengths.',
+    image: '/iovue/iovue-yellow-filter-hydrophilic.png',
     features: [
-      '26% Equilibrium Water Content for superior biocompatibility',
-      'Smooth controlled unfolding inside capsular bag',
-      'Spherical Biconvex geometry for robust refractive outcomes',
-      '360° Step Square Edge for PCO defense'
+      '26% Equilibrium Water Content for superior tissue tolerance',
+      'Sub-2.2mm MICS cartridge delivery with smooth unfolding',
+      'Compact 11.00mm diameter models (IFA 6010, IYA 6010) for small eyes',
+      '0° Pre-vaulted models (IFS/IFA/IYA 6025D) for capsular adhesion'
     ],
     specs: [
-      { label: 'Optic Profile', value: 'Spherical Biconvex Hydrophilic' },
-      { label: 'Optic Diameter / Length', value: '6.00 mm / 12.50 mm' },
-      { label: 'Diopter Range', value: '-5.0 D to +35.0 D' },
-      { label: 'Estimated A-Constant / ACD', value: '118.0 / 4.96 mm' },
-      { label: 'Refractive Index', value: '1.46 at 20°C' },
+      { label: 'Registered Models', value: 'IFS 6025/D, IFA 6025/D, IFA 6010, IYA 6025/D, IYA 6010' },
+      { label: 'Optic Profile', value: 'Biconvex Spheric & Aberration-Neutral Aspheric' },
+      { label: 'Optic / Overall Dia', value: '6.00 mm / 12.50 mm & 11.00 mm' },
+      { label: 'Diopter Range', value: '-5.0 D to +35.0 D (0.5D increments)' },
+      { label: 'Estimated A-Constant', value: '118.0' },
       { label: 'Sterilization', value: 'Steam Autoclaved' }
     ]
   },
   {
-    id: 'iovue-phobic-monofocal',
-    name: 'IOVUE™ Aspheric Hydrophobic Monofocal Foldable IOL',
-    tagline: 'Single-Piece Cryo-Lathed Glisten-Free Hydrophobic Monofocal',
-    description: 'High refractive index (1.49 / 1.56) glisten-free hydrophobic PEA/PEMA copolymer monofocal lens featuring modified 5° C-loop haptic geometry for exceptional capsular ELP stability.',
-    image: '/iovue/iovue-phobic.png',
+    id: 'iovue-pmma-series',
+    name: 'IOVUE™ IPS / IPA / IPY / IAC / Iris-Claw PMMA Series',
+    tagline: 'High Molecular Weight Clinical CQ PMMA with UV Filtration',
+    description: 'High-purity clinical grade PMMA intraocular lenses with 360° advance square edge for ECCE and SICS procedures, anterior chamber angle support (IAC 6025), and aphakic iris-claw reconstruction (IPS 5580).',
+    image: '/iovue/iovue-pmma-single-piece.png',
     features: [
-      'Glisten-Free Cryo-Lathed PEA/PEMA Hydrophobic Polymer',
-      'High Refractive Index (1.49 / 1.56) for ultra-thin lens profile',
-      '360° Step Square Edge Technology for zero PCO risk',
-      'Single-Piece Modified C-Loop haptics with 5° angulation'
+      'High Molecular Weight Clinical-Grade CQ PMMA with UV Absorber',
+      '360° Continuous Step Square Edge',
+      'Specialized Iris Claw Fixation (IPS 5580: 5.5mm Optic / 8.0mm Length)',
+      'Anterior Chamber 4-Point Flexible Support (IAC 6025)'
     ],
     specs: [
-      { label: 'Optic Profile', value: 'Aberration-Neutral Negative Aspheric' },
-      { label: 'Optic Diameter / Length', value: '6.00 mm / 12.50 mm (13.00 mm)' },
-      { label: 'Diopter Range', value: '+4.0 D to +35.0 D (0.5D increments)' },
-      { label: 'Estimated ACD', value: '5.1 mm' },
-      { label: 'Refractive Index', value: '1.49 / 1.56 High-Purity Acrylic' },
+      { label: 'Registered Models', value: 'IPS 5525, IPS 6025, IAC 6025, IPA 6025, IPY 6025, IPS 5580' },
+      { label: 'Optic Profile', value: 'Biconvex Spheric / Aspheric / Iris Claw' },
+      { label: 'Optic / Overall Dia', value: '5.50-6.00 mm / 8.00-12.50 mm' },
+      { label: 'Diopter Range', value: '+0.0 D to +35.0 D' },
+      { label: 'Estimated A-Constant', value: '118.2 (PC) / 115.3 (AC) / 115.0 (Iris Claw)' },
       { label: 'Sterilization', value: 'Ethylene Oxide (ETO Gas)' }
     ]
   }

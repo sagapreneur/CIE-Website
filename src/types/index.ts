@@ -11,6 +11,7 @@ export interface Product {
   image: string;
   image_url?: string;
   is_featured: boolean;
+  model?: string;
 }
 
 export interface SubCategory {

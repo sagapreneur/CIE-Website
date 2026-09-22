@@ -7,17 +7,17 @@
       {
         "name": "Hydrophilic Acrylic Foldable IOLs",
         "slug": "hydrophilic-acrylic-foldable-iols",
-        "count": 8
+        "count": 12
       },
       {
         "name": "Hydrophobic Acrylic Foldable IOLs",
         "slug": "hydrophobic-acrylic-foldable-iols",
-        "count": 3
+        "count": 12
       },
       {
         "name": "PMMA Posterior Chamber IOLs",
         "slug": "pmma-posterior-chamber-iols",
-        "count": 7
+        "count": 4
       },
       {
         "name": "Specialty IOLs (Toric, Multifocal, Iris-Claw)",
@@ -27,20 +27,16 @@
       {
         "name": "Anterior Chamber Intraocular Lenses",
         "slug": "anterior-chamber-intraocular-lenses",
-        "count": 3
+        "count": 1
       },
-      {
-        "name": "Posterior Chamber PMMA Lenses",
-        "slug": "posterior-chamber-pmma-lenses",
-        "count": 2
-      },
+
       {
         "name": "IOL Delivery Systems",
         "slug": "iol-delivery-systems",
         "count": 1
       }
     ],
-    "product_count": 27,
+    "product_count": 33,
     "icon_url": "/category-icons/Intraocular Lenses-01.svg"
   },
   {
@@ -82,43 +78,53 @@
     "subcategories": [
       {
         "name": "Cannulas",
-        "slug": "cannulas"
+        "slug": "cannulas",
+        "count": 72
       },
       {
         "name": "Forceps",
-        "slug": "forceps"
+        "slug": "forceps",
+        "count": 77
       },
       {
         "name": "Lacrimal Instruments",
-        "slug": "lacrimal-instruments"
+        "slug": "lacrimal-instruments",
+        "count": 13
       },
       {
         "name": "Lens Manipulators & Rotators",
-        "slug": "lens-manipulators-and-rotators"
+        "slug": "lens-manipulators-and-rotators",
+        "count": 28
       },
       {
         "name": "Markers & Calipers",
-        "slug": "markers-and-calipers"
+        "slug": "markers-and-calipers",
+        "count": 21
       },
       {
         "name": "Needle Holder",
-        "slug": "needle-holder"
+        "slug": "needle-holder",
+        "count": 5
       },
       {
         "name": "Punches & Curettes & Spoons",
-        "slug": "punches-and-curettes-and-spoons"
+        "slug": "punches-and-curettes-and-spoons",
+        "count": 16
       },
       {
         "name": "Scissors",
-        "slug": "scissors"
+        "slug": "scissors",
+        "count": 23
       },
       {
         "name": "Spatulas & Spuds",
-        "slug": "spatulas-and-spuds"
+        "slug": "spatulas-and-spuds",
+        "count": 24
       },
       {
         "name": "Speculums & Retractors",
-        "slug": "speculums-and-retractors"
+        "slug": "speculums-and-retractors",
+        "count": 22
       },
       {
         "name": "Lens Loops",

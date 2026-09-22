@@ -80,10 +80,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
           </div>
         )}
 
-        {/* Brand Flagship Badge */}
+        {/* Brand Flagship & Model Badge */}
         {product.brand && (
           <span className="absolute top-3 left-3 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-brand-teal text-white shadow-sm z-10">
-            {product.brand} Flagship
+            {product.brand} {product.model ? `· ${product.model}` : 'Flagship'}
           </span>
         )}
 
