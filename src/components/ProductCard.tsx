@@ -46,8 +46,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
         {(product.image_url || product.image) ? (
           <div className="relative overflow-hidden w-full h-full flex items-center justify-center">
             <img 
-              src={product.image_url || product.image} 
+              src={(product.image_url || product.image || '').replace(/\.(png|jpg|jpeg)$/i, '.webp')} 
               alt={product.name} 
+              loading="lazy"
+              decoding="async"
+              width={220}
+              height={180}
               className="h-44 sm:h-48 w-auto max-w-full object-contain mx-auto transition-transform duration-200 ease-out"
               style={{
                 transformOrigin: `${zoomPos.x}% ${zoomPos.y}%`,
@@ -55,7 +59,11 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
               }}
               onError={(e) => {
                 const target = e.currentTarget;
-                if (!target.src.includes('default.jpg')) {
+                const orig = product.image_url || product.image || '/products/default.jpg';
+                if (target.src.endsWith('.webp') && orig !== target.src) {
+                  // Fallback to original format
+                  target.src = orig;
+                } else if (!target.src.includes('default.jpg')) {
                   target.src = '/products/default.jpg';
                 }
               }}

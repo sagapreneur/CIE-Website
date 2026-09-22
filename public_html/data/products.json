@@ -301,6 +301,64 @@
     }
   },
   {
+    "id": 9007,
+    "name": "IOVUE™ Scleral Fixation PMMA Intraocular Lens",
+    "slug": "iovue-scleral-fixation-pmma-intraocular-lens",
+    "main_category": "Intraocular Lenses",
+    "category_path": "Intraocular Lenses > PMMA Lenses single piece",
+    "brand": "IOVUE",
+    "model": "PS 6535",
+    "image_url": "/iovue/iovue-pmma-3piece-uv.png",
+    "short_description": "Robust single-piece PMMA intraocular lens with dual eyelet anchor haptics and oversized 6.50mm optic designed for trans-scleral suture fixation.",
+    "long_description": "The IOVUE™ PS 6535 is an ophthalmic PMMA intraocular lens meticulously designed for trans-scleral suture fixation. Deployed in eyes exhibiting catastrophic capsular or zonular deficiency, the haptics of the PS 6535 feature precisely engineered terminal eyelets. These eyelets act as secure anchor points, allowing the surgeon to pass non-absorbable 9-0 or 10-0 prolene or polypropylene sutures through the haptics directly into the scleral wall (typically 1.5 mm posterior to the limbus). Manufactured with Clinical Quality CQ-PMMA with UV absorber and an oversized 6.50 mm optic diameter, it ensures maximum stability, visual axis coverage, and dysphotopsia prevention.",
+    "variants": [
+      {
+        "model": "PS 6535",
+        "name": "PS 6535 Scleral Fixation PMMA",
+        "optic_dia": "6.50 mm",
+        "overall_dia": "13.50 mm",
+        "diopter": "+10.0 D to +30.0 D",
+        "a_constant": "118.5",
+        "haptic_type": "0° Planar with Suture Eyelets",
+        "sterilization": "ETO Gas",
+        "specifications": {
+          "Model Number": "PS 6535",
+          "Optic Type": "Biconvex Scleral Fixation with Eyelets",
+          "Optic Diameter": "6.50 mm",
+          "Overall Length": "13.50 mm",
+          "Diopter Range": "+10.0 D to +30.0 D (0.5 D increments)",
+          "A-Constant": "118.5",
+          "Haptic Material": "Clinical Quality PMMA (CQ-PMMA with UV Filter)",
+          "Haptic Angle": "0° Planar with Suture Eyelets",
+          "Sterilization": "ETO Gas (Ethylene Oxide)",
+          "Instrument Classification": "Class IIb Medical Device",
+          "Material": "Clinical Quality CQ-PMMA with UV Blocker",
+          "Quality Standard": "ISO 13485 : 2016 / CE Mark Technical Dossiers",
+          "Export Origin": "Nagpur, India (Central India Export)",
+          "Manufacturer": "Central India Export (HQ Zero Mile, Nagpur)"
+        }
+      }
+    ],
+    "specifications": {
+      "Model Number": "PS 6535",
+      "Optic Type": "Biconvex Scleral Fixation with Eyelets",
+      "Optic Diameter": "6.50 mm",
+      "Overall Length": "13.50 mm",
+      "Diopter Range": "+10.0 D to +30.0 D (0.5 D increments)",
+      "A-Constant": "118.5",
+      "Haptic Material": "Clinical Quality PMMA (CQ-PMMA with UV Filter)",
+      "Haptic Angle": "0° Planar with Suture Eyelets",
+      "Sterilization": "ETO Gas (Ethylene Oxide)",
+      "Instrument Classification": "Class IIb Medical Device",
+      "Material": "Clinical Quality CQ-PMMA with UV Blocker",
+      "Quality Standard": "ISO 13485 : 2016 / CE Mark Technical Dossiers",
+      "Export Origin": "Nagpur, India (Central India Export)",
+      "Manufacturer": "Central India Export (HQ Zero Mile, Nagpur)"
+    },
+    "is_featured": true,
+    "image": "/iovue/iovue-pmma-3piece-uv.png"
+  },
+  {
     "id": 9105,
     "name": "IOVUE™ Hydrophilic Acrylic Foldable Spheric IOL",
     "slug": "iovue-hydrophilic-acrylic-foldable-spheric-iol",

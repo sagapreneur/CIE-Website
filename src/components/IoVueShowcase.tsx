@@ -257,12 +257,20 @@ export const IoVueShowcase: React.FC<IoVueShowcaseProps> = ({ onOpenRfq }) => {
               className="bg-slate-50 rounded-xl p-4 border border-slate-200 shadow-inner flex flex-col items-center justify-center min-h-[240px] max-h-[300px] relative overflow-hidden group/zoom cursor-crosshair"
             >
               <img 
-                src={currentProd.image} 
+                src={currentProd.image.replace(/\.(png|jpg|jpeg)$/i, '.webp')} 
                 alt={currentProd.name} 
-                className="max-h-64 sm:max-h-72 w-auto object-contain mx-auto transition-transform duration-150 ease-out" 
+                loading="lazy"
+                decoding="async"
+                className="max-h-52 w-auto object-contain mx-auto transition-transform duration-150 ease-out select-none pointer-events-none"
                 style={{
                   transformOrigin: `${zoomPos.x}% ${zoomPos.y}%`,
                   transform: isHovered ? 'scale(2.2)' : 'scale(1)'
+                }}
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (target.src.endsWith('.webp')) {
+                    target.src = currentProd.image;
+                  }
                 }}
               />
               

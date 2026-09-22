@@ -94,8 +94,9 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
               {(product.image_url || product.image) ? (
                 <div className="relative w-full h-full flex flex-col items-center justify-center overflow-hidden">
                   <img 
-                    src={product.image_url || product.image} 
+                    src={(product.image_url || product.image || '').replace(/\.(png|jpg|jpeg)$/i, '.webp')} 
                     alt={product.name} 
+                    decoding="async"
                     className="max-h-64 w-auto object-contain mx-auto transition-transform duration-150 ease-out" 
                     style={{
                       transformOrigin: `${zoomPos.x}% ${zoomPos.y}%`,
@@ -103,7 +104,10 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
                     }}
                     onError={(e) => {
                       const target = e.currentTarget;
-                      if (!target.src.includes('default.jpg')) {
+                      const orig = product.image_url || product.image || '/products/default.jpg';
+                      if (target.src.endsWith('.webp') && orig !== target.src) {
+                        target.src = orig;
+                      } else if (!target.src.includes('default.jpg')) {
                         target.src = '/products/default.jpg';
                       }
                     }}
