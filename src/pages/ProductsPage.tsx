@@ -52,7 +52,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
     const selectedSubLower = selectedSubcategory.trim().toLowerCase();
     const searchLower = searchQuery.trim().toLowerCase();
 
-    return productsData.filter(p => {
+    const filtered = productsData.filter(p => {
       // 1. Subcategory filter (exact or segment match)
       if (selectedSubLower) {
         const pathLower = (p.category_path || '').toLowerCase();
@@ -82,6 +82,31 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
 
       return matchSearch && matchIovue;
     });
+
+    // When viewing Intraocular Lenses (without subcategory filter), prioritize all lenses first, followed by CTR & Injectors
+    if (selectedCatLower === 'intraocular lenses' && !selectedSubLower) {
+      const iolRankOrder = [
+        'pmma lenses single piece',
+        'hydrophylic foldable single piece',
+        'hydrophobic foldable single piece',
+        'edof lenses',
+        'pmma 3 piece',
+        'foldable 3 piece',
+        'capsular tension ring',
+        'injector system'
+      ];
+      return [...filtered].sort((a, b) => {
+        const pathA = (a.category_path || '').toLowerCase();
+        const pathB = (b.category_path || '').toLowerCase();
+        const rankA = iolRankOrder.findIndex(sub => pathA.includes(sub));
+        const rankB = iolRankOrder.findIndex(sub => pathB.includes(sub));
+        const finalA = rankA === -1 ? 999 : rankA;
+        const finalB = rankB === -1 ? 999 : rankB;
+        return finalA - finalB;
+      });
+    }
+
+    return filtered;
   }, [selectedCategory, selectedSubcategory, searchQuery, onlyIovue]);
 
   const handleCategorySelect = (catName: string) => {

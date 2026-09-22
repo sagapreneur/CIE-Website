@@ -80,20 +80,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
           </div>
         )}
 
-        {/* Brand Flagship & Model Badge */}
-        {product.brand && (
-          <span className="absolute top-3 left-3 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-brand-teal text-white shadow-sm z-10">
-            {product.brand} {product.variants && product.variants.length > 1 ? `· ${product.variants.length} Models` : product.model ? `· ${product.model}` : 'Flagship'}
-          </span>
-        )}
-
-        {/* Category / Subcategory Clickable Badge */}
-        <div className="absolute top-3 right-3 z-10 flex flex-col items-end gap-1">
+        {/* Subcategory Clickable Badge (Top-Left Corner) */}
+        <div className="absolute top-3 left-3 z-10 flex flex-col items-start gap-1">
           {product.category_path && product.category_path.includes('>') ? (
             <Link
               to={`/products?category=${encodeURIComponent(product.main_category)}&subcategory=${encodeURIComponent(product.category_path.split('>')[1].trim())}`}
               onClick={(e) => e.stopPropagation()}
-              className="text-[10px] font-bold text-brand-teal bg-white/95 backdrop-blur-sm border border-brand-teal/30 hover:bg-brand-teal hover:text-white px-2 py-0.5 rounded shadow-2xs transition-colors truncate max-w-[170px] cursor-pointer"
+              className="text-[10px] font-bold text-brand-teal bg-white/95 backdrop-blur-sm border border-brand-teal/30 hover:bg-brand-teal hover:text-white px-2.5 py-1 rounded-md shadow-2xs transition-colors truncate max-w-[210px] cursor-pointer"
               title={`View only ${product.category_path.split('>')[1].trim()}`}
             >
               {product.category_path.split('>')[1].trim()}
@@ -102,12 +95,19 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
             <Link
               to={`/products?category=${encodeURIComponent(product.main_category)}`}
               onClick={(e) => e.stopPropagation()}
-              className="text-[10px] font-bold text-slate-700 bg-white/95 border border-slate-200 hover:text-brand-teal px-2 py-0.5 rounded shadow-2xs transition-colors cursor-pointer"
+              className="text-[10px] font-bold text-slate-700 bg-white/95 border border-slate-200 hover:text-brand-teal px-2.5 py-1 rounded-md shadow-2xs transition-colors cursor-pointer"
             >
               {product.main_category}
             </Link>
           )}
         </div>
+
+        {/* Brand Flagship & Model Badge (Bottom-Right Corner as requested) */}
+        {product.brand && (
+          <span className="absolute bottom-3 right-3 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-brand-teal text-white shadow-sm z-10">
+            {product.brand} {product.variants && product.variants.length > 1 ? `· ${product.variants.length} Models` : product.model ? `· ${product.model}` : 'Flagship'}
+          </span>
+        )}
       </div>
 
       {/* Product Body */}
