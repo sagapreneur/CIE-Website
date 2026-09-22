@@ -21,8 +21,38 @@ export const IoVuePage: React.FC<IoVuePageProps> = ({ onOpenRfq }) => {
     return productsData.filter(p => p.brand === 'ioVue' || p.brand === 'IOVUE' || p.category_path.includes('Intraocular Lenses'));
   }, []);
 
+  // Flatten the 30 registered models from the 10 product families for the full technical matrix
   const registeredModels = useMemo(() => {
-    return iovueProducts.filter(p => p.model && (p.id >= 9101 && p.id <= 9130));
+    const list: any[] = [];
+    iovueProducts.forEach(p => {
+      if (p.variants && p.variants.length > 0) {
+        p.variants.forEach((v: any) => {
+          list.push({
+            id: p.id,
+            slug: p.slug,
+            name: v.name || `${p.name} (Model ${v.model})`,
+            model: v.model,
+            category_path: p.category_path,
+            main_category: p.main_category,
+            short_description: p.short_description,
+            image_url: p.image_url || p.image,
+            specifications: v.specifications || {
+              "Model Number": v.model,
+              "Optic Diameter": v.optic_dia,
+              "Overall Diameter": v.overall_dia,
+              "Diopter Power Range": v.diopter,
+              "Estimated A-Constant": v.a_constant,
+              "Haptic Architecture": v.haptic_type,
+              "Sterilization": v.sterilization,
+              "PCO Protection": v.pco
+            }
+          });
+        });
+      } else if (p.model && p.id >= 9100) {
+        list.push(p);
+      }
+    });
+    return list;
   }, [iovueProducts]);
 
   const filteredMatrixModels = useMemo(() => {

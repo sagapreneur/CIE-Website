@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Container, Section, Button, Badge } from '../components/Primitives';
 import { ProductCard } from '../components/ProductCard';
@@ -18,6 +18,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
   const [isHovered, setIsHovered] = useState(false);
   const [orderQty, setOrderQty] = useState(100);
   const [addedFeedback, setAddedFeedback] = useState(false);
+  const [selectedVariantIndex, setSelectedVariantIndex] = useState(0);
   const { addToCart, openCart, totalItemsCount } = useCart();
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -30,8 +31,30 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
   const product = productsData.find(p => p.slug === currentSlug) || productsData.find(p => p.slug.toLowerCase() === currentSlug?.toLowerCase()) || productsData[0];
   const relatedProducts = productsData.filter(p => p.main_category === product.main_category && p.id !== product.id).slice(0, 4);
 
+  // Reset variation when slug changes
+  useEffect(() => {
+    setSelectedVariantIndex(0);
+  }, [currentSlug]);
+
+  const activeVariant = product.variants && product.variants.length > 0
+    ? product.variants[selectedVariantIndex] || product.variants[0]
+    : null;
+
+  const activeSpecs = activeVariant && activeVariant.specifications
+    ? activeVariant.specifications
+    : product.specifications || {};
+
+  const activeModel = activeVariant ? activeVariant.model : product.model;
+
   const handleAddToCart = () => {
-    addToCart(product, orderQty);
+    const itemToAdd = activeVariant ? {
+      ...product,
+      name: `${product.name} (Model ${activeVariant.model})`,
+      model: activeVariant.model,
+      specifications: activeSpecs
+    } : product;
+
+    addToCart(itemToAdd, orderQty);
     setAddedFeedback(true);
     setTimeout(() => {
       setAddedFeedback(false);
@@ -126,9 +149,9 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Badge variant="blue">{product.category_path}</Badge>
-                {product.model && (
+                {activeModel && (
                   <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-brand-teal text-white text-[10px] font-bold tracking-wider uppercase font-mono shadow-2xs">
-                    Model: {product.model}
+                    Model: {activeModel}
                   </span>
                 )}
                 {product.brand && (
@@ -147,6 +170,75 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
             <div className="p-4 bg-brand-soft/60 rounded-xl border border-brand-teal/20 text-sm text-slate-700 leading-relaxed font-normal">
               {product.short_description || 'High-precision ophthalmic instrument supplied under ISO 13485 quality standards for precision cataract and micro-incision surgery.'}
             </div>
+
+            {/* Model & Dimension Variation Selector */}
+            {product.variants && product.variants.length > 1 && (
+              <div className="p-4 bg-slate-50 rounded-xl border-2 border-brand-teal/30 space-y-3 shadow-xs">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-bold text-slate-900 uppercase tracking-wider font-display flex items-center space-x-1.5">
+                    <span className="w-2 h-2 rounded-full bg-brand-teal animate-pulse" />
+                    <span>Select Model & Dimension Variation:</span>
+                  </span>
+                  <span className="text-[11px] font-mono text-brand-teal font-bold bg-white px-2.5 py-0.5 rounded-md border border-brand-teal/20">
+                    {product.variants.length} Options Available
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {product.variants.map((variant, idx) => {
+                    const isSelected = idx === selectedVariantIndex;
+                    return (
+                      <button
+                        key={variant.model}
+                        type="button"
+                        onClick={() => setSelectedVariantIndex(idx)}
+                        className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex items-center justify-between ${
+                          isSelected
+                            ? 'bg-white border-brand-teal text-slate-900 shadow-sm ring-2 ring-brand-teal/20'
+                            : 'bg-white/70 border-slate-200 text-slate-700 hover:bg-white hover:border-slate-300'
+                        }`}
+                      >
+                        <div className="space-y-1">
+                          <div className="font-mono font-bold text-xs flex items-center space-x-1.5">
+                            <span className={isSelected ? 'text-brand-teal font-extrabold' : 'text-slate-900'}>
+                              {variant.model}
+                            </span>
+                            {variant.model.endsWith('P') && (
+                              <span className="px-1.5 py-0.2 rounded text-[9px] font-bold bg-amber-100 text-amber-800 font-sans uppercase">
+                                Preloaded
+                              </span>
+                            )}
+                            {(variant.model.includes('CE') || variant.model.includes('YE')) && (
+                              <span className="px-1.5 py-0.2 rounded text-[9px] font-bold bg-purple-100 text-purple-800 font-sans uppercase">
+                                EDOF
+                              </span>
+                            )}
+                            {variant.model.includes('Y') && !variant.model.includes('YE') && (
+                              <span className="px-1.5 py-0.2 rounded text-[9px] font-bold bg-yellow-100 text-yellow-800 font-sans uppercase">
+                                Yellow
+                              </span>
+                            )}
+                          </div>
+                          <div className="text-[11px] text-slate-600 font-mono">
+                            Optic: <strong className="text-slate-800">{variant.optic_dia}</strong> · Overall: <strong className="text-brand-teal">{variant.overall_dia}</strong>
+                          </div>
+                          {variant.diopter && (
+                            <div className="text-[10px] text-slate-500 font-mono">
+                              Power: {variant.diopter}
+                            </div>
+                          )}
+                        </div>
+                        <div className={`w-5 h-5 rounded-full border flex items-center justify-center shrink-0 ml-2 transition-all ${
+                          isSelected ? 'border-brand-teal bg-brand-teal text-white' : 'border-slate-300 bg-white'
+                        }`}>
+                          {isSelected && <Check className="w-3 h-3 text-white stroke-[3]" />}
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             {/* Primary RFQ & Cart Action Box */}
             <div className="p-5 bg-brand-soft rounded-xl border border-brand-teal/30 space-y-4 shadow-sm">
@@ -223,18 +315,25 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
             </div>
 
             {/* Specifications Table */}
-            {Object.keys(product.specifications).length > 0 && (
+            {Object.keys(activeSpecs).length > 0 && (
               <div className="space-y-3 pt-2">
-                <h3 className="font-display font-bold text-slate-900 text-base border-b border-slate-200 pb-2">
-                  Technical Specifications Table
-                </h3>
+                <div className="flex items-center justify-between border-b border-slate-200 pb-2">
+                  <h3 className="font-display font-bold text-slate-900 text-base">
+                    Technical Specifications Table
+                  </h3>
+                  {activeModel && (
+                    <span className="text-xs font-mono font-bold text-brand-teal bg-brand-soft border border-brand-teal/30 px-2.5 py-0.5 rounded-full">
+                      Specifications for Model: {activeModel}
+                    </span>
+                  )}
+                </div>
                 <div className="bg-slate-50 rounded-xl border border-slate-200 overflow-hidden text-xs">
                   <table className="w-full text-left">
                     <tbody>
-                      {Object.entries(product.specifications).map(([key, val], idx) => (
+                      {Object.entries(activeSpecs).map(([key, val], idx) => (
                         <tr key={key} className={idx % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
                           <td className="py-2.5 px-4 font-semibold text-slate-700 border-r border-slate-200 w-1/3">{key}</td>
-                          <td className="py-2.5 px-4 font-mono text-slate-900">{val}</td>
+                          <td className="py-2.5 px-4 font-mono text-slate-900">{String(val)}</td>
                         </tr>
                       ))}
                     </tbody>

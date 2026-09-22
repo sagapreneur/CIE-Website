@@ -83,7 +83,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
         {/* Brand Flagship & Model Badge */}
         {product.brand && (
           <span className="absolute top-3 left-3 px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-brand-teal text-white shadow-sm z-10">
-            {product.brand} {product.model ? `· ${product.model}` : 'Flagship'}
+            {product.brand} {product.variants && product.variants.length > 1 ? `· ${product.variants.length} Models` : product.model ? `· ${product.model}` : 'Flagship'}
           </span>
         )}
 
@@ -108,8 +108,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
           {product.short_description || 'High-precision ophthalmic surgical instrument designed for micro-incisions and surgical procedures.'}
         </p>
 
-        {/* Key Specification Badges */}
-        {Object.keys(product.specifications).length > 0 && (
+        {/* Key Specification Badges / Variants Count Badge */}
+        {product.variants && product.variants.length > 1 ? (
+          <div className="pt-1 flex items-center space-x-1.5">
+            <span className="text-[10px] font-bold text-brand-teal bg-brand-soft border border-brand-teal/30 px-2.5 py-1 rounded-lg inline-flex items-center space-x-1 font-mono">
+              <span>{product.variants.length} Models & Sizes Available</span>
+            </span>
+          </div>
+        ) : Object.keys(product.specifications).length > 0 ? (
           <div className="pt-2 flex flex-wrap gap-1.5">
             {Object.entries(product.specifications).slice(0, 2).map(([key, val]) => (
               <span key={key} className="text-[10px] bg-slate-100 text-slate-700 px-2 py-0.5 rounded font-mono truncate max-w-[180px]">
@@ -117,7 +123,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
               </span>
             ))}
           </div>
-        )}
+        ) : null}
       </div>
 
       {/* Action Footer with Add to Cart */}

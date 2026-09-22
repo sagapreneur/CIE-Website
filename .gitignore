@@ -22,3 +22,4 @@ Thumbs.db
 # Temp scratch scripts
 scratch/
 *.tmp
+*.xlsx

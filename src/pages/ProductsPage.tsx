@@ -59,6 +59,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
       const matchSearch = !searchLower || 
         p.name.toLowerCase().includes(searchLower) || 
         (p.model && p.model.toLowerCase().includes(searchLower)) ||
+        (p.variants && p.variants.some(v => v.model.toLowerCase().includes(searchLower))) ||
         p.short_description.toLowerCase().includes(searchLower) || 
         p.slug.toLowerCase().includes(searchLower);
 

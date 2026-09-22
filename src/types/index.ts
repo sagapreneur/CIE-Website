@@ -1,3 +1,17 @@
+export interface ProductVariant {
+  model: string;
+  name?: string;
+  optic_dia?: string;
+  overall_dia?: string;
+  diopter?: string;
+  a_constant?: string;
+  haptic_type?: string;
+  sterilization?: string;
+  pco?: string;
+  image?: string;
+  specifications?: Record<string, any>;
+}
+
 export interface Product {
   id: number;
   name: string;
@@ -12,6 +26,7 @@ export interface Product {
   image_url?: string;
   is_featured: boolean;
   model?: string;
+  variants?: ProductVariant[];
 }
 
 export interface SubCategory {
