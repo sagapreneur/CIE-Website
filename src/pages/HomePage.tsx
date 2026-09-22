@@ -184,6 +184,31 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenRfq }) => {
                     <h3 className="font-display font-extrabold text-slate-900 text-base group-hover:text-brand-teal transition-colors leading-snug line-clamp-2 min-h-[2.5rem]">
                       {cat.name}
                     </h3>
+
+                    {/* Clickable Subcategories Pills */}
+                    {cat.subcategories && cat.subcategories.length > 0 && (
+                      <div className="pt-2 flex flex-wrap gap-1 relative z-20">
+                        {cat.subcategories.slice(0, 3).map((sub, sIdx) => (
+                          <button
+                            key={sIdx}
+                            type="button"
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              navigate(`/products?category=${encodeURIComponent(cat.name)}&subcategory=${encodeURIComponent(sub.name)}`);
+                            }}
+                            className="text-[10px] px-2 py-0.5 rounded bg-slate-100 hover:bg-brand-teal hover:text-white text-slate-700 font-medium transition-colors cursor-pointer"
+                          >
+                            {sub.name}
+                          </button>
+                        ))}
+                        {cat.subcategories.length > 3 && (
+                          <span className="text-[10px] px-1.5 py-0.5 text-brand-teal font-bold">
+                            +{cat.subcategories.length - 3} more
+                          </span>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </div>
 

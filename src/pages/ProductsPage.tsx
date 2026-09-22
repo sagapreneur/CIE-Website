@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, Link } from 'react-router-dom';
 import { Container, Section, SectionHeading, Button } from '../components/Primitives';
 import { ProductCard } from '../components/ProductCard';
-import { Search, Filter, X, ChevronRight, ChevronDown, FileText, Layers } from 'lucide-react';
+import { Search, Filter, X, ChevronRight, ChevronDown, FileText, Layers, ArrowRight } from 'lucide-react';
 import productsData from '../../public_html/data/products.json';
 import categoriesData from '../../public_html/data/categories.json';
 
@@ -22,6 +22,12 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
   const [onlyIovue, setOnlyIovue] = useState<boolean>(false);
   const [visibleCount, setVisibleCount] = useState<number>(15);
   const [showMobileFilters, setShowMobileFilters] = useState<boolean>(false);
+  
+  // Keep Intraocular Lenses and Instruments subcategories expanded and accessible by default
+  const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({
+    'Intraocular Lenses': true,
+    'Instruments': true
+  });
 
   useEffect(() => {
     const cat = searchParams.get('category');
@@ -30,6 +36,9 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
     setSelectedCategory(cat || '');
     setSelectedSubcategory(sub || '');
     if (search !== null) setSearchQuery(search);
+    if (cat) {
+      setExpandedCategories(prev => ({ ...prev, [cat]: true }));
+    }
   }, [searchParams]);
 
   // Reset pagination on filter change
@@ -47,7 +56,9 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
       // 1. Subcategory filter (exact or segment match)
       if (selectedSubLower) {
         const pathLower = (p.category_path || '').toLowerCase();
-        if (!pathLower.includes(selectedSubLower)) {
+        const normSub = selectedSubLower.replace('hydrophylic', 'hydrophilic');
+        const normPath = pathLower.replace('hydrophylic', 'hydrophilic');
+        if (!pathLower.includes(selectedSubLower) && !normPath.includes(normSub)) {
           return false;
         }
       }
@@ -83,6 +94,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
     } else {
       setSelectedCategory(catName);
       setSelectedSubcategory('');
+      setExpandedCategories(prev => ({ ...prev, [catName]: true }));
       const params: Record<string, string> = { category: catName };
       if (searchQuery) params.search = searchQuery;
       setSearchParams(params);
@@ -92,9 +104,18 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
   const handleSubcategorySelect = (catName: string, subName: string) => {
     setSelectedCategory(catName);
     setSelectedSubcategory(subName);
+    setExpandedCategories(prev => ({ ...prev, [catName]: true }));
     const params: Record<string, string> = { category: catName, subcategory: subName };
     if (searchQuery) params.search = searchQuery;
     setSearchParams(params);
+  };
+
+  const toggleExpand = (catName: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setExpandedCategories(prev => ({
+      ...prev,
+      [catName]: !prev[catName]
+    }));
   };
 
   return (
@@ -128,7 +149,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
           <div className="lg:hidden col-span-1">
             <button
               onClick={() => setShowMobileFilters(!showMobileFilters)}
-              className="w-full py-3 px-4 bg-white border border-slate-200 rounded-xl shadow-sm font-bold text-slate-800 text-xs flex items-center justify-between hover:bg-slate-50 transition-colors"
+              className="w-full py-3 px-4 bg-white border border-slate-200 rounded-xl shadow-sm font-bold text-slate-800 text-xs flex items-center justify-between hover:bg-slate-50 transition-colors cursor-pointer"
             >
               <div className="flex items-center space-x-2">
                 <Filter className="w-4 h-4 text-brand-teal" />
@@ -158,7 +179,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
                 />
                 <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
                 {searchQuery && (
-                  <button onClick={() => setSearchQuery('')} className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-600">
+                  <button onClick={() => setSearchQuery('')} className="absolute right-3 top-2.5 text-slate-400 hover:text-slate-600 cursor-pointer">
                     <X className="w-4 h-4" />
                   </button>
                 )}
@@ -181,62 +202,73 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
                 )}
               </div>
 
-              <div className="space-y-1 max-h-[500px] overflow-y-auto pr-1">
+              <div className="space-y-1.5 max-h-[550px] overflow-y-auto pr-1">
                 {categoriesData.map((cat) => {
                   const isCatSelected = selectedCategory.toLowerCase() === cat.name.toLowerCase();
                   const hasSubcategories = cat.subcategories && cat.subcategories.length > 0;
+                  const isExpanded = !!expandedCategories[cat.name] || isCatSelected;
 
                   return (
                     <div key={cat.id} className="space-y-0.5">
-                      <button
-                        onClick={() => handleCategorySelect(cat.name)}
-                        className={`w-full text-left px-3 py-2 rounded-lg text-xs font-medium transition-colors flex items-center justify-between group cursor-pointer ${
-                          isCatSelected && !selectedSubcategory
-                            ? 'bg-brand-teal text-white font-bold shadow-xs' 
-                            : isCatSelected
-                              ? 'bg-brand-soft text-brand-teal font-bold border border-brand-teal/30'
-                              : 'hover:bg-slate-100 text-slate-700'
-                        }`}
-                      >
-                        <div className="flex items-center space-x-2 truncate pr-2">
-                          {cat.icon_url && (
-                            <img 
-                              src={cat.icon_url} 
-                              alt={cat.name} 
-                              className={`w-4 h-4 object-contain shrink-0 ${isCatSelected && !selectedSubcategory ? 'brightness-0 invert' : ''}`} 
-                            />
-                          )}
-                          <span className="truncate">{cat.name}</span>
-                        </div>
-                        <div className="flex items-center space-x-1 shrink-0">
+                      <div className="flex items-center">
+                        <button
+                          onClick={() => handleCategorySelect(cat.name)}
+                          className={`flex-1 text-left px-3 py-2 rounded-lg text-xs font-medium transition-colors flex items-center justify-between group cursor-pointer ${
+                            isCatSelected && !selectedSubcategory
+                              ? 'bg-brand-teal text-white font-bold shadow-xs' 
+                              : isCatSelected
+                                ? 'bg-brand-soft text-brand-teal font-bold border border-brand-teal/30'
+                                : 'hover:bg-slate-100 text-slate-700'
+                          }`}
+                        >
+                          <div className="flex items-center space-x-2 truncate pr-2">
+                            {cat.icon_url && (
+                              <img 
+                                src={cat.icon_url} 
+                                alt={cat.name} 
+                                className={`w-4 h-4 object-contain shrink-0 ${isCatSelected && !selectedSubcategory ? 'brightness-0 invert' : ''}`} 
+                              />
+                            )}
+                            <span className="truncate">{cat.name}</span>
+                          </div>
                           <span className={`text-[10px] px-1.5 py-0.5 rounded font-mono ${
                             isCatSelected && !selectedSubcategory ? 'bg-white/20 text-white' : 'bg-slate-100 text-slate-600'
                           }`}>
                             {cat.product_count}
                           </span>
-                          {hasSubcategories && (
-                            <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isCatSelected ? 'rotate-180 text-brand-teal' : 'text-slate-400'}`} />
-                          )}
-                        </div>
-                      </button>
+                        </button>
 
-                      {/* Nested Subcategories List when Category is Active */}
-                      {isCatSelected && hasSubcategories && (
+                        {/* Expand/Collapse Toggle Button */}
+                        {hasSubcategories && (
+                          <button
+                            type="button"
+                            onClick={(e) => toggleExpand(cat.name, e)}
+                            className="p-2 text-slate-400 hover:text-brand-teal transition-colors cursor-pointer"
+                            title={isExpanded ? 'Collapse subcategories' : 'Expand subcategories'}
+                          >
+                            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isExpanded ? 'rotate-180 text-brand-teal' : ''}`} />
+                          </button>
+                        )}
+                      </div>
+
+                      {/* Clickable Subcategories List */}
+                      {hasSubcategories && isExpanded && (
                         <div className="ml-3 pl-2.5 border-l-2 border-brand-teal/30 space-y-0.5 my-1 animate-in fade-in duration-200">
                           {/* "All [Category]" Option */}
                           <button
                             onClick={() => {
+                              setSelectedCategory(cat.name);
                               setSelectedSubcategory('');
                               setSearchParams({ category: cat.name });
                             }}
                             className={`w-full text-left px-2.5 py-1.5 rounded-md text-[11px] transition-colors flex items-center justify-between cursor-pointer ${
-                              !selectedSubcategory 
+                              isCatSelected && !selectedSubcategory 
                                 ? 'bg-brand-teal text-white font-bold' 
                                 : 'text-slate-600 hover:bg-slate-100 font-medium'
                             }`}
                           >
                             <span className="truncate">All {cat.name}</span>
-                            <span className={`text-[10px] font-mono ${!selectedSubcategory ? 'text-white' : 'text-slate-400'}`}>
+                            <span className={`text-[10px] font-mono ${isCatSelected && !selectedSubcategory ? 'text-white' : 'text-slate-400'}`}>
                               {cat.product_count}
                             </span>
                           </button>
@@ -251,7 +283,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
                                 className={`w-full text-left px-2.5 py-1.5 rounded-md text-[11px] transition-colors flex items-center justify-between cursor-pointer group/sub ${
                                   isSubSelected 
                                     ? 'bg-brand-teal text-white font-bold shadow-2xs' 
-                                    : 'text-slate-600 hover:bg-slate-100 font-medium hover:text-slate-900'
+                                    : 'text-slate-600 hover:bg-brand-soft hover:text-brand-teal font-medium'
                                 }`}
                               >
                                 <span className="truncate pr-1">{sub.name}</span>

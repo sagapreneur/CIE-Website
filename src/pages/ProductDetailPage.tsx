@@ -148,7 +148,30 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ onOpenRfq 
           <div className="lg:col-span-7 space-y-6">
             <div className="space-y-2">
               <div className="flex flex-wrap items-center gap-2">
-                <Badge variant="blue">{product.category_path}</Badge>
+                {product.category_path && product.category_path.includes('>') ? (
+                  <div className="inline-flex items-center space-x-1.5 text-xs">
+                    <Link
+                      to={`/products?category=${encodeURIComponent(product.main_category)}`}
+                      className="px-2.5 py-1 bg-brand-soft text-brand-blue hover:text-brand-teal rounded-md border border-brand-teal/20 font-semibold transition-colors cursor-pointer"
+                    >
+                      {product.main_category}
+                    </Link>
+                    <span className="text-slate-400 font-bold">&gt;</span>
+                    <Link
+                      to={`/products?category=${encodeURIComponent(product.main_category)}&subcategory=${encodeURIComponent(product.category_path.split('>')[1].trim())}`}
+                      className="px-2.5 py-1 bg-brand-teal text-white hover:bg-[#20968E] rounded-md font-bold shadow-2xs transition-colors cursor-pointer"
+                    >
+                      {product.category_path.split('>')[1].trim()}
+                    </Link>
+                  </div>
+                ) : (
+                  <Link
+                    to={`/products?category=${encodeURIComponent(product.main_category)}`}
+                    className="px-2.5 py-1 bg-brand-soft text-brand-blue hover:text-brand-teal rounded-md border border-brand-teal/20 text-xs font-semibold transition-colors cursor-pointer"
+                  >
+                    {product.category_path || product.main_category}
+                  </Link>
+                )}
                 {activeModel && (
                   <span className="inline-flex items-center space-x-1 px-2.5 py-0.5 rounded-full bg-brand-teal text-white text-[10px] font-bold tracking-wider uppercase font-mono shadow-2xs">
                     Model: {activeModel}

@@ -283,19 +283,43 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
                                 <Layers className="w-5 h-5 text-brand-teal" />
                               )}
                             </div>
-                            <div>
-                              <h3 className="font-display font-extrabold text-slate-900 text-sm tracking-wide uppercase">
-                                {activeSubcategory === 'All' ? `ALL ${selectedCategoryObj.name.toUpperCase()}` : activeSubcategory.toUpperCase()}
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setMegaMenuOpen(false);
+                                if (activeSubcategory === 'All') {
+                                  navigate(`/products?category=${encodeURIComponent(selectedCategoryObj.name)}`);
+                                } else {
+                                  navigate(`/products?category=${encodeURIComponent(selectedCategoryObj.name)}&subcategory=${encodeURIComponent(activeSubcategory)}`);
+                                }
+                              }}
+                              className="text-left group/title cursor-pointer"
+                              title="Click to view all products in this category / subcategory"
+                            >
+                              <h3 className="font-display font-extrabold text-slate-900 text-sm tracking-wide uppercase group-hover/title:text-brand-teal transition-colors flex items-center space-x-1.5">
+                                <span>{activeSubcategory === 'All' ? `ALL ${selectedCategoryObj.name.toUpperCase()}` : activeSubcategory.toUpperCase()}</span>
+                                <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover/title:opacity-100 transition-opacity text-brand-teal" />
                               </h3>
-                              <span className="text-[11px] text-slate-500 font-medium">
-                                Showing items in {selectedCategoryObj.name}
+                              <span className="text-[11px] text-slate-500 font-medium group-hover/title:text-brand-teal">
+                                View all {activeSubcategory === 'All' ? selectedCategoryObj.name : activeSubcategory} products →
                               </span>
-                            </div>
+                            </button>
                           </div>
 
-                          <span className="text-[11px] font-bold bg-brand-teal text-white px-2.5 py-0.5 rounded-full font-mono">
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setMegaMenuOpen(false);
+                              if (activeSubcategory === 'All') {
+                                navigate(`/products?category=${encodeURIComponent(selectedCategoryObj.name)}`);
+                              } else {
+                                navigate(`/products?category=${encodeURIComponent(selectedCategoryObj.name)}&subcategory=${encodeURIComponent(activeSubcategory)}`);
+                              }
+                            }}
+                            className="text-[11px] font-bold bg-brand-teal hover:bg-[#20968E] text-white px-2.5 py-0.5 rounded-full font-mono transition-colors cursor-pointer shadow-2xs"
+                          >
                             {activeProductsList.length} items
-                          </span>
+                          </button>
                         </div>
                       )}
 

@@ -87,9 +87,26 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onOpenRfq }) 
           </span>
         )}
 
-        {/* Category Badge */}
-        <div className="absolute top-3 right-3 z-10">
-          <Badge variant="blue">{product.main_category}</Badge>
+        {/* Category / Subcategory Clickable Badge */}
+        <div className="absolute top-3 right-3 z-10 flex flex-col items-end gap-1">
+          {product.category_path && product.category_path.includes('>') ? (
+            <Link
+              to={`/products?category=${encodeURIComponent(product.main_category)}&subcategory=${encodeURIComponent(product.category_path.split('>')[1].trim())}`}
+              onClick={(e) => e.stopPropagation()}
+              className="text-[10px] font-bold text-brand-teal bg-white/95 backdrop-blur-sm border border-brand-teal/30 hover:bg-brand-teal hover:text-white px-2 py-0.5 rounded shadow-2xs transition-colors truncate max-w-[170px] cursor-pointer"
+              title={`View only ${product.category_path.split('>')[1].trim()}`}
+            >
+              {product.category_path.split('>')[1].trim()}
+            </Link>
+          ) : (
+            <Link
+              to={`/products?category=${encodeURIComponent(product.main_category)}`}
+              onClick={(e) => e.stopPropagation()}
+              className="text-[10px] font-bold text-slate-700 bg-white/95 border border-slate-200 hover:text-brand-teal px-2 py-0.5 rounded shadow-2xs transition-colors cursor-pointer"
+            >
+              {product.main_category}
+            </Link>
+          )}
         </div>
       </div>
 
