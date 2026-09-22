@@ -36,11 +36,17 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRfq }) => {
     let prods = productsData.filter(p => p.main_category === selectedCategoryObj.name);
     if (activeSubcategory && activeSubcategory !== 'All') {
       const subLower = activeSubcategory.toLowerCase();
-      prods = prods.filter(p => 
-        p.name.toLowerCase().includes(subLower) || 
-        p.category_path?.toLowerCase().includes(subLower) ||
-        p.slug.toLowerCase().includes(subLower)
-      );
+      const normSub = subLower.replace(/hydrophylic/g, 'hydrophilic');
+      prods = prods.filter(p => {
+        const pathLower = (p.category_path || '').toLowerCase();
+        const normPath = pathLower.replace(/hydrophylic/g, 'hydrophilic');
+        return (
+          p.name.toLowerCase().includes(subLower) || 
+          pathLower.includes(subLower) ||
+          normPath.includes(normSub) ||
+          p.slug.toLowerCase().includes(subLower)
+        );
+      });
     }
     return prods.slice(0, 24);
   }, [selectedCategoryObj, activeSubcategory]);

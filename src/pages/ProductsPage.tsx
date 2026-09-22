@@ -35,7 +35,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
     const search = searchParams.get('search');
     setSelectedCategory(cat || '');
     setSelectedSubcategory(sub || '');
-    if (search !== null) setSearchQuery(search);
+    setSearchQuery(search || '');
     if (cat) {
       setExpandedCategories(prev => ({ ...prev, [cat]: true }));
     }
@@ -56,15 +56,13 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
       // 1. Subcategory filter (exact or segment match)
       if (selectedSubLower) {
         const pathLower = (p.category_path || '').toLowerCase();
-        const normSub = selectedSubLower.replace('hydrophylic', 'hydrophilic');
-        const normPath = pathLower.replace('hydrophylic', 'hydrophilic');
+        const normSub = selectedSubLower.replace(/hydrophylic/g, 'hydrophilic');
+        const normPath = pathLower.replace(/hydrophylic/g, 'hydrophilic');
         if (!pathLower.includes(selectedSubLower) && !normPath.includes(normSub)) {
           return false;
         }
-      }
-
-      // 2. Category filter
-      if (selectedCatLower) {
+      } else if (selectedCatLower) {
+        // 2. Category filter (when no subcategory is selected)
         const mainCatLower = (p.main_category || '').toLowerCase();
         if (mainCatLower !== selectedCatLower) {
           return false;
@@ -90,24 +88,23 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({ onOpenRfq }) => {
     if (selectedCategory.toLowerCase() === catName.toLowerCase() && !selectedSubcategory) {
       setSelectedCategory('');
       setSelectedSubcategory('');
+      setSearchQuery('');
       setSearchParams({});
     } else {
       setSelectedCategory(catName);
       setSelectedSubcategory('');
+      setSearchQuery('');
       setExpandedCategories(prev => ({ ...prev, [catName]: true }));
-      const params: Record<string, string> = { category: catName };
-      if (searchQuery) params.search = searchQuery;
-      setSearchParams(params);
+      setSearchParams({ category: catName });
     }
   };
 
   const handleSubcategorySelect = (catName: string, subName: string) => {
     setSelectedCategory(catName);
     setSelectedSubcategory(subName);
+    setSearchQuery('');
     setExpandedCategories(prev => ({ ...prev, [catName]: true }));
-    const params: Record<string, string> = { category: catName, subcategory: subName };
-    if (searchQuery) params.search = searchQuery;
-    setSearchParams(params);
+    setSearchParams({ category: catName, subcategory: subName });
   };
 
   const toggleExpand = (catName: string, e: React.MouseEvent) => {
